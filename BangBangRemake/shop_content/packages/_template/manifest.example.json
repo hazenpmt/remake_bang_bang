@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "item_id": "my_item_id",
+      "item_type": "consumable",
+      "name": "Tên vật phẩm",
+      "description": "Mô tả tự xuống dòng trong card.",
+      "image": "assets/my_item.png",
+      "grant": {"kind": "inventory_stack"}
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "offer_my_item_id",
+      "item_id": "my_item_id",
+      "shelf_ids": ["recommend", "material"],
+      "currency": "xu",
+      "price": 100,
+      "original_price": 150,
+      "badges": ["sale", "new"],
+      "giftable": true,
+      "required_level": 1,
+      "required_vip": false,
+      "max_quantity_per_order": 99,
+      "sort_priority": 0,
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\gui_summer\\level\\91d2f1a3926214fd2f83959e2d3f0f10.swf",
+  "logical_name": "zh_CN/gui_summer/level/level_effect6.swf",
+  "fps": 24.0,
+  "frames": 14,
+  "shape_textures": 15,
+  "sprite_timelines": 7,
+  "frame_items_min": 2,
+  "frame_items_max": 2,
+  "frame_masks_min": 1,
+  "frame_masks_max": 1,
+  "shape_png_bytes": 75207,
+  "timeline_json_bytes": 7504,
+  "warnings": []
+}

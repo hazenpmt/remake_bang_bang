@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\gui_summer\\controls\\main\\e3d7028504af66fb463c5c90433d9bbc.swf",
+  "logical_name": "zh_CN/gui_summer/controls/main/char_bar_orange.swf",
+  "fps": 24.0,
+  "frames": 100,
+  "shape_textures": 4,
+  "sprite_timelines": 1,
+  "frame_items_min": 1,
+  "frame_items_max": 3,
+  "frame_masks_min": 0,
+  "frame_masks_max": 1,
+  "shape_png_bytes": 955,
+  "timeline_json_bytes": 64621,
+  "warnings": []
+}

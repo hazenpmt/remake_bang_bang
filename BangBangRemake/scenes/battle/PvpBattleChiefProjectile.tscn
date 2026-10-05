@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/battle/pvp_battle_chief_projectile.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/battle/npcs/chief/changmao.png" id="2_bullet"]
+
+[node name="PvpBattleChiefProjectile" type="Node2D"]
+z_index = 8
+script = ExtResource("1_script")
+
+[node name="Bullet" type="Sprite2D" parent="."]
+texture = ExtResource("2_bullet")

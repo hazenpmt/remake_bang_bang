@@ -1,0 +1,35 @@
+# ==========================================
+# Root .gitignore for BangBang Remake
+# ==========================================
+
+# OS & Editor temp files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+.idea/
+.vscode/
+
+# Node.js & Backend (BangBangServer)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.logs/
+backups/
+content_storage/
+
+# Godot Engine (BangBangRemake)
+.godot/
+.import/
+*.translation
+export_presets.cfg
+*.log
+BangBangRemake/Godot/
+BangBangRemake/pvp_skill_check.log
+BangBangRemake/result_sequence_test.log
+
+# Build & Test outputs
+test_export/

@@ -1,0 +1,479 @@
+[gd_scene format=3 uid="uid://bd1osixut26bj"]
+
+[ext_resource type="Texture2D" uid="uid://tictn5brrvmw" path="res://assets/ui/military_rank/generated/military_rank_outer_frame_ai.png" id="1_frame"]
+[ext_resource type="Texture2D" uid="uid://cqxvnnqn3p6ws" path="res://assets/ui/military_rank/title_mr_sys_t.png" id="2_title"]
+[ext_resource type="Texture2D" uid="uid://bgnrdv3t07vr1" path="res://assets/ui/military_rank/img_mr_attr_list_bk.png" id="3_left"]
+[ext_resource type="Texture2D" uid="uid://btsag1s1yr4xv" path="res://assets/ui/military_rank/img_mr_attr_bk.png" id="4_right"]
+[ext_resource type="Texture2D" uid="uid://cto48hnpiuux3" path="res://assets/ui/military_rank/btn_watch_mr_list_t.png" id="5_watch"]
+[ext_resource type="Texture2D" uid="uid://b07x43x3hvu2y" path="res://assets/ui/military_rank/attrIcon/img_phy_arm_active.png" id="6_phy"]
+[ext_resource type="Texture2D" uid="uid://fnlexphxo2yg" path="res://assets/ui/military_rank/attrIcon/img_ctsis_arm_active.png" id="7_pierce"]
+[ext_resource type="Texture2D" uid="uid://bgb5segrqls05" path="res://assets/ui/military_rank/attrIcon/img_eng_arm_active.png" id="8_energy"]
+[ext_resource type="Texture2D" uid="uid://csvwtee05uklr" path="res://assets/ui/military_rank/attrIcon/img_hpmax_active.png" id="9_hp"]
+[ext_resource type="Texture2D" uid="uid://cg3hg4qmmjij" path="res://assets/ui/military_rank/attrIcon/img_common_cool_no_active.png" id="11_cooldown"]
+[ext_resource type="Texture2D" uid="uid://ddq32hc7ivnb3" path="res://assets/ui/military_rank/rank/Junxian01.png" id="12_rank1"]
+[ext_resource type="Texture2D" uid="uid://d1s78i5ht7sfe" path="res://assets/ui/military_rank/rank/Junxian02.png" id="13_rank2"]
+[ext_resource type="Texture2D" uid="uid://cn82ox36j1ej3" path="res://assets/ui/military_rank/rank/Junxian10.png" id="14_rank10"]
+[ext_resource type="Texture2D" uid="uid://i2i7q6vmwlhu" path="res://assets/ui/military_rank/img_mr_attr_item_m_lbk.png" id="16_m_light"]
+[ext_resource type="Texture2D" uid="uid://b715wlrcl675i" path="res://assets/ui/military_rank/img_mr_attr_item_b_bk.png" id="17_b_dark"]
+[ext_resource type="Texture2D" uid="uid://cfru1de3xwgfc" path="res://assets/ui/military_rank/attrIcon/img_atk_un_active.png" id="23_atk_dark"]
+[ext_resource type="Texture2D" uid="uid://bwd8lqrqjxw6o" path="res://assets/ui/military_rank/img_mr_pr_big.png" id="24_progress"]
+[ext_resource type="Texture2D" uid="uid://dncf3t3kol4lh" path="res://assets/ui/military_rank/img_mr_pr_bk_big.png" id="25_progress_background"]
+
+[node name="MilitaryRankOverview" type="Control" unique_id=1128520790]
+custom_minimum_size = Vector2(1000, 580)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1000.0
+offset_bottom = 580.0
+mouse_filter = 1
+
+[node name="OpaqueBackdrop" type="ColorRect" parent="." unique_id=885779188]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 47.0
+offset_right = 987.0
+offset_bottom = 568.0
+mouse_filter = 2
+color = Color(0.0862745, 0.301961, 0.529412, 1)
+
+[node name="OuterFrame" type="TextureRect" parent="." unique_id=473552452]
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_frame")
+
+[node name="Header" type="Control" parent="." unique_id=257491237]
+z_index = 11
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Title" type="TextureRect" parent="Header" unique_id=242979663]
+layout_mode = 0
+offset_left = 439.0
+offset_right = 563.0
+offset_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource("2_title")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CloseButton" type="TextureButton" parent="Header" unique_id=492201962]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 23.0
+offset_right = 981.0
+offset_bottom = 54.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+
+[node name="Overview" type="Control" parent="." unique_id=1876223664]
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 50.0
+offset_right = 982.0
+offset_bottom = 570.0
+
+[node name="LeftBackground" type="TextureRect" parent="Overview" unique_id=2072801121]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -22.0
+offset_right = 632.0
+offset_bottom = 498.0
+mouse_filter = 2
+texture = ExtResource("3_left")
+expand_mode = 1
+
+[node name="RightBackground" type="TextureRect" parent="Overview" unique_id=966568018]
+layout_mode = 0
+offset_left = 626.0
+offset_right = 964.0
+offset_bottom = 520.0
+mouse_filter = 2
+texture = ExtResource("4_right")
+expand_mode = 1
+
+[node name="CurrentIcon" type="TextureRect" parent="Overview" unique_id=328671935]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 14.0
+offset_right = 118.0
+offset_bottom = 97.0
+mouse_filter = 2
+texture = ExtResource("12_rank1")
+stretch_mode = 3
+
+[node name="NextIcon" type="TextureRect" parent="Overview" unique_id=822255525]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 14.0
+offset_right = 584.0
+offset_bottom = 97.0
+mouse_filter = 2
+texture = ExtResource("13_rank2")
+stretch_mode = 3
+
+[node name="CurrentName" type="Label" parent="Overview" unique_id=293094668]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 100.0
+offset_right = 148.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 0.88, 0.08, 1)
+theme_override_font_sizes/font_size = 15
+text = "Binh nhì"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextName" type="Label" parent="Overview" unique_id=79735190]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 100.0
+offset_right = 614.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "Hạ Sĩ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CurrentCaption" type="Label" parent="Overview" unique_id=599833370]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 19.0
+offset_right = 258.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.64, 0.91, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Chung"
+vertical_alignment = 1
+
+[node name="NextCaption" type="Label" parent="Overview" unique_id=1433341166]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 19.0
+offset_right = 462.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.64, 0.91, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "Lv sau"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Progress" type="TextureProgressBar" parent="Overview" unique_id=1766990836]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 46.0
+offset_right = 448.0
+offset_bottom = 69.0
+value = 20.0
+texture_under = ExtResource("25_progress_background")
+texture_progress = ExtResource("24_progress")
+
+[node name="ProgressText" type="Label" parent="Overview" unique_id=692560843]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 46.0
+offset_right = 448.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "1/5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WatchRankListButton" type="TextureButton" parent="Overview" unique_id=1351931478]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 82.0
+offset_right = 356.0
+offset_bottom = 114.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_watch")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PhysicalArmorFrame" type="TextureRect" parent="Overview" unique_id=804478020]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 169.0
+offset_right = 111.0
+offset_bottom = 252.0
+mouse_filter = 2
+texture = ExtResource("16_m_light")
+stretch_mode = 3
+
+[node name="PhysicalArmorIcon" type="TextureRect" parent="Overview" unique_id=939888749]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 183.0
+offset_right = 87.0
+offset_bottom = 237.0
+mouse_filter = 2
+texture = ExtResource("6_phy")
+stretch_mode = 3
+
+[node name="PhysicalArmorLabel" type="Label" parent="Overview" unique_id=432487971]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 253.0
+offset_right = 147.0
+offset_bottom = 278.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Giáp Vật Lý +0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PierceFrame" type="TextureRect" parent="Overview" unique_id=572690375]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 213.0
+offset_right = 351.0
+offset_bottom = 296.0
+mouse_filter = 2
+texture = ExtResource("16_m_light")
+stretch_mode = 3
+
+[node name="PierceIcon" type="TextureRect" parent="Overview" unique_id=442479387]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 225.0
+offset_right = 327.0
+offset_bottom = 279.0
+mouse_filter = 2
+texture = ExtResource("7_pierce")
+stretch_mode = 3
+
+[node name="PierceLabel" type="Label" parent="Overview" unique_id=1999628450]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 300.0
+offset_right = 373.0
+offset_bottom = 325.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Xuyên Thấu +0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnergyArmorFrame" type="TextureRect" parent="Overview" unique_id=1153800726]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 308.0
+offset_right = 191.0
+offset_bottom = 391.0
+mouse_filter = 2
+texture = ExtResource("16_m_light")
+stretch_mode = 3
+
+[node name="EnergyArmorIcon" type="TextureRect" parent="Overview" unique_id=871356586]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 322.0
+offset_right = 170.0
+offset_bottom = 376.0
+mouse_filter = 2
+texture = ExtResource("8_energy")
+stretch_mode = 3
+
+[node name="EnergyArmorLabel" type="Label" parent="Overview" unique_id=86880501]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 388.0
+offset_right = 230.0
+offset_bottom = 413.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Khiên Năng Lượng +0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HitPointsFrame" type="TextureRect" parent="Overview" unique_id=1512053935]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 355.0
+offset_right = 430.0
+offset_bottom = 438.0
+mouse_filter = 2
+texture = ExtResource("16_m_light")
+stretch_mode = 3
+
+[node name="HitPointsIcon" type="TextureRect" parent="Overview" unique_id=2035600413]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 367.0
+offset_right = 404.0
+offset_bottom = 421.0
+mouse_filter = 2
+texture = ExtResource("9_hp")
+stretch_mode = 3
+
+[node name="HitPointsLabel" type="Label" parent="Overview" unique_id=28041572]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 435.0
+offset_right = 450.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "HP +0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AttackFrame" type="TextureRect" parent="Overview" unique_id=556398482]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 244.0
+offset_right = 620.0
+offset_bottom = 358.0
+mouse_filter = 2
+texture = ExtResource("17_b_dark")
+stretch_mode = 3
+
+[node name="AttackIcon" type="TextureRect" parent="Overview" unique_id=1599374935]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 267.0
+offset_right = 593.0
+offset_bottom = 347.0
+mouse_filter = 2
+texture = ExtResource("23_atk_dark")
+stretch_mode = 3
+
+[node name="AttackLabel" type="Label" parent="Overview" unique_id=1712212015]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 355.0
+offset_right = 624.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "TC +0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActivationRequirement" type="Label" parent="Overview" unique_id=187753442]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 459.0
+offset_right = 651.0
+offset_bottom = 489.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "ĐK kích hoạt skill kế tiếp:  ★ x4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SummaryTitle" type="Label" parent="Overview" unique_id=1809523083]
+layout_mode = 0
+offset_left = 637.0
+offset_top = 23.0
+offset_right = 953.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.72, 0.94, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Thuộc Tính Quân Hàm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SummaryText" type="RichTextLabel" parent="Overview" unique_id=532960583]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 66.0
+offset_right = 937.0
+offset_bottom = 234.0
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+bbcode_enabled = true
+text = "[table=2][cell][right][b]Giáp Vật Lý:[/b][/right][/cell][cell][left]   [color=#ffe20b][b]+0.00[/b][/color][/left][/cell][cell][right][b]Giáp Năng Lượng:[/b][/right][/cell][cell][left]   [color=#ffe20b][b]+0.00[/b][/color][/left][/cell][cell][right][b]Xuyên:[/b][/right][/cell][cell][left]   [color=#ffe20b][b]+0.00[/b][/color][/left][/cell][cell][right][b]HP:[/b][/right][/cell][cell][left]   [color=#ffe20b][b]+0[/b][/color][/left][/cell][cell][right][b]TC:[/b][/right][/cell][cell][left]   [color=#ffe20b][b]+0.00[/b][/color][/left][/cell][cell][right][b]CD Skill:[/b][/right][/cell][cell][left]   [color=#ffe20b][b]0.0%[/b][/color][/left][/cell][/table]"
+scroll_active = false
+
+[node name="DescriptionPanel" type="Control" parent="Overview" unique_id=1316471918]
+clip_contents = true
+anchors_preset = 0
+offset_left = 647.0
+offset_top = 238.0
+offset_right = 945.0
+offset_bottom = 324.0
+
+[node name="Description" type="Label" parent="Overview/DescriptionPanel" unique_id=1995738719]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 282.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Giới thiệu:
+Cứ mỗi tăng 1 cấp Tank sẽ nhận được 1 Ngôi Sao,
+tích lũy đạt số lượng nhất định sẽ tăng Quân Hàm."
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[node name="SpecialRankIcon" type="TextureRect" parent="Overview" unique_id=645541569]
+layout_mode = 0
+offset_left = 657.0
+offset_top = 370.0
+offset_right = 733.0
+offset_bottom = 452.0
+mouse_filter = 2
+texture = ExtResource("14_rank10")
+stretch_mode = 3
+
+[node name="ActivateLabel" type="Label" parent="Overview" unique_id=1619297030]
+layout_mode = 0
+offset_left = 740.0
+offset_top = 370.0
+offset_right = 840.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(1, 0.88, 0.08, 1)
+theme_override_font_sizes/font_size = 16
+text = "Kích hoạt"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CooldownIcon" type="TextureRect" parent="Overview" unique_id=1929022163]
+layout_mode = 0
+offset_left = 876.0
+offset_top = 391.0
+offset_right = 923.0
+offset_bottom = 445.0
+mouse_filter = 2
+texture = ExtResource("11_cooldown")
+stretch_mode = 3
+
+[node name="SpecialRankText" type="Label" parent="Overview" unique_id=195421524]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 451.0
+offset_right = 822.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "Quân hàm Thiếu Tá kích hoạt thuộc tính"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CooldownText" type="Label" parent="Overview" unique_id=124872682]
+layout_mode = 0
+offset_left = 838.0
+offset_top = 459.0
+offset_right = 958.0
+offset_bottom = 483.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "CD Skill -0.5%"
+horizontal_alignment = 1
+vertical_alignment = 1

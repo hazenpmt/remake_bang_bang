@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://diitbg41qv8yp"]
+
+[ext_resource type="Texture2D" uid="uid://qtv3rr2gi8ug" path="res://assets/animations/battle_result_mv_t_compact/shapes/6.png" id="1_pedestal"]
+[ext_resource type="Texture2D" uid="uid://ng13abwbpohx" path="res://assets/animations/battle_result_mv_t_compact/shapes/28.png" id="2_rotation"]
+[ext_resource type="Texture2D" uid="uid://du7nsawhvhtif" path="res://assets/animations/battle_result_mv_t_compact/shapes/24.png" id="3_player_name"]
+[ext_resource type="Texture2D" uid="uid://bu1k4o4yv4vc6" path="res://assets/animations/battle_result_mv_t_compact/shapes/14.png" id="4_tank_name"]
+[ext_resource type="Texture2D" uid="uid://7u5gp5qo7nvh" path="res://assets/battle/result/avatar_heads/boy001.png" id="5_avatar"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/tank_ironman_reward.png" id="6_tank"]
+[ext_resource type="PackedScene" path="res://scenes/battle/PvpBattleHonorBadge.tscn" id="7_badge"]
+
+[sub_resource type="Shader" id="Shader_subtract"]
+code = "shader_type canvas_item;
+render_mode unshaded, blend_sub;
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_subtract"]
+shader = SubResource("Shader_subtract")
+
+[node name="PvpBattleHonorSlot" type="Control" unique_id=768265567]
+custom_minimum_size = Vector2(249, 492)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 249.0
+offset_bottom = 492.0
+mouse_filter = 2
+
+[node name="LayoutGuides" type="Node2D" parent="." unique_id=1744436873]
+
+[node name="TripleContentOffset" type="Marker2D" parent="LayoutGuides" unique_id=1657710747]
+position = Vector2(0, 42)
+
+[node name="Content" type="Control" parent="." unique_id=991209534]
+anchors_preset = 0
+offset_right = 249.0
+offset_bottom = 492.0
+mouse_filter = 2
+
+[node name="Pedestal" type="TextureRect" parent="Content" unique_id=681020544]
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 406.0
+mouse_filter = 2
+texture = ExtResource("1_pedestal")
+
+[node name="PedestalAura" type="TextureRect" parent="Content" unique_id=18406208]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 406.0
+mouse_filter = 2
+texture = ExtResource("1_pedestal")
+
+[node name="RotatingBase" type="Node2D" parent="Content" unique_id=1304016021]
+position = Vector2(124.5, 334.9)
+scale = Vector2(2.259262, 1)
+
+[node name="SourceRotation" type="Sprite2D" parent="Content/RotatingBase" unique_id=384834221]
+material = SubResource("ShaderMaterial_subtract")
+texture = ExtResource("2_rotation")
+
+[node name="Avatar" type="Control" parent="Content" unique_id=102230922]
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 32.0
+offset_right = 252.0
+offset_bottom = 151.0
+mouse_filter = 2
+
+[node name="Portrait" type="TextureRect" parent="Content/Avatar" unique_id=296998452]
+layout_mode = 0
+offset_left = 57.0
+offset_right = 192.0
+offset_bottom = 119.0
+mouse_filter = 2
+texture = ExtResource("5_avatar")
+
+[node name="PlayerNameBackground" type="TextureRect" parent="Content" unique_id=2074353028]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 150.0
+offset_right = 231.0
+offset_bottom = 179.0
+mouse_filter = 2
+texture = ExtResource("3_player_name")
+
+[node name="PlayerName" type="Label" parent="Content" unique_id=2039851811]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 151.0
+offset_right = 240.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(1, 0.980392, 0.498039, 1)
+theme_override_colors/font_outline_color = Color(0.921569, 0.219608, 0.003922, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 18
+text = "Beenn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TankVisual" type="Control" parent="Content" unique_id=1563839149]
+anchors_preset = 0
+offset_right = 249.0
+offset_bottom = 492.0
+mouse_filter = 2
+
+[node name="TankImage" type="TextureRect" parent="Content/TankVisual" unique_id=670864201]
+layout_mode = 0
+offset_left = 24.5
+offset_top = 194.0
+offset_right = 224.5
+offset_bottom = 394.0
+mouse_filter = 2
+texture = ExtResource("6_tank")
+
+[node name="TankNameBackground" type="TextureRect" parent="Content" unique_id=1975098473]
+layout_mode = 0
+offset_left = 50.5
+offset_top = 404.0
+offset_right = 198.5
+offset_bottom = 431.0
+mouse_filter = 2
+texture = ExtResource("4_tank_name")
+
+[node name="TankName" type="Label" parent="Content" unique_id=1150389317]
+layout_mode = 0
+offset_left = 50.5
+offset_top = 404.0
+offset_right = 198.5
+offset_bottom = 431.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.05, 0.08, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 14
+text = "Iron Man"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Honors" type="Control" parent="." unique_id=1311213041]
+anchors_preset = 0
+offset_left = -3.0
+offset_top = -75.0
+offset_right = 246.0
+offset_bottom = 75.0
+mouse_filter = 2
+
+[node name="LayoutSingle" type="Control" parent="Honors" unique_id=372120951]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Badge1" parent="Honors/LayoutSingle" unique_id=1486520015 instance=ExtResource("7_badge")]
+layout_mode = 0
+offset_left = 74.5
+offset_right = 174.5
+
+[node name="LayoutDouble" type="Control" parent="Honors" unique_id=1586708651]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Badge1" parent="Honors/LayoutDouble" unique_id=919344203 instance=ExtResource("7_badge")]
+layout_mode = 0
+offset_left = 24.5
+offset_right = 124.5
+
+[node name="Badge2" parent="Honors/LayoutDouble" unique_id=1902306164 instance=ExtResource("7_badge")]
+layout_mode = 0
+offset_left = 124.5
+offset_right = 224.5
+
+[node name="LayoutTriple" type="Control" parent="Honors" unique_id=588493855]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Badge1" parent="Honors/LayoutTriple" unique_id=1559471537 instance=ExtResource("7_badge")]
+layout_mode = 0
+offset_left = 139.5
+offset_top = 48.0
+offset_right = 239.5
+offset_bottom = 148.0
+
+[node name="Badge2" parent="Honors/LayoutTriple" unique_id=479976017 instance=ExtResource("7_badge")]
+layout_mode = 0
+offset_left = 74.5
+offset_right = 174.5
+
+[node name="Badge3" parent="Honors/LayoutTriple" unique_id=1608413776 instance=ExtResource("7_badge")]
+layout_mode = 0
+offset_left = 9.5
+offset_top = 48.0
+offset_right = 109.5
+offset_bottom = 148.0

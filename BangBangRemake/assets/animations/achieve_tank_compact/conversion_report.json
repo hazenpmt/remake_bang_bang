@@ -1,0 +1,19 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\ui\\94b8f94bfd2bf8270ce13f0b384bc007.swf",
+  "logical_name": "zh_CN/swf/ui/achieve_tank_mv_t.swf",
+  "fps": 24.0,
+  "frames": 97,
+  "shape_textures": 13,
+  "sprite_timelines": 25,
+  "frame_items_min": 13,
+  "frame_items_max": 24,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 363516,
+  "timeline_json_bytes": 308378,
+  "warnings": [
+    "Flash filters were found; compare them or bake only the affected layer.",
+    "Sprite 43 applies blend mode 8 to multiple children; compare group blending visually.",
+    "Sprite 50 applies blend mode 8 to multiple children; compare group blending visually."
+  ]
+}

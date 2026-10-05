@@ -1,0 +1,17 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\gui_summer\\controls\\login\\db0e8aab964db25fed8390e19a5b6f83.swf",
+  "logical_name": "zh_CN/gui_summer/controls/login/loading.swf",
+  "fps": 24.0,
+  "frames": 100,
+  "shape_textures": 5,
+  "sprite_timelines": 4,
+  "frame_items_min": 5,
+  "frame_items_max": 5,
+  "frame_masks_min": 1,
+  "frame_masks_max": 1,
+  "shape_png_bytes": 27509,
+  "timeline_json_bytes": 95756,
+  "warnings": [
+    "Sprite 10 applies blend mode 14 to multiple children; compare group blending visually."
+  ]
+}

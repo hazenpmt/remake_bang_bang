@@ -1,0 +1,320 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/auth/login_background.jpg" id="1_bg"]
+[ext_resource type="Texture2D" path="res://assets/auth/character_name_input.png" id="2_input"]
+[ext_resource type="Script" path="res://scripts/auth/character_select.gd" id="3_script"]
+[ext_resource type="Texture2D" path="res://assets/auth/gender_male.png" id="4_male"]
+[ext_resource type="Texture2D" path="res://assets/auth/gender_female.png" id="5_female"]
+[ext_resource type="Script" path="res://scripts/animation/swf_timeline_player.gd" id="6_timeline"]
+[ext_resource type="Texture2D" path="res://assets/auth/character_name_label.png" id="8_name_label"]
+[ext_resource type="Texture2D" path="res://assets/auth/character_confirm_frame.png" id="9_confirm_frame"]
+[ext_resource type="Texture2D" path="res://assets/auth/character_confirm_text.png" id="12_confirm_text"]
+[ext_resource type="PackedScene" path="res://scenes/common/MusicToggle.tscn" id="13_music_toggle"]
+[ext_resource type="Texture2D" path="res://assets/auth/character_roster/title_choose_character.png" id="14_title"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBox_input"]
+texture = ExtResource("2_input")
+texture_margin_left = 24.0
+texture_margin_top = 18.0
+texture_margin_right = 24.0
+texture_margin_bottom = 18.0
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_gender_glow"]
+bg_color = Color(1, 0.78, 0.08, 0.08)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.94, 0.22, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+shadow_color = Color(1, 0.55, 0.04, 0.8)
+shadow_size = 8
+
+[node name="CharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CharacterLayer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MaleCharacter" type="Node2D" parent="CharacterLayer"]
+unique_name_in_owner = true
+position = Vector2(715, 475)
+scale = Vector2(1.35, 1.35)
+script = ExtResource("6_timeline")
+timeline_path = "res://assets/animations/character_select_boy_compact/timeline.json"
+start_frame = 14
+end_frame = 91
+content_scale = Vector2(0.8, 0.8)
+content_position_adjust = Vector2(84, 41)
+
+[node name="FemaleCharacter" type="Node2D" parent="CharacterLayer"]
+unique_name_in_owner = true
+position = Vector2(1340, 475)
+scale = Vector2(1.35, 1.35)
+script = ExtResource("6_timeline")
+timeline_path = "res://assets/animations/character_select_girl_compact/timeline.json"
+autoplay = false
+content_scale = Vector2(0.8, 0.8)
+content_position_adjust = Vector2(84, 41)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Form" type="VBoxContainer" parent="Center"]
+custom_minimum_size = Vector2(620, 700)
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 0
+
+[node name="TopSpace" type="Control" parent="Center/Form"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Title" type="TextureRect" parent="Center/Form"]
+custom_minimum_size = Vector2(182, 53)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+texture = ExtResource("14_title")
+expand_mode = 0
+stretch_mode = 5
+
+[node name="CharacterSpace" type="Control" parent="Center/Form"]
+custom_minimum_size = Vector2(0, 237)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="GenderButtons" type="HBoxContainer" parent="Center/Form"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="MaleSlot" type="Control" parent="Center/Form/GenderButtons"]
+custom_minimum_size = Vector2(82, 82)
+layout_mode = 2
+
+[node name="MaleSelectionGlow" type="Panel" parent="Center/Form/GenderButtons/MaleSlot"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -38.0
+offset_right = 38.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBox_gender_glow")
+
+[node name="BtnMale" type="TextureButton" parent="Center/Form/GenderButtons/MaleSlot"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -33.0
+offset_right = 33.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("4_male")
+texture_pressed = ExtResource("4_male")
+texture_hover = ExtResource("4_male")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FemaleSlot" type="Control" parent="Center/Form/GenderButtons"]
+custom_minimum_size = Vector2(82, 82)
+layout_mode = 2
+
+[node name="FemaleSelectionGlow" type="Panel" parent="Center/Form/GenderButtons/FemaleSlot"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -38.0
+offset_right = 38.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBox_gender_glow")
+
+[node name="BtnFemale" type="TextureButton" parent="Center/Form/GenderButtons/FemaleSlot"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(66, 66)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -33.0
+offset_right = 33.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("5_female")
+texture_pressed = ExtResource("5_female")
+texture_hover = ExtResource("5_female")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="NameRow" type="HBoxContainer" parent="Center/Form"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="NameLabel" type="TextureRect" parent="Center/Form/NameRow"]
+custom_minimum_size = Vector2(115, 29)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("8_name_label")
+expand_mode = 0
+stretch_mode = 5
+
+[node name="CharacterName" type="LineEdit" parent="Center/Form/NameRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(257, 69)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBox_input")
+theme_override_styles/focus = SubResource("StyleBox_input")
+alignment = 1
+placeholder_text = "3-10 ký tự"
+max_length = 10
+
+[node name="NameRightOffset" type="Control" parent="Center/Form/NameRow"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BtnConfirm" type="TextureButton" parent="Center/Form"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(198, 84)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("9_confirm_frame")
+texture_pressed = ExtResource("9_confirm_frame")
+texture_hover = ExtResource("9_confirm_frame")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="OkText" type="TextureRect" parent="Center/Form/BtnConfirm"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -17.0
+offset_right = 32.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("12_confirm_text")
+expand_mode = 0
+stretch_mode = 5
+
+[node name="StatusLabel" type="Label" parent="Center/Form"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 19
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomInfo" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MusicToggle" parent="BottomInfo" instance=ExtResource("13_music_toggle")]
+
+[node name="HealthWarning" type="Label" parent="BottomInfo"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -59.0
+offset_right = 500.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Chơi game quá 180 phút một ngày sẽ ảnh hưởng xấu đến sức khỏe"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,396 @@
+[gd_scene format=3 uid="uid://c1sxq7rk1rk7m"]
+
+[ext_resource type="Script" uid="uid://b084ogkqepw8r" path="res://scripts/lobby/lobby_chat.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dykarj8w4qu24" path="res://assets/ui/chat/warning.png" id="2_warning"]
+[ext_resource type="Texture2D" uid="uid://o4goxx2674k8" path="res://assets/ui/chat/chat_background.png" id="3_background"]
+[ext_resource type="Texture2D" uid="uid://dwicmxj6qsgdd" path="res://assets/ui/chat/tab_normal.png" id="4_tab_normal"]
+[ext_resource type="Texture2D" uid="uid://v5n61lhsna2w" path="res://assets/ui/chat/tab_selected.png" id="5_tab_selected"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_up.png" id="6_up"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_down.png" id="7_down"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_track.png" id="8_track"]
+[ext_resource type="Texture2D" uid="uid://dnrytaq1umsod" path="res://assets/ui/chat/clear.png" id="9_clear"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/input_head.png" id="10_head"]
+[ext_resource type="Texture2D" uid="uid://drhrai8rf0rrd" path="res://assets/ui/chat/input_mid.png" id="11_mid"]
+[ext_resource type="Texture2D" uid="uid://c5cfknk5j27r3" path="res://assets/ui/chat/input_tail.png" id="12_tail"]
+[ext_resource type="Texture2D" uid="uid://b5k1ysh2dfk3f" path="res://assets/ui/chat/friend.png" id="13_friend"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/send.png" id="14_send"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/quick_chat.png" id="15_quick"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/message_input_left.png" id="16_message_left"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/message_input_mid.png" id="17_message_mid"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/message_input_right.png" id="18_message_right"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skin_scroll_thumb.png" id="19_scroll_thumb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_input"]
+
+[node name="LobbyChat" type="Control" unique_id=1975079930]
+z_index = 20
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -256.0
+offset_right = 469.0
+grow_vertical = 0
+script = ExtResource("1_script")
+
+[node name="Warning" type="TextureRect" parent="." unique_id=1730935711]
+layout_mode = 0
+offset_right = 460.0
+offset_bottom = 50.0
+mouse_filter = 2
+texture = ExtResource("2_warning")
+
+[node name="History" type="Control" parent="." unique_id=391681654]
+anchors_preset = 0
+offset_top = 50.0
+offset_right = 464.0
+offset_bottom = 213.0
+
+[node name="Background" type="TextureRect" parent="History" unique_id=43891608]
+layout_mode = 0
+offset_right = 464.0
+offset_bottom = 163.0
+mouse_filter = 2
+texture = ExtResource("3_background")
+
+[node name="Messages" type="RichTextLabel" parent="History" unique_id=345210692]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 35.0
+offset_right = 428.0
+offset_bottom = 157.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 0
+clip_contents = true
+vertical_alignment = 0
+
+[node name="TabTotal" type="TextureButton" parent="History" unique_id=1981282083]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 4.0
+offset_right = 97.0
+offset_bottom = 29.0
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("4_tab_normal")
+texture_pressed = ExtResource("5_tab_selected")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="History/TabTotal" unique_id=303418368]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "Tổng"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabRoom" type="TextureButton" parent="History" unique_id=1833444969]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 4.0
+offset_right = 166.0
+offset_bottom = 29.0
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("4_tab_normal")
+texture_pressed = ExtResource("5_tab_selected")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="History/TabRoom" unique_id=1884639636]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "Room"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabTeam" type="TextureButton" parent="History" unique_id=1333514325]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 4.0
+offset_right = 235.0
+offset_bottom = 29.0
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("4_tab_normal")
+texture_pressed = ExtResource("5_tab_selected")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="History/TabTeam" unique_id=863336891]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "Team"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabGuild" type="TextureButton" parent="History" unique_id=1866748828]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 4.0
+offset_right = 304.0
+offset_bottom = 29.0
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("4_tab_normal")
+texture_pressed = ExtResource("5_tab_selected")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="History/TabGuild" unique_id=315995902]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "Guild"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabPrivate" type="TextureButton" parent="History" unique_id=669270661]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 4.0
+offset_right = 373.0
+offset_bottom = 29.0
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("4_tab_normal")
+texture_pressed = ExtResource("5_tab_selected")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="History/TabPrivate" unique_id=1386376165]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 11
+text = "Chat riêng"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Btn_Clear" type="TextureButton" parent="History" unique_id=2131343263]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 5.0
+offset_right = 427.0
+offset_bottom = 25.0
+tooltip_text = "Xóa nội dung chat đang hiển thị"
+focus_mode = 0
+texture_normal = ExtResource("9_clear")
+
+[node name="Btn_Up" type="TextureButton" parent="History" unique_id=197925198]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 36.0
+offset_right = 453.0
+offset_bottom = 55.0
+tooltip_text = "Cuộn lên"
+focus_mode = 0
+texture_normal = ExtResource("6_up")
+
+[node name="ScrollTrack" type="TextureRect" parent="History" unique_id=1883545184]
+clip_contents = true
+layout_mode = 0
+offset_left = 434.0
+offset_top = 55.0
+offset_right = 454.0
+offset_bottom = 137.0
+mouse_filter = 0
+texture = ExtResource("8_track")
+expand_mode = 1
+
+[node name="Thumb" type="TextureRect" parent="History/ScrollTrack" unique_id=1801785591]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 19.0
+offset_bottom = 82.0
+mouse_filter = 0
+texture = ExtResource("19_scroll_thumb")
+expand_mode = 1
+
+[node name="Btn_Down" type="TextureButton" parent="History" unique_id=1097504486]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 137.0
+offset_right = 453.0
+offset_bottom = 156.0
+tooltip_text = "Cuộn xuống"
+focus_mode = 0
+texture_normal = ExtResource("7_down")
+
+[node name="Input" type="Control" parent="." unique_id=1500914775]
+anchors_preset = 0
+offset_top = 213.0
+offset_right = 464.0
+offset_bottom = 256.0
+
+[node name="Head" type="TextureRect" parent="Input" unique_id=1369523979]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("10_head")
+
+[node name="Middle" type="TextureRect" parent="Input" unique_id=641944181]
+texture_repeat = 2
+layout_mode = 0
+offset_left = 110.0
+offset_right = 440.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("11_mid")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Tail" type="TextureRect" parent="Input" unique_id=186000949]
+layout_mode = 0
+offset_left = 440.0
+offset_right = 464.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("12_tail")
+
+[node name="MessageInputLeft" type="TextureRect" parent="Input" unique_id=254058818]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 7.0
+offset_right = 134.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("16_message_left")
+
+[node name="MessageInputMiddle" type="TextureRect" parent="Input" unique_id=126713028]
+texture_repeat = 2
+layout_mode = 0
+offset_left = 134.0
+offset_top = 7.0
+offset_right = 355.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("17_message_mid")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="MessageInputRight" type="TextureRect" parent="Input" unique_id=523621510]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 7.0
+offset_right = 374.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("18_message_right")
+
+[node name="ChannelLabel" type="Label" parent="Input" unique_id=535419942]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 83.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.24, 0.42, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "Thế Giới"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Btn_Channel" type="Button" parent="Input" unique_id=206737079]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 104.0
+offset_bottom = 37.0
+tooltip_text = "Kênh chat hiện tại"
+focus_mode = 0
+flat = true
+
+[node name="Message" type="LineEdit" parent="Input" unique_id=718661778]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 7.0
+offset_right = 346.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.23, 0.42, 1)
+theme_override_colors/font_placeholder_color = Color(0.9, 0.96, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_input")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_input")
+placeholder_text = "Nhập nội dung chat bằng trả lời nhanh"
+max_length = 120
+
+[node name="Btn_Friend" type="TextureButton" parent="Input" unique_id=242239056]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 6.0
+offset_right = 413.0
+offset_bottom = 37.0
+tooltip_text = "Chat riêng"
+focus_mode = 0
+texture_normal = ExtResource("13_friend")
+
+[node name="Btn_Send" type="TextureButton" parent="Input" unique_id=1196992780]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 16.0
+offset_right = 366.0
+offset_bottom = 32.0
+tooltip_text = "Gửi tin nhắn"
+focus_mode = 0
+texture_normal = ExtResource("14_send")
+
+[node name="Btn_QuickChat" type="TextureButton" parent="Input" unique_id=1707136992]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 6.0
+offset_right = 458.0
+offset_bottom = 37.0
+tooltip_text = "Nhập tin nhắn"
+focus_mode = 0
+texture_normal = ExtResource("15_quick")
+
+[node name="PollTimer" type="Timer" parent="." unique_id=354757473]
+wait_time = 2.0
+autostart = true

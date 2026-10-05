@@ -1,0 +1,17 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\ui\\select\\select_no_arrow.swf",
+  "logical_name": "ui/select/select_no_arrow",
+  "fps": 24.0,
+  "frames": 10,
+  "shape_textures": 1,
+  "sprite_timelines": 1,
+  "frame_items_min": 3,
+  "frame_items_max": 3,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 4311,
+  "timeline_json_bytes": 5811,
+  "warnings": [
+    "Flash filters were found; compare them or bake only the affected layer."
+  ]
+}

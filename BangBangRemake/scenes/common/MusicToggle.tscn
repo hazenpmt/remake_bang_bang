@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/auth/music_on.png" id="1_music_on"]
+[ext_resource type="Script" path="res://scripts/ui/music_toggle.gd" id="2_script"]
+
+[node name="MusicToggle" type="TextureButton"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -100.0
+offset_right = 16.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+tooltip_text = "Tắt nhạc nền"
+texture_normal = ExtResource("1_music_on")
+texture_pressed = ExtResource("1_music_on")
+texture_hover = ExtResource("1_music_on")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_script")

@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\ui\\6a42219f269c261eb3144702db226d09.swf",
+  "logical_name": "zh_CN/swf/ui/sex_girl.swf",
+  "fps": 24.0,
+  "frames": 110,
+  "shape_textures": 3,
+  "sprite_timelines": 3,
+  "frame_items_min": 1,
+  "frame_items_max": 4,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 276858,
+  "timeline_json_bytes": 61546,
+  "warnings": []
+}

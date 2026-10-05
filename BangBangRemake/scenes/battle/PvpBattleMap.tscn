@@ -1,0 +1,1779 @@
+[gd_scene format=3 uid="uid://xhlq1c85ufhp"]
+
+[ext_resource type="Script" uid="uid://b7il0tp0deohu" path="res://scripts/battle/pvp_battle_map.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c6v5ac1sx65t1" path="res://assets/battle/maps/Maya Tiên tri(Tính điểm)/stage1.jpg" id="2_map"]
+[ext_resource type="Texture2D" uid="uid://busvw5vkta6ug" path="res://assets/battle/maps/Maya Tiên tri(Tính điểm)/stage1_sky.png" id="3_foreground"]
+[ext_resource type="PackedScene" path="res://scenes/battle/PvpBattleTank.tscn" id="4_tank"]
+[ext_resource type="Texture2D" uid="uid://b85i48jo32m76" path="res://assets/battle/maps/Maya Tiên tri(Tính điểm)/stage1_small.jpg" id="5_minimap"]
+[ext_resource type="Texture2D" path="res://assets/battle/hud/minimap/gangtiexia_small.png" id="6_marker"]
+[ext_resource type="Texture2D" uid="uid://c3hyk4qg2vlxs" path="res://assets/battle/hud/system_set.png" id="7_settings"]
+[ext_resource type="Texture2D" uid="uid://b0vsvhhk87b3h" path="res://assets/battle/hud/word_hp.png" id="8_hp_word"]
+[ext_resource type="Texture2D" uid="uid://bi0gy0ml5omtm" path="res://assets/battle/hud/life_bg.png" id="9_hp_bg"]
+[ext_resource type="Texture2D" uid="uid://chtx2om7mqfai" path="res://assets/battle/hud/life_green.png" id="10_hp_fill"]
+[ext_resource type="Texture2D" uid="uid://du7u0suirmsfy" path="res://assets/battle/hud/skill_slot.png" id="11_skill_slot"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skill_ironman_1.jpg" id="12_skill_1"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skill_ironman_2.jpg" id="13_skill_2"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skill_ironman_3.jpg" id="14_skill_3"]
+[ext_resource type="Script" uid="uid://bvn8uw1j2bjgm" path="res://scripts/animation/swf_timeline_player.gd" id="15_swf"]
+[ext_resource type="Script" uid="uid://dscqtoeghbmab" path="res://scripts/battle/pvp_battle_skill_slot.gd" id="16_skill_slot"]
+[ext_resource type="Texture2D" uid="uid://k0533xkjoxl6" path="res://assets/battle/hud/keys/key_r.png" id="17_key_r"]
+[ext_resource type="Texture2D" uid="uid://cyqr2pqi21phh" path="res://assets/battle/hud/keys/key_e.png" id="18_key_e"]
+[ext_resource type="Texture2D" uid="uid://ciq8j2ht02g8c" path="res://assets/battle/hud/keys/key_space.png" id="19_key_space"]
+[ext_resource type="Script" uid="uid://b63kxw5l257hv" path="res://scripts/battle/pvp_battle_map_editor_preview.gd" id="20_editor_preview"]
+[ext_resource type="Texture2D" uid="uid://bxa1urrak1iu7" path="res://assets/battle/tanks/Iron Man/buffs/buff_gangtie1.jpg" id="21_shield_buff"]
+[ext_resource type="Texture2D" uid="uid://y8x6ldrgwf21" path="res://assets/battle/hud/respawn/relive_bg_pve.png" id="22_respawn_bg"]
+[ext_resource type="Texture2D" uid="uid://1kyq05olyhl2" path="res://assets/battle/hud/respawn/btn_relive_right_now_t.png" id="23_respawn_now"]
+[ext_resource type="Texture2D" uid="uid://bei2y7agxfrcl" path="res://assets/battle/hud/respawn/word_vip.png" id="24_vip_word"]
+[ext_resource type="Script" uid="uid://tc8wf41pxeh0" path="res://scripts/battle/pvp_battle_map_object_marker.gd" id="25_map_object_marker"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/fixbox001.png" id="26_object_1008"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/fixbox002.png" id="27_object_1009"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/cannon1_base.png" id="28_object_1102"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/cannon2_base.png" id="29_object_1103"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/missile2_base.png" id="30_object_1105"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/missile2_base.png" id="31_object_1106"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/box001.png" id="32_object_2003"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/box002.png" id="33_object_2004"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/box004.png" id="34_object_2006"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/earthbags002.png" id="35_object_2008"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/abatis001.png" id="36_object_2009"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/abatis002.png" id="37_object_2010"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/roadblock001.png" id="38_object_2011"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/iron006.png" id="39_object_5031"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/cannon1_gun.png" id="40_object_1102_gun"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/cannon2_gun.png" id="41_object_1103_gun"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/missile1_gun.png" id="42_object_1105_gun"]
+[ext_resource type="Texture2D" path="res://assets/battle/buildings/npc/missile2_gun.png" id="43_object_1106_gun"]
+[ext_resource type="PackedScene" path="res://scenes/battle/PvpBattleChief.tscn" id="44_chief"]
+[ext_resource type="PackedScene" uid="uid://d3j27oidhsinw" path="res://scenes/battle/PvpBattleTeamStateCard.tscn" id="45_team_card"]
+[ext_resource type="Texture2D" uid="uid://65exde3anfgb" path="res://assets/ui/pvp_match_flow/chat/chat_load.png" id="46_battle_chat"]
+[ext_resource type="Texture2D" uid="uid://o5hx0u1p33pv" path="res://assets/battle/hud/alive/bg.png" id="47_score_bg"]
+[ext_resource type="Texture2D" uid="uid://dpqxvppl8560f" path="res://assets/battle/hud/alive/left_blue.png" id="48_score_left_blue"]
+[ext_resource type="Texture2D" uid="uid://csf7wym1dc3n6" path="res://assets/battle/hud/alive/right_red.png" id="51_score_right_red"]
+[ext_resource type="PackedScene" path="res://scenes/battle/PvpBattleResultSequence.tscn" id="52_result_sequence"]
+[ext_resource type="PackedScene" path="res://scenes/battle/PvpBattleSettings.tscn" id="53_battle_settings"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_honj5"]
+size = Vector2(2160, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yofyb"]
+size = Vector2(168, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdowo"]
+size = Vector2(96, 936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgnst"]
+size = Vector2(203, 89)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o4be"]
+size = Vector2(72, 912)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t2o0"]
+size = Vector2(90, 190.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt6ul"]
+size = Vector2(312, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5eb5"]
+size = Vector2(336, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2b0mc"]
+size = Vector2(72, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkvf3"]
+size = Vector2(240, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v65re"]
+size = Vector2(48, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ec4yi"]
+size = Vector2(90, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1a56x"]
+size = Vector2(48, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xud3w"]
+size = Vector2(48, 321.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28xjx"]
+size = Vector2(240, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpjrk"]
+size = Vector2(94, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfrrp"]
+size = Vector2(312, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cxbv"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yooeo"]
+size = Vector2(186, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnj0s"]
+size = Vector2(168, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm6h1"]
+size = Vector2(2160, 168)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_player_movement"]
+radius = 36.0
+
+[sub_resource type="SystemFont" id="SystemFont_map_name"]
+font_names = PackedStringArray("Arial")
+font_weight = 700
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBox_battle_chat_input"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_top_right_frame"]
+bg_color = Color(0.02, 0.07, 0.08, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.85, 0.97, 0.98, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[node name="PvpBattleMap" type="Control" unique_id=444954372]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="ViewportContainer" type="SubViewportContainer" parent="." unique_id=1061809702]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WorldViewport" type="SubViewport" parent="ViewportContainer" unique_id=581620385]
+handle_input_locally = false
+size = Vector2i(2160, 1413)
+render_target_update_mode = 4
+
+[node name="World" type="Node2D" parent="ViewportContainer/WorldViewport" unique_id=1908146052]
+
+[node name="Background" type="Sprite2D" parent="ViewportContainer/WorldViewport/World" unique_id=527020002]
+position = Vector2(1080, 706.5)
+texture = ExtResource("2_map")
+
+[node name="EditorMapPreview" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=1831960338]
+z_index = 100
+script = ExtResource("20_editor_preview")
+
+[node name="EditorMapObjects" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=814048624]
+z_index = 90
+
+[node name="Object_004" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1082816811]
+position = Vector2(216, 240)
+script = ExtResource("25_map_object_marker")
+unique_id = 4
+template_id = 1105
+team_no = 1
+source_unique_id = 4
+collision_rectangles = Array[Rect2]([Rect2(-48, -48, 96, 96)])
+
+[node name="Base" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_004" unique_id=1093920429]
+show_behind_parent = true
+texture = ExtResource("30_object_1105")
+metadata/_edit_lock_ = true
+
+[node name="Overlay" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_004" unique_id=1398366379]
+show_behind_parent = true
+texture = ExtResource("42_object_1105_gun")
+metadata/_edit_lock_ = true
+
+[node name="Object_005" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=430243917]
+position = Vector2(132, 348)
+texture = ExtResource("26_object_1008")
+script = ExtResource("25_map_object_marker")
+unique_id = 5
+template_id = 1008
+team_no = 1
+source_unique_id = 5
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_006" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1127394971]
+position = Vector2(492, 396)
+texture = ExtResource("26_object_1008")
+script = ExtResource("25_map_object_marker")
+unique_id = 6
+template_id = 1008
+team_no = 1
+source_unique_id = 6
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_007" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=583112484]
+position = Vector2(1668, 1020)
+texture = ExtResource("27_object_1009")
+script = ExtResource("25_map_object_marker")
+unique_id = 7
+template_id = 1009
+team_no = 2
+source_unique_id = 7
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_008" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=45372262]
+position = Vector2(2028, 1068)
+texture = ExtResource("27_object_1009")
+script = ExtResource("25_map_object_marker")
+unique_id = 8
+template_id = 1009
+team_no = 2
+source_unique_id = 8
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_012" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1197832362]
+position = Vector2(1944, 1176)
+script = ExtResource("25_map_object_marker")
+unique_id = 12
+template_id = 1106
+team_no = 2
+source_unique_id = 12
+collision_rectangles = Array[Rect2]([Rect2(-48, -48, 96, 96)])
+
+[node name="Base" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_012" unique_id=150852172]
+show_behind_parent = true
+texture = ExtResource("31_object_1106")
+metadata/_edit_lock_ = true
+
+[node name="Overlay" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_012" unique_id=40889406]
+show_behind_parent = true
+texture = ExtResource("43_object_1106_gun")
+metadata/_edit_lock_ = true
+
+[node name="Object_014" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=886060063]
+position = Vector2(1860, 564)
+script = ExtResource("25_map_object_marker")
+unique_id = 14
+template_id = 1103
+team_no = 2
+source_unique_id = 14
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Base" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_014" unique_id=1272885335]
+show_behind_parent = true
+texture = ExtResource("29_object_1103")
+metadata/_edit_lock_ = true
+
+[node name="Overlay" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_014" unique_id=1867987166]
+show_behind_parent = true
+texture = ExtResource("41_object_1103_gun")
+metadata/_edit_lock_ = true
+
+[node name="Object_015" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1768032727]
+position = Vector2(300, 852)
+script = ExtResource("25_map_object_marker")
+unique_id = 15
+template_id = 1102
+team_no = 1
+source_unique_id = 15
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 48)])
+
+[node name="Base" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_015" unique_id=1759984196]
+show_behind_parent = true
+texture = ExtResource("28_object_1102")
+metadata/_edit_lock_ = true
+
+[node name="Overlay" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_015" unique_id=1137244260]
+show_behind_parent = true
+texture = ExtResource("40_object_1102_gun")
+metadata/_edit_lock_ = true
+
+[node name="Object_016" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=225646525]
+position = Vector2(300, 252)
+texture = ExtResource("39_object_5031")
+script = ExtResource("25_map_object_marker")
+unique_id = 16
+template_id = 5031
+team_no = 1
+source_unique_id = 16
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_017" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1477065915]
+position = Vector2(228, 324)
+texture = ExtResource("39_object_5031")
+script = ExtResource("25_map_object_marker")
+unique_id = 17
+template_id = 5031
+team_no = 1
+source_unique_id = 17
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_018" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=204125967]
+position = Vector2(372, 852)
+texture = ExtResource("39_object_5031")
+script = ExtResource("25_map_object_marker")
+unique_id = 18
+template_id = 5031
+team_no = 1
+source_unique_id = 18
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 48)])
+
+[node name="Object_019" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1250373562]
+position = Vector2(1788, 564)
+texture = ExtResource("39_object_5031")
+script = ExtResource("25_map_object_marker")
+unique_id = 19
+template_id = 5031
+team_no = 2
+source_unique_id = 19
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_020" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1409544883]
+position = Vector2(1860, 1164)
+texture = ExtResource("39_object_5031")
+script = ExtResource("25_map_object_marker")
+unique_id = 20
+template_id = 5031
+team_no = 2
+source_unique_id = 20
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_021" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=592141219]
+position = Vector2(1932, 1092)
+texture = ExtResource("39_object_5031")
+script = ExtResource("25_map_object_marker")
+unique_id = 21
+template_id = 5031
+team_no = 2
+source_unique_id = 21
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_022" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=433253716]
+position = Vector2(1860, 1092)
+texture = ExtResource("35_object_2008")
+script = ExtResource("25_map_object_marker")
+unique_id = 22
+template_id = 2008
+team_no = 2
+source_unique_id = 22
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_023" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=333137782]
+position = Vector2(300, 324)
+texture = ExtResource("35_object_2008")
+script = ExtResource("25_map_object_marker")
+unique_id = 23
+template_id = 2008
+team_no = 1
+source_unique_id = 23
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_024" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=2113724355]
+position = Vector2(372, 780)
+texture = ExtResource("35_object_2008")
+script = ExtResource("25_map_object_marker")
+unique_id = 24
+template_id = 2008
+team_no = 1
+source_unique_id = 24
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_025" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=2021500886]
+position = Vector2(300, 792)
+texture = ExtResource("37_object_2010")
+script = ExtResource("25_map_object_marker")
+unique_id = 25
+template_id = 2010
+team_no = 1
+source_unique_id = 25
+collision_rectangles = Array[Rect2]([Rect2(-36, -24, 72, 48)])
+
+[node name="Object_026" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1577563729]
+position = Vector2(1860, 624)
+texture = ExtResource("37_object_2010")
+script = ExtResource("25_map_object_marker")
+unique_id = 26
+template_id = 2010
+team_no = 2
+source_unique_id = 26
+collision_rectangles = Array[Rect2]([Rect2(-36, -24, 72, 48)])
+
+[node name="Object_027" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1126871875]
+position = Vector2(1788, 636)
+texture = ExtResource("35_object_2008")
+script = ExtResource("25_map_object_marker")
+unique_id = 27
+template_id = 2008
+team_no = 2
+source_unique_id = 27
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_028" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=781076265]
+position = Vector2(2028, 564)
+texture = ExtResource("32_object_2003")
+script = ExtResource("25_map_object_marker")
+unique_id = 28
+template_id = 2003
+source_unique_id = 28
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_029" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=818260993]
+position = Vector2(1668, 948)
+texture = ExtResource("32_object_2003")
+script = ExtResource("25_map_object_marker")
+unique_id = 29
+template_id = 2003
+source_unique_id = 29
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_030" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=378645206]
+position = Vector2(1668, 876)
+texture = ExtResource("32_object_2003")
+script = ExtResource("25_map_object_marker")
+unique_id = 30
+template_id = 2003
+source_unique_id = 30
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_031" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=713730188]
+position = Vector2(1668, 804)
+texture = ExtResource("33_object_2004")
+script = ExtResource("25_map_object_marker")
+unique_id = 31
+template_id = 2004
+source_unique_id = 31
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_032" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1006325101]
+position = Vector2(492, 468)
+texture = ExtResource("32_object_2003")
+script = ExtResource("25_map_object_marker")
+unique_id = 32
+template_id = 2003
+source_unique_id = 32
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_033" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1487644744]
+position = Vector2(492, 540)
+texture = ExtResource("32_object_2003")
+script = ExtResource("25_map_object_marker")
+unique_id = 33
+template_id = 2003
+source_unique_id = 33
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_034" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1044315923]
+position = Vector2(492, 612)
+texture = ExtResource("33_object_2004")
+script = ExtResource("25_map_object_marker")
+unique_id = 34
+template_id = 2004
+source_unique_id = 34
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_035" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1889086100]
+position = Vector2(132, 852)
+texture = ExtResource("32_object_2003")
+script = ExtResource("25_map_object_marker")
+unique_id = 35
+template_id = 2003
+source_unique_id = 35
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_046" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=597198639]
+position = Vector2(1296, 480)
+texture = ExtResource("34_object_2006")
+script = ExtResource("25_map_object_marker")
+unique_id = 46
+template_id = 2006
+source_unique_id = 46
+collision_rectangles = Array[Rect2]([Rect2(-72, -72, 144, 144)])
+
+[node name="Object_047" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=972995906]
+position = Vector2(864, 936)
+texture = ExtResource("34_object_2006")
+script = ExtResource("25_map_object_marker")
+unique_id = 47
+template_id = 2006
+source_unique_id = 47
+collision_rectangles = Array[Rect2]([Rect2(-72, -72, 144, 96)])
+
+[node name="Object_048" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=124363492]
+position = Vector2(1080, 1092)
+texture = ExtResource("36_object_2009")
+script = ExtResource("25_map_object_marker")
+unique_id = 48
+template_id = 2009
+team_no = 1
+source_unique_id = 48
+collision_rectangles = Array[Rect2]([Rect2(-24, -36, 48, 72)])
+
+[node name="Object_049" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=749093775]
+position = Vector2(1080, 1164)
+texture = ExtResource("36_object_2009")
+script = ExtResource("25_map_object_marker")
+unique_id = 49
+template_id = 2009
+team_no = 1
+source_unique_id = 49
+collision_rectangles = Array[Rect2]([Rect2(-24, -36, 48, 72)])
+
+[node name="Object_052" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1438125764]
+position = Vector2(1080, 324)
+texture = ExtResource("36_object_2009")
+script = ExtResource("25_map_object_marker")
+unique_id = 52
+template_id = 2009
+team_no = 2
+source_unique_id = 52
+collision_rectangles = Array[Rect2]([Rect2(-24, -36, 48, 72)])
+
+[node name="Object_053" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=46244440]
+position = Vector2(1080, 252)
+texture = ExtResource("36_object_2009")
+script = ExtResource("25_map_object_marker")
+unique_id = 53
+template_id = 2009
+team_no = 2
+source_unique_id = 53
+collision_rectangles = Array[Rect2]([Rect2(-24, -36, 48, 72)])
+
+[node name="Object_054" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=18055037]
+position = Vector2(1140, 324)
+texture = ExtResource("35_object_2008")
+script = ExtResource("25_map_object_marker")
+unique_id = 54
+template_id = 2008
+team_no = 2
+source_unique_id = 54
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 48)])
+
+[node name="Object_056" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1324164435]
+position = Vector2(1620, 396)
+texture = ExtResource("38_object_2011")
+script = ExtResource("25_map_object_marker")
+unique_id = 56
+template_id = 2011
+source_unique_id = 56
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_057" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=937638184]
+position = Vector2(1476, 396)
+texture = ExtResource("38_object_2011")
+script = ExtResource("25_map_object_marker")
+unique_id = 57
+template_id = 2011
+source_unique_id = 57
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_058" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=668473258]
+position = Vector2(540, 1020)
+texture = ExtResource("38_object_2011")
+script = ExtResource("25_map_object_marker")
+unique_id = 58
+template_id = 2011
+source_unique_id = 58
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_059" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1035386540]
+position = Vector2(684, 1020)
+texture = ExtResource("38_object_2011")
+script = ExtResource("25_map_object_marker")
+unique_id = 59
+template_id = 2011
+source_unique_id = 59
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_060" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1245554551]
+position = Vector2(1980, 180)
+texture = ExtResource("33_object_2004")
+script = ExtResource("25_map_object_marker")
+unique_id = 60
+template_id = 2004
+source_unique_id = 60
+collision_rectangles = Array[Rect2]([Rect2(-36, -12, 72, 48)])
+
+[node name="Object_061" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1802288512]
+position = Vector2(180, 1236)
+texture = ExtResource("33_object_2004")
+script = ExtResource("25_map_object_marker")
+unique_id = 61
+template_id = 2004
+source_unique_id = 61
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 24)])
+
+[node name="Object_064" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1486752732]
+position = Vector2(1020, 1092)
+texture = ExtResource("35_object_2008")
+script = ExtResource("25_map_object_marker")
+unique_id = 64
+template_id = 2008
+team_no = 1
+source_unique_id = 64
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Object_068" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1589342463]
+position = Vector2(1140, 252)
+script = ExtResource("25_map_object_marker")
+unique_id = 68
+template_id = 1103
+team_no = 2
+source_unique_id = 68
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Base" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_068" unique_id=861640335]
+show_behind_parent = true
+texture = ExtResource("29_object_1103")
+metadata/_edit_lock_ = true
+
+[node name="Overlay" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_068" unique_id=896770212]
+show_behind_parent = true
+texture = ExtResource("41_object_1103_gun")
+metadata/_edit_lock_ = true
+
+[node name="Object_069" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=1398762339]
+position = Vector2(1020, 1164)
+script = ExtResource("25_map_object_marker")
+unique_id = 69
+template_id = 1102
+team_no = 1
+source_unique_id = 69
+collision_rectangles = Array[Rect2]([Rect2(-36, -36, 72, 72)])
+
+[node name="Base" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_069" unique_id=296025128]
+show_behind_parent = true
+texture = ExtResource("28_object_1102")
+metadata/_edit_lock_ = true
+
+[node name="Overlay" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects/Object_069" unique_id=227672775]
+show_behind_parent = true
+texture = ExtResource("40_object_1102_gun")
+metadata/_edit_lock_ = true
+
+[node name="Object_070" type="Sprite2D" parent="ViewportContainer/WorldViewport/World/EditorMapObjects" unique_id=120023238]
+position = Vector2(300, 180)
+texture = ExtResource("39_object_5031")
+script = ExtResource("25_map_object_marker")
+unique_id = 70
+template_id = 5031
+team_no = 1
+source_unique_id = 70
+collision_rectangles = Array[Rect2]([Rect2(-36, -12, 72, 48)])
+
+[node name="TerrainCollision" type="StaticBody2D" parent="ViewportContainer/WorldViewport/World" unique_id=2125511207]
+collision_mask = 0
+
+[node name="DragCollision_00" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=553628146]
+position = Vector2(1080, 84)
+shape = SubResource("RectangleShape2D_honj5")
+
+[node name="DragCollision_01" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=439461818]
+position = Vector2(84, 240)
+shape = SubResource("RectangleShape2D_yofyb")
+
+[node name="DragCollision_02" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1127595518]
+position = Vector2(2112, 636)
+shape = SubResource("RectangleShape2D_xdowo")
+
+[node name="DragCollision_04" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=908883779]
+position = Vector2(516.5, 315)
+shape = SubResource("RectangleShape2D_lgnst")
+
+[node name="DragCollision_05" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=595951339]
+position = Vector2(36, 768)
+shape = SubResource("RectangleShape2D_7o4be")
+
+[node name="DragCollision_06" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1525822512]
+position = Vector2(573, 456.75)
+shape = SubResource("RectangleShape2D_5t2o0")
+
+[node name="DragCollision_07" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1175494763]
+position = Vector2(1260, 348)
+shape = SubResource("RectangleShape2D_dt6ul")
+
+[node name="DragCollision_08" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1778933641]
+position = Vector2(1272, 384)
+shape = SubResource("RectangleShape2D_n5eb5")
+
+[node name="DragCollision_09" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=122870599]
+position = Vector2(1404, 444)
+shape = SubResource("RectangleShape2D_2b0mc")
+
+[node name="DragCollision_10" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=128132646]
+position = Vector2(1776, 456)
+shape = SubResource("RectangleShape2D_wkvf3")
+
+[node name="DragCollision_11" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1885127952]
+position = Vector2(1392, 492)
+shape = SubResource("RectangleShape2D_v65re")
+
+[node name="DragCollision_12" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=337022434]
+position = Vector2(573, 612)
+shape = SubResource("RectangleShape2D_ec4yi")
+
+[node name="DragCollision_14" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=165548376]
+position = Vector2(576, 684)
+shape = SubResource("RectangleShape2D_1a56x")
+
+[node name="DragCollision_15" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1510914740]
+position = Vector2(1608, 847.25)
+shape = SubResource("RectangleShape2D_xud3w")
+
+[node name="DragCollision_16" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=225735512]
+position = Vector2(384, 912)
+shape = SubResource("RectangleShape2D_28xjx")
+
+[node name="DragCollision_17" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=555835105]
+position = Vector2(479, 996)
+shape = SubResource("RectangleShape2D_hpjrk")
+
+[node name="DragCollision_18" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1207701475]
+position = Vector2(876, 996)
+shape = SubResource("RectangleShape2D_sfrrp")
+
+[node name="DragCollision_19" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1839301999]
+position = Vector2(1608, 1032)
+shape = SubResource("RectangleShape2D_7cxbv")
+
+[node name="DragCollision_20" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1769433281]
+position = Vector2(1644, 1092)
+shape = SubResource("RectangleShape2D_yooeo")
+
+[node name="DragCollision_21" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1595178540]
+position = Vector2(2076, 1164)
+shape = SubResource("RectangleShape2D_wnj0s")
+
+[node name="DragCollision_22" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/TerrainCollision" unique_id=1544193448]
+position = Vector2(1080, 1308)
+shape = SubResource("RectangleShape2D_cm6h1")
+
+[node name="Spawns" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=577710232]
+
+[node name="Team1Slot1" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=701870364]
+position = Vector2(204, 468)
+
+[node name="Team1Slot2" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=355321981]
+position = Vector2(204, 564)
+
+[node name="Team1Slot3" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=1528793520]
+position = Vector2(204, 660)
+
+[node name="Team1Slot4" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=1531168344]
+position = Vector2(300, 516)
+
+[node name="Team1Slot5" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=22930093]
+position = Vector2(300, 612)
+
+[node name="Team2Slot1" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=1129028159]
+position = Vector2(1956, 948)
+
+[node name="Team2Slot2" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=1224634953]
+position = Vector2(1956, 852)
+
+[node name="Team2Slot3" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=815110622]
+position = Vector2(1956, 756)
+
+[node name="Team2Slot4" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=671506492]
+position = Vector2(1860, 804)
+
+[node name="Team2Slot5" type="Marker2D" parent="ViewportContainer/WorldViewport/World/Spawns" unique_id=2061179742]
+position = Vector2(1860, 900)
+
+[node name="Chiefs" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=2101897842]
+z_index = 5
+
+[node name="ChiefTeam1" parent="ViewportContainer/WorldViewport/World/Chiefs" unique_id=1476342996 instance=ExtResource("44_chief")]
+position = Vector2(357, 1142.5)
+patrol_right_x = 1203.0
+
+[node name="ChiefTeam2" parent="ViewportContainer/WorldViewport/World/Chiefs" unique_id=707125587 instance=ExtResource("44_chief")]
+position = Vector2(1812, 252)
+team_no = 2
+patrol_left_x = 986.0
+patrol_right_x = 1992.0
+initial_direction = -1
+
+[node name="ParticipantTanks" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=1745191807]
+z_index = 5
+
+[node name="MapBuildings" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=170723249]
+z_index = 4
+
+[node name="NeutralFootpoints" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=2001236388]
+z_index = 5
+
+[node name="PlayerTankAnchor" type="CharacterBody2D" parent="ViewportContainer/WorldViewport/World" unique_id=523632173]
+z_index = 5
+position = Vector2(204, 468)
+collision_layer = 2
+motion_mode = 1
+max_slides = 8
+safe_margin = 0.05
+
+[node name="MovementCollision" type="CollisionShape2D" parent="ViewportContainer/WorldViewport/World/PlayerTankAnchor" unique_id=505145436]
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_player_movement")
+
+[node name="PlayerTank" parent="ViewportContainer/WorldViewport/World/PlayerTankAnchor" unique_id=299674486 instance=ExtResource("4_tank")]
+turn_acceleration_degrees = 7100.0
+
+[node name="Projectiles" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=374019113]
+z_index = 6
+
+[node name="SkillEffects" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=776921664]
+z_index = 7
+
+[node name="FootpointEffectPreview" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=344581251]
+editor_description = "Ba mẫu hiệu ứng Footpoint: XuatHien = lúc bò lên khỏi lỗ; No = vụ nổ khi chết; XacChet = thân ngã/lăn sau khi chết. Chọn đúng node rồi chỉnh Transform > Scale; runtime sao chép scale/rotation/offset, không sửa asset nguồn."
+z_index = 9
+position = Vector2(1080, 706.5)
+
+[node name="XuatHien" type="Node2D" parent="ViewportContainer/WorldViewport/World/FootpointEffectPreview" unique_id=991579818]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/footpoint_birth_compact/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(75, 75)
+visible_item_keys = PackedStringArray()
+
+[node name="No" type="Node2D" parent="ViewportContainer/WorldViewport/World/FootpointEffectPreview" unique_id=444985362]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/footpoint_blow_compact/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(60, 60)
+visible_item_keys = PackedStringArray()
+
+[node name="XacChet" type="Node2D" parent="ViewportContainer/WorldViewport/World/FootpointEffectPreview" unique_id=1734384053]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/footpoint_death_compact/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(50, 50)
+visible_item_keys = PackedStringArray()
+
+[node name="DamageNumbers" type="Node2D" parent="ViewportContainer/WorldViewport/World" unique_id=291230877]
+z_index = 50
+
+[node name="Foreground" type="Sprite2D" parent="ViewportContainer/WorldViewport/World" unique_id=1872761831]
+z_index = 10
+position = Vector2(1080, 706.5)
+texture = ExtResource("3_foreground")
+
+[node name="Camera" type="Camera2D" parent="ViewportContainer/WorldViewport/World" unique_id=1814939062]
+position = Vector2(1080, 706.5)
+limit_left = 0
+limit_top = 0
+limit_right = 2160
+limit_bottom = 1413
+
+[node name="BattleHud" type="Control" parent="." unique_id=1501521271]
+z_index = 20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ScoreRuleHud" type="Control" parent="BattleHud" unique_id=1040045831]
+editor_description = "HUD luật Tính Điểm ghép từ nguyên 5 mảnh gốc gui_summer/controls/gameplay/alive. Chỉnh Transform trên node này để di chuyển/scale cả cụm; không sửa kích thước file ảnh."
+z_index = 50
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.5
+offset_right = 144.5
+offset_bottom = 60.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="BattleHud/ScoreRuleHud" unique_id=1064188423]
+layout_mode = 0
+offset_right = 289.0
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("47_score_bg")
+
+[node name="LeftSide" type="TextureRect" parent="BattleHud/ScoreRuleHud" unique_id=1908590348]
+layout_mode = 0
+offset_left = 17.5
+offset_top = 5.0
+offset_right = 93.5
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("48_score_left_blue")
+
+[node name="RightSide" type="TextureRect" parent="BattleHud/ScoreRuleHud" unique_id=217666515]
+layout_mode = 0
+offset_left = 196.5
+offset_top = 6.0
+offset_right = 272.5
+offset_bottom = 36.0
+mouse_filter = 2
+texture = ExtResource("51_score_right_red")
+
+[node name="LeftScore" type="Label" parent="BattleHud/ScoreRuleHud" unique_id=1644983122]
+layout_mode = 0
+offset_left = 19.5
+offset_top = 4.0
+offset_right = 95.5
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 18
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreGainEffect" type="Node2D" parent="BattleHud/ScoreRuleHud/LeftScore" unique_id=989547481]
+z_index = 10
+position = Vector2(123, 14.5)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/pvp_score_tip_compact/timeline.json"
+autoplay = false
+loop = false
+content_position_adjust = Vector2(275, 200)
+visible_item_keys = PackedStringArray("root/d4", "root/d5")
+
+[node name="RightScore" type="Label" parent="BattleHud/ScoreRuleHud" unique_id=1161633834]
+layout_mode = 0
+offset_left = 198.5
+offset_top = 5.0
+offset_right = 274.5
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 18
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreGainEffect" type="Node2D" parent="BattleHud/ScoreRuleHud/RightScore" unique_id=1188611458]
+z_index = 10
+position = Vector2(123, 14.5)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/pvp_score_tip_compact/timeline.json"
+autoplay = false
+loop = false
+content_position_adjust = Vector2(275, 200)
+visible_item_keys = PackedStringArray("root/d4", "root/d5")
+
+[node name="ScoreLimit" type="Label" parent="BattleHud/ScoreRuleHud" unique_id=1143308086]
+layout_mode = 0
+offset_left = 107.5
+offset_top = 4.0
+offset_right = 184.5
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 0.94, 0.64, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 16
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Label" parent="BattleHud/ScoreRuleHud" unique_id=327220925]
+layout_mode = 0
+offset_left = 108.5
+offset_top = 25.0
+offset_right = 185.5
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.12, 0.12, 0.12, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.8)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 15
+text = "4:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TeamStateLeft" type="Control" parent="BattleHud" unique_id=653660399]
+editor_description = "Cụm 5 card team trái. Chỉnh Transform > Position/Scale trên node này để di chuyển hoặc resize cả cụm."
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -382.0
+offset_right = 72.0
+offset_bottom = -23.0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Slot1" parent="BattleHud/TeamStateLeft" unique_id=367012317 instance=ExtResource("45_team_card")]
+layout_mode = 0
+
+[node name="Slot2" parent="BattleHud/TeamStateLeft" unique_id=1865413910 instance=ExtResource("45_team_card")]
+layout_mode = 0
+offset_top = 72.0
+offset_bottom = 143.0
+
+[node name="Slot3" parent="BattleHud/TeamStateLeft" unique_id=671612622 instance=ExtResource("45_team_card")]
+layout_mode = 0
+offset_top = 144.0
+offset_bottom = 215.0
+
+[node name="Slot4" parent="BattleHud/TeamStateLeft" unique_id=1990119034 instance=ExtResource("45_team_card")]
+layout_mode = 0
+offset_top = 216.0
+offset_bottom = 287.0
+
+[node name="Slot5" parent="BattleHud/TeamStateLeft" unique_id=988707351 instance=ExtResource("45_team_card")]
+layout_mode = 0
+offset_top = 288.0
+offset_bottom = 359.0
+
+[node name="TeamStateRight" type="Control" parent="BattleHud" unique_id=2142506372]
+editor_description = "Cụm 5 card team phải. Chỉnh Transform > Position/Scale trên node này để di chuyển hoặc resize cả cụm."
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -382.0
+offset_right = -8.0
+offset_bottom = -23.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Slot1" parent="BattleHud/TeamStateRight" unique_id=646616523 instance=ExtResource("45_team_card")]
+layout_mode = 0
+
+[node name="Slot2" parent="BattleHud/TeamStateRight" unique_id=1213898321 instance=ExtResource("45_team_card")]
+layout_mode = 0
+offset_top = 72.0
+offset_bottom = 143.0
+
+[node name="Slot3" parent="BattleHud/TeamStateRight" unique_id=914056217 instance=ExtResource("45_team_card")]
+layout_mode = 0
+offset_top = 144.0
+offset_bottom = 215.0
+
+[node name="Slot4" parent="BattleHud/TeamStateRight" unique_id=925519679 instance=ExtResource("45_team_card")]
+layout_mode = 0
+offset_top = 216.0
+offset_bottom = 287.0
+
+[node name="Slot5" parent="BattleHud/TeamStateRight" unique_id=2087695117 instance=ExtResource("45_team_card")]
+layout_mode = 0
+offset_top = 288.0
+offset_bottom = 359.0
+
+[node name="MapName" type="Label" parent="BattleHud" unique_id=30205555]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 430.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 18
+text = "Maya Tiên tri [Tính Điểm]"
+vertical_alignment = 1
+
+[node name="ChatHistory" type="RichTextLabel" parent="BattleHud" unique_id=1946940055]
+z_index = 40
+layout_mode = 0
+offset_left = 7.0
+offset_top = 35.0
+offset_right = 520.0
+offset_bottom = 137.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = SubResource("SystemFont_map_name")
+theme_override_fonts/bold_font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/bold_font_size = 14
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="BattleChat" type="Control" parent="BattleHud" unique_id=260700657]
+editor_description = "Thanh chat trận dùng nguyên asset chat_load.png 557x79. Chỉnh Transform trên node này để đổi vị trí cả cụm."
+visible = false
+z_index = 60
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -278.5
+offset_top = -140.0
+offset_right = 278.5
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+
+[node name="Skin" type="TextureRect" parent="BattleHud/BattleChat" unique_id=199716662]
+layout_mode = 0
+offset_right = 557.0
+offset_bottom = 79.0
+mouse_filter = 2
+texture = ExtResource("46_battle_chat")
+
+[node name="ChannelButton" type="Button" parent="BattleHud/BattleChat" unique_id=2126932076]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 23.0
+offset_right = 118.0
+offset_bottom = 59.0
+tooltip_text = "Đổi kênh Chiến trường/Phe ta"
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Channel" type="Label" parent="BattleHud/BattleChat" unique_id=1555420874]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 29.0
+offset_right = 105.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.22, 0.42, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 12
+text = "Chiến trường"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Input" type="LineEdit" parent="BattleHud/BattleChat" unique_id=753767664]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 27.0
+offset_right = 399.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.66, 0.88, 1, 0.8)
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBox_battle_chat_input")
+theme_override_styles/focus = SubResource("StyleBox_battle_chat_input")
+placeholder_text = "Nhập nội dung chat"
+max_length = 64
+
+[node name="Minimap" type="TextureRect" parent="BattleHud" unique_id=1120047754]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -137.0
+offset_right = 206.0
+offset_bottom = -6.0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("5_minimap")
+expand_mode = 1
+
+[node name="PlayerMarker" type="TextureRect" parent="BattleHud/Minimap" unique_id=306056274]
+visible = false
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("6_marker")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TankMarkers" type="Control" parent="BattleHud/Minimap" unique_id=108776608]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BottomStatus" type="Control" parent="BattleHud" unique_id=360252330]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -70.0
+offset_right = 180.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Health" type="Control" parent="BattleHud/BottomStatus" unique_id=398943765]
+anchors_preset = 0
+offset_top = 9.0
+offset_right = 110.0
+offset_bottom = 62.0
+mouse_filter = 2
+
+[node name="Word" type="TextureRect" parent="BattleHud/BottomStatus/Health" unique_id=1876172418]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 30.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("8_hp_word")
+expand_mode = 1
+
+[node name="HpBackground" type="TextureRect" parent="BattleHud/BottomStatus/Health" unique_id=1383661863]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 28.0
+offset_right = 105.0
+offset_bottom = 42.0
+mouse_filter = 2
+texture = ExtResource("9_hp_bg")
+expand_mode = 1
+
+[node name="HpFillClip" type="Control" parent="BattleHud/BottomStatus/Health" unique_id=1560554682]
+clip_contents = true
+anchors_preset = 0
+offset_left = 36.0
+offset_top = 31.0
+offset_right = 102.0
+offset_bottom = 39.0
+mouse_filter = 2
+
+[node name="Fill" type="TextureRect" parent="BattleHud/BottomStatus/Health/HpFillClip" unique_id=453857902]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("10_hp_fill")
+expand_mode = 1
+
+[node name="HpValue" type="RichTextLabel" parent="BattleHud/BottomStatus/Health" unique_id=1327979933]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 27.0
+offset_right = 105.0
+offset_bottom = 43.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/normal_font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "[center][color=#d8ff00]2325[/color][color=#ff6b23]/2325[/color][/center]"
+fit_content = true
+scroll_active = false
+
+[node name="Skill1" type="Control" parent="BattleHud/BottomStatus" unique_id=1658428037]
+anchors_preset = 0
+offset_left = 120.0
+offset_top = 2.0
+offset_right = 182.0
+offset_bottom = 64.0
+script = ExtResource("16_skill_slot")
+
+[node name="Icon" type="TextureRect" parent="BattleHud/BottomStatus/Skill1" unique_id=1482899029]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
+texture = ExtResource("12_skill_1")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="BattleHud/BottomStatus/Skill1" unique_id=1026112574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("11_skill_slot")
+expand_mode = 1
+
+[node name="SelectedEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill1" unique_id=1091983047]
+visible = false
+z_index = 4
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_selected/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(25, 25)
+visible_item_keys = PackedStringArray()
+
+[node name="ReadyEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill1" unique_id=1914899170]
+z_index = 3
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_complete_compact/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(0.5, 1.05)
+visible_item_keys = PackedStringArray()
+
+[node name="CooldownEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill1" unique_id=482373675]
+visible = false
+z_index = 2
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_cooldown_compact/timeline.json"
+autoplay = false
+loop = false
+visible_item_keys = PackedStringArray()
+
+[node name="CooldownLabel" type="Label" parent="BattleHud/BottomStatus/Skill1" unique_id=165937293]
+visible = false
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hotkey" type="TextureRect" parent="BattleHud/BottomStatus/Skill1" unique_id=1536237609]
+z_index = 5
+layout_mode = 0
+offset_left = 45.0
+offset_top = 3.0
+offset_right = 56.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("17_key_r")
+expand_mode = 1
+
+[node name="Skill2" type="Control" parent="BattleHud/BottomStatus" unique_id=1325705997]
+anchors_preset = 0
+offset_left = 188.0
+offset_top = 2.0
+offset_right = 250.0
+offset_bottom = 64.0
+script = ExtResource("16_skill_slot")
+
+[node name="Icon" type="TextureRect" parent="BattleHud/BottomStatus/Skill2" unique_id=361666551]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
+texture = ExtResource("13_skill_2")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="BattleHud/BottomStatus/Skill2" unique_id=1427892809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("11_skill_slot")
+expand_mode = 1
+
+[node name="SelectedEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill2" unique_id=1551921251]
+visible = false
+z_index = 4
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_selected/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(25, 25)
+visible_item_keys = PackedStringArray()
+
+[node name="ReadyEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill2" unique_id=1140513154]
+z_index = 3
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_complete_compact/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(0.5, 1.05)
+visible_item_keys = PackedStringArray()
+
+[node name="CooldownEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill2" unique_id=963918827]
+visible = false
+z_index = 2
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_cooldown_compact/timeline.json"
+autoplay = false
+loop = false
+visible_item_keys = PackedStringArray()
+
+[node name="CooldownLabel" type="Label" parent="BattleHud/BottomStatus/Skill2" unique_id=855475754]
+visible = false
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hotkey" type="TextureRect" parent="BattleHud/BottomStatus/Skill2" unique_id=65232339]
+z_index = 5
+layout_mode = 0
+offset_left = 43.0
+offset_top = 3.0
+offset_right = 56.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("18_key_e")
+expand_mode = 1
+
+[node name="Skill3" type="Control" parent="BattleHud/BottomStatus" unique_id=1277371262]
+anchors_preset = 0
+offset_left = 256.0
+offset_top = 2.0
+offset_right = 318.0
+offset_bottom = 64.0
+script = ExtResource("16_skill_slot")
+
+[node name="Icon" type="TextureRect" parent="BattleHud/BottomStatus/Skill3" unique_id=1438696814]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
+texture = ExtResource("14_skill_3")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="BattleHud/BottomStatus/Skill3" unique_id=460251843]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("11_skill_slot")
+expand_mode = 1
+
+[node name="SelectedEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill3" unique_id=1096725507]
+visible = false
+z_index = 4
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_selected/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(25, 25)
+visible_item_keys = PackedStringArray()
+
+[node name="ReadyEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill3" unique_id=1205278588]
+z_index = 3
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_complete_compact/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(0.5, 1.05)
+visible_item_keys = PackedStringArray()
+
+[node name="CooldownEffect" type="Node2D" parent="BattleHud/BottomStatus/Skill3" unique_id=1166403881]
+visible = false
+z_index = 2
+position = Vector2(31, 31)
+script = ExtResource("15_swf")
+timeline_path = "res://assets/animations/battle_skill_cooldown_compact/timeline.json"
+autoplay = false
+loop = false
+visible_item_keys = PackedStringArray()
+
+[node name="CooldownLabel" type="Label" parent="BattleHud/BottomStatus/Skill3" unique_id=1529564632]
+visible = false
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hotkey" type="TextureRect" parent="BattleHud/BottomStatus/Skill3" unique_id=551615046]
+z_index = 5
+layout_mode = 0
+offset_left = 27.0
+offset_top = 2.0
+offset_right = 56.0
+offset_bottom = 17.0
+mouse_filter = 2
+texture = ExtResource("19_key_space")
+expand_mode = 1
+
+[node name="ShieldBuffIcon" type="TextureRect" parent="BattleHud/BottomStatus" unique_id=916151822]
+visible = false
+z_index = 5
+layout_mode = 0
+offset_left = 404.0
+offset_top = 8.0
+offset_right = 444.0
+offset_bottom = 48.0
+mouse_filter = 2
+texture = ExtResource("21_shield_buff")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TopRight" type="Control" parent="BattleHud" unique_id=634765314]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -262.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 34.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="Frame" type="Panel" parent="BattleHud/TopRight" unique_id=1032172688]
+layout_mode = 0
+offset_left = 134.0
+offset_right = 262.0
+offset_bottom = 26.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBox_top_right_frame")
+
+[node name="Kda" type="Label" parent="BattleHud/TopRight" unique_id=57454879]
+layout_mode = 0
+offset_right = 122.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(1, 0.91, 0.1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 16
+text = "K/D/A  0/0/0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Objective" type="Label" parent="BattleHud/TopRight" unique_id=1873597012]
+layout_mode = 0
+offset_left = -410.0
+offset_right = -8.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(1, 0.91, 0.1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 14
+text = "Tiêu diệt đối thủ, kiếm điểm để dành chiến thắng."
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Ping" type="Label" parent="BattleHud/TopRight" unique_id=738918963]
+layout_mode = 0
+offset_left = 138.0
+offset_right = 230.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.2, 1, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "-- ms"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="TextureButton" parent="BattleHud/TopRight" unique_id=858582437]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 2.0
+offset_right = 257.0
+offset_bottom = 24.0
+tooltip_text = "Cài đặt"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_settings")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="RespawnOverlay" type="Control" parent="BattleHud" unique_id=872420937]
+visible = false
+z_index = 30
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="BattleHud/RespawnOverlay" unique_id=1775617785]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.5
+offset_top = -31.5
+offset_right = 265.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("22_respawn_bg")
+expand_mode = 1
+
+[node name="SourceDividerCover" type="ColorRect" parent="BattleHud/RespawnOverlay" unique_id=2001605749]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.0
+offset_top = 29.0
+offset_right = 305.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0509804, 0.411765, 0.662745, 1)
+
+[node name="Countdown" type="Label" parent="BattleHud/RespawnOverlay" unique_id=1636863158]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -30.0
+offset_right = 125.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.91, 0.1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.18, 0.55, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 20
+text = "Còn 10 s hồi sinh"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FreeCount" type="Label" parent="BattleHud/RespawnOverlay" unique_id=974663788]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 87.0
+offset_top = 1.0
+offset_right = 252.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.08, 1)
+theme_override_colors/font_outline_color = Color(0.15, 0.08, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 12
+text = "Lượt hồi sinh miễn phí còn lại: 1"
+vertical_alignment = 1
+
+[node name="VipWord" type="TextureRect" parent="BattleHud/RespawnOverlay" unique_id=1583711255]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.0
+offset_top = 1.0
+offset_right = -229.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("24_vip_word")
+expand_mode = 1
+
+[node name="VipHint" type="Label" parent="BattleHud/RespawnOverlay" unique_id=1766980338]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_right = -34.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.08, 1)
+theme_override_colors/font_outline_color = Color(0.15, 0.08, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = SubResource("SystemFont_map_name")
+theme_override_font_sizes/font_size = 12
+text = "có thể rút ngắn thời gian đợi hồi sinh"
+vertical_alignment = 1
+
+[node name="RespawnNow" type="TextureButton" parent="BattleHud/RespawnOverlay" unique_id=99253616]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -1.0
+offset_right = 80.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(51, 20)
+tooltip_text = "Dùng lượt hồi sinh miễn phí"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("23_respawn_now")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PingRequest" type="HTTPRequest" parent="." unique_id=612780312]
+timeout = 2.0
+
+[node name="BattleResultSequence" parent="." instance=ExtResource("52_result_sequence")]
+
+[node name="SettingsPanel" parent="BattleHud" instance=ExtResource("53_battle_settings")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+z_index = 110

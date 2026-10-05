@@ -1,0 +1,1200 @@
+[gd_scene format=3 uid="uid://t7kjf2xb0c5w"]
+
+[ext_resource type="Script" uid="uid://dp15f7gqrgyco" path="res://scripts/lobby/pvp_room_view.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cjpfk4x2av10a" path="res://assets/ui/bg_sea.jpg" id="2_bg"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_room/frame.png" id="3_frame"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_room/content_bg.png" id="4_content"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_ready_room/shadow.png" id="5_swirl"]
+[ext_resource type="Texture2D" uid="uid://doasig5a357pm" path="res://assets/ui/pvp_room/title_room_game.png" id="6_title"]
+[ext_resource type="Texture2D" path="res://assets/ui/close_original.png" id="7_close"]
+[ext_resource type="Texture2D" uid="uid://dx4qntqww20b4" path="res://assets/ui/pvp_room/tabs/event_normal.png" id="8_tab_event_normal"]
+[ext_resource type="Texture2D" uid="uid://hmyof526hrgm" path="res://assets/ui/pvp_room/tabs/event_selected.png" id="9_tab_event_selected"]
+[ext_resource type="Texture2D" uid="uid://b4k4jovha0lfe" path="res://assets/ui/pvp_room/tabs/sotai_selected.png" id="11_tab_sotai_selected"]
+[ext_resource type="Texture2D" uid="uid://tyqrnsdlmi5e" path="res://assets/ui/pvp_room/tabs/rank_normal.png" id="12_tab_rank_normal"]
+[ext_resource type="Texture2D" uid="uid://bew5x4cnsewkj" path="res://assets/ui/pvp_room/tabs/rank_selected.png" id="13_tab_rank_selected"]
+[ext_resource type="Texture2D" uid="uid://dt1cdgiqe7y6h" path="res://assets/ui/pvp_room/room_header.png" id="14_header"]
+[ext_resource type="Texture2D" uid="uid://bxvqsi1c34gt4" path="res://assets/ui/pvp_room/room_row.png" id="15_row"]
+[ext_resource type="Texture2D" uid="uid://m86bgnvnor6g" path="res://assets/ui/pvp_room/caption_team.png" id="16_cap_team"]
+[ext_resource type="Texture2D" uid="uid://dnqjlfgm82vtc" path="res://assets/ui/pvp_room/caption_name.png" id="17_cap_name"]
+[ext_resource type="Texture2D" uid="uid://ce1ts7ub8tb01" path="res://assets/ui/pvp_room/caption_mode.png" id="18_cap_mode"]
+[ext_resource type="Texture2D" uid="uid://ca27s4okudexk" path="res://assets/ui/pvp_room/caption_map.png" id="19_cap_map"]
+[ext_resource type="Texture2D" uid="uid://b1qvyjig6yt53" path="res://assets/ui/pvp_room/caption_num.png" id="20_cap_num"]
+[ext_resource type="Texture2D" uid="uid://c8y5gkcl1y2kk" path="res://assets/ui/pvp_room/caption_status.png" id="21_cap_status"]
+[ext_resource type="Texture2D" uid="uid://c816cuv6mvf4q" path="res://assets/ui/pvp_room/status_wait.png" id="22_wait"]
+[ext_resource type="Texture2D" uid="uid://caa8eo2firfpt" path="res://assets/ui/pvp_room/status_running.png" id="23_running"]
+[ext_resource type="Texture2D" uid="uid://brhgkasftcl8p" path="res://assets/ui/pvp_room/join.png" id="24_join"]
+[ext_resource type="Texture2D" uid="uid://buc4t6fknfowu" path="res://assets/ui/pvp_room/watch.png" id="25_watch"]
+[ext_resource type="Texture2D" uid="uid://deahvfuou5o2x" path="res://assets/ui/pvp_room/player_list.png" id="26_player_list"]
+[ext_resource type="Texture2D" uid="uid://dw4m48p3jigsv" path="res://assets/ui/pvp_room/player_item.png" id="27_player_item"]
+[ext_resource type="Texture2D" uid="uid://buvbgbcm2d44i" path="res://assets/ui/pvp_room/player_tab_selected.png" id="28_player_tab_selected"]
+[ext_resource type="Texture2D" uid="uid://5wwsg3k8phxu" path="res://assets/ui/pvp_room/player_tab_normal.png" id="29_player_tab_normal"]
+[ext_resource type="Texture2D" uid="uid://be44uvcqkq8b6" path="res://assets/ui/pvp_room/player_tab_guild.png" id="30_player_guild"]
+[ext_resource type="Texture2D" uid="uid://b85ip88346mik" path="res://assets/ui/pvp_room/player_tab_friend.png" id="31_player_friend"]
+[ext_resource type="Texture2D" uid="uid://b1g86xcgk1nd7" path="res://assets/ui/pvp_room/player_tab_room.png" id="32_player_room"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skin_scroll_thumb.png" id="33_scroll_track"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_track.png" id="34_scroll_thumb"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_up.png" id="35_scroll_up"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_down.png" id="36_scroll_down"]
+[ext_resource type="Texture2D" uid="uid://blrgddfm7pg5q" path="res://assets/ui/pvp_room/pager.png" id="37_pager"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_room/pager_arrow.png" id="38_arrow"]
+[ext_resource type="Texture2D" uid="uid://by0las28a0anj" path="res://assets/ui/pvp_room/quick_join_frame_original.png" id="39_quick_bg"]
+[ext_resource type="Texture2D" uid="uid://c4e11lnvglqja" path="res://assets/ui/pvp_room/quick_text.png" id="40_quick_text"]
+[ext_resource type="Texture2D" uid="uid://cngm4hbuy4kp1" path="res://assets/ui/pvp_room/create_team.png" id="41_create"]
+[ext_resource type="Texture2D" uid="uid://bilmqqnjp3ng6" path="res://assets/ui/pvp_room/find_team.png" id="42_find"]
+[ext_resource type="Texture2D" uid="uid://bqjsdt6jvxs7t" path="res://assets/ui/btn_btm_shop.png" id="47_shop"]
+[ext_resource type="Texture2D" uid="uid://cqn8umt1cpu0w" path="res://assets/ui/btn_btm_friend.png" id="48_friend"]
+[ext_resource type="Texture2D" uid="uid://qk5xcdxeas8o" path="res://assets/ui/btn_btm_milrank.png" id="49_rank_btn"]
+[ext_resource type="Texture2D" uid="uid://dfujtqkon33fp" path="res://assets/ui/btn_btm_crystal.png" id="50_crystal"]
+[ext_resource type="Texture2D" uid="uid://vhirxeksbkgv" path="res://assets/ui/btn_btm_tank.png" id="51_tank"]
+[ext_resource type="Texture2D" uid="uid://bw4uikjkrpec8" path="res://assets/ui/btn_btm_assistant.png" id="52_assistant"]
+[ext_resource type="Texture2D" uid="uid://b7nppyc8vkic" path="res://assets/ui/btn_btm_bag.png" id="53_bag"]
+[ext_resource type="Texture2D" uid="uid://ythsrryootr1" path="res://assets/ui/btn_setting_switch_open.png" id="54_small_bg"]
+[ext_resource type="Texture2D" uid="uid://daird0g5gkp0c" path="res://assets/ui/ico_community.png" id="55_community"]
+[ext_resource type="Texture2D" uid="uid://tvb7kqsya577" path="res://assets/ui/ico_setting.png" id="56_settings"]
+[ext_resource type="Texture2D" uid="uid://dumjr8s8c2gdj" path="res://assets/ui/btn_return_frame.png" id="57_return_bg"]
+[ext_resource type="Texture2D" uid="uid://6yewvpsn7goj" path="res://assets/ui/ico_return.png" id="58_return"]
+[ext_resource type="Texture2D" uid="uid://b008xjdl3u5vt" path="res://assets/ui/pvp_room/room_row_selected.png" id="59_row_selected"]
+[ext_resource type="Texture2D" uid="uid://dkguoy83kdh5t" path="res://assets/ui/pvp_room/quick_people.png" id="60_quick_people"]
+[ext_resource type="Texture2D" uid="uid://4e741ffsofib" path="res://assets/ui/pvp_room/tabs/guild_normal.png" id="61_tab_guild_normal"]
+[ext_resource type="Texture2D" uid="uid://deunggvvoyfo5" path="res://assets/ui/pvp_room/tabs/guild_selected.png" id="62_tab_guild_selected"]
+[ext_resource type="Texture2D" uid="uid://pxlwsueavtis" path="res://assets/ui/pvp_room/tabs/test_normal.png" id="63_tab_test_normal"]
+[ext_resource type="Texture2D" uid="uid://doqqvm0wmwdyq" path="res://assets/ui/pvp_room/tabs/test_selected.png" id="64_tab_test_selected"]
+[ext_resource type="PackedScene" uid="uid://c1sxq7rk1rk7m" path="res://scenes/lobby/LobbyChat.tscn" id="65_chat_preview"]
+[ext_resource type="Texture2D" uid="uid://cmalh7v68638w" path="res://assets/ui/ico_tasks.png" id="67_tasks"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/test/ready_room/PvpReadyRoom.tscn" id="68_ready_room"]
+[ext_resource type="Script" uid="uid://1357l0jood2h" path="res://scripts/ui/HoverButton.gd" id="69_hover"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/test/match/PvpMatchFlow.tscn" id="70_match_flow"]
+
+[node name="PvpRoomView" type="Control" unique_id=1991219409]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="MatchFlow" parent="." unique_id=928378217 instance=ExtResource("70_match_flow")]
+visible = false
+z_index = 200
+layout_mode = 1
+
+[node name="Background" type="TextureRect" parent="." unique_id=1789937179]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Window" type="Control" parent="." unique_id=605097108]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -508.5
+offset_top = -309.0
+offset_right = 508.5
+offset_bottom = 309.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.07, 1.07)
+pivot_offset = Vector2(508.5, 309)
+
+[node name="Frame" type="TextureRect" parent="Window" unique_id=1242286764]
+layout_mode = 0
+offset_right = 1017.0
+offset_bottom = 618.0
+mouse_filter = 2
+texture = ExtResource("3_frame")
+
+[node name="ContentBackground" type="TextureRect" parent="Window" unique_id=904250348]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 45.0
+offset_right = 808.0
+offset_bottom = 557.0
+mouse_filter = 2
+texture = ExtResource("4_content")
+
+[node name="ContentSwirl" type="TextureRect" parent="Window" unique_id=765640637]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 45.0
+offset_right = 808.0
+offset_bottom = 557.0
+mouse_filter = 2
+texture = ExtResource("5_swirl")
+
+[node name="Title" type="TextureRect" parent="Window" unique_id=118514892]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 10.0
+offset_right = 548.0
+offset_bottom = 38.0
+mouse_filter = 2
+texture = ExtResource("6_title")
+
+[node name="BtnClose" type="TextureButton" parent="Window" unique_id=457802550]
+layout_mode = 0
+offset_left = 977.0
+offset_top = 13.0
+offset_right = 1001.0
+offset_bottom = 37.0
+tooltip_text = "Đóng"
+texture_normal = ExtResource("7_close")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Tabs" type="Control" parent="Window" unique_id=2001695366]
+anchors_preset = 0
+offset_left = 22.0
+offset_top = 43.0
+offset_right = 567.0
+offset_bottom = 82.0
+
+[node name="Event" type="TextureButton" parent="Window/Tabs" unique_id=1506545260]
+layout_mode = 0
+offset_right = 109.0
+offset_bottom = 39.0
+texture_normal = ExtResource("8_tab_event_normal")
+texture_pressed = ExtResource("9_tab_event_selected")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Solo" type="TextureButton" parent="Window/Tabs" unique_id=1129981800]
+layout_mode = 0
+offset_left = 109.0
+offset_right = 218.0
+offset_bottom = 39.0
+texture_normal = ExtResource("11_tab_sotai_selected")
+texture_pressed = ExtResource("11_tab_sotai_selected")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Rank" type="TextureButton" parent="Window/Tabs" unique_id=1014038990]
+layout_mode = 0
+offset_left = 218.0
+offset_right = 327.0
+offset_bottom = 39.0
+texture_normal = ExtResource("12_tab_rank_normal")
+texture_pressed = ExtResource("13_tab_rank_selected")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Guild" type="TextureButton" parent="Window/Tabs" unique_id=122872696]
+layout_mode = 0
+offset_left = 327.0
+offset_right = 436.0
+offset_bottom = 39.0
+texture_normal = ExtResource("61_tab_guild_normal")
+texture_pressed = ExtResource("62_tab_guild_selected")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Test" type="TextureButton" parent="Window/Tabs" unique_id=227997165]
+layout_mode = 0
+offset_left = 436.0
+offset_right = 545.0
+offset_bottom = 39.0
+texture_normal = ExtResource("63_tab_test_normal")
+texture_pressed = ExtResource("64_tab_test_selected")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="RoomList" type="Control" parent="Window" unique_id=2055575784]
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 79.0
+offset_right = 799.0
+offset_bottom = 389.0
+
+[node name="Header" type="TextureRect" parent="Window/RoomList" unique_id=1447060417]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 776.0
+offset_bottom = 28.0
+mouse_filter = 2
+
+[node name="TeamCaption" type="TextureRect" parent="Window/RoomList" unique_id=1620470540]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 20.0
+mouse_filter = 2
+texture = ExtResource("16_cap_team")
+
+[node name="NameCaption" type="TextureRect" parent="Window/RoomList" unique_id=2091661215]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 2.0
+offset_right = 254.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("17_cap_name")
+
+[node name="ModeCaption" type="TextureRect" parent="Window/RoomList" unique_id=899842754]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 2.0
+offset_right = 386.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("18_cap_mode")
+
+[node name="MapCaption" type="TextureRect" parent="Window/RoomList" unique_id=1661821725]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 2.0
+offset_right = 505.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("19_cap_map")
+
+[node name="NumCaption" type="TextureRect" parent="Window/RoomList" unique_id=1286350584]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 2.0
+offset_right = 611.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("20_cap_num")
+
+[node name="StatusCaption" type="TextureRect" parent="Window/RoomList" unique_id=1861511212]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 2.0
+offset_right = 716.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("21_cap_status")
+
+[node name="Rows" type="Control" parent="Window/RoomList" unique_id=1654901823]
+anchors_preset = 0
+offset_top = 24.0
+offset_right = 781.0
+offset_bottom = 328.0
+
+[node name="Row1" type="TextureRect" parent="Window/RoomList/Rows" unique_id=1372661184]
+layout_mode = 0
+offset_right = 781.0
+offset_bottom = 38.0
+mouse_filter = 2
+texture = ExtResource("15_row")
+
+[node name="State" type="TextureRect" parent="Window/RoomList/Rows/Row1" unique_id=736955983]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 776.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("59_row_selected")
+
+[node name="Row2" type="TextureRect" parent="Window/RoomList/Rows" unique_id=843498977]
+layout_mode = 0
+offset_top = 38.0
+offset_right = 781.0
+offset_bottom = 76.0
+mouse_filter = 2
+texture = ExtResource("15_row")
+
+[node name="State" type="TextureRect" parent="Window/RoomList/Rows/Row2" unique_id=235179306]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 776.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("14_header")
+
+[node name="Row3" type="TextureRect" parent="Window/RoomList/Rows" unique_id=351784129]
+layout_mode = 0
+offset_top = 76.0
+offset_right = 781.0
+offset_bottom = 114.0
+mouse_filter = 2
+texture = ExtResource("15_row")
+
+[node name="State" type="TextureRect" parent="Window/RoomList/Rows/Row3" unique_id=1401213624]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 776.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[node name="Row4" type="TextureRect" parent="Window/RoomList/Rows" unique_id=445399033]
+layout_mode = 0
+offset_top = 114.0
+offset_right = 781.0
+offset_bottom = 152.0
+mouse_filter = 2
+texture = ExtResource("15_row")
+
+[node name="State" type="TextureRect" parent="Window/RoomList/Rows/Row4" unique_id=1307327190]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 776.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[node name="Row5" type="TextureRect" parent="Window/RoomList/Rows" unique_id=1816149433]
+layout_mode = 0
+offset_top = 152.0
+offset_right = 781.0
+offset_bottom = 190.0
+mouse_filter = 2
+texture = ExtResource("15_row")
+
+[node name="State" type="TextureRect" parent="Window/RoomList/Rows/Row5" unique_id=332325468]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 776.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[node name="Row6" type="TextureRect" parent="Window/RoomList/Rows" unique_id=237246082]
+layout_mode = 0
+offset_top = 190.0
+offset_right = 781.0
+offset_bottom = 228.0
+mouse_filter = 2
+texture = ExtResource("15_row")
+
+[node name="State" type="TextureRect" parent="Window/RoomList/Rows/Row6" unique_id=827476844]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 776.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[node name="Row7" type="TextureRect" parent="Window/RoomList/Rows" unique_id=1602988041]
+layout_mode = 0
+offset_top = 228.0
+offset_right = 781.0
+offset_bottom = 266.0
+mouse_filter = 2
+texture = ExtResource("15_row")
+
+[node name="State" type="TextureRect" parent="Window/RoomList/Rows/Row7" unique_id=321995387]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 776.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[node name="Row8" type="TextureRect" parent="Window/RoomList/Rows" unique_id=518062718]
+layout_mode = 0
+offset_top = 266.0
+offset_right = 781.0
+offset_bottom = 304.0
+mouse_filter = 2
+texture = ExtResource("15_row")
+
+[node name="State" type="TextureRect" parent="Window/RoomList/Rows/Row8" unique_id=1075844567]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 776.0
+offset_bottom = 33.0
+mouse_filter = 2
+
+[node name="HitTargets" type="Control" parent="Window/RoomList/Rows" unique_id=1036434908]
+anchors_preset = 0
+offset_right = 781.0
+offset_bottom = 304.0
+mouse_filter = 2
+
+[node name="Room1" type="Control" parent="Window/RoomList/Rows/HitTargets" unique_id=199322371]
+anchors_preset = 0
+offset_right = 781.0
+offset_bottom = 38.0
+mouse_default_cursor_shape = 2
+
+[node name="Room2" type="Control" parent="Window/RoomList/Rows/HitTargets" unique_id=271060475]
+anchors_preset = 0
+offset_top = 38.0
+offset_right = 781.0
+offset_bottom = 76.0
+mouse_default_cursor_shape = 2
+
+[node name="Room3" type="Control" parent="Window/RoomList/Rows/HitTargets" unique_id=1568144345]
+anchors_preset = 0
+offset_top = 76.0
+offset_right = 781.0
+offset_bottom = 114.0
+mouse_default_cursor_shape = 2
+
+[node name="Room4" type="Control" parent="Window/RoomList/Rows/HitTargets" unique_id=1910168932]
+anchors_preset = 0
+offset_top = 114.0
+offset_right = 781.0
+offset_bottom = 152.0
+mouse_default_cursor_shape = 2
+
+[node name="Room5" type="Control" parent="Window/RoomList/Rows/HitTargets" unique_id=1990562969]
+anchors_preset = 0
+offset_top = 152.0
+offset_right = 781.0
+offset_bottom = 190.0
+mouse_default_cursor_shape = 2
+
+[node name="Room6" type="Control" parent="Window/RoomList/Rows/HitTargets" unique_id=795009134]
+anchors_preset = 0
+offset_top = 190.0
+offset_right = 781.0
+offset_bottom = 228.0
+mouse_default_cursor_shape = 2
+
+[node name="Room7" type="Control" parent="Window/RoomList/Rows/HitTargets" unique_id=990497923]
+anchors_preset = 0
+offset_top = 228.0
+offset_right = 781.0
+offset_bottom = 266.0
+mouse_default_cursor_shape = 2
+
+[node name="Room8" type="Control" parent="Window/RoomList/Rows/HitTargets" unique_id=1318520028]
+anchors_preset = 0
+offset_top = 266.0
+offset_right = 781.0
+offset_bottom = 304.0
+mouse_default_cursor_shape = 2
+
+[node name="Room1" type="Control" parent="Window/RoomList/Rows" unique_id=1186575416]
+anchors_preset = 0
+offset_right = 781.0
+offset_bottom = 38.0
+mouse_filter = 2
+
+[node name="Id" type="Label" parent="Window/RoomList/Rows/Room1" unique_id=255804625]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 125.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.65, 0.31, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "1001"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Window/RoomList/Rows/Room1" unique_id=180833226]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 3.0
+offset_right = 330.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.65, 0.31, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "PvP Bot Test - sandbox"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mode" type="Label" parent="Window/RoomList/Rows/Room1" unique_id=886347785]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 3.0
+offset_right = 405.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.65, 0.31, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "Tự do"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Map" type="Label" parent="Window/RoomList/Rows/Room1" unique_id=322198684]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 3.0
+offset_right = 548.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.65, 0.31, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "Bản đồ ngẫu nh..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="Window/RoomList/Rows/Room1" unique_id=1450153755]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 3.0
+offset_right = 619.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.65, 0.31, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "0/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Status" type="TextureRect" parent="Window/RoomList/Rows/Room1" unique_id=21429424]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 7.0
+offset_right = 702.0
+offset_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource("22_wait")
+
+[node name="Join" type="TextureButton" parent="Window/RoomList/Rows/Room1" unique_id=984647992]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 7.0
+offset_right = 771.0
+offset_bottom = 31.0
+texture_normal = ExtResource("24_join")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Room2" type="Control" parent="Window/RoomList/Rows" unique_id=1395939900]
+anchors_preset = 0
+offset_top = 38.0
+offset_right = 781.0
+offset_bottom = 76.0
+mouse_filter = 2
+
+[node name="Id" type="Label" parent="Window/RoomList/Rows/Room2" unique_id=998412572]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 125.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.32, 0.55, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "268435491"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Window/RoomList/Rows/Room2" unique_id=862738896]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 3.0
+offset_right = 330.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.32, 0.55, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "PvP #20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mode" type="Label" parent="Window/RoomList/Rows/Room2" unique_id=1896145281]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 3.0
+offset_right = 405.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.32, 0.55, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "Tự do"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Map" type="Label" parent="Window/RoomList/Rows/Room2" unique_id=315045882]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 3.0
+offset_right = 548.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.32, 0.55, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "Bò sữa chạy nh..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="Window/RoomList/Rows/Room2" unique_id=1775397099]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 3.0
+offset_right = 619.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.32, 0.55, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "2/2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Status" type="TextureRect" parent="Window/RoomList/Rows/Room2" unique_id=428309132]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 7.0
+offset_right = 702.0
+offset_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource("23_running")
+
+[node name="Watch" type="TextureButton" parent="Window/RoomList/Rows/Room2" unique_id=764721361]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 7.0
+offset_right = 771.0
+offset_bottom = 31.0
+texture_normal = ExtResource("25_watch")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="ReadyRoom" parent="Window" unique_id=441879759 instance=ExtResource("68_ready_room")]
+visible = false
+z_index = 100
+layout_mode = 0
+
+[node name="PlayerList" type="Control" parent="Window" unique_id=1651307187]
+anchors_preset = 0
+offset_left = 815.0
+offset_top = 41.0
+offset_right = 1009.0
+offset_bottom = 562.0
+
+[node name="Background" type="TextureRect" parent="Window/PlayerList" unique_id=1460982219]
+layout_mode = 0
+offset_right = 194.0
+offset_bottom = 521.0
+mouse_filter = 2
+texture = ExtResource("26_player_list")
+
+[node name="GuildTab" type="TextureButton" parent="Window/PlayerList" unique_id=1978883550]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 58.0
+offset_bottom = 28.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("28_player_tab_selected")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Title" type="TextureRect" parent="Window/PlayerList/GuildTab" unique_id=522376903]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 42.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("30_player_guild")
+
+[node name="FriendTab" type="TextureButton" parent="Window/PlayerList" unique_id=763353255]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 3.0
+offset_right = 112.0
+offset_bottom = 28.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("29_player_tab_normal")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Title" type="TextureRect" parent="Window/PlayerList/FriendTab" unique_id=1955390376]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 43.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("31_player_friend")
+
+[node name="RoomTab" type="TextureButton" parent="Window/PlayerList" unique_id=1596084863]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 3.0
+offset_right = 166.0
+offset_bottom = 28.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("29_player_tab_normal")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Title" type="TextureRect" parent="Window/PlayerList/RoomTab" unique_id=666662986]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 43.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("32_player_room")
+
+[node name="Items" type="Control" parent="Window/PlayerList" unique_id=1625522775]
+clip_contents = true
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 159.0
+offset_bottom = 493.0
+
+[node name="Item1" type="TextureRect" parent="Window/PlayerList/Items" unique_id=2111087672]
+layout_mode = 0
+offset_right = 154.0
+offset_bottom = 65.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item2" type="TextureRect" parent="Window/PlayerList/Items" unique_id=1534756595]
+layout_mode = 0
+offset_top = 65.0
+offset_right = 154.0
+offset_bottom = 130.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item3" type="TextureRect" parent="Window/PlayerList/Items" unique_id=1262900322]
+layout_mode = 0
+offset_top = 130.0
+offset_right = 154.0
+offset_bottom = 195.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item4" type="TextureRect" parent="Window/PlayerList/Items" unique_id=1506810764]
+layout_mode = 0
+offset_top = 195.0
+offset_right = 154.0
+offset_bottom = 260.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item5" type="TextureRect" parent="Window/PlayerList/Items" unique_id=1668600976]
+layout_mode = 0
+offset_top = 260.0
+offset_right = 154.0
+offset_bottom = 325.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item6" type="TextureRect" parent="Window/PlayerList/Items" unique_id=302198188]
+layout_mode = 0
+offset_top = 325.0
+offset_right = 154.0
+offset_bottom = 390.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item7" type="TextureRect" parent="Window/PlayerList/Items" unique_id=302593907]
+layout_mode = 0
+offset_top = 390.0
+offset_right = 154.0
+offset_bottom = 455.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item8" type="TextureRect" parent="Window/PlayerList/Items" unique_id=1342939673]
+layout_mode = 0
+offset_top = 455.0
+offset_right = 154.0
+offset_bottom = 520.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item9" type="TextureRect" parent="Window/PlayerList/Items" unique_id=1683436262]
+layout_mode = 0
+offset_top = 520.0
+offset_right = 154.0
+offset_bottom = 585.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item10" type="TextureRect" parent="Window/PlayerList/Items" unique_id=669945163]
+layout_mode = 0
+offset_top = 585.0
+offset_right = 154.0
+offset_bottom = 650.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item11" type="TextureRect" parent="Window/PlayerList/Items" unique_id=1219989051]
+layout_mode = 0
+offset_top = 650.0
+offset_right = 154.0
+offset_bottom = 715.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item12" type="TextureRect" parent="Window/PlayerList/Items" unique_id=822504986]
+layout_mode = 0
+offset_top = 715.0
+offset_right = 154.0
+offset_bottom = 780.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item13" type="TextureRect" parent="Window/PlayerList/Items" unique_id=1036379684]
+layout_mode = 0
+offset_top = 780.0
+offset_right = 154.0
+offset_bottom = 845.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="Item14" type="TextureRect" parent="Window/PlayerList/Items" unique_id=653980451]
+layout_mode = 0
+offset_top = 845.0
+offset_right = 154.0
+offset_bottom = 910.0
+mouse_filter = 2
+texture = ExtResource("27_player_item")
+
+[node name="ScrollTrack" type="TextureRect" parent="Window/PlayerList" unique_id=677577992]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 38.0
+offset_right = 185.0
+offset_bottom = 493.0
+mouse_filter = 0
+texture = ExtResource("33_scroll_track")
+expand_mode = 1
+
+[node name="Thumb" type="TextureRect" parent="Window/PlayerList/ScrollTrack" unique_id=614065170]
+layout_mode = 0
+offset_left = -0.5
+offset_right = 19.5
+offset_bottom = 100.0
+mouse_filter = 0
+mouse_default_cursor_shape = 12
+texture = ExtResource("34_scroll_thumb")
+expand_mode = 1
+
+[node name="Up" type="TextureButton" parent="Window/PlayerList" unique_id=769449133]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 19.0
+offset_right = 185.0
+offset_bottom = 38.0
+focus_mode = 0
+texture_normal = ExtResource("35_scroll_up")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Down" type="TextureButton" parent="Window/PlayerList" unique_id=485035257]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 493.0
+offset_right = 185.0
+offset_bottom = 512.0
+focus_mode = 0
+texture_normal = ExtResource("36_scroll_down")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Pager" type="Control" parent="Window" unique_id=961431485]
+anchors_preset = 0
+offset_left = 517.0
+offset_top = 390.0
+offset_right = 751.0
+offset_bottom = 425.0
+
+[node name="Background" type="TextureRect" parent="Window/Pager" unique_id=1824110419]
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 35.0
+texture = ExtResource("37_pager")
+
+[node name="Previous" type="TextureRect" parent="Window/Pager" unique_id=1796604440]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 2.0
+offset_right = 114.0
+offset_bottom = 31.0
+texture = ExtResource("38_arrow")
+flip_h = true
+
+[node name="Next" type="TextureRect" parent="Window/Pager" unique_id=1565813324]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 2.0
+offset_right = 157.0
+offset_bottom = 31.0
+texture = ExtResource("38_arrow")
+
+[node name="QuickJoin" type="TextureButton" parent="Window" unique_id=1813772346]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 425.0
+offset_right = 770.0
+offset_bottom = 485.0
+texture_normal = ExtResource("39_quick_bg")
+stretch_mode = 0
+script = ExtResource("69_hover")
+
+[node name="Title" type="TextureRect" parent="Window/QuickJoin" unique_id=1101275726]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 17.0
+offset_right = 190.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("40_quick_text")
+
+[node name="PersonLeft" type="TextureRect" parent="Window/QuickJoin" unique_id=385280589]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 50.0
+offset_bottom = 45.0
+mouse_filter = 2
+texture = ExtResource("60_quick_people")
+
+[node name="PersonMiddle" type="TextureRect" parent="Window/QuickJoin" unique_id=276238795]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 12.0
+offset_right = 63.0
+offset_bottom = 42.0
+mouse_filter = 2
+texture = ExtResource("60_quick_people")
+
+[node name="PersonRight" type="TextureRect" parent="Window/QuickJoin" unique_id=255713066]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 15.0
+offset_right = 76.0
+offset_bottom = 45.0
+mouse_filter = 2
+texture = ExtResource("60_quick_people")
+
+[node name="CreateTeam" type="TextureButton" parent="Window" unique_id=1323562960]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 487.0
+offset_right = 640.0
+offset_bottom = 536.0
+texture_normal = ExtResource("41_create")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="FindTeam" type="TextureButton" parent="Window" unique_id=1273861113]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 487.0
+offset_right = 761.0
+offset_bottom = 536.0
+texture_normal = ExtResource("42_find")
+ignore_texture_size = true
+script = ExtResource("69_hover")
+
+[node name="Chat" parent="Window" unique_id=390240529 instance=ExtResource("65_chat_preview")]
+layout_mode = 0
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 7.0
+offset_top = 397.0
+offset_right = 471.0
+offset_bottom = 618.0
+grow_vertical = 1
+mouse_filter = 1
+script = null
+
+[node name="BottomDock" type="Control" parent="Window" unique_id=1153313995]
+anchors_preset = 0
+offset_top = 550.0
+offset_right = 1017.0
+offset_bottom = 618.0
+
+[node name="Shop" type="TextureRect" parent="Window/BottomDock" unique_id=1386621845]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 9.0
+offset_right = 327.0
+offset_bottom = 49.0
+texture = ExtResource("47_shop")
+
+[node name="Friend" type="TextureRect" parent="Window/BottomDock" unique_id=699745329]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 10.0
+offset_right = 422.0
+offset_bottom = 48.0
+texture = ExtResource("48_friend")
+
+[node name="Rank" type="TextureRect" parent="Window/BottomDock" unique_id=1392206384]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 5.0
+offset_right = 523.0
+offset_bottom = 51.0
+texture = ExtResource("49_rank_btn")
+
+[node name="Crystal" type="TextureRect" parent="Window/BottomDock" unique_id=496328866]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 10.0
+offset_right = 610.0
+offset_bottom = 48.0
+texture = ExtResource("50_crystal")
+
+[node name="Tank" type="TextureRect" parent="Window/BottomDock" unique_id=1689992017]
+layout_mode = 0
+offset_left = 586.0
+offset_top = 10.0
+offset_right = 662.0
+offset_bottom = 48.0
+texture = ExtResource("51_tank")
+
+[node name="Assistant" type="TextureRect" parent="Window/BottomDock" unique_id=1890492521]
+layout_mode = 0
+offset_left = 650.0
+offset_top = 13.0
+offset_right = 730.0
+offset_bottom = 46.0
+texture = ExtResource("52_assistant")
+
+[node name="Bag" type="TextureRect" parent="Window/BottomDock" unique_id=125479775]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 12.0
+offset_right = 815.0
+offset_bottom = 48.0
+texture = ExtResource("53_bag")
+
+[node name="Community" type="TextureRect" parent="Window/BottomDock" unique_id=1267454315]
+layout_mode = 0
+offset_left = 834.0
+offset_top = 15.0
+offset_right = 863.0
+offset_bottom = 44.0
+texture = ExtResource("54_small_bg")
+
+[node name="Icon" type="TextureRect" parent="Window/BottomDock/Community" unique_id=1396966379]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 23.0
+offset_bottom = 24.0
+texture = ExtResource("55_community")
+
+[node name="Tasks" type="TextureRect" parent="Window/BottomDock" unique_id=1349905500]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 16.0
+offset_right = 895.0
+offset_bottom = 45.0
+texture = ExtResource("54_small_bg")
+
+[node name="Icon" type="TextureRect" parent="Window/BottomDock/Tasks" unique_id=1363823495]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 18.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("67_tasks")
+
+[node name="Settings" type="TextureRect" parent="Window/BottomDock" unique_id=1373557610]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 15.0
+offset_right = 928.0
+offset_bottom = 44.0
+texture = ExtResource("54_small_bg")
+
+[node name="Icon" type="TextureRect" parent="Window/BottomDock/Settings" unique_id=1080307863]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 31.0
+offset_bottom = 30.0
+texture = ExtResource("56_settings")
+
+[node name="Return" type="TextureRect" parent="Window/BottomDock" unique_id=1368784200]
+layout_mode = 0
+offset_left = 925.0
+offset_top = 6.0
+offset_right = 969.0
+offset_bottom = 50.0
+texture = ExtResource("57_return_bg")
+
+[node name="Icon" type="TextureRect" parent="Window/BottomDock/Return" unique_id=61644157]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 35.0
+offset_bottom = 36.0
+texture = ExtResource("58_return")
+
+[node name="Channel" type="Label" parent="Window/BottomDock" unique_id=2144200105]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 99.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.35, 0.58, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "Thế Giới"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InputHint" type="Label" parent="Window/BottomDock" unique_id=143097577]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 13.0
+offset_right = 225.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.35, 0.58, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 11
+text = "dưới lv 15..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SharedChatHost" type="Control" parent="Window" unique_id=1787859501]
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 397.0
+offset_right = 471.0
+offset_bottom = 618.0
+mouse_filter = 1
+
+[node name="SharedBottomHost" type="Control" parent="Window" unique_id=1922479561]
+anchors_preset = 0
+offset_top = 550.0
+offset_right = 1017.0
+offset_bottom = 618.0
+mouse_filter = 2
+
+[node name="ModalHost" type="Control" parent="." unique_id=1732602569]
+z_index = 100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

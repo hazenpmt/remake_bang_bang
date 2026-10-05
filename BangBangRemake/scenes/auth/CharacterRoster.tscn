@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://y8eyi2fgt155"]
+
+[ext_resource type="Texture2D" uid="uid://cdgjdqgobgkwj" path="res://assets/auth/login_background.jpg" id="1_bg"]
+[ext_resource type="Script" uid="uid://b14psesbk27oa" path="res://scripts/auth/character_roster.gd" id="2_script"]
+[ext_resource type="Texture2D" uid="uid://wrdltd3nw14" path="res://assets/auth/character_roster/window.png" id="3_window"]
+[ext_resource type="Texture2D" uid="uid://u6homsjgnhd8" path="res://assets/auth/character_roster/card_selected.png" id="4_card"]
+[ext_resource type="Texture2D" uid="uid://cojvn2fk3oskc" path="res://assets/auth/character_roster/title_choose_character.png" id="5_title"]
+[ext_resource type="Texture2D" path="res://assets/ui/close_original.png" id="6_close"]
+[ext_resource type="Texture2D" uid="uid://5iyucg3xmlnf" path="res://assets/auth/character_roster/btn_previous.png" id="7_previous"]
+[ext_resource type="Texture2D" uid="uid://cce8qc0sa6l88" path="res://assets/auth/character_roster/btn_next.png" id="8_next"]
+[ext_resource type="Texture2D" uid="uid://bea7a84sta4v4" path="res://assets/auth/character_roster/btn_enter.png" id="9_enter"]
+[ext_resource type="Texture2D" uid="uid://03xnmextt2v8" path="res://assets/auth/character_roster/word_enter_game.png" id="10_enter_text"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/character_male_rgba.png" id="11_character"]
+[ext_resource type="Texture2D" uid="uid://bqspsimbeo4rl" path="res://assets/ui/profile/level/level_1.png" id="12_level"]
+[ext_resource type="Script" uid="uid://bvn8uw1j2bjgm" path="res://scripts/animation/swf_timeline_player.gd" id="13_level_fx"]
+[ext_resource type="PackedScene" path="res://scenes/common/MusicToggle.tscn" id="14_music"]
+[ext_resource type="Script" uid="uid://1357l0jood2h" path="res://scripts/ui/HoverButton.gd" id="15_hover"]
+
+[node name="CharacterRoster" type="Control" unique_id=2119699158]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=264132019]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Window" type="Control" parent="." unique_id=1062877670]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.0
+offset_top = -219.0
+offset_right = 328.0
+offset_bottom = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Frame" type="TextureRect" parent="Window" unique_id=1410015244]
+layout_mode = 0
+offset_left = -100.0
+offset_top = -4.0
+offset_right = 770.0
+offset_bottom = 500.0
+mouse_filter = 2
+texture = ExtResource("3_window")
+
+[node name="Title" type="TextureRect" parent="Window" unique_id=1392770358]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 9.0
+offset_right = 415.0
+offset_bottom = 62.0
+mouse_filter = 2
+texture = ExtResource("5_title")
+
+[node name="BtnClose" type="TextureButton" parent="Window" unique_id=1435545684]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 728.0
+offset_top = 23.0
+offset_right = 752.0
+offset_bottom = 47.0
+texture_normal = ExtResource("6_close")
+script = ExtResource("15_hover")
+
+[node name="BtnPrevious" type="TextureButton" parent="Window" unique_id=1040586513]
+layout_mode = 0
+offset_left = -102.0
+offset_top = 260.0
+offset_right = -50.0
+offset_bottom = 317.0
+disabled = true
+texture_normal = ExtResource("7_previous")
+texture_disabled = ExtResource("7_previous")
+
+[node name="BtnNext" type="TextureButton" parent="Window" unique_id=1678064654]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 244.0
+offset_right = 753.0
+offset_bottom = 301.0
+disabled = true
+texture_normal = ExtResource("8_next")
+texture_disabled = ExtResource("8_next")
+
+[node name="Card" type="TextureRect" parent="Window" unique_id=1222719864]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 99.0
+offset_right = 149.0
+offset_bottom = 411.0
+mouse_filter = 2
+texture = ExtResource("4_card")
+
+[node name="Character" type="TextureRect" parent="Window" unique_id=1378252009]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -30.0
+offset_top = 101.0
+offset_right = 150.0
+offset_bottom = 341.0
+mouse_filter = 2
+texture = ExtResource("11_character")
+
+[node name="Level" type="Control" parent="Window" unique_id=1859778866]
+anchors_preset = 0
+offset_left = -36.0
+offset_top = 109.0
+offset_right = 44.0
+offset_bottom = 149.0
+mouse_filter = 2
+
+[node name="LevelBase" type="TextureRect" parent="Window/Level" unique_id=897579580]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("12_level")
+
+[node name="LevelEffect" type="Node2D" parent="Window/Level" unique_id=1431039224]
+unique_name_in_owner = true
+visible = false
+position = Vector2(40, 20)
+script = ExtResource("13_level_fx")
+timeline_path = "res://assets/animations/profile_level_11_20_fx_compact/timeline.json"
+
+[node name="CharacterName" type="Label" parent="Window" unique_id=1946962509]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -35.0
+offset_top = 343.0
+offset_right = 149.0
+offset_bottom = 393.0
+theme_override_colors/font_color = Color(0.82, 0.16, 0.08, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 18
+text = "Nhân vật"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="BtnEnter" type="TextureButton" parent="Window" unique_id=528673405]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 256.0
+offset_top = 427.0
+offset_right = 377.0
+offset_bottom = 470.0
+texture_normal = ExtResource("9_enter")
+
+[node name="Text" type="TextureRect" parent="Window/BtnEnter" unique_id=1140815367]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -10.5
+offset_right = 39.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_enter_text")
+
+[node name="MusicToggle" parent="." unique_id=372349238 instance=ExtResource("14_music")]
+
+[node name="HealthWarning" type="Label" parent="." unique_id=796138430]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -59.0
+offset_right = 500.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Chơi Game Lành Mạnh
+Hãy sắp xếp thời gian chơi game hợp lý, giữ gìn sức khỏe, cẩn thận lừa đảo."
+horizontal_alignment = 1
+vertical_alignment = 1

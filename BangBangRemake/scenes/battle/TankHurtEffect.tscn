@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dmu1p1c41qf3x"]
+
+[ext_resource type="Script" uid="uid://bvn8uw1j2bjgm" path="res://scripts/animation/swf_timeline_player.gd" id="1_swf"]
+
+[node name="TankHurt" type="Node2D" unique_id=1215439004]
+z_index = 18
+position = Vector2(0, 0)
+script = ExtResource("1_swf")
+timeline_path = "res://assets/animations/battle_tank_hurt_compact/timeline.json"
+autoplay = false
+content_position_adjust = Vector2(50, 51)

@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\gui_summer\\controls\\main\\360\\aeacc768b6b7be867377bbd55c246106.swf",
+  "logical_name": "zh_CN/gui_summer/controls/main/360/plat.swf",
+  "fps": 24.0,
+  "frames": 191,
+  "shape_textures": 37,
+  "sprite_timelines": 4,
+  "frame_items_min": 9,
+  "frame_items_max": 17,
+  "frame_masks_min": 2,
+  "frame_masks_max": 4,
+  "shape_png_bytes": 1600066,
+  "timeline_json_bytes": 403989,
+  "warnings": []
+}

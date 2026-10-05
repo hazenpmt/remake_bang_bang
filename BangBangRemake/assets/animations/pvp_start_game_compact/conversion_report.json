@@ -1,0 +1,17 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\ui\\927552ae59de7827470338f8c53059b4.swf",
+  "logical_name": "zh_CN/swf/ui/starGame.swf",
+  "fps": 24.0,
+  "frames": 55,
+  "shape_textures": 4,
+  "sprite_timelines": 2,
+  "frame_items_min": 1,
+  "frame_items_max": 3,
+  "frame_masks_min": 1,
+  "frame_masks_max": 1,
+  "shape_png_bytes": 2662,
+  "timeline_json_bytes": 31501,
+  "warnings": [
+    "Flash filters were found; compare them or bake only the affected layer."
+  ]
+}

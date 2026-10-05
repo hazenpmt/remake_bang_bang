@@ -1,0 +1,17 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\gui_summer\\controls\\ladder\\eb23289139cbd20c41fd521173c7cf33.swf",
+  "logical_name": "zh_CN/gui_summer/controls/ladder/section_icon_platnum.swf",
+  "fps": 24.0,
+  "frames": 60,
+  "shape_textures": 19,
+  "sprite_timelines": 7,
+  "frame_items_min": 5,
+  "frame_items_max": 9,
+  "frame_masks_min": 2,
+  "frame_masks_max": 2,
+  "shape_png_bytes": 271449,
+  "timeline_json_bytes": 100374,
+  "warnings": [
+    "Flash filters were found; compare them or bake only the affected layer."
+  ]
+}

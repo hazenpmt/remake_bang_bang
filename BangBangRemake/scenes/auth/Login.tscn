@@ -1,0 +1,394 @@
+[gd_scene load_steps=12 format=3 uid="uid://ckfq8sptkvkly"]
+
+[ext_resource type="Texture2D" uid="uid://cdgjdqgobgkwj" path="res://assets/auth/login_background.jpg" id="1_bg"]
+[ext_resource type="Texture2D" uid="uid://cao0bbtxie5xl" path="res://assets/auth/login_logo.png" id="2_logo"]
+[ext_resource type="Texture2D" uid="uid://di11bmex2thba" path="res://assets/auth/btn_login.png" id="3_login"]
+[ext_resource type="Texture2D" uid="uid://s1esnrh6gf75" path="res://assets/auth/btn_register.png" id="4_register"]
+[ext_resource type="Texture2D" uid="uid://icdm36d3ao5g" path="res://assets/auth/input_wide.png" id="5_input"]
+[ext_resource type="Script" uid="uid://2a6ke1ghighe" path="res://scripts/auth/login.gd" id="6_script"]
+[ext_resource type="Texture2D" uid="uid://b1bu8b308jdpp" path="res://assets/auth/checkbox_unchecked.png" id="7_check_off"]
+[ext_resource type="Texture2D" uid="uid://fqlud0vu31f6" path="res://assets/auth/checkbox_checked.png" id="8_check_on"]
+[ext_resource type="PackedScene" path="res://scenes/common/MusicToggle.tscn" id="9_music_toggle"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_panel"]
+bg_color = Color(0.015, 0.06, 0.11, 0.82)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.08, 0.72, 0.96, 0.8)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.65)
+shadow_size = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBox_input"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+texture = ExtResource("5_input")
+texture_margin_left = 12.0
+texture_margin_top = 8.0
+texture_margin_right = 12.0
+texture_margin_bottom = 8.0
+
+[node name="Login" type="Control" unique_id=1451787172]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1075912345]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkOverlay" type="ColorRect" parent="." unique_id=2037219155]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.18)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=379849641]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainColumn" type="VBoxContainer" parent="Center" unique_id=15495519]
+custom_minimum_size = Vector2(610, 780)
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="Center/MainColumn" unique_id=411960728]
+custom_minimum_size = Vector2(570, 236)
+layout_mode = 2
+texture = ExtResource("2_logo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel" type="PanelContainer" parent="Center/MainColumn" unique_id=655101135]
+custom_minimum_size = Vector2(590, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBox_panel")
+
+[node name="Margin" type="MarginContainer" parent="Center/MainColumn/Panel" unique_id=482432495]
+layout_mode = 2
+theme_override_constants/margin_left = 55
+theme_override_constants/margin_top = 38
+theme_override_constants/margin_right = 55
+theme_override_constants/margin_bottom = 34
+
+[node name="Controls" type="VBoxContainer" parent="Center/MainColumn/Panel/Margin" unique_id=83764390]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="LoginForm" type="VBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls" unique_id=1170750474]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="AccountRow" type="HBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm" unique_id=718582913]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="AccountLabel" type="Label" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/AccountRow" unique_id=693784773]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.68, 0.12, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+text = "Tài khoản"
+vertical_alignment = 1
+
+[node name="LoginUsername" type="LineEdit" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/AccountRow" unique_id=2024253900]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.75, 0.85, 0.9, 0.85)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBox_input")
+theme_override_styles/focus = SubResource("StyleBox_input")
+placeholder_text = "Tối thiểu 6 ký tự, tối đa 15 ký tự"
+max_length = 15
+
+[node name="PasswordRow" type="HBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm" unique_id=903363321]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="PasswordLabel" type="Label" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/PasswordRow" unique_id=663897541]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.68, 0.12, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+text = "Mật khẩu"
+vertical_alignment = 1
+
+[node name="LoginPassword" type="LineEdit" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/PasswordRow" unique_id=1880002307]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.75, 0.85, 0.9, 0.85)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBox_input")
+theme_override_styles/focus = SubResource("StyleBox_input")
+placeholder_text = "Tối thiểu 6 ký tự, tối đa 15 ký tự"
+max_length = 15
+secret = true
+
+[node name="BtnToggleLoginPassword" type="Button" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/PasswordRow" unique_id=206047984]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+tooltip_text = "Hiện mật khẩu"
+theme_override_colors/font_color = Color(0.65, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 22
+toggle_mode = true
+text = "👁"
+flat = true
+
+[node name="LoginOptions" type="HBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm" unique_id=1978819880]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="RememberAccount" type="CheckBox" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/LoginOptions" unique_id=2061686326]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.78, 0.24, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_icons/checked = ExtResource("8_check_on")
+theme_override_icons/unchecked = ExtResource("7_check_off")
+text = "Ghi nhớ tài khoản"
+
+[node name="LoginAgreement" type="CheckBox" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/LoginOptions" unique_id=190611978]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.78, 0.24, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_icons/checked = ExtResource("8_check_on")
+theme_override_icons/unchecked = ExtResource("7_check_off")
+text = "Đã đọc và đồng ý"
+
+[node name="LoginButtons" type="HBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm" unique_id=835042993]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="BtnLogin" type="TextureButton" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/LoginButtons" unique_id=1533330245]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 39)
+layout_mode = 2
+texture_normal = ExtResource("3_login")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnOpenRegister" type="TextureButton" parent="Center/MainColumn/Panel/Margin/Controls/LoginForm/LoginButtons" unique_id=1409835684]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 39)
+layout_mode = 2
+texture_normal = ExtResource("4_register")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="RegisterForm" type="VBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls" unique_id=1023868593]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="RegisterAccountRow" type="HBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm" unique_id=866953141]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="RegisterAccountLabel" type="Label" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterAccountRow" unique_id=599701518]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.68, 0.12, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 19
+text = "Tài khoản"
+vertical_alignment = 1
+
+[node name="RegisterUsername" type="LineEdit" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterAccountRow" unique_id=1904370703]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.75, 0.85, 0.9, 0.85)
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBox_input")
+theme_override_styles/focus = SubResource("StyleBox_input")
+placeholder_text = "Tối thiểu 6 ký tự, tối đa 15 ký tự"
+max_length = 15
+
+[node name="RegisterPasswordRow" type="HBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm" unique_id=297259025]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RegisterPasswordLabel" type="Label" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterPasswordRow" unique_id=770998119]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.68, 0.12, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 19
+text = "Mật khẩu"
+vertical_alignment = 1
+
+[node name="RegisterPassword" type="LineEdit" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterPasswordRow" unique_id=751040311]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.75, 0.85, 0.9, 0.85)
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBox_input")
+theme_override_styles/focus = SubResource("StyleBox_input")
+placeholder_text = "Tối thiểu 6 ký tự, tối đa 15 ký tự"
+max_length = 15
+secret = true
+
+[node name="BtnToggleRegisterPassword" type="Button" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterPasswordRow" unique_id=19563081]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+tooltip_text = "Hiện mật khẩu"
+theme_override_colors/font_color = Color(0.65, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 22
+toggle_mode = true
+text = "👁"
+flat = true
+
+[node name="RegisterConfirmRow" type="HBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm" unique_id=1638762848]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RegisterConfirmLabel" type="Label" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterConfirmRow" unique_id=967406719]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.68, 0.12, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 17
+text = "Nhập lại"
+vertical_alignment = 1
+
+[node name="RegisterPasswordConfirm" type="LineEdit" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterConfirmRow" unique_id=1109043907]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.75, 0.85, 0.9, 0.85)
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBox_input")
+theme_override_styles/focus = SubResource("StyleBox_input")
+placeholder_text = "Nhập lại mật khẩu"
+max_length = 15
+secret = true
+
+[node name="BtnToggleRegisterConfirm" type="Button" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterConfirmRow" unique_id=716407340]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+tooltip_text = "Hiện mật khẩu"
+theme_override_colors/font_color = Color(0.65, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 22
+toggle_mode = true
+text = "👁"
+flat = true
+
+[node name="RegisterAgreement" type="CheckBox" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm" unique_id=1009921323]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.78, 0.24, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_icons/checked = ExtResource("8_check_on")
+theme_override_icons/unchecked = ExtResource("7_check_off")
+text = "Đã đọc và đồng ý"
+
+[node name="RegisterButtons" type="HBoxContainer" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm" unique_id=1824955126]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="BtnRegister" type="TextureButton" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterButtons" unique_id=161124419]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 39)
+layout_mode = 2
+texture_normal = ExtResource("4_register")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnBackToLogin" type="Button" parent="Center/MainColumn/Panel/Margin/Controls/RegisterForm/RegisterButtons" unique_id=1080765768]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 39)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Quay lại"
+
+[node name="StatusLabel" type="Label" parent="Center/MainColumn/Panel/Margin/Controls" unique_id=1226412854]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BusyIndicator" type="ProgressBar" parent="Center/MainColumn/Panel/Margin/Controls" unique_id=1370739933]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+value = 55.0
+show_percentage = false
+indeterminate = true
+editor_preview_indeterminate = false
+
+[node name="MusicToggle" parent="." instance=ExtResource("9_music_toggle")]

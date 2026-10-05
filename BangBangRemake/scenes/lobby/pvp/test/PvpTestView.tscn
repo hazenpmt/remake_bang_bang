@@ -1,0 +1,262 @@
+[gd_scene format=3 uid="uid://bu2ow8w1w13jr"]
+
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/hub/PvpRoomView.tscn" id="1_pvp_room"]
+
+[node name="PvpRoomView" unique_id=1908425449 instance=ExtResource("1_pvp_room")]
+initial_tab = 4
+
+[node name="Title" parent="Window" index="3"]
+offset_left = 468.3131
+offset_top = 22.08412
+offset_right = 548.3131
+offset_bottom = 50.08412
+
+[node name="Tabs" parent="Window" index="5"]
+anchors_preset = 0
+
+[node name="RoomList" parent="Window" index="6"]
+anchors_preset = 0
+
+[node name="TeamCaption" parent="Window/RoomList" index="1"]
+offset_left = 49.378532
+offset_top = 5.700948
+offset_right = 80.37853
+offset_bottom = 22.700949
+
+[node name="NameCaption" parent="Window/RoomList" index="2"]
+offset_left = 200.78038
+offset_top = 5.700927
+offset_right = 236.78038
+offset_bottom = 27.700928
+
+[node name="ModeCaption" parent="Window/RoomList" index="3"]
+offset_left = 348.44394
+offset_top = 3.8317676
+offset_right = 384.44394
+offset_bottom = 25.831768
+
+[node name="MapCaption" parent="Window/RoomList" index="4"]
+offset_left = 456.85516
+offset_top = 2.8971882
+offset_right = 492.85516
+offset_bottom = 24.897188
+
+[node name="NumCaption" parent="Window/RoomList" index="5"]
+offset_left = 565.2663
+offset_top = -2.7102885
+offset_right = 601.2663
+offset_bottom = 19.289711
+
+[node name="StatusCaption" parent="Window/RoomList" index="6"]
+offset_left = 642.8364
+offset_top = -3.644868
+offset_right = 678.8364
+offset_bottom = 18.355133
+
+[node name="Rows" parent="Window/RoomList" index="7"]
+anchors_preset = 0
+offset_left = 2.6495533
+offset_top = 15.981321
+offset_right = 783.64954
+offset_bottom = 319.98132
+
+[node name="HitTargets" parent="Window/RoomList/Rows" index="8"]
+anchors_preset = 0
+
+[node name="Room1" parent="Window/RoomList/Rows/HitTargets" index="0"]
+anchors_preset = 0
+
+[node name="Room2" parent="Window/RoomList/Rows/HitTargets" index="1"]
+anchors_preset = 0
+
+[node name="Room3" parent="Window/RoomList/Rows/HitTargets" index="2"]
+anchors_preset = 0
+
+[node name="Room4" parent="Window/RoomList/Rows/HitTargets" index="3"]
+anchors_preset = 0
+
+[node name="Room5" parent="Window/RoomList/Rows/HitTargets" index="4"]
+anchors_preset = 0
+
+[node name="Room6" parent="Window/RoomList/Rows/HitTargets" index="5"]
+anchors_preset = 0
+
+[node name="Room7" parent="Window/RoomList/Rows/HitTargets" index="6"]
+anchors_preset = 0
+
+[node name="Room8" parent="Window/RoomList/Rows/HitTargets" index="7"]
+anchors_preset = 0
+
+[node name="Room1" parent="Window/RoomList/Rows" index="9"]
+anchors_preset = 0
+
+[node name="Room2" parent="Window/RoomList/Rows" index="10"]
+anchors_preset = 0
+
+[node name="PlayerList" parent="Window" index="7"]
+anchors_preset = 0
+
+[node name="GuildTab" parent="Window/PlayerList" index="1"]
+offset_left = 16.864435
+offset_top = 5.3831944
+offset_right = 69.86443
+offset_bottom = 30.383194
+
+[node name="FriendTab" parent="Window/PlayerList" index="2"]
+offset_left = 72.0046
+offset_top = 5.3831944
+offset_right = 125.0046
+offset_bottom = 30.383194
+
+[node name="RoomTab" parent="Window/PlayerList" index="3"]
+offset_left = 126.210175
+offset_top = 5.3831944
+offset_right = 179.21017
+offset_bottom = 30.383194
+
+[node name="Items" parent="Window/PlayerList" index="4"]
+anchors_preset = 0
+
+[node name="ScrollTrack" parent="Window/PlayerList" index="5"]
+offset_left = 167.3317
+offset_top = 35.289726
+offset_right = 186.3317
+offset_bottom = 490.28973
+
+[node name="Thumb" parent="Window/PlayerList/ScrollTrack" index="0"]
+offset_left = 0.93457943
+offset_top = 19.62618
+offset_right = 18.93458
+offset_bottom = 104.62618
+
+[node name="Up" parent="Window/PlayerList" index="6"]
+offset_left = 167.33173
+offset_top = 35.289734
+offset_right = 186.33173
+offset_bottom = 54.289734
+
+[node name="Down" parent="Window/PlayerList" index="7"]
+offset_left = 167.33171
+offset_top = 469.86917
+offset_right = 186.33171
+offset_bottom = 488.86917
+
+[node name="Pager" parent="Window" index="8"]
+anchors_preset = 0
+offset_left = 520.64954
+offset_top = 396.85043
+offset_right = 754.64954
+offset_bottom = 431.85043
+
+[node name="Background" parent="Window/Pager" index="0"]
+offset_left = 4.6728973
+offset_right = 238.6729
+
+[node name="Previous" parent="Window/Pager" index="1"]
+offset_left = 84.112114
+offset_top = 3.7383046
+offset_right = 117.112114
+offset_bottom = 32.738304
+
+[node name="Next" parent="Window/Pager" index="2"]
+offset_left = 127.10275
+offset_top = 3.738305
+offset_right = 160.10275
+offset_bottom = 32.738304
+
+[node name="QuickJoin" parent="Window" index="9"]
+offset_left = 507.56543
+offset_top = 440.7757
+offset_right = 777.5654
+offset_bottom = 500.7757
+
+[node name="CreateTeam" parent="Window" index="10"]
+offset_left = 529.0607
+offset_top = 498.7196
+offset_right = 640.0607
+offset_bottom = 547.7196
+
+[node name="FindTeam" parent="Window" index="11"]
+offset_left = 650.556
+offset_top = 498.7196
+offset_right = 761.556
+offset_bottom = 547.7196
+
+[node name="BottomDock" parent="Window" index="13"]
+anchors_preset = 0
+
+[node name="Shop" parent="Window/BottomDock" index="0"]
+offset_left = 257.09818
+offset_top = 13.205607
+offset_right = 353.09818
+offset_bottom = 53.20561
+
+[node name="Friend" parent="Window/BottomDock" index="1"]
+offset_left = 354.29437
+offset_top = 13.205601
+offset_right = 446.29437
+offset_bottom = 51.2056
+
+[node name="Rank" parent="Window/BottomDock" index="2"]
+offset_left = 444.9486
+offset_top = 7.598158
+offset_right = 548.9486
+offset_bottom = 53.59816
+
+[node name="Crystal" parent="Window/BottomDock" index="3"]
+offset_left = 548.6869
+offset_top = 14.140181
+offset_right = 638.6869
+offset_bottom = 52.140182
+
+[node name="Tank" parent="Window/BottomDock" index="4"]
+offset_left = 617.84576
+offset_top = 14.140181
+offset_right = 693.84576
+offset_bottom = 52.140182
+
+[node name="Assistant" parent="Window/BottomDock" index="5"]
+offset_left = 685.1355
+offset_top = 16.943954
+offset_right = 765.1355
+offset_bottom = 49.943954
+
+[node name="Bag" parent="Window/BottomDock" index="6"]
+offset_left = 771.11676
+offset_top = 15.074746
+offset_right = 862.11676
+offset_bottom = 51.074745
+
+[node name="Community" parent="Window/BottomDock" index="7"]
+offset_left = 865.5093
+offset_top = 18.8131
+offset_right = 894.5093
+offset_bottom = 47.813103
+
+[node name="Tasks" parent="Window/BottomDock" index="8"]
+offset_left = 898.2196
+offset_top = 18.813093
+offset_right = 927.2196
+offset_bottom = 47.813095
+
+[node name="Settings" parent="Window/BottomDock" index="9"]
+offset_left = 929.0608
+offset_top = 18.813099
+offset_right = 958.0608
+offset_bottom = 47.8131
+
+[node name="Icon" parent="Window/BottomDock/Settings" index="0"]
+offset_left = 5.018711e-05
+offset_right = 30.00005
+
+[node name="Return" parent="Window/BottomDock" index="10"]
+offset_left = 958.0327
+offset_top = 8.53271
+offset_right = 996.0327
+offset_bottom = 47.53271
+
+[node name="SharedChatHost" parent="Window" index="14"]
+anchors_preset = 0
+
+[node name="SharedBottomHost" parent="Window" index="15"]
+anchors_preset = 0

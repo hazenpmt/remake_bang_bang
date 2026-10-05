@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://ccd4kn0cihsah"]
+
+[ext_resource type="Texture2D" uid="uid://cleovrr2b6ujk" path="res://assets/ui/pvp_ready_room/captain_title.png" id="1_captain"]
+[ext_resource type="Texture2D" uid="uid://cn2y28f7pc31q" path="res://assets/ui/profile/avatar_male.png" id="2_avatar"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/tank_ironman_reward.png" id="3_tank"]
+[ext_resource type="Texture2D" uid="uid://bqspsimbeo4rl" path="res://assets/ui/profile/level/level_1.png" id="4_level"]
+[ext_resource type="Texture2D" uid="uid://3nha2d6yq1ik" path="res://assets/ui/tank/tank_level_1.png" id="5_tank_level"]
+[ext_resource type="Script" uid="uid://bvn8uw1j2bjgm" path="res://scripts/animation/swf_timeline_player.gd" id="6_level_fx"]
+[ext_resource type="Texture2D" uid="uid://d2nb4s1ud7hpp" path="res://assets/ui/pvp_ready_room/name_background.png" id="7_name_background"]
+
+[node name="Member" type="Control" unique_id=1803403885]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 158.0
+offset_bottom = 318.0
+mouse_filter = 2
+
+[node name="Avatar" type="TextureRect" parent="." unique_id=1211035176]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 35.0
+offset_right = 71.0
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("2_avatar")
+expand_mode = 1
+
+[node name="Level" type="TextureRect" parent="." unique_id=345136990]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 40.0
+offset_right = 111.0
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("4_level")
+expand_mode = 1
+
+[node name="LevelEffect" type="Node2D" parent="." unique_id=1847352405]
+visible = false
+position = Vector2(91, 50)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("6_level_fx")
+timeline_path = "res://assets/animations/profile_level_11_20_fx_compact/timeline.json"
+
+[node name="NameBackground" type="TextureRect" parent="." unique_id=1457248431]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 96.0
+offset_right = 145.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("7_name_background")
+
+[node name="Name" type="Label" parent="." unique_id=2013286232]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 93.0
+offset_right = 121.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(1, 0.95, 0.15, 1)
+theme_override_colors/font_outline_color = Color(0, 0.2, 0.35, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "Beenn"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Tank" type="TextureRect" parent="." unique_id=1802563586]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 122.0
+offset_right = 150.0
+offset_bottom = 275.0
+mouse_filter = 2
+texture = ExtResource("3_tank")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TankLevel" type="TextureRect" parent="." unique_id=1777903430]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 251.0
+offset_right = 46.0
+offset_bottom = 272.0
+mouse_filter = 2
+texture = ExtResource("5_tank_level")
+
+[node name="TankName" type="Label" parent="." unique_id=2057205957]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 249.0
+offset_right = 171.0
+offset_bottom = 275.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.45, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 11
+text = "Iron Man"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="CaptainTitle" type="TextureRect" parent="." unique_id=53603013]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 276.0
+offset_right = 93.0
+offset_bottom = 300.0
+mouse_filter = 2
+texture = ExtResource("1_captain")

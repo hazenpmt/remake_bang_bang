@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/animation/swf_timeline_player.gd" id="1_swf"]
+
+[node name="Transition" type="Control"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="OriginalBattleDoor" type="Node2D" parent="."]
+position = Vector2(960, 540)
+script = ExtResource("1_swf")
+timeline_path = "res://assets/animations/pvp_battle_transition_compact/timeline.json"
+autoplay = false
+loop = false

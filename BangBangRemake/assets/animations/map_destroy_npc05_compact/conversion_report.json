@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\npc\\destroy_npc05.swf",
+  "logical_name": "destroy_npc05",
+  "fps": 24.0,
+  "frames": 10,
+  "shape_textures": 6,
+  "sprite_timelines": 0,
+  "frame_items_min": 5,
+  "frame_items_max": 5,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 3532,
+  "timeline_json_bytes": 10702,
+  "warnings": []
+}

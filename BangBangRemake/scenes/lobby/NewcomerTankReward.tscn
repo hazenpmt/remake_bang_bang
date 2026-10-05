@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://bpt848d4nkgrk"]
+
+[ext_resource type="Script" uid="uid://b0yxvtb3v2ul1" path="res://scripts/lobby/newcomer_tank_reward.gd" id="1_reward"]
+[ext_resource type="Script" uid="uid://bvn8uw1j2bjgm" path="res://scripts/animation/swf_timeline_player.gd" id="2_timeline"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/tank_ironman_reward.png" id="3_tank"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skill_ironman_1.jpg" id="4_skill_1"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skill_ironman_2.jpg" id="5_skill_2"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skill_ironman_3.jpg" id="6_skill_3"]
+[ext_resource type="Shader" path="res://shaders/rounded_texture_mask.gdshader" id="7_skill_mask"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_skill_round"]
+shader = ExtResource("7_skill_mask")
+
+[node name="NewcomerTankReward" type="Control" unique_id=1417222590]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_reward")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=1249215305]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78)
+
+[node name="Stage" type="Control" parent="." unique_id=109841987]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Animation" type="Node2D" parent="Stage" unique_id=461251138]
+position = Vector2(200, 200)
+script = ExtResource("2_timeline")
+timeline_path = "res://assets/animations/achieve_tank_compact/timeline.json"
+autoplay = false
+
+[node name="TankImage" type="TextureRect" parent="Stage" unique_id=1689187571]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 75.0
+offset_right = 300.0
+offset_bottom = 275.0
+mouse_filter = 2
+texture = ExtResource("3_tank")
+stretch_mode = 5
+
+[node name="TankName" type="Label" parent="Stage" unique_id=781780250]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 249.0
+offset_right = 317.0
+offset_bottom = 281.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.37, 0.74, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 19
+text = "Iron Man"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Skill1" type="TextureRect" parent="Stage" unique_id=1889358510]
+material = SubResource("ShaderMaterial_skill_round")
+layout_mode = 0
+offset_left = 103.0
+offset_top = 294.0
+offset_right = 153.0
+offset_bottom = 344.0
+mouse_filter = 2
+texture = ExtResource("4_skill_1")
+
+[node name="Skill2" type="TextureRect" parent="Stage" unique_id=579414561]
+material = SubResource("ShaderMaterial_skill_round")
+layout_mode = 0
+offset_left = 173.0
+offset_top = 294.0
+offset_right = 223.0
+offset_bottom = 344.0
+mouse_filter = 2
+texture = ExtResource("5_skill_2")
+
+[node name="Skill3" type="TextureRect" parent="Stage" unique_id=102426679]
+material = SubResource("ShaderMaterial_skill_round")
+layout_mode = 0
+offset_left = 242.0
+offset_top = 294.0
+offset_right = 292.0
+offset_bottom = 344.0
+mouse_filter = 2
+texture = ExtResource("6_skill_3")
+
+[node name="BtnOk" type="Button" parent="Stage" unique_id=620675913]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 146.5
+offset_top = 352.0
+offset_right = 248.5
+offset_bottom = 400.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true

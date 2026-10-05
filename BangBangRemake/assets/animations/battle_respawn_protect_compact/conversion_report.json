@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\buff\\protect_time.swf",
+  "logical_name": "buff/protect_time",
+  "fps": 20.0,
+  "frames": 16,
+  "shape_textures": 8,
+  "sprite_timelines": 0,
+  "frame_items_min": 1,
+  "frame_items_max": 1,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 52202,
+  "timeline_json_bytes": 4295,
+  "warnings": []
+}

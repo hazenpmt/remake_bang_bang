@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://b1bnw2ae7nvmt"]
+
+[ext_resource type="Texture2D" uid="uid://tictn5brrvmw" path="res://assets/ui/military_rank/generated/military_rank_outer_frame_ai.png" id="1_frame"]
+[ext_resource type="Texture2D" uid="uid://ddf3vqyob84ku" path="res://assets/ui/military_rank/title_mr_list_t.png" id="2_title"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/military_rank/MilitaryRankCard.tscn" id="3_card"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_pre_page.png" id="4_prev"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_next_page.png" id="5_next"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num1.png" id="6_num1"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num1_select.png" id="7_num1_select"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num2.png" id="8_num2"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num2_select.png" id="9_num2_select"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num3.png" id="10_num3"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num3_select.png" id="11_num3_select"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num4.png" id="12_num4"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num4_select.png" id="13_num4_select"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num5.png" id="14_num5"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/mall/btn_num5_select.png" id="15_num5_select"]
+
+[node name="MilitaryRankLevelPopup" type="Control" unique_id=571979520]
+custom_minimum_size = Vector2(900, 530)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 900.0
+offset_bottom = 530.0
+
+[node name="OpaqueBackdrop" type="ColorRect" parent="." unique_id=194864504]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 890.0
+offset_bottom = 520.0
+mouse_filter = 2
+color = Color(0.0862745, 0.301961, 0.529412, 1)
+
+[node name="OuterFrame" type="TextureRect" parent="." unique_id=25565579]
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_frame")
+expand_mode = 1
+
+[node name="Title" type="TextureRect" parent="." unique_id=76417393]
+z_index = 11
+layout_mode = 0
+offset_left = 389.0
+offset_top = 9.0
+offset_right = 512.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("2_title")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CloseButton" type="TextureButton" parent="." unique_id=516516622]
+z_index = 12
+layout_mode = 0
+offset_left = 860.0
+offset_top = 19.0
+offset_right = 891.0
+offset_bottom = 50.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+
+[node name="Cards" type="Control" parent="." unique_id=1382940285]
+anchors_preset = 0
+offset_left = 67.0
+offset_top = 55.0
+offset_right = 832.0
+offset_bottom = 457.0
+
+[node name="Card0" parent="Cards" unique_id=1138393505 instance=ExtResource("3_card")]
+layout_mode = 0
+
+[node name="Card1" parent="Cards" unique_id=948796153 instance=ExtResource("3_card")]
+layout_mode = 0
+offset_left = 195.0
+offset_right = 375.0
+
+[node name="Card2" parent="Cards" unique_id=477394557 instance=ExtResource("3_card")]
+layout_mode = 0
+offset_left = 390.0
+offset_right = 570.0
+
+[node name="Card3" parent="Cards" unique_id=1816415637 instance=ExtResource("3_card")]
+layout_mode = 0
+offset_left = 585.0
+offset_right = 765.0
+
+[node name="Card4" parent="Cards" unique_id=674015614 instance=ExtResource("3_card")]
+layout_mode = 0
+offset_top = 205.0
+offset_bottom = 402.0
+
+[node name="Card5" parent="Cards" unique_id=2045000788 instance=ExtResource("3_card")]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 205.0
+offset_right = 375.0
+offset_bottom = 402.0
+
+[node name="Card6" parent="Cards" unique_id=1347043581 instance=ExtResource("3_card")]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 205.0
+offset_right = 570.0
+offset_bottom = 402.0
+
+[node name="Card7" parent="Cards" unique_id=1972505583 instance=ExtResource("3_card")]
+layout_mode = 0
+offset_left = 585.0
+offset_top = 205.0
+offset_right = 765.0
+offset_bottom = 402.0
+
+[node name="PrevButton" type="TextureButton" parent="." unique_id=1799062279]
+z_index = 11
+layout_mode = 0
+offset_left = 329.0
+offset_top = 465.0
+offset_right = 354.0
+offset_bottom = 491.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_prev")
+
+[node name="PageButton0" type="TextureButton" parent="." unique_id=23883077]
+z_index = 11
+layout_mode = 0
+offset_left = 357.0
+offset_top = 468.0
+offset_right = 381.0
+offset_bottom = 490.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_num1")
+texture_disabled = ExtResource("7_num1_select")
+
+[node name="PageButton1" type="TextureButton" parent="." unique_id=1073614323]
+z_index = 11
+layout_mode = 0
+offset_left = 383.0
+offset_top = 468.0
+offset_right = 407.0
+offset_bottom = 490.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_num2")
+texture_disabled = ExtResource("9_num2_select")
+
+[node name="PageButton2" type="TextureButton" parent="." unique_id=1501002318]
+z_index = 11
+layout_mode = 0
+offset_left = 410.0
+offset_top = 468.0
+offset_right = 434.0
+offset_bottom = 490.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_num3")
+texture_disabled = ExtResource("11_num3_select")
+
+[node name="PageButton3" type="TextureButton" parent="." unique_id=1745261688]
+z_index = 11
+layout_mode = 0
+offset_left = 437.0
+offset_top = 468.0
+offset_right = 461.0
+offset_bottom = 490.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_num4")
+texture_disabled = ExtResource("13_num4_select")
+
+[node name="PageButton4" type="TextureButton" parent="." unique_id=447344333]
+z_index = 11
+layout_mode = 0
+offset_left = 464.0
+offset_top = 468.0
+offset_right = 488.0
+offset_bottom = 490.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_num5")
+texture_disabled = ExtResource("15_num5_select")
+
+[node name="NextButton" type="TextureButton" parent="." unique_id=1686790604]
+z_index = 11
+layout_mode = 0
+offset_left = 493.0
+offset_top = 466.0
+offset_right = 518.0
+offset_bottom = 492.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_next")

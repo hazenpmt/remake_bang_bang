@@ -1,0 +1,321 @@
+[gd_scene format=3 uid="uid://dfibw7cmh7ceu"]
+
+[ext_resource type="Script" uid="uid://bxw8bvuq8fimu" path="res://scripts/lobby/pvp_ready_room.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_room/content_bg.png" id="2_background"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_ready_room/shadow.png" id="3_shadow"]
+[ext_resource type="Texture2D" uid="uid://b3grb73kjocay" path="res://assets/ui/pvp_ready_room/player_card.png" id="4_slot"]
+[ext_resource type="Texture2D" uid="uid://styqrupctbdi" path="res://assets/ui/pvp_ready_room/waiting_player.png" id="5_waiting"]
+[ext_resource type="PackedScene" uid="uid://ccd4kn0cihsah" path="res://scenes/lobby/pvp/test/ready_room/PvpReadyRoomMember.tscn" id="9_member"]
+[ext_resource type="Texture2D" uid="uid://wcuenyoage56" path="res://assets/ui/pvp_ready_room/start_game_background.png" id="10_start_background"]
+[ext_resource type="Texture2D" uid="uid://e3jaxfmrhj22" path="res://assets/ui/pvp_ready_room/start_game_button.png" id="11_start_button"]
+[ext_resource type="Texture2D" uid="uid://dguvgm8thnya" path="res://assets/ui/pvp_ready_room/maps/random.jpg" id="12_random_map"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/test/ready_room/PvpMapSelector.tscn" id="13_map_selector"]
+[ext_resource type="Texture2D" uid="uid://cg68wuuuf7m5y" path="res://assets/ui/pvp_ready_room/room_code_caption.png" id="14_room_code_caption"]
+[ext_resource type="Script" uid="uid://bvn8uw1j2bjgm" path="res://scripts/animation/swf_timeline_player.gd" id="15_start_effect"]
+[ext_resource type="Script" uid="uid://1357l0jood2h" path="res://scripts/ui/HoverButton.gd" id="16_hover"]
+[ext_resource type="Texture2D" uid="uid://0qhhrflqju6p" path="res://assets/ui/pvp_ready_room/matchmaking_caption.png" id="17_match_caption"]
+[ext_resource type="Texture2D" uid="uid://ysm5moqlf3l5" path="res://assets/ui/pvp_ready_room/matchmaking_cancel_button.png" id="18_match_cancel"]
+[ext_resource type="Texture2D" uid="uid://dxaykogpo4v1j" path="res://assets/ui/pvp_ready_room/matchmaking_cancel_text.png" id="19_match_cancel_text"]
+
+[sub_resource type="Shader" id="Shader_map_rounded"]
+code = "shader_type canvas_item;
+
+uniform float corner_radius_px = 8.0;
+uniform vec2 rect_size_px = vec2(168.0, 100.0);
+
+void fragment() {
+	vec4 texel = texture(TEXTURE, UV);
+	vec2 point = abs(UV - vec2(0.5)) * rect_size_px;
+	vec2 inner = rect_size_px * 0.5 - vec2(corner_radius_px);
+	vec2 outside = max(point - inner, vec2(0.0));
+	float distance_to_edge = length(outside) - corner_radius_px;
+	texel.a *= 1.0 - smoothstep(-0.75, 0.75, distance_to_edge);
+	COLOR = texel;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_map_rounded"]
+shader = SubResource("Shader_map_rounded")
+shader_parameter/corner_radius_px = 8.0
+shader_parameter/rect_size_px = Vector2(168, 100)
+
+[node name="PvpReadyRoom" type="Control" unique_id=1369059658]
+z_index = 100
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1017.0
+offset_bottom = 618.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=624397130]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 47.0
+offset_right = 809.0
+offset_bottom = 559.0
+mouse_filter = 2
+texture = ExtResource("2_background")
+
+[node name="Shadow" type="TextureRect" parent="." unique_id=889161324]
+modulate = Color(1, 1, 1, 0.16)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 47.0
+offset_right = 809.0
+offset_bottom = 559.0
+mouse_filter = 2
+texture = ExtResource("3_shadow")
+
+[node name="RoomCodeCaption" type="TextureRect" parent="." unique_id=73240607]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 52.0
+offset_right = 85.0
+offset_bottom = 69.0
+mouse_filter = 2
+texture = ExtResource("14_room_code_caption")
+
+[node name="RoomCode" type="Label" parent="." unique_id=1881584628]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 49.0
+offset_right = 150.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.35, 0.58, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "1001"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoomTitle" type="Label" parent="." unique_id=1522561232]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 17.0
+offset_right = 647.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.28, 0.28, 0.28, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Phòng PvP"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Slots" type="Control" parent="." unique_id=1027036455]
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 75.0
+offset_right = 809.0
+offset_bottom = 393.0
+mouse_filter = 2
+
+[node name="Slot1" type="TextureRect" parent="Slots" unique_id=565159379]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 318.0
+mouse_filter = 2
+texture = ExtResource("4_slot")
+
+[node name="Waiting" type="TextureRect" parent="Slots/Slot1" unique_id=1562111461]
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_top = 99.0
+offset_right = 136.0
+offset_bottom = 218.0
+mouse_filter = 2
+texture = ExtResource("5_waiting")
+
+[node name="Member" parent="Slots/Slot1" unique_id=1134551742 instance=ExtResource("9_member")]
+layout_mode = 0
+
+[node name="Slot2" type="TextureRect" parent="Slots" unique_id=1991971272]
+layout_mode = 0
+offset_left = 159.0
+offset_right = 317.0
+offset_bottom = 318.0
+mouse_filter = 2
+texture = ExtResource("4_slot")
+
+[node name="Waiting" type="TextureRect" parent="Slots/Slot2" unique_id=779743535]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 99.0
+offset_right = 136.0
+offset_bottom = 218.0
+mouse_filter = 2
+texture = ExtResource("5_waiting")
+
+[node name="Member" parent="Slots/Slot2" unique_id=2023328792 instance=ExtResource("9_member")]
+layout_mode = 0
+
+[node name="Slot3" type="TextureRect" parent="Slots" unique_id=947588299]
+layout_mode = 0
+offset_left = 318.0
+offset_right = 476.0
+offset_bottom = 318.0
+mouse_filter = 2
+texture = ExtResource("4_slot")
+
+[node name="Waiting" type="TextureRect" parent="Slots/Slot3" unique_id=2063569936]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 99.0
+offset_right = 136.0
+offset_bottom = 218.0
+mouse_filter = 2
+texture = ExtResource("5_waiting")
+
+[node name="Member" parent="Slots/Slot3" unique_id=934834723 instance=ExtResource("9_member")]
+layout_mode = 0
+
+[node name="Slot4" type="TextureRect" parent="Slots" unique_id=198118782]
+layout_mode = 0
+offset_left = 477.0
+offset_right = 635.0
+offset_bottom = 318.0
+mouse_filter = 2
+texture = ExtResource("4_slot")
+
+[node name="Waiting" type="TextureRect" parent="Slots/Slot4" unique_id=1487537479]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 99.0
+offset_right = 136.0
+offset_bottom = 218.0
+mouse_filter = 2
+texture = ExtResource("5_waiting")
+
+[node name="Member" parent="Slots/Slot4" unique_id=420778979 instance=ExtResource("9_member")]
+layout_mode = 0
+
+[node name="Slot5" type="TextureRect" parent="Slots" unique_id=106886042]
+layout_mode = 0
+offset_left = 636.0
+offset_right = 794.0
+offset_bottom = 318.0
+mouse_filter = 2
+texture = ExtResource("4_slot")
+
+[node name="Waiting" type="TextureRect" parent="Slots/Slot5" unique_id=2114949769]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 99.0
+offset_right = 136.0
+offset_bottom = 218.0
+mouse_filter = 2
+texture = ExtResource("5_waiting")
+
+[node name="Member" parent="Slots/Slot5" unique_id=2125244894 instance=ExtResource("9_member")]
+layout_mode = 0
+
+[node name="StartControls" type="Control" parent="." unique_id=1554217108]
+anchors_preset = 0
+offset_left = 515.0
+offset_top = 405.0
+offset_right = 804.0
+offset_bottom = 527.0
+
+[node name="Background" type="TextureRect" parent="StartControls" unique_id=1631102646]
+layout_mode = 0
+offset_right = 289.0
+offset_bottom = 122.0
+mouse_filter = 2
+texture = ExtResource("10_start_background")
+
+[node name="MapButton" type="TextureButton" parent="StartControls" unique_id=1637729632]
+material = SubResource("ShaderMaterial_map_rounded")
+layout_mode = 0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 179.0
+offset_bottom = 109.0
+texture_normal = ExtResource("12_random_map")
+ignore_texture_size = true
+script = ExtResource("16_hover")
+
+[node name="StartGame" type="TextureButton" parent="StartControls" unique_id=73009962]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 15.0
+offset_right = 275.0
+offset_bottom = 99.0
+texture_normal = ExtResource("11_start_button")
+ignore_texture_size = true
+script = ExtResource("16_hover")
+
+[node name="StartGameEffect" type="Node2D" parent="StartControls" unique_id=1650311453]
+z_index = 1
+position = Vector2(256, 80)
+script = ExtResource("15_start_effect")
+timeline_path = "res://assets/animations/pvp_start_game_compact/timeline.json"
+
+[node name="Matchmaking" type="Control" parent="StartControls" unique_id=1790215220]
+visible = false
+anchors_preset = 0
+offset_right = 289.0
+offset_bottom = 128.0
+
+[node name="Caption" type="TextureRect" parent="StartControls/Matchmaking" unique_id=1852749706]
+layout_mode = 0
+offset_left = 65.5
+offset_top = 2.0
+offset_right = 223.5
+offset_bottom = 20.0
+mouse_filter = 2
+texture = ExtResource("17_match_caption")
+
+[node name="Elapsed" type="Label" parent="StartControls/Matchmaking" unique_id=1976535803]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 20.0
+offset_right = 244.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 0.91, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.31, 0.5, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 25
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cancel" type="TextureButton" parent="StartControls/Matchmaking" unique_id=1406578508]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 52.0
+offset_right = 235.0
+offset_bottom = 95.0
+texture_normal = ExtResource("18_match_cancel")
+ignore_texture_size = true
+script = ExtResource("16_hover")
+
+[node name="Text" type="TextureRect" parent="StartControls/Matchmaking/Cancel" unique_id=700848529]
+layout_mode = 0
+offset_left = 49.5
+offset_top = 9.0
+offset_right = 131.5
+offset_bottom = 34.0
+mouse_filter = 2
+texture = ExtResource("19_match_cancel_text")
+
+[node name="Estimated" type="Label" parent="StartControls/Matchmaking" unique_id=555827915]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 97.0
+offset_right = 249.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.31, 0.5, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+text = "Dự kiến: 00:30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MapSelector" parent="." unique_id=554459662 instance=ExtResource("13_map_selector")]
+visible = false
+anchors_preset = 0

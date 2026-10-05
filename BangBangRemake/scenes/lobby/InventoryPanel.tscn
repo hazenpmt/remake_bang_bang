@@ -1,0 +1,1839 @@
+[gd_scene format=3 uid="uid://c5krxkmituff6"]
+
+[ext_resource type="Script" uid="uid://cl8vxfyjsqae7" path="res://scripts/lobby/inventory_panel.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tui_do_panel.png" id="2_panel"]
+[ext_resource type="Texture2D" path="res://assets/ui/close_original.png" id="12_close"]
+[ext_resource type="Texture2D" uid="uid://6bf7g8f1m60g" path="res://assets/ui/inventory/tankbarn/title_barn_t.png" id="13_title"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/character_frame.png" id="14_avatar_frame"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/character_male_rgba.png" id="15_avatar"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/level/level_15.png" id="16_level"]
+[ext_resource type="Texture2D" uid="uid://byqdk6boumf03" path="res://assets/ui/inventory/tankbarn/char_infoBk_t.png" id="17_stats"]
+[ext_resource type="Texture2D" uid="uid://dew5ird4l5jyt" path="res://assets/ui/inventory/tankbarn/exptrack.png" id="18_exp_track"]
+[ext_resource type="Texture2D" uid="uid://cwy5rbdowax80" path="res://assets/ui/inventory/tankbarn/expbar.png" id="19_exp_bar"]
+[ext_resource type="Texture2D" uid="uid://c3afdo5ioq6jm" path="res://assets/ui/inventory/inventory_content_frame.png" id="20_content"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tabs/shop_navItem_s.png" id="29_tab"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/title/nav_meterial_t.png" id="30_tab_items"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/title/nav_item_t.png" id="31_tab_materials"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/title/nav_clothe_t.png" id="32_tab_fashion"]
+[ext_resource type="Texture2D" path="res://assets/ui/shop/title/nav_individual_t.png" id="33_tab_decoration"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tabs/nav_achievement_t.png" id="34_tab_achievement"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tabs/nav_paintword_t.png" id="35_tab_spray"]
+[ext_resource type="Texture2D" uid="uid://c41moc8fjkowy" path="res://assets/ui/inventory/public/pager_bk.png" id="36_pager"]
+[ext_resource type="Texture2D" uid="uid://ctbtrhehgkrsx" path="res://assets/ui/inventory/public/btn_s2_prev.png" id="38_prev"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_room/pager_arrow.png" id="39_next"]
+[ext_resource type="Texture2D" uid="uid://dkcls843ne7gm" path="res://assets/ui/inventory/tankbarn/fash_sBK.png" id="41_fashion"]
+[ext_resource type="Texture2D" uid="uid://iigt6y31yp4u" path="res://assets/ui/inventory/tankbarn/fash_sBK_texture.png" id="42_fashion_rays"]
+[ext_resource type="Texture2D" uid="uid://dsf8rwonn8a8o" path="res://assets/ui/inventory/tankbarn/fash_name.png" id="43_fashion_name"]
+[ext_resource type="Texture2D" uid="uid://csemvspp2a6k0" path="res://assets/ui/inventory/tankbarn/Ach_BK.png" id="44_achievement"]
+[ext_resource type="Texture2D" uid="uid://dwagrm1v0oxbn" path="res://assets/ui/inventory/tankbarn/Ach_sBK.png" id="45_achievement_row"]
+[ext_resource type="Texture2D" uid="uid://d2gc0veu2y046" path="res://assets/ui/inventory/preview/icon_record001.png" id="46_ach_icon1"]
+[ext_resource type="Texture2D" uid="uid://dh88t5y164x0" path="res://assets/ui/inventory/preview/icon_record002.png" id="47_ach_icon2"]
+[ext_resource type="Texture2D" uid="uid://bk5jda3daexde" path="res://assets/ui/inventory/preview/icon_record003.png" id="48_ach_icon3"]
+[ext_resource type="Texture2D" uid="uid://bwnhiylxv8i8n" path="res://assets/ui/inventory/preview/icon_record004.png" id="49_ach_icon4"]
+[ext_resource type="Texture2D" uid="uid://yosdyad4wl2g" path="res://assets/ui/inventory/tankbarn/paint_sBK.png" id="50_spray_preview"]
+[ext_resource type="Texture2D" uid="uid://dg778vqyko0uo" path="res://assets/ui/inventory/tankbarn/paint_sBK_texture.png" id="51_spray_rays"]
+[ext_resource type="Texture2D" uid="uid://b38qei42ieef0" path="res://assets/ui/inventory/preview/spray01.png" id="52_spray"]
+[ext_resource type="Texture2D" uid="uid://de1nsq1402g7t" path="res://assets/ui/inventory/tankbarn/title_itemsorting_t.png" id="53_sort_text"]
+[ext_resource type="Texture2D" uid="uid://cwawrumo33yh" path="res://assets/ui/inventory/tankbarn/title_sell_t.png" id="54_sell_text"]
+[ext_resource type="Texture2D" uid="uid://ce23aod7utf4" path="res://assets/ui/inventory/tankbarn/word_akeyopenpacks_t.png" id="55_open_text"]
+[ext_resource type="Texture2D" uid="uid://dtteb8eqcyeb1" path="res://assets/ui/inventory/tankbarn/word_goshop_t.png" id="56_shop_text"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/public/button_2_green.png" id="57_green"]
+[ext_resource type="Texture2D" uid="uid://cebstddsu5n63" path="res://assets/ui/inventory/public/button_2_orange.png" id="58_orange"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/public/button_2_s_blue.png" id="59_blue_s"]
+[ext_resource type="Script" uid="uid://dmbvq8k7opkog" path="res://scripts/ui/HoverPressTextureButton.gd" id="60_hover"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ReusableNotification.tscn" id="61_notification"]
+[ext_resource type="Script" path="res://scripts/animation/swf_timeline_player.gd" id="62_level_fx"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/public/label138x21.png" id="63_value_frame"]
+[ext_resource type="Texture2D" path="res://assets/ui/currency/icon_xu.png" id="64_xu"]
+[ext_resource type="Texture2D" path="res://assets/ui/currency/icon_xu_locked.png" id="65_locked_xu"]
+[ext_resource type="Texture2D" path="res://assets/ui/currency/icon_silver.png" id="66_silver"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/public/btn_s2_first.png" id="67_first"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/public/btn_s2_last.png" id="68_last"]
+[ext_resource type="Texture2D" path="res://assets/ui/notification/cancel_text.png" id="69_cancel_text"]
+[ext_resource type="Texture2D" path="res://assets/ui/notification/button_blue.png" id="70_blue"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/Lable66x28.png" id="72_value66"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/w6_achievementPoint_t.png" id="73_achievement_point"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/w6_achievementCompletedCount_t.png" id="74_achievement_count"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/w2_all_t.png" id="75_achievement_all"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/w2_completed_t.png" id="76_achievement_completed"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/w2_unfinished_t.png" id="77_achievement_unfinished"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/w6_medal_t.png" id="78_achievement_medal"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/preview/spraycan.png" id="79_spray_can"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/title_choise_t.png" id="80_choose_text"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/public/tick.png" id="81_tick"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_up.png" id="82_scroll_up"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_down.png" id="83_scroll_down"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_track.png" id="84_scroll_track"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skin_scroll_thumb.png" id="85_scroll_thumb"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/options_bk.png" id="86_achievement_options"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/tankbarn/achievement_medal_frame.png" id="87_achievement_medal_frame"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_achievement_mission_frame"]
+atlas = ExtResource("44_achievement")
+region = Rect2(36, 143, 495, 251)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_achievement_row_fill"]
+atlas = ExtResource("45_achievement_row")
+region = Rect2(440, 0, 1, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_achievement_row_right_cap"]
+atlas = ExtResource("45_achievement_row")
+region = Rect2(448, 0, 15, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_achievement_medal_top"]
+atlas = ExtResource("87_achievement_medal_frame")
+region = Rect2(0, 0, 492, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_achievement_medal_middle"]
+atlas = ExtResource("87_achievement_medal_frame")
+region = Rect2(0, 32, 492, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_achievement_medal_bottom"]
+atlas = ExtResource("87_achievement_medal_frame")
+region = Rect2(0, 46, 492, 18)
+
+[node name="InventoryPanel" type="Control" unique_id=1002720628]
+editor_description = "Scene KHO đang dùng trực tiếp trong game. Mở scene này để chỉnh vị trí các thành phần; MainLobby vẫn đặt instance visible=false khi mới vào sảnh."
+z_index = 45
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=2063445037]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.42)
+
+[node name="Window" type="Control" parent="." unique_id=951641028]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.5
+offset_top = -282.5
+offset_right = 430.5
+offset_bottom = 282.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="Window" unique_id=1574163607]
+layout_mode = 0
+offset_right = 861.0
+offset_bottom = 565.0
+mouse_filter = 2
+texture = ExtResource("2_panel")
+
+[node name="AvatarFrame" type="TextureRect" parent="Window" unique_id=1885862823]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 48.0
+offset_right = 231.0
+offset_bottom = 354.0
+mouse_filter = 2
+texture = ExtResource("14_avatar_frame")
+
+[node name="Avatar" type="TextureRect" parent="Window" unique_id=1497989049]
+layout_mode = 0
+offset_left = 35.5
+offset_top = 97.5
+offset_right = 215.5
+offset_bottom = 337.5
+mouse_filter = 2
+texture = ExtResource("15_avatar")
+
+[node name="Level" type="Control" parent="Window" unique_id=2017065485]
+layout_mode = 0
+offset_left = 9.5
+offset_top = 49.5
+offset_right = 89.5
+offset_bottom = 89.5
+mouse_filter = 2
+
+[node name="Base" type="TextureRect" parent="Window/Level"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("16_level")
+
+[node name="Effect" type="Node2D" parent="Window/Level"]
+visible = false
+position = Vector2(40, 20)
+modulate = Color(1, 1, 1, 0.68)
+script = ExtResource("62_level_fx")
+timeline_path = "res://assets/animations/profile_level_11_20_fx_compact/timeline.json"
+autoplay = false
+
+[node name="ProfileName" type="Label" parent="Window" unique_id=523075372]
+layout_mode = 0
+offset_left = 69.5
+offset_top = 59.5
+offset_right = 186.5
+offset_bottom = 84.5
+theme_override_colors/font_color = Color(1, 0.87, 0.21, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.24, 0.37, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Nhân vật"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExpBar" type="TextureProgressBar" parent="Window" unique_id=744804049]
+layout_mode = 0
+offset_top = 365.0
+offset_left = 84.0
+offset_right = 222.0
+offset_bottom = 379.0
+mouse_filter = 2
+step = 0.01
+value = 11.9077
+texture_under = ExtResource("18_exp_track")
+texture_progress = ExtResource("19_exp_bar")
+nine_patch_stretch = true
+
+[node name="ExpValue" type="Label" parent="Window" unique_id=1054589896]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 360.0
+offset_right = 222.0
+offset_bottom = 382.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.22, 0.34, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 13
+text = "0/0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatsLabels" type="TextureRect" parent="Window" unique_id=1081840218]
+layout_mode = 0
+offset_left = 21.5
+offset_top = 363.5
+offset_right = 75.5
+offset_bottom = 493.5
+texture = ExtResource("17_stats")
+
+[node name="GuildFrame" type="TextureRect" parent="Window"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 389.0
+offset_right = 222.0
+offset_bottom = 410.0
+mouse_filter = 2
+texture = ExtResource("63_value_frame")
+
+[node name="GuildValue" type="Label" parent="Window"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 388.0
+offset_right = 218.0
+offset_bottom = 411.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "Chưa gia nhập"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="WinsFrame" type="TextureRect" parent="Window"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 417.0
+offset_right = 222.0
+offset_bottom = 438.0
+mouse_filter = 2
+texture = ExtResource("63_value_frame")
+
+[node name="WinsValue" type="Label" parent="Window"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 416.0
+offset_right = 218.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "0"
+vertical_alignment = 1
+
+[node name="RunFrame" type="TextureRect" parent="Window"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 445.0
+offset_right = 222.0
+offset_bottom = 466.0
+mouse_filter = 2
+texture = ExtResource("63_value_frame")
+
+[node name="RunValue" type="Label" parent="Window"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 444.0
+offset_right = 218.0
+offset_bottom = 467.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "0%"
+vertical_alignment = 1
+
+[node name="DailyFrame" type="TextureRect" parent="Window"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 473.0
+offset_right = 222.0
+offset_bottom = 494.0
+mouse_filter = 2
+texture = ExtResource("63_value_frame")
+
+[node name="DailyValue" type="Label" parent="Window"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 472.0
+offset_right = 218.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "0"
+vertical_alignment = 1
+
+[node name="ContentFrame" type="Control" parent="Window" unique_id=1014083253]
+clip_contents = true
+anchors_preset = 0
+offset_left = 230.5
+offset_top = 75.5
+offset_right = 842.5
+offset_bottom = 528.5
+
+[node name="Background" type="TextureRect" parent="Window/ContentFrame" unique_id=671780996]
+layout_mode = 0
+offset_right = 612.0
+offset_bottom = 453.0
+mouse_filter = 2
+texture = ExtResource("20_content")
+
+[node name="Viewport" type="Control" parent="Window/ContentFrame" unique_id=299364737]
+clip_contents = true
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 594.0
+offset_bottom = 435.0
+
+[node name="ItemsView" type="Control" parent="Window/ContentFrame/Viewport" unique_id=1076394077]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemGrid" type="Control" parent="Window/ContentFrame/Viewport/ItemsView" unique_id=1953925957]
+anchors_preset = 0
+offset_left = 23.0
+offset_top = 8.0
+offset_right = 550.0
+offset_bottom = 299.0
+
+[node name="XuIcon" type="TextureRect" parent="Window/ContentFrame/Viewport/ItemsView"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 304.0
+offset_right = 50.0
+offset_bottom = 330.0
+mouse_filter = 2
+texture = ExtResource("64_xu")
+
+[node name="XuValue" type="Label" parent="Window/ContentFrame/Viewport/ItemsView"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 303.0
+offset_right = 196.0
+offset_bottom = 331.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.26, 0.4, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Xu: 0"
+vertical_alignment = 1
+
+[node name="LockedXuIcon" type="TextureRect" parent="Window/ContentFrame/Viewport/ItemsView"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 330.0
+offset_right = 50.0
+offset_bottom = 356.0
+mouse_filter = 2
+texture = ExtResource("65_locked_xu")
+
+[node name="LockedXuValue" type="Label" parent="Window/ContentFrame/Viewport/ItemsView"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 329.0
+offset_right = 196.0
+offset_bottom = 357.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.26, 0.4, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Xu khóa: 0"
+vertical_alignment = 1
+
+[node name="SilverIcon" type="TextureRect" parent="Window/ContentFrame/Viewport/ItemsView"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 356.0
+offset_right = 50.0
+offset_bottom = 382.0
+mouse_filter = 2
+texture = ExtResource("66_silver")
+
+[node name="SilverValue" type="Label" parent="Window/ContentFrame/Viewport/ItemsView"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 355.0
+offset_right = 196.0
+offset_bottom = 383.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.26, 0.4, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Bạc: 0"
+vertical_alignment = 1
+
+[node name="ExpandStorage" type="LinkButton" parent="Window/ContentFrame/Viewport/ItemsView" unique_id=1420341541]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 315.0
+offset_right = 384.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0.45, 1, 0.18, 1)
+theme_override_colors/font_pressed_color = Color(0.3, 0.78, 0.1, 1)
+theme_override_colors/font_hover_color = Color(0.9, 1, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.27, 0.39, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Mở rộng kho"
+
+[node name="PageControls" type="Control" parent="Window/ContentFrame/Viewport/ItemsView" unique_id=904812504]
+visible = false
+anchors_preset = 0
+offset_left = 202.0
+offset_top = 307.0
+offset_right = 374.0
+offset_bottom = 340.0
+
+[node name="Prev" type="TextureButton" parent="Window/ContentFrame/Viewport/ItemsView/PageControls" unique_id=1120391124]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 33.0
+offset_bottom = 31.0
+texture_normal = ExtResource("38_prev")
+script = ExtResource("60_hover")
+
+[node name="Pager" type="TextureRect" parent="Window/ContentFrame/Viewport/ItemsView/PageControls" unique_id=1195751284]
+layout_mode = 0
+offset_left = 43.0
+offset_right = 129.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("36_pager")
+
+[node name="Page" type="Label" parent="Window/ContentFrame/Viewport/ItemsView/PageControls" unique_id=1105239240]
+layout_mode = 0
+offset_left = 43.0
+offset_right = 129.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "1/2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Window/ContentFrame/Viewport/ItemsView/PageControls" unique_id=700588648]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 2.0
+offset_right = 172.0
+offset_bottom = 31.0
+texture_normal = ExtResource("39_next")
+script = ExtResource("60_hover")
+
+[node name="Sort" type="TextureButton" parent="Window/ContentFrame/Viewport/ItemsView" unique_id=783030768]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 324.0
+offset_right = 545.0
+offset_bottom = 352.0
+texture_normal = ExtResource("57_green")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/ItemsView/Sort" unique_id=1874803862]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("53_sort_text")
+
+[node name="Sell" type="TextureButton" parent="Window/ContentFrame/Viewport/ItemsView" unique_id=500790907]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 357.0
+offset_right = 546.0
+offset_bottom = 385.0
+texture_normal = ExtResource("58_orange")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/ItemsView/Sell" unique_id=337099781]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("54_sell_text")
+
+[node name="OpenAll" type="TextureButton" parent="Window/ContentFrame/Viewport/ItemsView" unique_id=1278275001]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 393.0
+offset_right = 441.0
+offset_bottom = 418.0
+texture_normal = ExtResource("59_blue_s")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/ItemsView/OpenAll" unique_id=1781414282]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 84.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("55_open_text")
+
+[node name="GoShop" type="TextureButton" parent="Window/ContentFrame/Viewport/ItemsView" unique_id=1953012174]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 390.0
+offset_right = 547.0
+offset_bottom = 418.0
+texture_normal = ExtResource("58_orange")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/ItemsView/GoShop" unique_id=1599754420]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 4.0
+offset_right = 74.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("56_shop_text")
+
+[node name="MaterialsView" type="Control" parent="Window/ContentFrame/Viewport" unique_id=1117648855]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemGrid" type="Control" parent="Window/ContentFrame/Viewport/MaterialsView" unique_id=883685029]
+anchors_preset = 0
+offset_left = 23.0
+offset_top = 8.0
+offset_right = 550.0
+offset_bottom = 299.0
+
+[node name="XuIcon" type="TextureRect" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 304.0
+offset_right = 50.0
+offset_bottom = 330.0
+mouse_filter = 2
+texture = ExtResource("64_xu")
+
+[node name="XuValue" type="Label" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 303.0
+offset_right = 196.0
+offset_bottom = 331.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.26, 0.4, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Xu: 0"
+vertical_alignment = 1
+
+[node name="LockedXuIcon" type="TextureRect" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 330.0
+offset_right = 50.0
+offset_bottom = 356.0
+mouse_filter = 2
+texture = ExtResource("65_locked_xu")
+
+[node name="LockedXuValue" type="Label" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 329.0
+offset_right = 196.0
+offset_bottom = 357.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.26, 0.4, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Xu khóa: 0"
+vertical_alignment = 1
+
+[node name="SilverIcon" type="TextureRect" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 356.0
+offset_right = 50.0
+offset_bottom = 382.0
+mouse_filter = 2
+texture = ExtResource("66_silver")
+
+[node name="SilverValue" type="Label" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 355.0
+offset_right = 196.0
+offset_bottom = 383.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.26, 0.4, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Bạc: 0"
+vertical_alignment = 1
+
+[node name="PageControls" type="Control" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 307.0
+offset_right = 444.0
+offset_bottom = 340.0
+
+[node name="First" type="TextureButton" parent="Window/ContentFrame/Viewport/MaterialsView/PageControls"]
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 29.0
+texture_normal = ExtResource("67_first")
+script = ExtResource("60_hover")
+
+[node name="Prev" type="TextureButton" parent="Window/ContentFrame/Viewport/MaterialsView/PageControls"]
+layout_mode = 0
+offset_left = 46.0
+offset_right = 79.0
+offset_bottom = 29.0
+texture_normal = ExtResource("38_prev")
+script = ExtResource("60_hover")
+
+[node name="Pager" type="TextureRect" parent="Window/ContentFrame/Viewport/MaterialsView/PageControls"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 165.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("36_pager")
+
+[node name="Page" type="Label" parent="Window/ContentFrame/Viewport/MaterialsView/PageControls"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 165.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "1/3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Window/ContentFrame/Viewport/MaterialsView/PageControls"]
+layout_mode = 0
+offset_left = 165.0
+offset_right = 198.0
+offset_bottom = 29.0
+texture_normal = ExtResource("39_next")
+script = ExtResource("60_hover")
+
+[node name="Last" type="TextureButton" parent="Window/ContentFrame/Viewport/MaterialsView/PageControls"]
+layout_mode = 0
+offset_left = 198.0
+offset_right = 244.0
+offset_bottom = 29.0
+texture_normal = ExtResource("68_last")
+script = ExtResource("60_hover")
+
+[node name="Sort" type="TextureButton" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 324.0
+offset_right = 545.0
+offset_bottom = 352.0
+texture_normal = ExtResource("57_green")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/MaterialsView/Sort"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("53_sort_text")
+
+[node name="Sell" type="TextureButton" parent="Window/ContentFrame/Viewport/MaterialsView"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 357.0
+offset_right = 546.0
+offset_bottom = 385.0
+texture_normal = ExtResource("58_orange")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/MaterialsView/Sell"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("54_sell_text")
+
+[node name="FashionView" type="Control" parent="Window/ContentFrame/Viewport" unique_id=1188290282]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card1" type="TextureRect" parent="Window/ContentFrame/Viewport/FashionView" unique_id=1527321471]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 8.0
+offset_right = 191.0
+offset_bottom = 334.0
+texture = ExtResource("41_fashion")
+
+[node name="Rays" type="TextureRect" parent="Window/ContentFrame/Viewport/FashionView/Card1" unique_id=1855918924]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 166.0
+offset_bottom = 326.0
+texture = ExtResource("42_fashion_rays")
+
+[node name="NameBar" type="TextureRect" parent="Window/ContentFrame/Viewport/FashionView/Card1" unique_id=2075983546]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 161.0
+offset_bottom = 38.0
+texture = ExtResource("43_fashion_name")
+
+[node name="Card2" type="TextureRect" parent="Window/ContentFrame/Viewport/FashionView" unique_id=1316691035]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 8.0
+offset_right = 371.0
+offset_bottom = 334.0
+texture = ExtResource("41_fashion")
+
+[node name="Card3" type="TextureRect" parent="Window/ContentFrame/Viewport/FashionView" unique_id=279872954]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 8.0
+offset_right = 551.0
+offset_bottom = 334.0
+texture = ExtResource("41_fashion")
+
+[node name="PageControls" type="Control" parent="Window/ContentFrame/Viewport/FashionView"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 350.0
+offset_right = 410.0
+offset_bottom = 383.0
+
+[node name="First" type="TextureButton" parent="Window/ContentFrame/Viewport/FashionView/PageControls"]
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 29.0
+texture_normal = ExtResource("67_first")
+script = ExtResource("60_hover")
+
+[node name="Prev" type="TextureButton" parent="Window/ContentFrame/Viewport/FashionView/PageControls"]
+layout_mode = 0
+offset_left = 46.0
+offset_right = 79.0
+offset_bottom = 29.0
+texture_normal = ExtResource("38_prev")
+script = ExtResource("60_hover")
+
+[node name="Pager" type="TextureRect" parent="Window/ContentFrame/Viewport/FashionView/PageControls"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 165.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("36_pager")
+
+[node name="Page" type="Label" parent="Window/ContentFrame/Viewport/FashionView/PageControls"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 165.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Window/ContentFrame/Viewport/FashionView/PageControls"]
+layout_mode = 0
+offset_left = 165.0
+offset_right = 198.0
+offset_bottom = 29.0
+texture_normal = ExtResource("39_next")
+script = ExtResource("60_hover")
+
+[node name="Last" type="TextureButton" parent="Window/ContentFrame/Viewport/FashionView/PageControls"]
+layout_mode = 0
+offset_left = 198.0
+offset_right = 244.0
+offset_bottom = 29.0
+texture_normal = ExtResource("68_last")
+script = ExtResource("60_hover")
+
+[node name="DecorationView" type="Control" parent="Window/ContentFrame/Viewport" unique_id=1494660376]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card1" type="TextureRect" parent="Window/ContentFrame/Viewport/DecorationView" unique_id=1725003940]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 8.0
+offset_right = 191.0
+offset_bottom = 334.0
+texture = ExtResource("41_fashion")
+
+[node name="NameBar" type="TextureRect" parent="Window/ContentFrame/Viewport/DecorationView/Card1"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 161.0
+offset_bottom = 38.0
+mouse_filter = 2
+texture = ExtResource("43_fashion_name")
+
+[node name="Card2" type="TextureRect" parent="Window/ContentFrame/Viewport/DecorationView" unique_id=1816205713]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 8.0
+offset_right = 371.0
+offset_bottom = 334.0
+texture = ExtResource("41_fashion")
+
+[node name="NameBar" type="TextureRect" parent="Window/ContentFrame/Viewport/DecorationView/Card2"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 161.0
+offset_bottom = 38.0
+mouse_filter = 2
+texture = ExtResource("43_fashion_name")
+
+[node name="Card3" type="TextureRect" parent="Window/ContentFrame/Viewport/DecorationView" unique_id=255988978]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 8.0
+offset_right = 551.0
+offset_bottom = 334.0
+texture = ExtResource("41_fashion")
+
+[node name="NameBar" type="TextureRect" parent="Window/ContentFrame/Viewport/DecorationView/Card3"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 161.0
+offset_bottom = 38.0
+mouse_filter = 2
+texture = ExtResource("43_fashion_name")
+
+[node name="PageControls" type="Control" parent="Window/ContentFrame/Viewport/DecorationView"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 340.0
+offset_right = 410.0
+offset_bottom = 373.0
+
+[node name="First" type="TextureButton" parent="Window/ContentFrame/Viewport/DecorationView/PageControls"]
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 29.0
+texture_normal = ExtResource("67_first")
+script = ExtResource("60_hover")
+
+[node name="Prev" type="TextureButton" parent="Window/ContentFrame/Viewport/DecorationView/PageControls"]
+layout_mode = 0
+offset_left = 46.0
+offset_right = 79.0
+offset_bottom = 29.0
+texture_normal = ExtResource("38_prev")
+script = ExtResource("60_hover")
+
+[node name="Pager" type="TextureRect" parent="Window/ContentFrame/Viewport/DecorationView/PageControls"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 165.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("36_pager")
+
+[node name="Page" type="Label" parent="Window/ContentFrame/Viewport/DecorationView/PageControls"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 165.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Window/ContentFrame/Viewport/DecorationView/PageControls"]
+layout_mode = 0
+offset_left = 165.0
+offset_right = 198.0
+offset_bottom = 29.0
+texture_normal = ExtResource("39_next")
+script = ExtResource("60_hover")
+
+[node name="Last" type="TextureButton" parent="Window/ContentFrame/Viewport/DecorationView/PageControls"]
+layout_mode = 0
+offset_left = 198.0
+offset_right = 244.0
+offset_bottom = 29.0
+texture_normal = ExtResource("68_last")
+script = ExtResource("60_hover")
+
+[node name="Cancel" type="TextureButton" parent="Window/ContentFrame/Viewport/DecorationView"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 379.0
+offset_right = 336.0
+offset_bottom = 407.0
+texture_normal = ExtResource("70_blue")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/DecorationView/Cancel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 3.0
+offset_right = 68.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("69_cancel_text")
+
+[node name="AchievementsView" type="Control" parent="Window/ContentFrame/Viewport" unique_id=818255681]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MissionFrame" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView" unique_id=504617512]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 64.0
+offset_right = 531.0
+offset_bottom = 315.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_mission_frame")
+
+[node name="AchievementPointTitle" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 9.0
+offset_right = 126.0
+offset_bottom = 29.0
+mouse_filter = 2
+texture = ExtResource("73_achievement_point")
+
+[node name="AchievementPointFrame" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 5.0
+offset_right = 198.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("72_value66")
+
+[node name="AchievementPointValue" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 5.0
+offset_right = 198.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AchievementCountTitle" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 38.0
+offset_right = 124.0
+offset_bottom = 58.0
+mouse_filter = 2
+texture = ExtResource("74_achievement_count")
+
+[node name="AchievementCountFrame" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 34.0
+offset_right = 198.0
+offset_bottom = 62.0
+mouse_filter = 2
+texture = ExtResource("72_value66")
+
+[node name="AchievementCountValue" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 34.0
+offset_right = 198.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 13
+text = "1/239"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FilterFrame" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 27.0
+offset_right = 494.0
+offset_bottom = 65.0
+mouse_filter = 2
+texture = ExtResource("86_achievement_options")
+
+[node name="FilterAll" type="TextureButton" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 32.0
+offset_right = 318.0
+offset_bottom = 60.0
+texture_normal = ExtResource("57_green")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/FilterAll"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 4.0
+offset_right = 68.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("75_achievement_all")
+
+[node name="FilterCompleted" type="TextureButton" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 32.0
+offset_right = 408.0
+offset_bottom = 60.0
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/FilterCompleted"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 5.0
+offset_right = 74.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("76_achievement_completed")
+
+[node name="FilterUnfinished" type="TextureButton" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 32.0
+offset_right = 494.0
+offset_bottom = 60.0
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/FilterUnfinished"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 81.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("77_achievement_unfinished")
+
+[node name="Row1" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView" unique_id=1921762490]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 68.0
+offset_right = 526.0
+offset_bottom = 127.0
+texture = ExtResource("45_achievement_row")
+
+[node name="BackgroundExtension" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row1"]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 473.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_row_fill")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="BackgroundRightCap" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row1"]
+layout_mode = 0
+offset_left = 473.0
+offset_right = 488.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_row_right_cap")
+
+[node name="Icon" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row1" unique_id=1738947793]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 52.0
+offset_bottom = 53.0
+texture = ExtResource("46_ach_icon1")
+
+[node name="Name" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row1" unique_id=1090346049]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 3.0
+offset_right = 330.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 15
+text = "Lính Mới"
+
+[node name="Description" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row1"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 27.0
+offset_right = 330.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Đấu 1 trận"
+
+[node name="Point" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row1"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 3.0
+offset_right = 465.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Điểm thành tích: 6"
+horizontal_alignment = 2
+
+[node name="Progress" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row1"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 27.0
+offset_right = 465.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Tiến độ: 0/1"
+horizontal_alignment = 2
+
+[node name="Row2" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView" unique_id=1411205867]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 128.0
+offset_right = 526.0
+offset_bottom = 187.0
+texture = ExtResource("45_achievement_row")
+
+[node name="BackgroundExtension" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row2"]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 473.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_row_fill")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="BackgroundRightCap" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row2"]
+layout_mode = 0
+offset_left = 473.0
+offset_right = 488.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_row_right_cap")
+
+[node name="Icon" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row2" unique_id=1007370250]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 52.0
+offset_bottom = 53.0
+texture = ExtResource("47_ach_icon2")
+
+[node name="Name" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row2" unique_id=336380516]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 3.0
+offset_right = 330.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 15
+text = "Sơ nhập chiến trường"
+
+[node name="Description" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row2"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 27.0
+offset_right = 330.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Đấu 10 trận"
+
+[node name="Point" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row2"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 3.0
+offset_right = 465.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Điểm thành tích: 20"
+horizontal_alignment = 2
+
+[node name="Progress" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row2"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 27.0
+offset_right = 465.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Tiến độ: 0/10"
+horizontal_alignment = 2
+
+[node name="Row3" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView" unique_id=896513513]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 188.0
+offset_right = 526.0
+offset_bottom = 247.0
+texture = ExtResource("45_achievement_row")
+
+[node name="BackgroundExtension" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row3"]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 473.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_row_fill")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="BackgroundRightCap" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row3"]
+layout_mode = 0
+offset_left = 473.0
+offset_right = 488.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_row_right_cap")
+
+[node name="Icon" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row3" unique_id=786605605]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 52.0
+offset_bottom = 53.0
+texture = ExtResource("48_ach_icon3")
+
+[node name="Name" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row3" unique_id=1777702484]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 3.0
+offset_right = 330.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 15
+text = "Kinh Nghiệm Sa Trường"
+
+[node name="Description" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row3"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 27.0
+offset_right = 330.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Đấu 100 trận"
+
+[node name="Point" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row3"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 3.0
+offset_right = 465.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Điểm thành tích: 40"
+horizontal_alignment = 2
+
+[node name="Progress" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row3"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 27.0
+offset_right = 465.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Tiến độ: 0/100"
+horizontal_alignment = 2
+
+[node name="Row4" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView" unique_id=1506492149]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 248.0
+offset_right = 526.0
+offset_bottom = 307.0
+texture = ExtResource("45_achievement_row")
+
+[node name="BackgroundExtension" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row4"]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 473.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_row_fill")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="BackgroundRightCap" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row4"]
+layout_mode = 0
+offset_left = 473.0
+offset_right = 488.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_row_right_cap")
+
+[node name="Icon" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/Row4" unique_id=1331639428]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 52.0
+offset_bottom = 53.0
+texture = ExtResource("49_ach_icon4")
+
+[node name="Name" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row4" unique_id=1966158416]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 3.0
+offset_right = 330.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 15
+text = "Lần Đầu Thắng Lợi"
+
+[node name="Description" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row4"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 27.0
+offset_right = 330.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Thắng 1 trận"
+
+[node name="Point" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row4"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 3.0
+offset_right = 465.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Điểm thành tích: 10"
+horizontal_alignment = 2
+
+[node name="Progress" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView/Row4"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 27.0
+offset_right = 465.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.98, 0.35, 0.07, 1)
+theme_override_font_sizes/font_size = 13
+text = "Tiến độ: 0/1"
+horizontal_alignment = 2
+
+[node name="CustomScrollBar" type="Control" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 64.0
+offset_right = 549.0
+offset_bottom = 315.0
+mouse_filter = 2
+
+[node name="Track" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/CustomScrollBar"]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 232.0
+mouse_filter = 2
+texture = ExtResource("84_scroll_track")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Thumb" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/CustomScrollBar"]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 19.0
+offset_bottom = 89.0
+mouse_filter = 2
+texture = ExtResource("85_scroll_thumb")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Up" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/CustomScrollBar"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("82_scroll_up")
+
+[node name="Down" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/CustomScrollBar"]
+layout_mode = 0
+offset_top = 232.0
+offset_right = 19.0
+offset_bottom = 251.0
+mouse_filter = 2
+texture = ExtResource("83_scroll_down")
+
+[node name="MedalFrame" type="Control" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 322.0
+offset_right = 531.0
+offset_bottom = 406.0
+mouse_filter = 2
+
+[node name="Top" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/MedalFrame"]
+layout_mode = 0
+offset_right = 492.0
+offset_bottom = 18.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_medal_top")
+
+[node name="Middle" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/MedalFrame"]
+layout_mode = 0
+offset_top = 18.0
+offset_right = 492.0
+offset_bottom = 66.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_medal_middle")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Bottom" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView/MedalFrame"]
+layout_mode = 0
+offset_top = 66.0
+offset_right = 492.0
+offset_bottom = 84.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_achievement_medal_bottom")
+
+[node name="MedalTitle" type="TextureRect" parent="Window/ContentFrame/Viewport/AchievementsView"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 340.0
+offset_right = 44.0
+offset_bottom = 374.0
+mouse_filter = 2
+texture = ExtResource("78_achievement_medal")
+
+[node name="MedalNote" type="Label" parent="Window/ContentFrame/Viewport/AchievementsView" unique_id=1650131536]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 322.0
+offset_right = 506.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 14
+text = "Hiện không có huân chương! Hãy cố gắng thêm nhé!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SprayView" type="Control" parent="Window/ContentFrame/Viewport" unique_id=2073533]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hint" type="Label" parent="Window/ContentFrame/Viewport/SprayView" unique_id=317693507]
+layout_mode = 0
+offset_left = 90.0
+offset_right = 486.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 15
+text = "Đổi hình phun tốn 1 bình sơn"
+horizontal_alignment = 1
+
+[node name="CurrentLabel" type="Label" parent="Window/ContentFrame/Viewport/SprayView"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 47.0
+offset_right = 140.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Hiện"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ChooseLabel" type="Label" parent="Window/ContentFrame/Viewport/SprayView"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 88.0
+offset_right = 140.0
+offset_bottom = 115.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Chọn"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Preview" type="TextureRect" parent="Window/ContentFrame/Viewport/SprayView" unique_id=1298219175]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 25.0
+offset_right = 432.0
+offset_bottom = 135.0
+texture = ExtResource("50_spray_preview")
+
+[node name="Rays" type="TextureRect" parent="Window/ContentFrame/Viewport/SprayView/Preview" unique_id=822340364]
+layout_mode = 0
+offset_right = 287.0
+offset_bottom = 110.0
+texture = ExtResource("51_spray_rays")
+
+[node name="Spray" type="TextureRect" parent="Window/ContentFrame/Viewport/SprayView/Preview" unique_id=960010789]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 15.0
+offset_right = 184.0
+offset_bottom = 95.0
+texture = ExtResource("52_spray")
+
+[node name="SprayCanTitle" type="Label" parent="Window/ContentFrame/Viewport/SprayView"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 8.0
+offset_right = 568.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 14
+text = "Bình XO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SprayCan" type="TextureRect" parent="Window/ContentFrame/Viewport/SprayView"]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 32.0
+offset_right = 558.0
+offset_bottom = 132.0
+mouse_filter = 2
+texture = ExtResource("79_spray_can")
+
+[node name="SprayGrid" type="Control" parent="Window/ContentFrame/Viewport/SprayView" unique_id=2065726032]
+anchors_preset = 0
+offset_left = 68.0
+offset_top = 145.0
+offset_right = 513.0
+offset_bottom = 312.0
+
+[node name="PageControls" type="Control" parent="Window/ContentFrame/Viewport/SprayView"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 321.0
+offset_right = 410.0
+offset_bottom = 354.0
+
+[node name="First" type="TextureButton" parent="Window/ContentFrame/Viewport/SprayView/PageControls"]
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 29.0
+texture_normal = ExtResource("67_first")
+script = ExtResource("60_hover")
+
+[node name="Prev" type="TextureButton" parent="Window/ContentFrame/Viewport/SprayView/PageControls"]
+layout_mode = 0
+offset_left = 46.0
+offset_right = 79.0
+offset_bottom = 29.0
+texture_normal = ExtResource("38_prev")
+script = ExtResource("60_hover")
+
+[node name="Pager" type="TextureRect" parent="Window/ContentFrame/Viewport/SprayView/PageControls"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 165.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("36_pager")
+
+[node name="Page" type="Label" parent="Window/ContentFrame/Viewport/SprayView/PageControls"]
+layout_mode = 0
+offset_left = 79.0
+offset_right = 165.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next" type="TextureButton" parent="Window/ContentFrame/Viewport/SprayView/PageControls"]
+layout_mode = 0
+offset_left = 165.0
+offset_right = 198.0
+offset_bottom = 29.0
+texture_normal = ExtResource("39_next")
+script = ExtResource("60_hover")
+
+[node name="Last" type="TextureButton" parent="Window/ContentFrame/Viewport/SprayView/PageControls"]
+layout_mode = 0
+offset_left = 198.0
+offset_right = 244.0
+offset_bottom = 29.0
+texture_normal = ExtResource("68_last")
+script = ExtResource("60_hover")
+
+[node name="DoubleClickHint" type="Label" parent="Window/ContentFrame/Viewport/SprayView"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 370.0
+offset_right = 286.0
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.28, 0.44, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 13
+text = "Double click"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Select" type="TextureButton" parent="Window/ContentFrame/Viewport/SprayView"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 370.0
+offset_right = 396.0
+offset_bottom = 398.0
+texture_normal = ExtResource("57_green")
+script = ExtResource("60_hover")
+
+[node name="Text" type="TextureRect" parent="Window/ContentFrame/Viewport/SprayView/Select"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 4.0
+offset_right = 65.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("80_choose_text")
+
+[node name="TabBar" type="Control" parent="Window" unique_id=1047847992]
+anchors_preset = 0
+offset_left = 276.5
+offset_top = 49.5
+offset_right = 777.5
+offset_bottom = 78.5
+
+[node name="TabItems" type="TextureButton" parent="Window/TabBar" unique_id=1954230877]
+layout_mode = 0
+offset_right = 91.0
+offset_bottom = 29.0
+texture_normal = ExtResource("29_tab")
+script = ExtResource("60_hover")
+
+[node name="Label" type="TextureRect" parent="Window/TabBar/TabItems" unique_id=2017376792]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 11.0
+offset_right = 64.0
+offset_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource("30_tab_items")
+
+[node name="TabMaterials" type="TextureButton" parent="Window/TabBar" unique_id=933534991]
+layout_mode = 0
+offset_left = 82.0
+offset_right = 173.0
+offset_bottom = 29.0
+texture_normal = ExtResource("29_tab")
+script = ExtResource("60_hover")
+
+[node name="Label" type="TextureRect" parent="Window/TabBar/TabMaterials" unique_id=181625568]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 6.0
+offset_right = 63.0
+offset_bottom = 27.0
+mouse_filter = 2
+texture = ExtResource("31_tab_materials")
+
+[node name="TabFashion" type="TextureButton" parent="Window/TabBar" unique_id=1772799801]
+layout_mode = 0
+offset_left = 164.0
+offset_right = 255.0
+offset_bottom = 29.0
+texture_normal = ExtResource("29_tab")
+script = ExtResource("60_hover")
+
+[node name="Label" type="TextureRect" parent="Window/TabBar/TabFashion" unique_id=1156271483]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 4.0
+offset_right = 64.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("32_tab_fashion")
+
+[node name="TabDecoration" type="TextureButton" parent="Window/TabBar" unique_id=1060728290]
+layout_mode = 0
+offset_left = 246.0
+offset_right = 337.0
+offset_bottom = 29.0
+texture_normal = ExtResource("29_tab")
+script = ExtResource("60_hover")
+
+[node name="Label" type="TextureRect" parent="Window/TabBar/TabDecoration" unique_id=1645164976]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("33_tab_decoration")
+
+[node name="TabAchievements" type="TextureButton" parent="Window/TabBar" unique_id=1565902613]
+layout_mode = 0
+offset_left = 328.0
+offset_right = 419.0
+offset_bottom = 29.0
+texture_normal = ExtResource("29_tab")
+script = ExtResource("60_hover")
+
+[node name="Label" type="TextureRect" parent="Window/TabBar/TabAchievements" unique_id=1272438755]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 4.0
+offset_right = 64.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("34_tab_achievement")
+
+[node name="TabSpray" type="TextureButton" parent="Window/TabBar" unique_id=1171852815]
+layout_mode = 0
+offset_left = 410.0
+offset_right = 501.0
+offset_bottom = 29.0
+texture_normal = ExtResource("29_tab")
+script = ExtResource("60_hover")
+
+[node name="Label" type="TextureRect" parent="Window/TabBar/TabSpray" unique_id=1343878173]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 10.0
+offset_right = 64.0
+offset_bottom = 31.0
+mouse_filter = 2
+texture = ExtResource("35_tab_spray")
+
+[node name="Title" type="TextureRect" parent="Window" unique_id=1260111235]
+layout_mode = 0
+offset_left = 407.5
+offset_top = 8.5
+offset_right = 451.5
+offset_bottom = 35.5
+mouse_filter = 2
+texture = ExtResource("13_title")
+
+[node name="CloseButton" type="TextureButton" parent="Window" unique_id=1597438609]
+layout_mode = 0
+offset_left = 824.5
+offset_top = 6.5
+offset_right = 848.5
+offset_bottom = 30.5
+texture_normal = ExtResource("12_close")
+
+[node name="Notification" parent="." unique_id=1305750692 instance=ExtResource("61_notification")]
+layout_mode = 1

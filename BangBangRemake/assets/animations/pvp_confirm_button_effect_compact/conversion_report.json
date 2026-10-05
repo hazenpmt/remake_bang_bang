@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\gui_summer\\controls\\battleconfirm\\30239ed77b70fe9238ffc27f90384367.swf",
+  "logical_name": "zh_CN/gui_summer/controls/battleconfirm/swf_confirm_btn_effect.swf",
+  "fps": 24.0,
+  "frames": 24,
+  "shape_textures": 8,
+  "sprite_timelines": 8,
+  "frame_items_min": 1,
+  "frame_items_max": 1,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 33926,
+  "timeline_json_bytes": 5948,
+  "warnings": []
+}

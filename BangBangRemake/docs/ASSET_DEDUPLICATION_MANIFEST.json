@@ -1,0 +1,1928 @@
+{
+  "format": "bangbang.asset_deduplication",
+  "version": 1,
+  "rule": "One physical source image per SHA-256 content hash.",
+  "groups": [
+    {
+      "sha256": "008fbb46700f3615f48107cc9f4ad4c1242b2c196da1125e8b8cd05fec504016",
+      "canonical": "res://assets/ui/profile/character_male_rgba.png",
+      "removed": [
+        "res://assets/ui/inventory/preview/boy001.png"
+      ],
+      "bytes_saved": 18140
+    },
+    {
+      "sha256": "00b995d6e37b9f524eaad0e5034fbfae1fd126d5347e3befe4c3ef68719a49b0",
+      "canonical": "res://assets/battle/buildings/npc/cannon2_base.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/cannon2_base.png"
+      ],
+      "bytes_saved": 5319
+    },
+    {
+      "sha256": "01cf5a5ebfeae3b3b796fc24ba2db7cc7f731989684b758e52a7eb6a91728bc1",
+      "canonical": "res://assets/ui/chat/message_input_mid.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/chat/iptbgmid.png"
+      ],
+      "bytes_saved": 167
+    },
+    {
+      "sha256": "02445da5dbba2514c6d444f58f11eb6152d217fc191a76a976788933c2c0734b",
+      "canonical": "res://assets/battle/result_tanks/kakaxi12.png",
+      "removed": [
+        "res://assets/battle/result_tanks/kakaxi05.png"
+      ],
+      "bytes_saved": 15221
+    },
+    {
+      "sha256": "0625a77fe4d0ad82ba0dee176938cc9592237cf934f9a7860358f453bafcbcb4",
+      "canonical": "res://assets/ui/pvp_ready_room/shadow.png",
+      "removed": [
+        "res://assets/ui/pvp_room/content_swirl.png"
+      ],
+      "bytes_saved": 9452
+    },
+    {
+      "sha256": "079156a8e288f9f2fe570659064cae85da0e7efa450afa41eae37660195a5100",
+      "canonical": "res://assets/battle/result_tanks/dianhun03.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/dianhun03.png"
+      ],
+      "bytes_saved": 31530
+    },
+    {
+      "sha256": "0ad40a9c3da6109d81e5836415b13be4b2e042297588170739d430ca7fcb60d9",
+      "canonical": "res://assets/ui/shop/mall/btn_pre_page.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_pre_page.png"
+      ],
+      "bytes_saved": 1015
+    },
+    {
+      "sha256": "0bebff25170c9b8dbb281148649f16e44e383b4cb9f3f035b74047cdd42664e7",
+      "canonical": "res://assets/battle/buildings/npc/box004.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/box004.png"
+      ],
+      "bytes_saved": 16441
+    },
+    {
+      "sha256": "0bf1568db5ff678026cda5a7e28139741cb53d88fc9f68310d998ff65ab8d856",
+      "canonical": "res://assets/ui/profile/btn_add.png",
+      "removed": [
+        "res://assets/ui/profile/btn_plus.png"
+      ],
+      "bytes_saved": 1021
+    },
+    {
+      "sha256": "0ccce38595f86c8caeba8ddb0dc36e71551086784333514aa1ec8b28c2e079b4",
+      "canonical": "res://assets/ui/shop/public/bk3_rt.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3_rt.png"
+      ],
+      "bytes_saved": 443
+    },
+    {
+      "sha256": "0d24a2da00023b89f882814e5845ab502a037871479c30b62dd8e453e4317672",
+      "canonical": "res://assets/ui/tank/skin_ironman_3.png",
+      "removed": [
+        "res://assets/battle/result_tanks/gangtiexia05.png"
+      ],
+      "bytes_saved": 15441
+    },
+    {
+      "sha256": "0d832f101248013655ee66fa6a3805f344676991f397e8d276320af1f40528b0",
+      "canonical": "res://assets/ui/inventory/tui_do_panel.png",
+      "removed": [
+        "res://assets/ui/notification/spiral_source.png"
+      ],
+      "bytes_saved": 45222
+    },
+    {
+      "sha256": "0e31c2449697e142ed6def5820257a1f17f3fbda7c1078f894fdc867661be0f9",
+      "canonical": "res://assets/battle/result_tanks/haiyao04.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/haiyao04.png"
+      ],
+      "bytes_saved": 13903
+    },
+    {
+      "sha256": "1185db88090051ece7232b055082de339f09cd06522a03e2b68fe5fb0bef2bd5",
+      "canonical": "res://assets/ui/pvp_room/pager_arrow.png",
+      "removed": [
+        "res://assets/ui/inventory/public/btn_s2_next.png",
+        "res://assets/ui/tank/pager_next.png"
+      ],
+      "bytes_saved": 1314
+    },
+    {
+      "sha256": "1318280afb47a5add110eedaad37977aade1e6f8ae68d171066bbed5fdceca6a",
+      "canonical": "res://assets/ui/shop/title/nav_meterial_t.png",
+      "removed": [
+        "res://assets/ui/inventory/tabs/nav_meterial_t.png"
+      ],
+      "bytes_saved": 463
+    },
+    {
+      "sha256": "13d511e15404a2b7bcbc7c5d8d1a5a1103b9703065c053206159833d21b578b4",
+      "canonical": "res://assets/ui/shop/public/bk_rt.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_rt.png",
+        "res://assets/ui/profile/frame/frame_top_right.png"
+      ],
+      "bytes_saved": 2006
+    },
+    {
+      "sha256": "1423b0817c981e9c60949e9a4c2a6bae2dd3aa1ba6844dc2bc4adb3bb2479184",
+      "canonical": "res://assets/ui/profile/level/level_15.png",
+      "removed": [
+        "res://assets/ui/inventory/preview/level015.png"
+      ],
+      "bytes_saved": 6061
+    },
+    {
+      "sha256": "16efa87a866627e159d09782c13d6b6fb21ac8dcea5cf9f9092611b5ed3f5629",
+      "canonical": "res://assets/battle/result_tanks/youling01.png",
+      "removed": [
+        "res://assets/battle/result_tanks/jujishou01.png"
+      ],
+      "bytes_saved": 14573
+    },
+    {
+      "sha256": "186bec2ab1f610590e2072ec8c227f5125b456c888958f36717fc3f464e6a225",
+      "canonical": "res://assets/ui/shop/mall/btn_num5.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num5.png"
+      ],
+      "bytes_saved": 507
+    },
+    {
+      "sha256": "19aa9c74f8f79380db97807d490f63f83ba3b21eba09b1e7ccceee3f80b17ba2",
+      "canonical": "res://assets/battle/buildings/npc/box002.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/box002.png"
+      ],
+      "bytes_saved": 7079
+    },
+    {
+      "sha256": "1b0fa3c85061984cbc1948ed9772a5949a4fda84543466b333453ec50cdd9f47",
+      "canonical": "res://assets/ui/tank/tank_ironman_head.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/gangtiexia03.png"
+      ],
+      "bytes_saved": 7338
+    },
+    {
+      "sha256": "1c47f49586a68bc305ffd3a876c8aaab742edfcda727629ed481e3020a9b8387",
+      "canonical": "res://assets/battle/result_tanks/shanjing04.png",
+      "removed": [
+        "res://assets/battle/result_tanks/shanjing101.png"
+      ],
+      "bytes_saved": 15968
+    },
+    {
+      "sha256": "1c9a5efc11d8b625923ecb32af7db0e1e45c04526cc834d095a85ac22ef1a8f8",
+      "canonical": "res://assets/ui/profile/title_purchase.png",
+      "removed": [
+        "res://assets/ui/shop/controls/title_confirmpaygood_t.png"
+      ],
+      "bytes_saved": 3229
+    },
+    {
+      "sha256": "1d0c3146def9253cc69d9686c8b483883caba8f2f307fbacb0188fc82733f062",
+      "canonical": "res://assets/ui/shop/public/bk3.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3.png"
+      ],
+      "bytes_saved": 112
+    },
+    {
+      "sha256": "1eaab600cc122804547cfa0f590c0997ac82dea95ec933dcf6f4294d925c1140",
+      "canonical": "res://assets/ui/tank/skill_ironman_1.jpg",
+      "removed": [
+        "res://assets/battle/tanks/Iron Man/skills/skill_tiejia.jpg"
+      ],
+      "bytes_saved": 1526
+    },
+    {
+      "sha256": "21c87f67a4c37740656398f7e4504dd3761c37d0de6b582f483f078d7f550bc1",
+      "canonical": "res://assets/battle/buildings/npc/earthbags002.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/earthbags002.png"
+      ],
+      "bytes_saved": 4695
+    },
+    {
+      "sha256": "226833a88a52ed65f75ed2b1d57bcc449598ebaba4887d8cedbbadef2ae85345",
+      "canonical": "res://assets/battle/buildings/npc/cannon1_base.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/cannon1_base.png"
+      ],
+      "bytes_saved": 5271
+    },
+    {
+      "sha256": "23367fdf757f3f57b2096371d5d2ced2a65b5ae8069845de0d85b04d482faf69",
+      "canonical": "res://assets/ui/currency/currency_bar.png",
+      "removed": [
+        "res://assets/ui/bg_coin.png"
+      ],
+      "bytes_saved": 892
+    },
+    {
+      "sha256": "270ac5986b82b567420612e2fd51fbc146021c222e2a30b5b80c845c9447c19a",
+      "canonical": "res://assets/ui/notification/button_blue.png",
+      "removed": [
+        "res://assets/ui/inventory/public/button_2_blue.png",
+        "res://assets/ui/profile/original/button_blue_96x28.png",
+        "res://assets/ui/shop/public/button_2_blue.png"
+      ],
+      "bytes_saved": 4221
+    },
+    {
+      "sha256": "277e4b5a128082b5bdac6add07c6bc1c4d5003d696f6078b380c42d514cb3564",
+      "canonical": "res://assets/ui/inventory/tabs/nav_paintword_t.png",
+      "removed": [
+        "res://assets/ui/shop/title/nav_paintword_t.png"
+      ],
+      "bytes_saved": 608
+    },
+    {
+      "sha256": "278c0aabc34c32b2da88aa19a86338f5c995dc35fa3b24a1c8be514c91f6d38d",
+      "canonical": "res://assets/battle/buildings/npc/roadblock001.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/roadblock001.png"
+      ],
+      "bytes_saved": 5392
+    },
+    {
+      "sha256": "2c0116e12677576234bfea5b5d7e852a993183e427f38a3a512fb2eaff1821eb",
+      "canonical": "res://assets/battle/result_tanks/lufei04_vn.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/lufei04_vn.png"
+      ],
+      "bytes_saved": 16215
+    },
+    {
+      "sha256": "2cf2ef7d3e6163967e95c0f5c03fba67937755d3ae3737d79b37d001a6ff4398",
+      "canonical": "res://assets/ui/tank/skill_ironman_2.jpg",
+      "removed": [
+        "res://assets/battle/tanks/Iron Man/skills/skill_hongzha.jpg"
+      ],
+      "bytes_saved": 1492
+    },
+    {
+      "sha256": "2d12aeebc61a13b140e7b1f946c3e611a2f8ce133a77fa879f676dfc4b153a4f",
+      "canonical": "res://assets/battle/buildings/npc/missile2_base.png",
+      "removed": [
+        "res://assets/battle/buildings/npc/missile1_base.png",
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/missile1_base.png",
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/missile2_base.png"
+      ],
+      "bytes_saved": 24189
+    },
+    {
+      "sha256": "3052c5489f534ab270ffaae65c30c34839d8a449af4f87ef8bc6fe4a36619fb5",
+      "canonical": "res://assets/ui/chat/send.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/chat/chat_enter.png"
+      ],
+      "bytes_saved": 423
+    },
+    {
+      "sha256": "30825b86bd34fa9f55088a29b45d3454cb80ba6ffc90fe8336417895000a64d7",
+      "canonical": "res://assets/battle/result_tanks/bianfuxia_pf11.png",
+      "removed": [
+        "res://assets/battle/result_tanks/bianfuxia_pf03.png"
+      ],
+      "bytes_saved": 10952
+    },
+    {
+      "sha256": "31b4332ba77327c039616390f080c7df19df3e385d688f7ba0cf1b64e1477d46",
+      "canonical": "res://assets/ui/profile/character_frame.png",
+      "removed": [
+        "res://assets/ui/inventory/public/charAvatarBk.png",
+        "res://assets/ui/shop/public/charAvatarBk.png"
+      ],
+      "bytes_saved": 5544
+    },
+    {
+      "sha256": "362dfb5bfb1515b5f7cca98378e80bd0b0c1e20cf8d35fb743b1d2d3420210e6",
+      "canonical": "res://assets/ui/tank/tank_wukong.png",
+      "removed": [
+        "res://assets/ui/shop/products/avatar/wukong03.png"
+      ],
+      "bytes_saved": 33228
+    },
+    {
+      "sha256": "3729cfab810336c30e1a5d87edc08c8d4fa4060bd88d0196e8eb398fcfcd61ab",
+      "canonical": "res://assets/ui/chat/input_head.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/chat/chatbghead.png"
+      ],
+      "bytes_saved": 2220
+    },
+    {
+      "sha256": "387110b7c80db85164f3ae3c39cf83916573c229322c5de7b411baa706d40e28",
+      "canonical": "res://assets/battle/result_tanks/chaoren03_vn.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/chaoren03_vn.png"
+      ],
+      "bytes_saved": 12200
+    },
+    {
+      "sha256": "41989890c5ca8df4ddfed551043439e3d401e8326c9dcf1ff1ac93e2596505aa",
+      "canonical": "res://assets/battle/result_tanks/eling02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/eling02.png"
+      ],
+      "bytes_saved": 31712
+    },
+    {
+      "sha256": "4547d4c67ec3b0b3ab03e819f2d004b323cc1f9918e7f580c420448f691b1e18",
+      "canonical": "res://assets/battle/result_tanks/jinmuyan04.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/jinmuyan04.png"
+      ],
+      "bytes_saved": 25092
+    },
+    {
+      "sha256": "46791e94f0264d7d77f6f6f83a993c11b0ea0ee60be665a260b2dfe25c438e59",
+      "canonical": "res://assets/ui/profile/original/label_glamour.png",
+      "removed": [
+        "res://assets/ui/profile/label_glamour.png"
+      ],
+      "bytes_saved": 1466
+    },
+    {
+      "sha256": "47541e6a9fb29919048e09e15608123d3ad878e04eb7cc91b7264265b3efb913",
+      "canonical": "res://assets/ui/shop/mall/btn_num4_select.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num4_select.png"
+      ],
+      "bytes_saved": 709
+    },
+    {
+      "sha256": "47dbcf38eab0a39038dab3925a078603f4ca1923bc35724fb8c5256cb1b9745a",
+      "canonical": "res://assets/ui/shop/title/nav_individual_t.png",
+      "removed": [
+        "res://assets/ui/inventory/tabs/nav_individual_t.png"
+      ],
+      "bytes_saved": 596
+    },
+    {
+      "sha256": "4874e3d78c93c251656bbaa4aba1b3fa338d14ae639ae392527f50d8e94c0957",
+      "canonical": "res://assets/ui/tank/tab_all.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_all_normal.png"
+      ],
+      "bytes_saved": 301
+    },
+    {
+      "sha256": "4c817bfcd1079aa251e22eb5a93cbd2c2312011556c459d0f9e592c8344ee90e",
+      "canonical": "res://assets/ui/pvp_room/content_bg.png",
+      "removed": [
+        "res://assets/ui/pvp_ready_room/background.png"
+      ],
+      "bytes_saved": 5506
+    },
+    {
+      "sha256": "4ce7d44cc69f014b287cd27997251cb3faef6f9c210a1eac6946e47d3056bbe1",
+      "canonical": "res://assets/ui/tooltip_quest.png",
+      "removed": [
+        "res://assets/ui/shop/title/t1_tips_t.png"
+      ],
+      "bytes_saved": 2842
+    },
+    {
+      "sha256": "4d2614fdd89123a0a94a5a26e20f739b53b68eb0c1512bde3b9574a80f7a533d",
+      "canonical": "res://assets/battle/result_tanks/longtaizi02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/longtaizi02.png"
+      ],
+      "bytes_saved": 13872
+    },
+    {
+      "sha256": "4da41d8ade285fccac720a519039a6759e0be8d67294afdccafd3cc8d27cae80",
+      "canonical": "res://assets/ui/shop/public/bk3_rb.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3_rb.png"
+      ],
+      "bytes_saved": 476
+    },
+    {
+      "sha256": "50d6d7eb4c6762fd045ee60d89795fa65bbd6c5d2b37bf835c7fc32a5d146670",
+      "canonical": "res://assets/battle/buildings/npc/fixbox002.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/fixbox002.png"
+      ],
+      "bytes_saved": 4483
+    },
+    {
+      "sha256": "50dbfb5271864230bb4b25986d95326ac8405e5bb8e3848ca823e9c9a2da9d2f",
+      "canonical": "res://assets/battle/result_tanks/minions2.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/minions2.png"
+      ],
+      "bytes_saved": 20786
+    },
+    {
+      "sha256": "528ad2a0f95ab04455b44a3669524211ef631cb577f3d27ff2c8854184030e9f",
+      "canonical": "res://assets/battle/result_tanks/haiwang02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/haiwang02.png"
+      ],
+      "bytes_saved": 60540
+    },
+    {
+      "sha256": "538c197b4f63bb1dee5cbdfb19952544cd109c0cf4790b0e854cc369132ab631",
+      "canonical": "res://assets/ui/shop/public/bk3_l.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3_l.png"
+      ],
+      "bytes_saved": 740
+    },
+    {
+      "sha256": "54b8352a2fe6d42a2e302bb887e363da2d0d887c468459b0014ed75a82a66946",
+      "canonical": "res://assets/battle/result_tanks/houyi03.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/houyi03.png"
+      ],
+      "bytes_saved": 24769
+    },
+    {
+      "sha256": "5544d647b1ed120441c3e20139d4e4a6e12fcea4e6800b38d780464e82449ca2",
+      "canonical": "res://assets/auth/character_confirm_text.png",
+      "removed": [
+        "res://assets/ui/shop/title/b1_confirm_t.png"
+      ],
+      "bytes_saved": 1466
+    },
+    {
+      "sha256": "556106d6ca5a19b0d17f8db78237be647d34c03424ff170511399f216b4271d9",
+      "canonical": "res://assets/battle/result_tanks/animalpanda.png",
+      "removed": [
+        "res://assets/battle/result_tanks/gongfuxiongmao_pf01.png"
+      ],
+      "bytes_saved": 12520
+    },
+    {
+      "sha256": "55ea91305d9e2ef06dd9306dd78ae73458ba145ce5faca0269135a6ed9e77bbe",
+      "canonical": "res://assets/battle/buildings/npc/cannon2_gun.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/cannon2_gun.png"
+      ],
+      "bytes_saved": 4557
+    },
+    {
+      "sha256": "56f76dc9f66ac431a812fd8acc18cb8e7c262ebc2e7919bda061b65f6e4d10ed",
+      "canonical": "res://assets/ui/notification/ok_text.png",
+      "removed": [
+        "res://assets/ui/shop/title/title_confirm_green_t.png"
+      ],
+      "bytes_saved": 543
+    },
+    {
+      "sha256": "57d38fe951667e522dde60c52ae83e21177e71048a0757704d410042e6b5642a",
+      "canonical": "res://assets/ui/shop/mall/btn_num4.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num4.png"
+      ],
+      "bytes_saved": 511
+    },
+    {
+      "sha256": "57d627121c228f45cff1f140f01c0cbdff772ef82c3b26c87c25390b0df9a917",
+      "canonical": "res://assets/battle/result_tanks/liao01.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/liao01.png"
+      ],
+      "bytes_saved": 14576
+    },
+    {
+      "sha256": "58db49c7e41eaea5182c5768e36063a89223b01374f7ab93bb454a2cdece69fb",
+      "canonical": "res://assets/ui/shop/public/bk3_r.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3_r.png"
+      ],
+      "bytes_saved": 720
+    },
+    {
+      "sha256": "5b32db58574d5896a0b1fb13250137221b7566b55549735b97e06d67adef8793",
+      "canonical": "res://assets/ui/close_original.png",
+      "removed": [
+        "res://assets/ui/battle_settings/btn_close.png",
+        "res://assets/ui/battle_settings/button_close_red.png",
+        "res://assets/ui/friend_original/close.png",
+        "res://assets/ui/inventory/public/button_close.png",
+        "res://assets/ui/profile/btn_close.png",
+        "res://assets/ui/shop/public/button_close.png"
+      ],
+      "bytes_saved": 7428
+    },
+    {
+      "sha256": "5d645d89da33bc6b520f20d50fa62010f90d5d038c899970012cfc0761418592",
+      "canonical": "res://assets/battle/result_tanks/kuangsan02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/kuangsan02.png"
+      ],
+      "bytes_saved": 13543
+    },
+    {
+      "sha256": "5fb18bb827533672eeeab42ea262b1dc8f3ad30bb14123fead8cc0cf88f571d7",
+      "canonical": "res://assets/battle/result_tanks/dahuangfeng04.png",
+      "removed": [
+        "res://assets/battle/result_tanks/dahuangfeng101.png",
+        "res://assets/battle/result_tanks/dahuangfeng102.png"
+      ],
+      "bytes_saved": 29200
+    },
+    {
+      "sha256": "61dfc0e37f6b9970b9972ccc3c06ead5bf3f3115e26c84e9f1b325f1bf14c562",
+      "canonical": "res://assets/battle/result_tanks/yingren02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/yingren02.png"
+      ],
+      "bytes_saved": 65208
+    },
+    {
+      "sha256": "6233ee4d674275286e229f5c973342b6344cdbd2d332c1ecfaa4d623f10006ce",
+      "canonical": "res://assets/ui/friend_original/row_button_blue.png",
+      "removed": [
+        "res://assets/ui/profile/original/value_blue_66x29.png"
+      ],
+      "bytes_saved": 1417
+    },
+    {
+      "sha256": "65c584932b695db9a296ac7e717c526cc9d26698dfcaece31f2f817a7006794d",
+      "canonical": "res://assets/ui/shop/public/bk.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk.png",
+        "res://assets/ui/profile/frame/frame_top.png"
+      ],
+      "bytes_saved": 404
+    },
+    {
+      "sha256": "674ea0cd3478ea4e41f0b8128723443f425cce5ba952f20f1233b4d9a44b619b",
+      "canonical": "res://assets/ui/inventory/public/button_2_green.png",
+      "removed": [
+        "res://assets/ui/notification/button_green.png",
+        "res://assets/ui/profile/original/button_green_96x28.png"
+      ],
+      "bytes_saved": 2462
+    },
+    {
+      "sha256": "68589b8f7ccc86fe5d41f3b293cdd4095d2e081a73559817eb720afc445a6d8a",
+      "canonical": "res://assets/ui/chat/quick_chat.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/chat/chat_word.png"
+      ],
+      "bytes_saved": 1513
+    },
+    {
+      "sha256": "6863a1566231ba83b7d5ff818b1aba76c8a7cfdb4745838e88998e8e66397968",
+      "canonical": "res://assets/battle/buildings/npc/missile1_gun.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/missile1_gun.png"
+      ],
+      "bytes_saved": 10113
+    },
+    {
+      "sha256": "688c203dedef9fa41c043021ddc4449704ccb024a5a292cc8ce19d6c659e7b0c",
+      "canonical": "res://assets/ui/shop/mall/btn_num1.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num1.png"
+      ],
+      "bytes_saved": 506
+    },
+    {
+      "sha256": "6a6328dae0f08f73ffca0985b5c2b2764112f0ac8abf082f3dfba4922e1bb31e",
+      "canonical": "res://assets/battle/result_tanks/qiaoba05.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/qiaoba05.png"
+      ],
+      "bytes_saved": 26716
+    },
+    {
+      "sha256": "6b0c781d89feb8ecd152c1a5b7705344f0116a88b9956c57acd3bf59ab818513",
+      "canonical": "res://assets/ui/pve_bright.png",
+      "removed": [
+        "res://assets/ui/btn_pve.png"
+      ],
+      "bytes_saved": 28462
+    },
+    {
+      "sha256": "6b9c9280b49d9bb90be1d7c856c4a49b83ba27edc643a0a52e7b69a93bcb9471",
+      "canonical": "res://assets/ui/tank/skin_ironman_2.png",
+      "removed": [
+        "res://assets/battle/result_tanks/gangtiexia04.png"
+      ],
+      "bytes_saved": 13162
+    },
+    {
+      "sha256": "71071c46ac3304ddb2009c5f8a47682ce2d5ea06b7216e61068dc33e69fa1df7",
+      "canonical": "res://assets/ui/pvp_match_flow/deployed_button.png",
+      "removed": [
+        "res://assets/ui/tank/tab_bg.png"
+      ],
+      "bytes_saved": 808
+    },
+    {
+      "sha256": "734edba5cd6d86d1ef72706fbb435da2b4266412e60f5e0985b9666f34e288a0",
+      "canonical": "res://assets/ui/notification/cancel_text.png",
+      "removed": [
+        "res://assets/ui/inventory/tankbarn/title_cancel_t.png",
+        "res://assets/ui/shop/title/title_cancel_t.png"
+      ],
+      "bytes_saved": 1696
+    },
+    {
+      "sha256": "77bf832ce04d269baeebd8ec8e3aca87efc971edec4f7c83ccb1d2d59d3b8303",
+      "canonical": "res://assets/ui/shop/public/bk_s.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_s.png",
+        "res://assets/ui/profile/frame/frame_pattern.png"
+      ],
+      "bytes_saved": 39272
+    },
+    {
+      "sha256": "77f1550cd34e5fdf7668cf4d6f158de85801c9d70c46f31eb4df419e5d470b88",
+      "canonical": "res://assets/ui/shop/mall/btn_num2_select.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num2_select.png"
+      ],
+      "bytes_saved": 719
+    },
+    {
+      "sha256": "77f3d4589c9e1c6e7bb8bf4a8490a5653e38d877172a43d05426b8ccbc7e1e95",
+      "canonical": "res://assets/ui/shop/title/nav_clothe_t.png",
+      "removed": [
+        "res://assets/ui/inventory/tabs/nav_clothe_t.png"
+      ],
+      "bytes_saved": 961
+    },
+    {
+      "sha256": "7a51767c3ad927656e01f98051cb1f690b182344e4125f035907f313668d9fd3",
+      "canonical": "res://assets/battle/result_tanks/fenghuang03.png",
+      "removed": [
+        "res://assets/battle/result_tanks/fenghuang01.png",
+        "res://assets/battle/result_tanks/fenghuang02.png",
+        "res://assets/ui/pvp_match_flow/tank_heads/fenghuang01.png"
+      ],
+      "bytes_saved": 33558
+    },
+    {
+      "sha256": "809253e7038c26597ec713e8e762c5f833f2c17a761bf541b4d2db615f909db1",
+      "canonical": "res://assets/ui/pvp_room/frame.png",
+      "removed": [
+        "res://assets/ui/pvp_ready_room/frame.png"
+      ],
+      "bytes_saved": 8247
+    },
+    {
+      "sha256": "8567cbe547d6d5eba9736656ffe3acd0c07697b974da7f196e37debe8574d280",
+      "canonical": "res://assets/battle/result_tanks/feiyi_pf05.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/feiyi_pf05.png"
+      ],
+      "bytes_saved": 23553
+    },
+    {
+      "sha256": "85c31cc04e647ba0d3a58081dc4d52473442ee89ee598e561df17014cfd2edbe",
+      "canonical": "res://assets/battle/result_tanks/dianhun02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/dianhun02.png"
+      ],
+      "bytes_saved": 26467
+    },
+    {
+      "sha256": "87615cb2d384463d1f5170f627dc88a2df948f6af7ee608c0591144b1c3d619a",
+      "canonical": "res://assets/ui/tank/skin_bao_sa_mac.png",
+      "removed": [
+        "res://assets/battle/result_tanks/gangtiexia_pf01.png"
+      ],
+      "bytes_saved": 14738
+    },
+    {
+      "sha256": "8c5f3e805110d2abf306a99ce1b1966bbe86e455ba040b0baf43975a5a0b28fc",
+      "canonical": "res://assets/ui/shop/mall/btn_num1_select.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num1_select.png"
+      ],
+      "bytes_saved": 702
+    },
+    {
+      "sha256": "8c7ad2f21f72932c75d13ca5591b51510e922d814efe610d375202e4d5f17161",
+      "canonical": "res://assets/battle/result_tanks/houyi04.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/houyi04.png"
+      ],
+      "bytes_saved": 27542
+    },
+    {
+      "sha256": "8cc0e1f748bd55249080cd2fbc6405a645e63aaa55c921c9eb1adb29147d0aa2",
+      "canonical": "res://assets/ui/shop/mall/btn_num5_select.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num5_select.png"
+      ],
+      "bytes_saved": 723
+    },
+    {
+      "sha256": "914665cac2dae88259a9bd842eba14e86c69390beef85cbd3c37d1b71c18247f",
+      "canonical": "res://assets/ui/currency/icon_xu_locked.png",
+      "removed": [
+        "res://assets/ui/shop/controls/coupon.png"
+      ],
+      "bytes_saved": 1375
+    },
+    {
+      "sha256": "914ac4f2da235fd206b2ca49406830ae300ac264314373442520d91d5a1da35a",
+      "canonical": "res://assets/ui/shop/mall/btn_num3_select.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num3_select.png"
+      ],
+      "bytes_saved": 710
+    },
+    {
+      "sha256": "95f3cadfee4eeb707a7ee4f81600dda90fdbb5471fa2dba1cb02b4686e4a1dd3",
+      "canonical": "res://assets/battle/result/btn_achieved_t.png",
+      "removed": [
+        "res://assets/ui/shop/controls/btn_achieved_t.png"
+      ],
+      "bytes_saved": 1846
+    },
+    {
+      "sha256": "961f431462951deec289dad8cd308e3fa0d94ee62bc8bcec4be6b00af83649fd",
+      "canonical": "res://assets/battle/result_tanks/nangua_pf01.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/nangua_pf01.png"
+      ],
+      "bytes_saved": 13876
+    },
+    {
+      "sha256": "9aa66ef90b11b63b8bd1559ec2d8435bd7195558241718867cb10775ee72da60",
+      "canonical": "res://assets/battle/result_tanks/boshi02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/boshi02.png"
+      ],
+      "bytes_saved": 8339
+    },
+    {
+      "sha256": "9afa7450c0c9e2b4abc69432259c78d81b6b2c65789862a16ec677e49171aaba",
+      "canonical": "res://assets/battle/buildings/npc/abatis002.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/abatis002.png"
+      ],
+      "bytes_saved": 3554
+    },
+    {
+      "sha256": "9c2fbbe402804f107e1054c74be0c3d81ce06d27fa58436acb7c1bb383268fe3",
+      "canonical": "res://assets/ui/tank/tab_bg_selected.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/deploy_button.png"
+      ],
+      "bytes_saved": 1483
+    },
+    {
+      "sha256": "9c52e4969f7a55decbdc3eea0d4a61d5c955c82c9bc131f6ef903b9e828318d8",
+      "canonical": "res://assets/ui/currency/icon_silver.png",
+      "removed": [
+        "res://assets/ui/shop/controls/diamond.png"
+      ],
+      "bytes_saved": 1120
+    },
+    {
+      "sha256": "9e0313f0497d26b5faa2def4f8f565dcb6fdbff689ad6411f026d075234b9783",
+      "canonical": "res://assets/battle/result_tanks/qiaoba03.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/qiaoba03.png"
+      ],
+      "bytes_saved": 20885
+    },
+    {
+      "sha256": "9febc5b8e35409250e04b1aa5257294e6747749926d325db6b4799f7a01134bf",
+      "canonical": "res://assets/ui/tank/tab_all_selected.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_all_selected.png"
+      ],
+      "bytes_saved": 297
+    },
+    {
+      "sha256": "a133e476811d02df470c6f3fc5b54711ad6742be5fae428c59db131e12517499",
+      "canonical": "res://assets/ui/tank/skin_chien_canh_tuong_lai.png",
+      "removed": [
+        "res://assets/battle/result_tanks/gangtiexia_pf02.png"
+      ],
+      "bytes_saved": 12489
+    },
+    {
+      "sha256": "a1443ff54c169a7a216d0e2044187c784d81019536997a844e0bca0cfd59a28e",
+      "canonical": "res://assets/ui/inventory/tabs/nav_achievement_t.png",
+      "removed": [
+        "res://assets/ui/shop/title/nav_achievement_t.png"
+      ],
+      "bytes_saved": 933
+    },
+    {
+      "sha256": "a30a1f75b49a5ed62f599141c04b52efef7d724ac5f7abf9c503f1ce1080665b",
+      "canonical": "res://assets/battle/buildings/npc/box001.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/box001.png"
+      ],
+      "bytes_saved": 5732
+    },
+    {
+      "sha256": "a39d67e40eaa3a60b8f2406e94187b779b54b34d1672cf6f853d7b31f7a3008e",
+      "canonical": "res://assets/ui/tank/tab_tank.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_tanker_normal.png"
+      ],
+      "bytes_saved": 423
+    },
+    {
+      "sha256": "a5c848d3bd28ae3f44e9e929aadd098d8e25fd3804eaf29092f7d3262b889b06",
+      "canonical": "res://assets/ui/chat/scrollbar_track.png",
+      "removed": [
+        "res://assets/ui/friend_original/scrollbar_track.png",
+        "res://assets/ui/pvp_room/scroll_thumb.png",
+        "res://assets/ui/tank/skin_scroll_track.png"
+      ],
+      "bytes_saved": 345
+    },
+    {
+      "sha256": "a92087a93968ab34980cae8f6073dc8e47a6b59afdaad25bba2d4f278662c332",
+      "canonical": "res://assets/battle/result_tanks/zhouyu02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/zhouyu02.png"
+      ],
+      "bytes_saved": 129516
+    },
+    {
+      "sha256": "ab6e3d5d0dfa647fc48dc568d7173c8964d4d5df10468d7554946f901ea9d73e",
+      "canonical": "res://assets/ui/inventory/public/button_2_s_blue.png",
+      "removed": [
+        "res://assets/ui/profile/original/value_blue_86x25.png"
+      ],
+      "bytes_saved": 1245
+    },
+    {
+      "sha256": "ab74118728e8ca06d1ab5450b0713ff8a7d285c85eaeb2bc0567568c58e8d8ff",
+      "canonical": "res://assets/ui/tank/skill_ironman_3.jpg",
+      "removed": [
+        "res://assets/battle/tanks/Iron Man/skills/skill_penshe.jpg"
+      ],
+      "bytes_saved": 1295
+    },
+    {
+      "sha256": "af2f2384844598717beb61a03040b9e4367d6c460e1877a122a73491a969aa68",
+      "canonical": "res://assets/battle/result_tanks/fenghuang_blue.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/fenghuang_blue.png"
+      ],
+      "bytes_saved": 23321
+    },
+    {
+      "sha256": "b0674d16b313991ace47cd7536e05f8e986779ee33ddfce3139aa0fd7dbd6229",
+      "canonical": "res://assets/battle/result_tanks/youying02.png",
+      "removed": [
+        "res://assets/battle/result_tanks/jujishou02.png",
+        "res://assets/ui/pvp_match_flow/tank_heads/jujishou02.png"
+      ],
+      "bytes_saved": 28186
+    },
+    {
+      "sha256": "b0e6c9513daac843f5f6e19f2d1f63ea1113dc775157bed84c2a9ab88fe967de",
+      "canonical": "res://assets/battle/hud/minimap/gangtiexia_small.png",
+      "removed": [
+        "res://assets/battle/hud/result_micro/gangtiexia_small.png",
+        "res://assets/battle/tanks/Iron Man/gangtiexia_minimap.png"
+      ],
+      "bytes_saved": 2884
+    },
+    {
+      "sha256": "b2d69f20c206ab8650ceb24c7b03abbc4ed0a53a74553eb6ad50f8c5d7d88d57",
+      "canonical": "res://assets/ui/shop/title/nav_item_t.png",
+      "removed": [
+        "res://assets/ui/inventory/tabs/nav_item_t.png"
+      ],
+      "bytes_saved": 977
+    },
+    {
+      "sha256": "b31e0e2d634665decab44a72f0d483c3ca4553f220f08cb00138a1a88767a18e",
+      "canonical": "res://assets/battle/buildings/npc/fixbox001.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/fixbox001.png"
+      ],
+      "bytes_saved": 4452
+    },
+    {
+      "sha256": "b3460dd447c68f368053f14895bee2652a87943fd56e9b570239b84215155e61",
+      "canonical": "res://assets/ui/shop/public/bk_lb.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_lb.png",
+        "res://assets/ui/profile/frame/frame_bottom_left.png"
+      ],
+      "bytes_saved": 1570
+    },
+    {
+      "sha256": "b4326780f7359780aa7e27d02a09540d78e91ce6f060208f73610c2ee9325c86",
+      "canonical": "res://assets/ui/shop/mall/btn_num2.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num2.png"
+      ],
+      "bytes_saved": 512
+    },
+    {
+      "sha256": "b52651926e45c143ff04f04070902a0f5f8a8c126c93d6fc403b69026f7df330",
+      "canonical": "res://assets/ui/inventory/tabs/shop_navItem_s.png",
+      "removed": [
+        "res://assets/ui/shop/controls/shop_navItem_s.png"
+      ],
+      "bytes_saved": 413
+    },
+    {
+      "sha256": "b545fb32de9383d51818e25b8b99123440be0cb8d1462093be6864ac40d4a5ef",
+      "canonical": "res://assets/ui/tank/skin_scroll_thumb.png",
+      "removed": [
+        "res://assets/ui/chat/scrollbar_thumb.png",
+        "res://assets/ui/friend_original/scrollbar_thumb.png",
+        "res://assets/ui/pvp_room/scroll_track.png"
+      ],
+      "bytes_saved": 1215
+    },
+    {
+      "sha256": "b56aeac899c033f41f371cad7cc8293a8e7b704f9b241ccc9f82f57ed5a95169",
+      "canonical": "res://assets/battle/result_tanks/dabai03.png",
+      "removed": [
+        "res://assets/battle/result_tanks/dabai104.png",
+        "res://assets/ui/pvp_match_flow/tank_heads/dabai03.png"
+      ],
+      "bytes_saved": 23158
+    },
+    {
+      "sha256": "b6a7f7f6839855458ba6d1e88476d742c72c2b74a89a625899e01f9e4056ee65",
+      "canonical": "res://assets/battle/result_tanks/laowan01.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/laowan01.png"
+      ],
+      "bytes_saved": 14793
+    },
+    {
+      "sha256": "b9e890c2197d3f0092af81f143360f88b7db5c184ad4038d75f21b8597fe80d7",
+      "canonical": "res://assets/ui/tank/tank_cell_owned.png",
+      "removed": [
+        "res://assets/ui/tank/tank_cell_selected.png"
+      ],
+      "bytes_saved": 6826
+    },
+    {
+      "sha256": "bbd6da1fb13e33e0f3da051a4cd6b68994ffdf5529e6f1f13aabf52c9febab97",
+      "canonical": "res://assets/ui/shop/public/bk3_lt.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3_lt.png"
+      ],
+      "bytes_saved": 450
+    },
+    {
+      "sha256": "bc351ae2c15aff31efc15765ba6ccb6e8b5de8e6a640dede9cd41774433f3142",
+      "canonical": "res://assets/battle/result_tanks/minions.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/minions.png"
+      ],
+      "bytes_saved": 19952
+    },
+    {
+      "sha256": "bf0b41a133dad979c001d6f03f9f2a723f7db314ee399ae56a1dc63378f5456b",
+      "canonical": "res://assets/ui/shop/public/bk_lt.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_lt.png",
+        "res://assets/ui/profile/frame/frame_top_left.png"
+      ],
+      "bytes_saved": 2010
+    },
+    {
+      "sha256": "bf9fea90c28fd39782fc9484a50d120818f7ec2e25ad0ac116505ea0070e5203",
+      "canonical": "res://assets/ui/shop/public/bk_oc.png",
+      "removed": [
+        "res://assets/ui/profile/frame/frame_top_line.png"
+      ],
+      "bytes_saved": 882
+    },
+    {
+      "sha256": "c0857f8ae47858f49f3f40a9526af7bca0d5ab95abe3f898fad7cbe306b58756",
+      "canonical": "res://assets/battle/result_tanks/minions_vn.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/minions_vn.png"
+      ],
+      "bytes_saved": 14015
+    },
+    {
+      "sha256": "c1c6e557ed89a798e779e7cf10c77ccfedcb6da97571933094989c062c577792",
+      "canonical": "res://assets/ui/tank/tank_ironman.png",
+      "removed": [
+        "res://assets/ui/shop/products/avatar/gangtiexia03.png"
+      ],
+      "bytes_saved": 22499
+    },
+    {
+      "sha256": "c1dc9305912facd9e345004b977c2a08ec2e585a6c7ada42ad50c9d715f5969c",
+      "canonical": "res://assets/battle/result_tanks/niumo01.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/niumo01.png"
+      ],
+      "bytes_saved": 13100
+    },
+    {
+      "sha256": "c2861e58b1e78fa36ce42ee2a4c2f94f4a0e8acef495c07767aadc1ef7ac8d44",
+      "canonical": "res://assets/battle/buildings/npc/cannon1_gun.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/cannon1_gun.png"
+      ],
+      "bytes_saved": 4525
+    },
+    {
+      "sha256": "c903e1e7cba6d678ba0fad2db583a412ea8666281f49e107adda57ec1f59cb5c",
+      "canonical": "res://assets/ui/tank/close.png",
+      "removed": [
+        "res://assets/auth/character_roster/btn_close.png"
+      ],
+      "bytes_saved": 2181
+    },
+    {
+      "sha256": "c96dee20ba9e5849df1f14b60719e4e8a3acec00c0a39a063350a1a5b3c7c962",
+      "canonical": "res://assets/ui/chat/message_input_right.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/chat/iptbgtail.png"
+      ],
+      "bytes_saved": 494
+    },
+    {
+      "sha256": "cab4297f3f56ad7209eba238b83d8b7d81a54b5c8e873b34f49fe57ba23537cd",
+      "canonical": "res://assets/battle/result_tanks/nezha02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/nezha02.png"
+      ],
+      "bytes_saved": 29748
+    },
+    {
+      "sha256": "cb081a9cacdc1428f3ed0d4d93269214ac77b30e4079959fd6134af845ecef44",
+      "canonical": "res://assets/ui/chat/scrollbar_down.png",
+      "removed": [
+        "res://assets/ui/friend_original/scrollbar_down.png",
+        "res://assets/ui/pvp_room/scroll_down.png",
+        "res://assets/ui/tank/skin_scroll_right.png"
+      ],
+      "bytes_saved": 795
+    },
+    {
+      "sha256": "cb306da31d2a27179d27f4b14f3605c6b48bbe50487e4effe04cddbaa6b5c298",
+      "canonical": "res://assets/ui/inventory/tabs/shop_navItem_s_Selected.png",
+      "removed": [
+        "res://assets/ui/shop/controls/shop_navItem_s_Selected.png"
+      ],
+      "bytes_saved": 1013
+    },
+    {
+      "sha256": "cb91fc28c301a9907e5d490ac41dc14cd1695fdbc855dfae70092fd7d4dcd25f",
+      "canonical": "res://assets/ui/tank/skin_dung_si_binh_minh.png",
+      "removed": [
+        "res://assets/battle/result_tanks/gangtiexia_pf03.png"
+      ],
+      "bytes_saved": 14561
+    },
+    {
+      "sha256": "cfafe0e3be21af43dbe3fc724ee00cc526789b129f87ad4ac97c260ebda43469",
+      "canonical": "res://assets/ui/shop/public/bk_rb.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_rb.png",
+        "res://assets/ui/profile/frame/frame_bottom_right.png"
+      ],
+      "bytes_saved": 1604
+    },
+    {
+      "sha256": "d0d0de043c6a40a78016ba4bc0531374f825f81207b85cc3cc8f17ec42c7e66c",
+      "canonical": "res://assets/battle/result_tanks/aisha02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/aisha02.png"
+      ],
+      "bytes_saved": 24378
+    },
+    {
+      "sha256": "d484a4497803950a110c29a7c231afc09710c99b8db4bb45a5145c2f928f99e8",
+      "canonical": "res://assets/ui/tank/tank_ironman_reward.png",
+      "removed": [
+        "res://assets/battle/result_tanks/gangtiexia03.png"
+      ],
+      "bytes_saved": 12862
+    },
+    {
+      "sha256": "d5bb5db18c0910663cfbd61a0c4f9fb91f6f3a7dd04f0c32e11d871e78fcf59e",
+      "canonical": "res://assets/ui/shop/mall/btn_next_page.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_next_page.png"
+      ],
+      "bytes_saved": 1011
+    },
+    {
+      "sha256": "d65b0ab53f0bc991103b6c0548d52894de5311c7f608f510c17585df036c369a",
+      "canonical": "res://assets/ui/profile/frame/frame_bottom.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_b.png",
+        "res://assets/ui/shop/public/bk_b.png"
+      ],
+      "bytes_saved": 228
+    },
+    {
+      "sha256": "d7e8fe6ef30099eeab8febb8a127b02b314d42f69482b775ef72ee71b81e14fc",
+      "canonical": "res://assets/battle/result_tanks/houyi02.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/houyi02.png"
+      ],
+      "bytes_saved": 12991
+    },
+    {
+      "sha256": "de0f88b31e7d239f4ac084cc73a0f00b765a1b87cfa629a246db135c2ca87cf2",
+      "canonical": "res://assets/battle/result_tanks/dianhun01.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/dianhun01.png"
+      ],
+      "bytes_saved": 22925
+    },
+    {
+      "sha256": "e275ab62d954fa1945a9606013f0990a9c344fd9ab16e9459ba100297488c439",
+      "canonical": "res://assets/battle/buildings/npc/missile2_gun.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/missile2_gun.png"
+      ],
+      "bytes_saved": 9977
+    },
+    {
+      "sha256": "e45dfa1e7e813a27ded413320ebe8952b8d90e172417f53ae04fe67b0658193c",
+      "canonical": "res://assets/ui/chat/message_input_left.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/chat/iptbghead.png"
+      ],
+      "bytes_saved": 498
+    },
+    {
+      "sha256": "e505986e00c994933b5c5eee39e6e914d2783aed130b14e075e03338766ecdcc",
+      "canonical": "res://assets/ui/shop/public/bk_l.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_l.png",
+        "res://assets/ui/profile/frame/frame_left.png"
+      ],
+      "bytes_saved": 224
+    },
+    {
+      "sha256": "e55d6bd01d934ec429a8948ea6cdcb9ab5e84b3220a2732644f3b536a69226d4",
+      "canonical": "res://assets/ui/profile/original/label_romantic.png",
+      "removed": [
+        "res://assets/ui/profile/label_romantic.png"
+      ],
+      "bytes_saved": 1658
+    },
+    {
+      "sha256": "e646c3bab5510b24ef13a982468e50dfc0d5099e19070aaf045d2a299c2e0ed0",
+      "canonical": "res://assets/battle/result_tanks/qifeizhixin01.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_heads/qifeizhixin01.png"
+      ],
+      "bytes_saved": 14516
+    },
+    {
+      "sha256": "e9a434985e97e26d685aa8388a0e317387767ffbd96806c670e8e8fb923901a1",
+      "canonical": "res://assets/ui/tank/tab_tank_selected.png",
+      "removed": [
+        "res://assets/ui/pvp_match_flow/tank_tanker_selected.png"
+      ],
+      "bytes_saved": 412
+    },
+    {
+      "sha256": "ea75173786170acb8e3930623ee887ea0b96e7c65424e6380d6236395ed3b766",
+      "canonical": "res://assets/battle/buildings/npc/fixbox002_break4.png",
+      "removed": [
+        "res://assets/battle/buildings/npc/fixbox001_break4.png"
+      ],
+      "bytes_saved": 2276
+    },
+    {
+      "sha256": "eb43cc777808fd42cf4fdb57d51367c097745e5b984e2cea2988f5bf0ec974ee",
+      "canonical": "res://assets/ui/tank/tank_wukong_2.png",
+      "removed": [
+        "res://assets/battle/result_tanks/wukong04.png"
+      ],
+      "bytes_saved": 33958
+    },
+    {
+      "sha256": "effe85025ac19fb6df14eddf935210abe466305663f482ff82680991191982d3",
+      "canonical": "res://assets/ui/shop/public/bk3_b.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3_b.png"
+      ],
+      "bytes_saved": 110
+    },
+    {
+      "sha256": "f2e73e03d1cf2183358fb4f7a33395bbeb96df7c448a7e91b38a088f4ac13b40",
+      "canonical": "res://assets/ui/shop/mall/btn_num3.png",
+      "removed": [
+        "res://assets/ui/military_rank/pager/mall/btn_num3.png"
+      ],
+      "bytes_saved": 529
+    },
+    {
+      "sha256": "f30d22d53c1625b8fd0c9280f84ff3830a29714ebe1a9fae2b3d524b9b0143eb",
+      "canonical": "res://assets/battle/buildings/npc/abatis001.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/abatis001.png"
+      ],
+      "bytes_saved": 3579
+    },
+    {
+      "sha256": "f3366ba9d7840d66b64490ada5cb3d6b8817f8a14ae01333ffbe59a4dff18d51",
+      "canonical": "res://assets/ui/tank/skin_use_button_bg.png",
+      "removed": [
+        "res://assets/ui/friend_original/row_button_green.png"
+      ],
+      "bytes_saved": 1250
+    },
+    {
+      "sha256": "f4e7f050514c281938a8e4f2ff5527d5859877e0a37f97222905846891b4648d",
+      "canonical": "res://assets/ui/chat/scrollbar_up.png",
+      "removed": [
+        "res://assets/ui/friend_original/scrollbar_up.png",
+        "res://assets/ui/pvp_room/scroll_up.png",
+        "res://assets/ui/tank/skin_scroll_left.png"
+      ],
+      "bytes_saved": 789
+    },
+    {
+      "sha256": "f911443e25ccde89cf5dc201cc91d83313e2a0e467e1b56450e461c338c5ae45",
+      "canonical": "res://assets/battle/buildings/npc/iron006.png",
+      "removed": [
+        "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/iron006.png"
+      ],
+      "bytes_saved": 4718
+    },
+    {
+      "sha256": "f9babf2b5f5487fbdde71736f9bf412d37e12939c99fde1efe6bab84d3078773",
+      "canonical": "res://assets/ui/shop/public/bk3_c.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3_c.png"
+      ],
+      "bytes_saved": 223
+    },
+    {
+      "sha256": "fa9998a05660ab885695609482c80db5814b4b9fd4e92f4b31ef0694a3849093",
+      "canonical": "res://assets/ui/currency/icon_xu.png",
+      "removed": [
+        "res://assets/ui/shop/controls/money.png"
+      ],
+      "bytes_saved": 1351
+    },
+    {
+      "sha256": "fbff8de0ea367313aa9d4db8f60944bf4160e98c9f18e484065d4b63b42332fe",
+      "canonical": "res://assets/ui/tank/skin_mk42.png",
+      "removed": [
+        "res://assets/battle/result_tanks/gangtiexia_pf04.png"
+      ],
+      "bytes_saved": 14327
+    },
+    {
+      "sha256": "fea11933a710625cec636c4356e8270bdaaef9c7741ac6a1a279b3b906c4d48a",
+      "canonical": "res://assets/ui/shop/public/bk_r.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_r.png",
+        "res://assets/ui/profile/frame/frame_right.png"
+      ],
+      "bytes_saved": 226
+    },
+    {
+      "sha256": "fee9cd408addd64aa0d1f93a5be5cd2fe74730dfa94abf5bfe36091e95fce6f8",
+      "canonical": "res://assets/ui/shop/public/bk_ti.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk_ti.png",
+        "res://assets/ui/profile/frame/frame_title_holder.png"
+      ],
+      "bytes_saved": 6410
+    },
+    {
+      "sha256": "ffe6f107d4d032a4905da30e6853b96561bd88eadd05376b17add14b11b2268a",
+      "canonical": "res://assets/ui/shop/public/bk3_lb.png",
+      "removed": [
+        "res://assets/ui/inventory/public/bk3_lb.png"
+      ],
+      "bytes_saved": 466
+    },
+    {
+      "sha256": "150e46fa624b4208f1b3717251b4edb20a53b6de5f3c9a67e91ba11f20538d3c",
+      "canonical": "res://assets/animations/shared_shapes/150e46fa624b4208f1b3717251b4edb20a53b6de5f3c9a67e91ba11f20538d3c.png",
+      "removed": [
+        "res://assets/animations/profile_level_21_30_fx_compact/shapes/3.png",
+        "res://assets/animations/profile_level_31_35_fx_compact/shapes/3.png",
+        "res://assets/animations/profile_level_36_40_fx_compact/shapes/3.png"
+      ],
+      "bytes_saved": 3388
+    },
+    {
+      "sha256": "21f1f52fa52b900b60ae1496e13141544de26272e20a5ff0681f6e4473243c24",
+      "canonical": "res://assets/animations/shared_shapes/21f1f52fa52b900b60ae1496e13141544de26272e20a5ff0681f6e4473243c24.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/30.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/30.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/30.png"
+      ],
+      "bytes_saved": 3858
+    },
+    {
+      "sha256": "29f8b3b62382f09760145e9a5b90fb84c3cc28efe31ac87b858f69d7e4882471",
+      "canonical": "res://assets/animations/shared_shapes/29f8b3b62382f09760145e9a5b90fb84c3cc28efe31ac87b858f69d7e4882471.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/22.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/22.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/22.png"
+      ],
+      "bytes_saved": 7408
+    },
+    {
+      "sha256": "2d8800f7680e69c30c254a08e29de73e9e902d0f5c9f71629df850027cbbf09e",
+      "canonical": "res://assets/animations/shared_shapes/2d8800f7680e69c30c254a08e29de73e9e902d0f5c9f71629df850027cbbf09e.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/24.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/24.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/24.png"
+      ],
+      "bytes_saved": 6930
+    },
+    {
+      "sha256": "4e6460ce6bb674911af1528cbdd5551f1bb9ee7dd4bda1ec370022cfadb5fd55",
+      "canonical": "res://assets/animations/shared_shapes/4e6460ce6bb674911af1528cbdd5551f1bb9ee7dd4bda1ec370022cfadb5fd55.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/16.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/16.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/16.png"
+      ],
+      "bytes_saved": 20146
+    },
+    {
+      "sha256": "522d02c29680a7a2c08065d430de859d2c1e683c8c03332146cf931d6ea92b49",
+      "canonical": "res://assets/animations/shared_shapes/522d02c29680a7a2c08065d430de859d2c1e683c8c03332146cf931d6ea92b49.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/4.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/4.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/4.png"
+      ],
+      "bytes_saved": 770
+    },
+    {
+      "sha256": "64214225a43f06968266b9c5c0b58e1cb2ddc3520fdf4d1304265d2b1ad8f09a",
+      "canonical": "res://assets/animations/shared_shapes/64214225a43f06968266b9c5c0b58e1cb2ddc3520fdf4d1304265d2b1ad8f09a.png",
+      "removed": [
+        "res://assets/animations/profile_exp_bar_compact/shapes/9.png",
+        "res://assets/animations/profile_stamina_bar_compact/shapes/9.png"
+      ],
+      "bytes_saved": 113
+    },
+    {
+      "sha256": "65f9a2af605fcea34320202b989b53f8367749357679aa6866d364a8e1e19e5e",
+      "canonical": "res://assets/animations/shared_shapes/65f9a2af605fcea34320202b989b53f8367749357679aa6866d364a8e1e19e5e.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/26.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/26.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/26.png"
+      ],
+      "bytes_saved": 6188
+    },
+    {
+      "sha256": "6fd584c59093488db6846aee5b686862ac8f0c79a5427ac49ca3499892e7644a",
+      "canonical": "res://assets/animations/shared_shapes/6fd584c59093488db6846aee5b686862ac8f0c79a5427ac49ca3499892e7644a.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/28.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/28.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/28.png"
+      ],
+      "bytes_saved": 5304
+    },
+    {
+      "sha256": "796e4089b8d1d95ea878ca6c0fb781ebf34ed0abfdc1cbe877bd2360f98e2511",
+      "canonical": "res://assets/animations/shared_shapes/796e4089b8d1d95ea878ca6c0fb781ebf34ed0abfdc1cbe877bd2360f98e2511.png",
+      "removed": [
+        "res://assets/animations/profile_level_21_30_fx_compact/shapes/18.png",
+        "res://assets/animations/profile_level_31_35_fx_compact/shapes/28.png",
+        "res://assets/animations/profile_level_36_40_fx_compact/shapes/28.png"
+      ],
+      "bytes_saved": 3784
+    },
+    {
+      "sha256": "7ff23d427c8fea7017fb5204b50d74ff98503447ec0343f572f6a13c97445b19",
+      "canonical": "res://assets/animations/shared_shapes/7ff23d427c8fea7017fb5204b50d74ff98503447ec0343f572f6a13c97445b19.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/2.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/2.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/2.png"
+      ],
+      "bytes_saved": 3678
+    },
+    {
+      "sha256": "803d3a895133796936376e9a180b74b5a60353101bbc96381bdb88d5c358fa59",
+      "canonical": "res://assets/animations/shared_shapes/803d3a895133796936376e9a180b74b5a60353101bbc96381bdb88d5c358fa59.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/6.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/6.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/6.png"
+      ],
+      "bytes_saved": 30498
+    },
+    {
+      "sha256": "8e6fed4cee7a59d756786655d6054d130cc28ddb3cbd9580109954db4aa5bb6d",
+      "canonical": "res://assets/animations/shared_shapes/8e6fed4cee7a59d756786655d6054d130cc28ddb3cbd9580109954db4aa5bb6d.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/9.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/9.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/9.png"
+      ],
+      "bytes_saved": 20756
+    },
+    {
+      "sha256": "9cf1134ebc1987686257d397c536cf2bc95ceee8be98af9ebcc1745d2833c2f1",
+      "canonical": "res://assets/animations/shared_shapes/9cf1134ebc1987686257d397c536cf2bc95ceee8be98af9ebcc1745d2833c2f1.png",
+      "removed": [
+        "res://assets/animations/profile_level_21_30_fx_compact/shapes/12.png",
+        "res://assets/animations/profile_level_31_35_fx_compact/shapes/18.png",
+        "res://assets/animations/profile_level_36_40_fx_compact/shapes/18.png"
+      ],
+      "bytes_saved": 3272
+    },
+    {
+      "sha256": "a327b46d9294f821d6bfe75f82825b54adb89834ee4d2ce97890f190c3289d0d",
+      "canonical": "res://assets/animations/shared_shapes/a327b46d9294f821d6bfe75f82825b54adb89834ee4d2ce97890f190c3289d0d.png",
+      "removed": [
+        "res://assets/animations/profile_level_21_30_fx_compact/shapes/15.png",
+        "res://assets/animations/profile_level_31_35_fx_compact/shapes/23.png",
+        "res://assets/animations/profile_level_36_40_fx_compact/shapes/23.png"
+      ],
+      "bytes_saved": 3924
+    },
+    {
+      "sha256": "aaf4b1e1fd004adf4f60191a3ee125b9ec590f66922f89e70fbc813deb6e6f74",
+      "canonical": "res://assets/animations/shared_shapes/aaf4b1e1fd004adf4f60191a3ee125b9ec590f66922f89e70fbc813deb6e6f74.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/12.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/12.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/12.png"
+      ],
+      "bytes_saved": 21682
+    },
+    {
+      "sha256": "ac79ac8017c9b56d1a7d546e23c579fde080468e23fe85d67f63a1cd57372cbb",
+      "canonical": "res://assets/animations/shared_shapes/ac79ac8017c9b56d1a7d546e23c579fde080468e23fe85d67f63a1cd57372cbb.png",
+      "removed": [
+        "res://assets/animations/profile_level_21_30_fx_compact/shapes/6.png",
+        "res://assets/animations/profile_level_31_35_fx_compact/shapes/8.png",
+        "res://assets/animations/profile_level_36_40_fx_compact/shapes/8.png"
+      ],
+      "bytes_saved": 3024
+    },
+    {
+      "sha256": "b06396f32214094994da13c540e413d21857e0ea84b52ee556f67882c6a3a958",
+      "canonical": "res://assets/animations/shared_shapes/b06396f32214094994da13c540e413d21857e0ea84b52ee556f67882c6a3a958.png",
+      "removed": [
+        "res://assets/animations/profile_level_21_30_fx_compact/shapes/21.png",
+        "res://assets/animations/profile_level_31_35_fx_compact/shapes/33.png",
+        "res://assets/animations/profile_level_36_40_fx_compact/shapes/33.png"
+      ],
+      "bytes_saved": 4382
+    },
+    {
+      "sha256": "c0a886374b723b27a752c29b461fcdaf8b2ef06cb762d000ec36414bde16dc89",
+      "canonical": "res://assets/animations/shared_shapes/c0a886374b723b27a752c29b461fcdaf8b2ef06cb762d000ec36414bde16dc89.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/20.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/20.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/20.png"
+      ],
+      "bytes_saved": 33360
+    },
+    {
+      "sha256": "c20dd785ff69f90843668cfb763dff360db85b160adcf0408dc4f0015ea4c53a",
+      "canonical": "res://assets/animations/shared_shapes/c20dd785ff69f90843668cfb763dff360db85b160adcf0408dc4f0015ea4c53a.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/32.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/32.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/32.png"
+      ],
+      "bytes_saved": 586
+    },
+    {
+      "sha256": "c81111dad4a4b87175b10136dad627614ad026c141e1f59b7f5fa1e160ba83df",
+      "canonical": "res://assets/animations/shared_shapes/c81111dad4a4b87175b10136dad627614ad026c141e1f59b7f5fa1e160ba83df.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/13.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/13.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/13.png"
+      ],
+      "bytes_saved": 756
+    },
+    {
+      "sha256": "ccda08e3869f172bae01427b974c3d9ce0efdc85c204314066f647f63968f3ec",
+      "canonical": "res://assets/animations/shared_shapes/ccda08e3869f172bae01427b974c3d9ce0efdc85c204314066f647f63968f3ec.png",
+      "removed": [
+        "res://assets/animations/profile_level_21_30_fx_compact/shapes/9.png",
+        "res://assets/animations/profile_level_31_35_fx_compact/shapes/13.png",
+        "res://assets/animations/profile_level_36_40_fx_compact/shapes/13.png"
+      ],
+      "bytes_saved": 2980
+    },
+    {
+      "sha256": "d987f4c9d37c6282f5cb9cb6cf933559facb15494020d62c643d4aa9df548c59",
+      "canonical": "res://assets/animations/shared_shapes/d987f4c9d37c6282f5cb9cb6cf933559facb15494020d62c643d4aa9df548c59.png",
+      "removed": [
+        "res://assets/animations/footpoint_blow_compact/shapes/17.png",
+        "res://assets/animations/ironman_death_blow_compact/shapes/17.png",
+        "res://assets/animations/map_destroy_paota_compact/shapes/17.png"
+      ],
+      "bytes_saved": 726
+    },
+    {
+      "sha256": "e4da5d5a8454c9d204d14b68297a01021b151adbced2e1af8bffab5d84636b9e",
+      "canonical": "res://assets/animations/shared_shapes/e4da5d5a8454c9d204d14b68297a01021b151adbced2e1af8bffab5d84636b9e.png",
+      "removed": [
+        "res://assets/animations/profile_exp_bar_compact/shapes/2.png",
+        "res://assets/animations/profile_stamina_bar_compact/shapes/2.png"
+      ],
+      "bytes_saved": 164
+    }
+  ],
+  "changed_text_files": [
+    "assets/animations/footpoint_blow_compact/timeline.json",
+    "assets/animations/ironman_death_blow_compact/timeline.json",
+    "assets/animations/map_destroy_paota_compact/timeline.json",
+    "assets/animations/profile_exp_bar_compact/timeline.json",
+    "assets/animations/profile_level_21_30_fx_compact/timeline.json",
+    "assets/animations/profile_level_31_35_fx_compact/timeline.json",
+    "assets/animations/profile_level_36_40_fx_compact/timeline.json",
+    "assets/animations/profile_stamina_bar_compact/timeline.json",
+    "assets/animations/pvp_tank_heads/jinshanshan_pf01_compact/timeline.json",
+    "docs/ASSET_DEDUPLICATION_MANIFEST.json",
+    "scenes/auth/CharacterRoster.tscn",
+    "scenes/battle/PvpBattleHonorSlot.tscn",
+    "scenes/battle/PvpBattleMap.tscn",
+    "scenes/battle/PvpBattleResultScreen.tscn",
+    "scenes/battle/PvpBattleSettings.tscn",
+    "scenes/battle/PvpBattleTeamStateCard.tscn",
+    "scenes/lobby/FriendPanel.tscn",
+    "scenes/lobby/InventoryPanel.tscn",
+    "scenes/lobby/LobbyChat.tscn",
+    "scenes/lobby/MainLobby.tscn",
+    "scenes/lobby/NewcomerTankReward.tscn",
+    "scenes/lobby/ProfileView.tscn",
+    "scenes/lobby/TankPanel.tscn",
+    "scenes/lobby/military_rank/MilitaryRankLevelPopup.tscn",
+    "scenes/lobby/pvp/hub/PvpRoomView.tscn",
+    "scenes/lobby/pvp/test/match/PvpTankSelect.tscn",
+    "scenes/lobby/pvp/test/ready_room/PvpMapSelector.tscn",
+    "scenes/lobby/pvp/test/ready_room/PvpReadyRoom.tscn",
+    "scenes/lobby/pvp/test/ready_room/PvpReadyRoomMember.tscn",
+    "scenes/lobby/shop/ShopPanel.tscn",
+    "scenes/ui/ReusableNotification.tscn",
+    "scripts/auth/character_roster.gd",
+    "scripts/battle/pvp_battle_map_editor_preview.gd",
+    "scripts/lobby/friend_panel.gd",
+    "scripts/lobby/pvp_match_flow.gd",
+    "scripts/lobby/pvp_room_view.gd",
+    "scripts/lobby/shop_product_card.gd",
+    "tests/battle_result_sequence_smoke.gd"
+  ],
+  "removed_file_count": 269,
+  "removed_files": [
+    "res://assets/animations/footpoint_blow_compact/shapes/12.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/13.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/16.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/17.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/2.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/20.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/22.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/24.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/26.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/28.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/30.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/32.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/4.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/6.png",
+    "res://assets/animations/footpoint_blow_compact/shapes/9.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/12.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/13.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/16.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/17.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/2.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/20.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/22.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/24.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/26.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/28.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/30.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/32.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/4.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/6.png",
+    "res://assets/animations/ironman_death_blow_compact/shapes/9.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/12.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/13.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/16.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/17.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/2.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/20.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/22.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/24.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/26.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/28.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/30.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/32.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/4.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/6.png",
+    "res://assets/animations/map_destroy_paota_compact/shapes/9.png",
+    "res://assets/animations/profile_exp_bar_compact/shapes/2.png",
+    "res://assets/animations/profile_exp_bar_compact/shapes/9.png",
+    "res://assets/animations/profile_level_21_30_fx_compact/shapes/12.png",
+    "res://assets/animations/profile_level_21_30_fx_compact/shapes/15.png",
+    "res://assets/animations/profile_level_21_30_fx_compact/shapes/18.png",
+    "res://assets/animations/profile_level_21_30_fx_compact/shapes/21.png",
+    "res://assets/animations/profile_level_21_30_fx_compact/shapes/3.png",
+    "res://assets/animations/profile_level_21_30_fx_compact/shapes/6.png",
+    "res://assets/animations/profile_level_21_30_fx_compact/shapes/9.png",
+    "res://assets/animations/profile_level_31_35_fx_compact/shapes/13.png",
+    "res://assets/animations/profile_level_31_35_fx_compact/shapes/18.png",
+    "res://assets/animations/profile_level_31_35_fx_compact/shapes/23.png",
+    "res://assets/animations/profile_level_31_35_fx_compact/shapes/28.png",
+    "res://assets/animations/profile_level_31_35_fx_compact/shapes/3.png",
+    "res://assets/animations/profile_level_31_35_fx_compact/shapes/33.png",
+    "res://assets/animations/profile_level_31_35_fx_compact/shapes/8.png",
+    "res://assets/animations/profile_level_36_40_fx_compact/shapes/13.png",
+    "res://assets/animations/profile_level_36_40_fx_compact/shapes/18.png",
+    "res://assets/animations/profile_level_36_40_fx_compact/shapes/23.png",
+    "res://assets/animations/profile_level_36_40_fx_compact/shapes/28.png",
+    "res://assets/animations/profile_level_36_40_fx_compact/shapes/3.png",
+    "res://assets/animations/profile_level_36_40_fx_compact/shapes/33.png",
+    "res://assets/animations/profile_level_36_40_fx_compact/shapes/8.png",
+    "res://assets/animations/profile_stamina_bar_compact/shapes/2.png",
+    "res://assets/animations/profile_stamina_bar_compact/shapes/9.png",
+    "res://assets/auth/character_roster/btn_close.png",
+    "res://assets/battle/buildings/npc/fixbox001_break4.png",
+    "res://assets/battle/buildings/npc/missile1_base.png",
+    "res://assets/battle/hud/result_micro/gangtiexia_small.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/abatis001.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/abatis002.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/box001.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/box002.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/box004.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/cannon1_base.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/cannon1_gun.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/cannon2_base.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/cannon2_gun.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/earthbags002.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/fixbox001.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/fixbox002.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/iron006.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/missile1_base.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/missile1_gun.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/missile2_base.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/missile2_gun.png",
+    "res://assets/battle/maps/Maya Tiên tri(Tính điểm)/npc/roadblock001.png",
+    "res://assets/battle/result_tanks/bianfuxia_pf03.png",
+    "res://assets/battle/result_tanks/dabai104.png",
+    "res://assets/battle/result_tanks/dahuangfeng101.png",
+    "res://assets/battle/result_tanks/dahuangfeng102.png",
+    "res://assets/battle/result_tanks/fenghuang01.png",
+    "res://assets/battle/result_tanks/fenghuang02.png",
+    "res://assets/battle/result_tanks/gangtiexia03.png",
+    "res://assets/battle/result_tanks/gangtiexia04.png",
+    "res://assets/battle/result_tanks/gangtiexia05.png",
+    "res://assets/battle/result_tanks/gangtiexia_pf01.png",
+    "res://assets/battle/result_tanks/gangtiexia_pf02.png",
+    "res://assets/battle/result_tanks/gangtiexia_pf03.png",
+    "res://assets/battle/result_tanks/gangtiexia_pf04.png",
+    "res://assets/battle/result_tanks/gongfuxiongmao_pf01.png",
+    "res://assets/battle/result_tanks/jujishou01.png",
+    "res://assets/battle/result_tanks/jujishou02.png",
+    "res://assets/battle/result_tanks/kakaxi05.png",
+    "res://assets/battle/result_tanks/shanjing101.png",
+    "res://assets/battle/result_tanks/wukong04.png",
+    "res://assets/battle/tanks/Iron Man/gangtiexia_minimap.png",
+    "res://assets/battle/tanks/Iron Man/skills/skill_hongzha.jpg",
+    "res://assets/battle/tanks/Iron Man/skills/skill_penshe.jpg",
+    "res://assets/battle/tanks/Iron Man/skills/skill_tiejia.jpg",
+    "res://assets/ui/battle_settings/btn_close.png",
+    "res://assets/ui/battle_settings/button_close_red.png",
+    "res://assets/ui/bg_coin.png",
+    "res://assets/ui/btn_pve.png",
+    "res://assets/ui/chat/scrollbar_thumb.png",
+    "res://assets/ui/friend_original/close.png",
+    "res://assets/ui/friend_original/row_button_green.png",
+    "res://assets/ui/friend_original/scrollbar_down.png",
+    "res://assets/ui/friend_original/scrollbar_thumb.png",
+    "res://assets/ui/friend_original/scrollbar_track.png",
+    "res://assets/ui/friend_original/scrollbar_up.png",
+    "res://assets/ui/inventory/preview/boy001.png",
+    "res://assets/ui/inventory/preview/level015.png",
+    "res://assets/ui/inventory/public/bk.png",
+    "res://assets/ui/inventory/public/bk3.png",
+    "res://assets/ui/inventory/public/bk3_b.png",
+    "res://assets/ui/inventory/public/bk3_c.png",
+    "res://assets/ui/inventory/public/bk3_l.png",
+    "res://assets/ui/inventory/public/bk3_lb.png",
+    "res://assets/ui/inventory/public/bk3_lt.png",
+    "res://assets/ui/inventory/public/bk3_r.png",
+    "res://assets/ui/inventory/public/bk3_rb.png",
+    "res://assets/ui/inventory/public/bk3_rt.png",
+    "res://assets/ui/inventory/public/bk_b.png",
+    "res://assets/ui/inventory/public/bk_l.png",
+    "res://assets/ui/inventory/public/bk_lb.png",
+    "res://assets/ui/inventory/public/bk_lt.png",
+    "res://assets/ui/inventory/public/bk_r.png",
+    "res://assets/ui/inventory/public/bk_rb.png",
+    "res://assets/ui/inventory/public/bk_rt.png",
+    "res://assets/ui/inventory/public/bk_s.png",
+    "res://assets/ui/inventory/public/bk_ti.png",
+    "res://assets/ui/inventory/public/btn_s2_next.png",
+    "res://assets/ui/inventory/public/button_2_blue.png",
+    "res://assets/ui/inventory/public/button_close.png",
+    "res://assets/ui/inventory/public/charAvatarBk.png",
+    "res://assets/ui/inventory/tabs/nav_clothe_t.png",
+    "res://assets/ui/inventory/tabs/nav_individual_t.png",
+    "res://assets/ui/inventory/tabs/nav_item_t.png",
+    "res://assets/ui/inventory/tabs/nav_meterial_t.png",
+    "res://assets/ui/inventory/tankbarn/title_cancel_t.png",
+    "res://assets/ui/military_rank/pager/mall/btn_next_page.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num1.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num1_select.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num2.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num2_select.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num3.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num3_select.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num4.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num4_select.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num5.png",
+    "res://assets/ui/military_rank/pager/mall/btn_num5_select.png",
+    "res://assets/ui/military_rank/pager/mall/btn_pre_page.png",
+    "res://assets/ui/notification/button_green.png",
+    "res://assets/ui/notification/spiral_source.png",
+    "res://assets/ui/profile/btn_close.png",
+    "res://assets/ui/profile/btn_plus.png",
+    "res://assets/ui/profile/frame/frame_bottom_left.png",
+    "res://assets/ui/profile/frame/frame_bottom_right.png",
+    "res://assets/ui/profile/frame/frame_left.png",
+    "res://assets/ui/profile/frame/frame_pattern.png",
+    "res://assets/ui/profile/frame/frame_right.png",
+    "res://assets/ui/profile/frame/frame_title_holder.png",
+    "res://assets/ui/profile/frame/frame_top.png",
+    "res://assets/ui/profile/frame/frame_top_left.png",
+    "res://assets/ui/profile/frame/frame_top_line.png",
+    "res://assets/ui/profile/frame/frame_top_right.png",
+    "res://assets/ui/profile/label_glamour.png",
+    "res://assets/ui/profile/label_romantic.png",
+    "res://assets/ui/profile/original/button_blue_96x28.png",
+    "res://assets/ui/profile/original/button_green_96x28.png",
+    "res://assets/ui/profile/original/value_blue_66x29.png",
+    "res://assets/ui/profile/original/value_blue_86x25.png",
+    "res://assets/ui/pvp_match_flow/chat/chat_enter.png",
+    "res://assets/ui/pvp_match_flow/chat/chat_word.png",
+    "res://assets/ui/pvp_match_flow/chat/chatbghead.png",
+    "res://assets/ui/pvp_match_flow/chat/iptbghead.png",
+    "res://assets/ui/pvp_match_flow/chat/iptbgmid.png",
+    "res://assets/ui/pvp_match_flow/chat/iptbgtail.png",
+    "res://assets/ui/pvp_match_flow/deploy_button.png",
+    "res://assets/ui/pvp_match_flow/tank_all_normal.png",
+    "res://assets/ui/pvp_match_flow/tank_all_selected.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/aisha02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/boshi02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/chaoren03_vn.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/dabai03.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/dianhun01.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/dianhun02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/dianhun03.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/eling02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/feiyi_pf05.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/fenghuang01.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/fenghuang_blue.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/gangtiexia03.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/haiwang02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/haiyao04.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/houyi02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/houyi03.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/houyi04.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/jinmuyan04.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/jujishou02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/kuangsan02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/laowan01.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/liao01.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/longtaizi02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/lufei04_vn.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/minions.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/minions2.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/minions_vn.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/nangua_pf01.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/nezha02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/niumo01.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/qiaoba03.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/qiaoba05.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/qifeizhixin01.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/yingren02.png",
+    "res://assets/ui/pvp_match_flow/tank_heads/zhouyu02.png",
+    "res://assets/ui/pvp_match_flow/tank_tanker_normal.png",
+    "res://assets/ui/pvp_match_flow/tank_tanker_selected.png",
+    "res://assets/ui/pvp_ready_room/background.png",
+    "res://assets/ui/pvp_ready_room/frame.png",
+    "res://assets/ui/pvp_room/content_swirl.png",
+    "res://assets/ui/pvp_room/scroll_down.png",
+    "res://assets/ui/pvp_room/scroll_thumb.png",
+    "res://assets/ui/pvp_room/scroll_track.png",
+    "res://assets/ui/pvp_room/scroll_up.png",
+    "res://assets/ui/shop/controls/btn_achieved_t.png",
+    "res://assets/ui/shop/controls/coupon.png",
+    "res://assets/ui/shop/controls/diamond.png",
+    "res://assets/ui/shop/controls/money.png",
+    "res://assets/ui/shop/controls/shop_navItem_s.png",
+    "res://assets/ui/shop/controls/shop_navItem_s_Selected.png",
+    "res://assets/ui/shop/controls/title_confirmpaygood_t.png",
+    "res://assets/ui/shop/products/avatar/gangtiexia03.png",
+    "res://assets/ui/shop/products/avatar/wukong03.png",
+    "res://assets/ui/shop/public/bk_b.png",
+    "res://assets/ui/shop/public/button_2_blue.png",
+    "res://assets/ui/shop/public/button_close.png",
+    "res://assets/ui/shop/public/charAvatarBk.png",
+    "res://assets/ui/shop/title/b1_confirm_t.png",
+    "res://assets/ui/shop/title/nav_achievement_t.png",
+    "res://assets/ui/shop/title/nav_paintword_t.png",
+    "res://assets/ui/shop/title/t1_tips_t.png",
+    "res://assets/ui/shop/title/title_cancel_t.png",
+    "res://assets/ui/shop/title/title_confirm_green_t.png",
+    "res://assets/ui/tank/pager_next.png",
+    "res://assets/ui/tank/skin_scroll_left.png",
+    "res://assets/ui/tank/skin_scroll_right.png",
+    "res://assets/ui/tank/skin_scroll_track.png",
+    "res://assets/ui/tank/tab_bg.png",
+    "res://assets/ui/tank/tank_cell_selected.png",
+    "res://assets/ui/profile/tank_ironman_reward_rgba.png",
+    "res://assets/ui/profile/character_male.png",
+    "res://assets/ui/profile/character_female.png"
+  ],
+  "pixel_equivalent_groups": [
+    {
+      "pixel_sha256": "0bd8ff27ad9c7e016a48b2b5a6335b852e4a7d42babbbf339ccd1d7bcd2f18dc",
+      "canonical": "res://assets/ui/tank/tank_ironman_reward.png",
+      "removed": [
+        "res://assets/ui/profile/tank_ironman_reward_rgba.png"
+      ],
+      "bytes_saved": 35081
+    },
+    {
+      "pixel_sha256": "1c50b00423909c9f04f44a24ce63b1475a0b1364f51b0d097bb872f4aea2582f",
+      "canonical": "res://assets/ui/profile/character_male_rgba.png",
+      "removed": [
+        "res://assets/ui/profile/character_male.png"
+      ],
+      "bytes_saved": 18140
+    },
+    {
+      "pixel_sha256": "5decb5d8b154a3603777c350a4f5c97730d7ae644e118c7e40a016c7d99b5e8f",
+      "canonical": "res://assets/ui/profile/character_female_rgba.png",
+      "removed": [
+        "res://assets/ui/profile/character_female.png"
+      ],
+      "bytes_saved": 16798
+    }
+  ],
+  "runtime_compatibility": {
+    "alias_file": "res://scripts/data/asset_path_aliases.gd",
+    "alias_count": 269,
+    "purpose": "Resolve removed legacy, serialized, generated, and server-provided image paths to their single canonical source.",
+    "dynamic_loaders_updated": [
+      "scripts/animation/swf_timeline_player.gd",
+      "scripts/auth/character_roster.gd",
+      "scripts/battle/pvp_battle_result_screen.gd",
+      "scripts/battle/pvp_battle_result_sequence.gd",
+      "scripts/data/battle_building_catalog.gd",
+      "scripts/lobby/friend_panel.gd",
+      "scripts/lobby/inventory_panel.gd",
+      "scripts/lobby/main_lobby.gd",
+      "scripts/lobby/military_rank_panel.gd",
+      "scripts/lobby/profile_view.gd",
+      "scripts/lobby/pvp_map_selector.gd",
+      "scripts/lobby/pvp_match_flow.gd",
+      "scripts/lobby/pvp_ready_room.gd",
+      "scripts/lobby/pvp_tank_head_catalog.gd",
+      "scripts/lobby/shop_product_card.gd",
+      "scripts/lobby/tank_panel.gd",
+      "scripts/lobby/tank_skin_catalog.gd"
+    ]
+  },
+  "validation": {
+    "final_image_count": 2141,
+    "net_image_count_reduction": 245,
+    "exact_duplicate_groups": 0,
+    "reencoded_pixel_duplicate_groups": 0,
+    "timeline_count": 59,
+    "timeline_texture_reference_count": 615,
+    "missing_timeline_textures": 0,
+    "scene_ext_resource_count": 790,
+    "missing_scene_ext_resources": 0,
+    "bytes_saved": 1840123
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\ui\\life_warn.swf",
+  "logical_name": "zh_CN/swf/ui/life_warn.swf",
+  "fps": 24.0,
+  "frames": 24,
+  "shape_textures": 1,
+  "sprite_timelines": 1,
+  "frame_items_min": 2,
+  "frame_items_max": 3,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 3480,
+  "timeline_json_bytes": 12538,
+  "warnings": []
+}

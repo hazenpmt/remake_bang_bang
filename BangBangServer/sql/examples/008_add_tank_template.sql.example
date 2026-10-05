@@ -1,0 +1,182 @@
+-- Copy this file to the next numbered migration, for example:
+--   sql/008_add_<tank_key>.sql
+-- Do not run this template as-is. Replace every value marked REPLACE_ME
+-- with confirmed game data and exact existing asset keys.
+
+BEGIN;
+
+INSERT INTO tanks (
+    tank_key,
+    display_name,
+    max_level,
+    damage_type,
+    role_key,
+    quality_key,
+    difficulty,
+    avatar_asset_key,
+    preview_asset_key,
+    thumbnail_asset_key
+)
+VALUES (
+    'REPLACE_ME_TANK_KEY',
+    'REPLACE_ME_DISPLAY_NAME',
+    6,
+    'REPLACE_ME_PHYSICAL_OR_ENERGY',
+    'REPLACE_ME_ROLE',
+    'REPLACE_ME_QUALITY',
+    1,
+    'REPLACE_ME_AVATAR_ASSET_KEY',
+    'REPLACE_ME_PREVIEW_ASSET_KEY',
+    'REPLACE_ME_THUMBNAIL_ASSET_KEY'
+)
+ON CONFLICT (tank_key) DO UPDATE
+SET display_name = EXCLUDED.display_name,
+    max_level = EXCLUDED.max_level,
+    damage_type = EXCLUDED.damage_type,
+    role_key = EXCLUDED.role_key,
+    quality_key = EXCLUDED.quality_key,
+    difficulty = EXCLUDED.difficulty,
+    avatar_asset_key = EXCLUDED.avatar_asset_key,
+    preview_asset_key = EXCLUDED.preview_asset_key,
+    thumbnail_asset_key = EXCLUDED.thumbnail_asset_key,
+    enabled = TRUE;
+
+-- Add one confirmed row for every level. Do not invent missing stats.
+INSERT INTO tank_level_stats (
+    tank_id,
+    level,
+    hit_points,
+    basic_attack_damage,
+    penetration,
+    physical_armor,
+    energy_shield,
+    move_speed,
+    fire_rate,
+    attack_range
+)
+SELECT
+    tank.id,
+    stats.level,
+    stats.hit_points,
+    stats.basic_attack_damage,
+    stats.penetration,
+    stats.physical_armor,
+    stats.energy_shield,
+    stats.move_speed,
+    stats.fire_rate,
+    stats.attack_range
+FROM tanks tank
+CROSS JOIN (
+    VALUES
+        -- level, hp, attack, penetration, armor, shield, move, fire rate, range
+        (1, REPLACE_ME, REPLACE_ME, REPLACE_ME, REPLACE_ME, REPLACE_ME, REPLACE_ME, REPLACE_ME, REPLACE_ME)
+) AS stats(
+    level,
+    hit_points,
+    basic_attack_damage,
+    penetration,
+    physical_armor,
+    energy_shield,
+    move_speed,
+    fire_rate,
+    attack_range
+)
+WHERE tank.tank_key = 'REPLACE_ME_TANK_KEY'
+ON CONFLICT (tank_id, level) DO UPDATE
+SET hit_points = EXCLUDED.hit_points,
+    basic_attack_damage = EXCLUDED.basic_attack_damage,
+    penetration = EXCLUDED.penetration,
+    physical_armor = EXCLUDED.physical_armor,
+    energy_shield = EXCLUDED.energy_shield,
+    move_speed = EXCLUDED.move_speed,
+    fire_rate = EXCLUDED.fire_rate,
+    attack_range = EXCLUDED.attack_range;
+
+-- Repeat the VALUES row for each confirmed skill.
+INSERT INTO tank_skills (
+    tank_id,
+    skill_key,
+    slot_index,
+    display_name,
+    icon_asset_key,
+    base_damage,
+    damage_per_tank_level,
+    cooldown_ms,
+    description
+)
+SELECT
+    tank.id,
+    skill.skill_key,
+    skill.slot_index,
+    skill.display_name,
+    skill.icon_asset_key,
+    skill.base_damage,
+    skill.damage_per_tank_level,
+    skill.cooldown_ms,
+    skill.description
+FROM tanks tank
+CROSS JOIN (
+    VALUES
+        (
+            'REPLACE_ME_SKILL_KEY',
+            1,
+            'REPLACE_ME_SKILL_NAME',
+            'REPLACE_ME_SKILL_ICON_ASSET_KEY',
+            REPLACE_ME,
+            REPLACE_ME,
+            REPLACE_ME,
+            'REPLACE_ME_DESCRIPTION'
+        )
+) AS skill(
+    skill_key,
+    slot_index,
+    display_name,
+    icon_asset_key,
+    base_damage,
+    damage_per_tank_level,
+    cooldown_ms,
+    description
+)
+WHERE tank.tank_key = 'REPLACE_ME_TANK_KEY'
+ON CONFLICT (tank_id, skill_key) DO UPDATE
+SET slot_index = EXCLUDED.slot_index,
+    display_name = EXCLUDED.display_name,
+    icon_asset_key = EXCLUDED.icon_asset_key,
+    base_damage = EXCLUDED.base_damage,
+    damage_per_tank_level = EXCLUDED.damage_per_tank_level,
+    cooldown_ms = EXCLUDED.cooldown_ms,
+    description = EXCLUDED.description;
+
+INSERT INTO tank_skins (
+    tank_id,
+    skin_key,
+    display_name,
+    quality_key,
+    avatar_asset_key,
+    preview_asset_key,
+    stat_modifiers,
+    is_default,
+    enabled
+)
+SELECT
+    tank.id,
+    'REPLACE_ME_DEFAULT_SKIN_KEY',
+    'REPLACE_ME_DEFAULT_SKIN_NAME',
+    'REPLACE_ME_QUALITY',
+    'REPLACE_ME_SKIN_AVATAR_ASSET_KEY',
+    'REPLACE_ME_SKIN_PREVIEW_ASSET_KEY',
+    '{}'::jsonb,
+    TRUE,
+    TRUE
+FROM tanks tank
+WHERE tank.tank_key = 'REPLACE_ME_TANK_KEY'
+ON CONFLICT (tank_id, skin_key) DO UPDATE
+SET display_name = EXCLUDED.display_name,
+    quality_key = EXCLUDED.quality_key,
+    avatar_asset_key = EXCLUDED.avatar_asset_key,
+    preview_asset_key = EXCLUDED.preview_asset_key,
+    stat_modifiers = EXCLUDED.stat_modifiers,
+    is_default = EXCLUDED.is_default,
+    enabled = EXCLUDED.enabled;
+
+COMMIT;

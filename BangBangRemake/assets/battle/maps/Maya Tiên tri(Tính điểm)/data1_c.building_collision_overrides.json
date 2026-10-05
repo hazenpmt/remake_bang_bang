@@ -1,0 +1,5 @@
+{
+  "format": "bangbang-building-collision-overrides-v1",
+  "note": "Optional manual collision rectangles. Leave a building id absent to use the converted original map rectangle. Every rectangle is in map pixels: x, y, width, height. Example: \"4\": [{\"x\": 168, \"y\": 192, \"width\": 96, \"height\": 96}].",
+  "buildings": {}
+}

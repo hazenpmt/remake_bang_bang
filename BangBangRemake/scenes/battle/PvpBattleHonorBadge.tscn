@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/animations/battle_result_mv_t_compact/shapes/33.png" id="1_icon"]
+[ext_resource type="Texture2D" path="res://assets/animations/battle_result_mv_t_compact/shapes/40.png" id="2_flash"]
+[ext_resource type="Texture2D" path="res://assets/animations/battle_result_mv_t_compact/shapes/43.png" id="3_spark"]
+[ext_resource type="Texture2D" path="res://assets/battle/result/honnor_label_kda_t.png" id="4_label"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_add"]
+blend_mode = 1
+
+[node name="HonorBadge" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+
+[node name="Visual" type="Control" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+
+[node name="ImpactFlash" type="TextureRect" parent="Visual"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_add")
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+mouse_filter = 2
+texture = ExtResource("2_flash")
+
+[node name="Spark" type="TextureRect" parent="Visual"]
+visible = false
+layout_mode = 0
+offset_left = -109.0
+offset_top = -79.95
+offset_right = 213.0
+offset_bottom = 122.05
+mouse_filter = 2
+texture = ExtResource("3_spark")
+expand_mode = 1
+
+[node name="Icon" type="TextureRect" parent="Visual"]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("1_icon")
+
+[node name="Label" type="TextureRect" parent="Visual"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 71.75
+offset_right = 71.0
+offset_bottom = 89.75
+mouse_filter = 2
+texture = ExtResource("4_label")

@@ -1,0 +1,17 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\gui_summer\\controls\\swf\\battle_result_mv_t.swf",
+  "logical_name": "battle_result_mv_t",
+  "fps": 24.0,
+  "frames": 646,
+  "shape_textures": 41,
+  "sprite_timelines": 29,
+  "baked_sprite_timelines": 0,
+  "frame_items_min": 12,
+  "frame_items_max": 30,
+  "frame_masks_min": 3,
+  "frame_masks_max": 4,
+  "shape_png_bytes": 2915175,
+  "baked_sprite_png_bytes": 0,
+  "timeline_json_bytes": 2433199,
+  "warnings": []
+}

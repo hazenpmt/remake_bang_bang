@@ -1,0 +1,156 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/animation/swf_timeline_player.gd" id="1_swf"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_match_flow/match_found_bg.png" id="2_bg"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_match_flow/confirm_button.png" id="3_confirm"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/test/match/PvpMatchAvatarSlot.tscn" id="4_slot"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_match_flow/confirmed_button.png" id="5_confirmed"]
+
+[node name="MatchFound" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ClickBlocker" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+color = Color(0, 0.03, 0.08, 0.4)
+
+[node name="Window" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 726.5
+offset_top = 367.5
+offset_right = 1193.5
+offset_bottom = 712.5
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Counter" type="Label" parent="Window"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 64.0
+offset_right = 214.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.18, 0.35, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 16
+text = "0/10 đã sắp xếp"
+vertical_alignment = 1
+
+[node name="Countdown" type="Label" parent="Window"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 64.0
+offset_right = 430.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(1, 0.9, 0.08, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.18, 0.35, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 16
+text = "Đếm ngược 30 giây"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AvatarSlots" type="Control" parent="Window"]
+layout_mode = 0
+offset_right = 467.0
+offset_bottom = 345.0
+mouse_filter = 2
+
+[node name="Slot01" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 105.0
+offset_right = 110.0
+offset_bottom = 167.0
+
+[node name="Slot02" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 105.0
+offset_right = 187.0
+offset_bottom = 167.0
+
+[node name="Slot03" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 105.0
+offset_right = 264.0
+offset_bottom = 167.0
+
+[node name="Slot04" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 105.0
+offset_right = 341.0
+offset_bottom = 167.0
+
+[node name="Slot05" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 105.0
+offset_right = 418.0
+offset_bottom = 167.0
+
+[node name="Slot06" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 181.0
+offset_right = 110.0
+offset_bottom = 243.0
+
+[node name="Slot07" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 181.0
+offset_right = 187.0
+offset_bottom = 243.0
+
+[node name="Slot08" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 181.0
+offset_right = 264.0
+offset_bottom = 243.0
+
+[node name="Slot09" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 181.0
+offset_right = 341.0
+offset_bottom = 243.0
+
+[node name="Slot10" parent="Window/AvatarSlots" instance=ExtResource("4_slot")]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 181.0
+offset_right = 418.0
+offset_bottom = 243.0
+
+[node name="ConfirmEffect" type="Node2D" parent="Window"]
+position = Vector2(233, 297.5)
+script = ExtResource("1_swf")
+timeline_path = "res://assets/animations/pvp_confirm_button_effect_compact/timeline.json"
+
+[node name="Confirm" type="TextureButton" parent="Window"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 277.0
+offset_right = 287.0
+offset_bottom = 318.0
+texture_normal = ExtResource("3_confirm")
+texture_disabled = ExtResource("5_confirmed")
+ignore_texture_size = true
+stretch_mode = 5

@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/battle/pvp_battle_footpoint.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/battle/tanks/Footpoint/footpoint_body.png" id="2_body"]
+[ext_resource type="Texture2D" path="res://assets/battle/tanks/Footpoint/footpoint_cannon.png" id="3_cannon"]
+[ext_resource type="Texture2D" path="res://assets/battle/hud/life_bg.png" id="4_hp_bg"]
+[ext_resource type="Texture2D" path="res://assets/battle/hud/life_yellow.png" id="5_hp_fill"]
+
+[node name="PvpBattleFootpoint" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_script")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("2_body")
+region_enabled = true
+region_rect = Rect2(0, 300, 150, 150)
+
+[node name="Cannon" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("3_cannon")
+
+[node name="NeutralHealth" type="Control" parent="."]
+z_index = 20
+layout_mode = 0
+offset_left = -36.0
+offset_top = 76.0
+offset_right = 36.0
+offset_bottom = 90.0
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="NeutralHealth"]
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("4_hp_bg")
+expand_mode = 1
+
+[node name="FillClip" type="Control" parent="NeutralHealth"]
+clip_contents = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 69.0
+offset_bottom = 11.0
+mouse_filter = 2
+
+[node name="Fill" type="TextureRect" parent="NeutralHealth/FillClip"]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("5_hp_fill")
+expand_mode = 1

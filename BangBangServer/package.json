@@ -1,0 +1,37 @@
+{
+  "name": "bangbang-remake-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup-db": "node src/setup-db.js",
+    "ensure-secrets": "node src/ensure-env-secrets.js",
+    "dev": "node --env-file-if-exists=.env --watch src/server.js",
+    "start": "node src/ensure-env-secrets.js && node --env-file-if-exists=.env src/server.js",
+    "migrate": "node --env-file-if-exists=.env src/migrate.js",
+    "sync-shop": "node --env-file-if-exists=.env src/sync-shop-catalog.js",
+    "backup-db": "node --env-file-if-exists=.env src/backup-database.js",
+    "verify-backup": "node --env-file-if-exists=.env src/verify-database-backup.js",
+    "backup-and-verify": "node src/backup-and-verify.js",
+    "test:economy-db": "node --env-file-if-exists=.env test/economy-postgres-smoke.js",
+    "test:battle-db": "node --env-file-if-exists=.env test/battle-postgres-smoke.js",
+    "test:battle-memory-db": "node --env-file-if-exists=.env test/battle-memory-postgres-smoke.js",
+    "test:shop-api": "node --env-file-if-exists=.env test/shop-api-read-smoke.js",
+    "test:security-db": "node --env-file-if-exists=.env test/security-postgres-smoke.js",
+    "test:operations": "node --env-file-if-exists=.env test/operations-http-smoke.js",
+    "test:world-chat-api": "node --env-file-if-exists=.env test/world-chat-http-smoke.js",
+    "test:live-online": "node --env-file-if-exists=.env test/live-online-http-smoke.js",
+    "test:chat-enter": "node --env-file-if-exists=.env test/chat-enter-godot-smoke.js",
+    "test:chat-enter-pvp-host": "node --env-file-if-exists=.env test/chat-enter-pvp-host-godot-smoke.js",
+    "test:content-db": "node --env-file-if-exists=.env test/content-publishing-postgres-smoke.js",
+    "create-admin": "node --env-file-if-exists=.env src/create-admin.js",
+    "set-role": "node --env-file-if-exists=.env src/set-account-role.js",
+    "reset-newcomer-tank": "node --env-file-if-exists=.env src/reset-newcomer-tank.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "pg": "^8.16.3",
+    "redis": "^6.2.1",
+    "ws": "^8.21.3"
+  }
+}

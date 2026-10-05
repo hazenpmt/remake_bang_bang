@@ -1,0 +1,42 @@
+groups:
+  - name: bangbang-server
+    rules:
+      - alert: BangBangServerDown
+        expr: up{job="bangbang-server"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: BangBang server metrics endpoint is unreachable
+      - alert: BangBangServerDrainingTooLong
+        expr: bangbang_shutting_down == 1
+        for: 2m
+        labels:
+          severity: high
+        annotations:
+          summary: BangBang server has been draining for more than two minutes
+      - alert: BangBangSecurityTelemetryDropped
+        expr: increase(bangbang_security_telemetry_dropped_total[5m]) > 0
+        labels:
+          severity: critical
+        annotations:
+          summary: Security events are being dropped
+      - alert: BangBangCriticalSecurityEvents
+        expr: increase(bangbang_security_events_critical_total[5m]) > 0
+        labels:
+          severity: critical
+        annotations:
+          summary: Critical BangBang security event detected
+      - alert: BangBangHighSecurityEventBurst
+        expr: increase(bangbang_security_events_high_total[5m]) >= 10
+        labels:
+          severity: high
+        annotations:
+          summary: Burst of high-severity BangBang security events
+      - alert: BangBangHighHttp5xxRate
+        expr: sum(rate(bangbang_http_requests_total{status=~"5.."}[5m])) / clamp_min(sum(rate(bangbang_http_requests_total[5m])), 0.001) > 0.05
+        for: 5m
+        labels:
+          severity: high
+        annotations:
+          summary: More than 5 percent of BangBang HTTP requests return 5xx

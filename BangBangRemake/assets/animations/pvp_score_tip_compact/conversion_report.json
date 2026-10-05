@@ -1,0 +1,17 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\ui\\pvp_score_tip.swf",
+  "logical_name": "zh_CN/swf/ui/pvp_score_tip.swf",
+  "fps": 24.0,
+  "frames": 39,
+  "shape_textures": 7,
+  "sprite_timelines": 0,
+  "baked_sprite_timelines": 0,
+  "frame_items_min": 2,
+  "frame_items_max": 6,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 17831,
+  "baked_sprite_png_bytes": 0,
+  "timeline_json_bytes": 31227,
+  "warnings": []
+}

@@ -1,0 +1,1444 @@
+[gd_scene format=3 uid="uid://yapgnytv60fp"]
+
+[ext_resource type="Texture2D" uid="uid://cjpfk4x2av10a" path="res://assets/ui/bg_sea.jpg" id="1_sea"]
+[ext_resource type="Texture2D" uid="uid://bw4ylngdlpwif" path="res://assets/ui/pvp_match_flow/tank_select/select_tank_bg.png" id="2_frame"]
+[ext_resource type="Texture2D" uid="uid://bq7g0ivr365g4" path="res://assets/ui/pvp_match_flow/tank_select/deploy_bg.png" id="3_deploy_bg"]
+[ext_resource type="Texture2D" uid="uid://d3cjufqw6fdty" path="res://assets/ui/pvp_match_flow/tank_select/deploy_text.png" id="4_deploy_text"]
+[ext_resource type="Texture2D" uid="uid://cnsvrxapi3dji" path="res://assets/ui/pvp_match_flow/tank_select/tab_all_selected.png" id="6_all_selected"]
+[ext_resource type="Texture2D" uid="uid://dplt3eh3p8oia" path="res://assets/ui/pvp_match_flow/tank_select/tab_dps_normal.png" id="7_dps_normal"]
+[ext_resource type="Texture2D" uid="uid://dyek0cwspulqg" path="res://assets/ui/pvp_match_flow/tank_select/tab_tanker_normal.png" id="8_tanker_normal"]
+[ext_resource type="Texture2D" uid="uid://b6ojh0omufpmu" path="res://assets/ui/pvp_match_flow/tank_select/tab_support_normal.png" id="9_support_normal"]
+[ext_resource type="Texture2D" uid="uid://gsg5ajo2o8ut" path="res://assets/ui/pvp_match_flow/tank_select/ally_arrow.png" id="10_ally_arrow"]
+[ext_resource type="Texture2D" uid="uid://bf2dqbooe33aq" path="res://assets/ui/pvp_match_flow/tank_select/enemy_arrow.png" id="11_enemy_arrow"]
+[ext_resource type="Texture2D" uid="uid://dguvgm8thnya" path="res://assets/ui/pvp_ready_room/maps/random.jpg" id="12_map"]
+[ext_resource type="Texture2D" uid="uid://cfx7p0168jmin" path="res://assets/ui/pvp_match_flow/tank_select/map_cover.png" id="13_map_cover"]
+[ext_resource type="Texture2D" uid="uid://ckrx5qw2m1bd1" path="res://assets/ui/pvp_match_flow/tank_select/send_text.png" id="14_send"]
+[ext_resource type="Texture2D" uid="uid://flcgkwvyrlvv" path="res://assets/ui/pvp_match_flow/tank_select/self_selected_bg.png" id="15_team_self"]
+[ext_resource type="Texture2D" uid="uid://i0kqahqq264s" path="res://assets/ui/pvp_match_flow/tank_select/ally_bg.png" id="16_team_ally"]
+[ext_resource type="Texture2D" uid="uid://b7146dkmfwh5i" path="res://assets/ui/pvp_match_flow/tank_select/enemy_bg.png" id="17_team_enemy"]
+[ext_resource type="Texture2D" uid="uid://djenfmb15uuju" path="res://assets/ui/pvp_match_flow/tank_select/tank_unselected_bg.png" id="18_tank_slot"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/tank_ironman_reward.png" id="20_tank_preview"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_match_flow/deployed_button.png" id="21_deployed_bg"]
+[ext_resource type="Texture2D" uid="uid://bkksd18fm6h56" path="res://assets/ui/tank/btn_skin.png" id="22_skin_button"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_up.png" id="23_scroll_up"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_down.png" id="24_scroll_down"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_track.png" id="25_scroll_track"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_track.png" id="26_scroll_thumb"]
+[ext_resource type="Texture2D" uid="uid://8l15hjvko72u" path="res://assets/ui/pvp_match_flow/tank_select/tank_grid_bg.png" id="27_team_grid"]
+[ext_resource type="Texture2D" uid="uid://cewrufhvp5qjr" path="res://assets/ui/pvp_match_flow/tank_select/tank_grid_cover.png" id="28_team_cover"]
+[ext_resource type="Texture2D" uid="uid://b6xp5xsrvn228" path="res://assets/ui/pvp_match_flow/tank_select/self_bg.png" id="29_team_self_frame"]
+[ext_resource type="Script" uid="uid://bvn8uw1j2bjgm" path="res://scripts/animation/swf_timeline_player.gd" id="30_swf"]
+[ext_resource type="Texture2D" uid="uid://degcf2omto6bt" path="res://assets/ui/tank/skin_tab_background.png" id="31_skin_tab_bg"]
+[ext_resource type="Texture2D" uid="uid://biaooufrlbbvl" path="res://assets/ui/tank/skin_tab_all_selected.png" id="32_skin_all"]
+[ext_resource type="Texture2D" uid="uid://834a5xxfudhw" path="res://assets/ui/tank/skin_tab_a.png" id="33_skin_a"]
+[ext_resource type="Texture2D" uid="uid://b5i5ls1y0hxyq" path="res://assets/ui/tank/skin_tab_s.png" id="34_skin_s"]
+[ext_resource type="Texture2D" uid="uid://hgf1jtskbmg4" path="res://assets/ui/tank/skin_tab_ss.png" id="35_skin_ss"]
+[ext_resource type="Texture2D" uid="uid://drp32v40pppv" path="res://assets/ui/tank/skin_tab_sss.png" id="36_skin_sss"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_up.png" id="37_skin_left"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_down.png" id="38_skin_right"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_track.png" id="39_skin_track"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skin_scroll_thumb.png" id="40_skin_thumb"]
+[ext_resource type="Texture2D" uid="uid://b2vtk3y348gbu" path="res://assets/ui/pvp_match_flow/tank_select/pvp_chat_compact.png" id="41_chat_compact"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_up.png" id="43_chat_up"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_down.png" id="44_chat_down"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/tank_level_1.png" id="45_tank_level_1"]
+[ext_resource type="Texture2D" path="res://assets/ui/skinframe/tankselect/orange.png" id="46_skinframe_tankselect"]
+[ext_resource type="Texture2D" path="res://assets/ui/skinframe/tanklist/orange.png" id="47_skinframe_tanklist"]
+[ext_resource type="Texture2D" path="res://assets/battle/hud/respawn/relive_bg_pve.png" id="48_intro_bg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleRole"]
+bg_color = Color(0.02, 0.43, 0.64, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.31, 0.83, 0.96, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleInput"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.32, 0.75, 0.94, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxTexture" id="StyleIntro"]
+texture = ExtResource("48_intro_bg")
+
+[node name="TankSelect" type="Control" unique_id=2056988935]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ClickBlocker" type="ColorRect" parent="." unique_id=1228342152]
+editor_description = "Không chặn click. Intro được xử lý riêng trong pvp_match_flow.gd."
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Background" type="TextureRect" parent="." unique_id=521087041]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_sea")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Panel" type="Control" parent="." unique_id=260455114]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -508.0
+offset_top = -308.5
+offset_right = 508.0
+offset_bottom = 308.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Frame" type="TextureRect" parent="Panel" unique_id=456590720]
+layout_mode = 0
+offset_right = 1016.0
+offset_bottom = 617.0
+mouse_filter = 2
+texture = ExtResource("2_frame")
+
+[node name="AllyTitle" type="Label" parent="Panel" unique_id=598169210]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 204.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.84, 0.97, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.25, 0.5, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 20
+text = "Ta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyTitle" type="Label" parent="Panel" unique_id=699606246]
+layout_mode = 0
+offset_left = 812.0
+offset_top = 2.0
+offset_right = 1012.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 0.88, 0.93, 1)
+theme_override_colors/font_shadow_color = Color(0.55, 0, 0.12, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 20
+text = "Địch"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TeamLeft" type="VBoxContainer" parent="Panel" unique_id=138661622]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 46.0
+offset_right = 187.0
+offset_bottom = 550.0
+theme_override_constants/separation = 3
+
+[node name="EditorPreviewSlot01" type="TextureRect" parent="Panel/TeamLeft" unique_id=1305643808]
+custom_minimum_size = Vector2(178, 98)
+clip_contents = true
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("15_team_self")
+
+[node name="TeamVisualClip" type="Control" parent="Panel/TeamLeft/EditorPreviewSlot01" unique_id=314186187]
+clip_contents = true
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 173.0
+offset_bottom = 93.0
+mouse_filter = 2
+
+[node name="TeamVisualCoordinates" type="Control" parent="Panel/TeamLeft/EditorPreviewSlot01/TeamVisualClip" unique_id=1340088164]
+anchors_preset = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 173.0
+offset_bottom = 93.0
+mouse_filter = 2
+
+[node name="TeamVisualRoot" type="Control" parent="Panel/TeamLeft/EditorPreviewSlot01/TeamVisualClip/TeamVisualCoordinates" unique_id=475710570]
+z_index = 4
+editor_description = "CHỈNH TAY Ở ĐÂY: preview và runtime cùng dùng nguồn Tank/Skin đầy đủ 200x200. Position/Scale/Rotation/Pivot/Size của node này được sao chép cho mọi ảnh và animation trong riêng 10 ô đội Ta/Địch."
+anchors_preset = 0
+offset_left = -15.0
+offset_top = -58.0
+offset_right = 185.0
+offset_bottom = 142.0
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(100, 100)
+mouse_filter = 2
+
+[node name="IronManTankPreview" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot01/TeamVisualClip/TeamVisualCoordinates/TeamVisualRoot" unique_id=1280821153]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("20_tank_preview")
+stretch_mode = 2
+flip_h = true
+
+[node name="Name" type="Label" parent="Panel/TeamLeft/EditorPreviewSlot01" unique_id=672519964]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 37.0
+offset_right = 172.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(1, 0.92, 0.12, 1)
+theme_override_font_sizes/font_size = 14
+text = "Beenn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EditorDeployedCover" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot01" unique_id=214832581]
+editor_description = "Bật Visible để xem lớp tối của trạng thái ĐÃ XUẤT CHIẾN. Ảnh gốc 175x95, không resize."
+visible = false
+layout_mode = 0
+offset_left = 1.5
+offset_top = 1.5
+offset_right = 176.5
+offset_bottom = 96.5
+mouse_filter = 2
+texture = ExtResource("28_team_cover")
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot01" unique_id=411827769]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("29_team_self_frame")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot01"]
+editor_description = "CHỈNH TAY Ở ĐÂY: vị trí/kích thước khung Skin mẫu cho cả 10 thẻ hai đội. Runtime sao chép transform node này; texture tự đổi Tím/Cam/ẩn theo Tank."
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="EditorPreviewSlot02" type="TextureRect" parent="Panel/TeamLeft" unique_id=767907941]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamLeft/EditorPreviewSlot02" unique_id=1201308901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot02" unique_id=1844752326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_team_ally")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot02"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="EditorPreviewSlot03" type="TextureRect" parent="Panel/TeamLeft" unique_id=1946742072]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamLeft/EditorPreviewSlot03" unique_id=175005609]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot03" unique_id=1830476903]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_team_ally")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot03"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="EditorPreviewSlot04" type="TextureRect" parent="Panel/TeamLeft" unique_id=745261341]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamLeft/EditorPreviewSlot04" unique_id=156670938]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot04" unique_id=248424998]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_team_ally")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot04"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="EditorPreviewSlot05" type="TextureRect" parent="Panel/TeamLeft" unique_id=1611375673]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamLeft/EditorPreviewSlot05" unique_id=1366051469]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot05" unique_id=73336889]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_team_ally")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamLeft/EditorPreviewSlot05"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="TeamRight" type="VBoxContainer" parent="Panel" unique_id=1011017901]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 46.0
+offset_right = 1011.0
+offset_bottom = 550.0
+theme_override_constants/separation = 3
+
+[node name="EditorPreviewSlot01" type="TextureRect" parent="Panel/TeamRight" unique_id=1576659469]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamRight/EditorPreviewSlot01" unique_id=459883120]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.86, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot01" unique_id=1850586652]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("17_team_enemy")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot01"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="EditorPreviewSlot02" type="TextureRect" parent="Panel/TeamRight" unique_id=1525586019]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamRight/EditorPreviewSlot02" unique_id=991063521]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.86, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot02" unique_id=363429714]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("17_team_enemy")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot02"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="EditorPreviewSlot03" type="TextureRect" parent="Panel/TeamRight" unique_id=348811569]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamRight/EditorPreviewSlot03" unique_id=468612309]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.86, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot03" unique_id=1714315424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("17_team_enemy")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot03"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="EditorPreviewSlot04" type="TextureRect" parent="Panel/TeamRight" unique_id=1124947895]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamRight/EditorPreviewSlot04" unique_id=1617256861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.86, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot04" unique_id=1819336562]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("17_team_enemy")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot04"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="EditorPreviewSlot05" type="TextureRect" parent="Panel/TeamRight" unique_id=1878869088]
+custom_minimum_size = Vector2(178, 98)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("27_team_grid")
+
+[node name="Question" type="Label" parent="Panel/TeamRight/EditorPreviewSlot05" unique_id=32019887]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.86, 1)
+theme_override_font_sizes/font_size = 30
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot05" unique_id=1743189125]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("17_team_enemy")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/TeamRight/EditorPreviewSlot05"]
+z_index = 3
+layout_mode = 0
+offset_left = 4.5
+offset_top = 3.0
+offset_right = 173.5
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("46_skinframe_tankselect")
+
+[node name="Center" type="Control" parent="Panel" unique_id=1085936516]
+anchors_preset = 0
+offset_left = 215.0
+offset_right = 815.0
+offset_bottom = 617.0
+
+[node name="PhaseStatus" type="Label" parent="Panel/Center" unique_id=1169111582]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 24.0
+offset_right = 566.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(1, 0.9, 0.08, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.25, 0.55, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 22
+text = "30  Bên ta chọn 1 tank (0/1)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AllyArrow" type="TextureRect" parent="Panel/Center" unique_id=1874072601]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 22.0
+offset_right = 54.0
+offset_bottom = 49.0
+mouse_filter = 2
+texture = ExtResource("10_ally_arrow")
+
+[node name="EnemyArrow" type="TextureRect" parent="Panel/Center" unique_id=1345660801]
+visible = false
+layout_mode = 0
+offset_left = 546.0
+offset_top = 22.0
+offset_right = 598.0
+offset_bottom = 49.0
+mouse_filter = 2
+texture = ExtResource("11_enemy_arrow")
+
+[node name="RoleTabs" type="Control" parent="Panel/Center" unique_id=1639300073]
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 67.0
+offset_right = 430.0
+offset_bottom = 98.0
+
+[node name="All" type="TextureButton" parent="Panel/Center/RoleTabs" unique_id=1408033346]
+layout_mode = 0
+offset_right = 93.0
+offset_bottom = 31.0
+texture_normal = ExtResource("6_all_selected")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Dps" type="TextureButton" parent="Panel/Center/RoleTabs" unique_id=1932987583]
+layout_mode = 0
+offset_left = 96.0
+offset_right = 189.0
+offset_bottom = 31.0
+texture_normal = ExtResource("7_dps_normal")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Tanker" type="TextureButton" parent="Panel/Center/RoleTabs" unique_id=1945830971]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 285.0
+offset_bottom = 31.0
+texture_normal = ExtResource("8_tanker_normal")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Support" type="TextureButton" parent="Panel/Center/RoleTabs" unique_id=809905372]
+layout_mode = 0
+offset_left = 288.0
+offset_right = 381.0
+offset_bottom = 31.0
+texture_normal = ExtResource("9_support_normal")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Skin" type="TextureButton" parent="Panel/Center/RoleTabs" unique_id=1701304789]
+layout_mode = 0
+offset_left = 390.0
+offset_top = -6.0
+offset_right = 512.0
+offset_bottom = 37.0
+texture_normal = ExtResource("22_skin_button")
+texture_hover = ExtResource("22_skin_button")
+
+[node name="TankScroll" type="ScrollContainer" parent="Panel/Center" unique_id=1786524211]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 103.0
+offset_right = 559.0
+offset_bottom = 409.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="TankGrid" type="GridContainer" parent="Panel/Center/TankScroll" unique_id=1198202215]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 5
+columns = 5
+
+[node name="EditorPreviewCell01" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=982789623]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank01" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell01" unique_id=92135928]
+editor_description = "Kéo node này để chỉnh offset chung của ô Tank bên trong mỗi cell. GridContainer chỉ điều khiển node cha EditorPreviewCell01; runtime sao chép Position/Size của node này cho mọi Tank/Skin."
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="TankVisual" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell01/EditorPreviewTank01" unique_id=777606142]
+z_index = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = 5.0
+offset_right = 199.0
+offset_bottom = 205.0
+scale = Vector2(0.475, 0.475)
+mouse_filter = 2
+texture = ExtResource("20_tank_preview")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell01/EditorPreviewTank01"]
+editor_description = "CHỈNH TAY Ở ĐÂY: vị trí/kích thước khung Skin mẫu cho toàn bộ lưới chọn Tank. Runtime sao chép transform node này; texture tự đổi Tím/Cam/ẩn theo từng Tank."
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="Level" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell01/EditorPreviewTank01" unique_id=449704422]
+editor_description = "Ảnh cấp Tank gốc. Runtime sao chép Position/Size/Scale/Rotation/Pivot của node này cho mọi ô Tank."
+z_index = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = -1.0
+offset_right = 95.0
+offset_bottom = 20.0
+mouse_filter = 2
+texture = ExtResource("45_tank_level_1")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="EditorPreviewCell02" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=1807270007]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank02" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell02" unique_id=404590163]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell02/EditorPreviewTank02"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell03" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=368075671]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank03" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell03" unique_id=2049628261]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell03/EditorPreviewTank03"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell04" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=765728928]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank04" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell04" unique_id=2047549775]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell04/EditorPreviewTank04"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell05" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=2059477887]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank05" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell05" unique_id=2049756623]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell05/EditorPreviewTank05"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell06" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=1295240565]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank06" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell06" unique_id=201634414]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell06/EditorPreviewTank06"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell07" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=620390859]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank07" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell07" unique_id=2034271238]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell07/EditorPreviewTank07"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell08" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=1901426549]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank08" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell08" unique_id=432294922]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell08/EditorPreviewTank08"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell09" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=688471333]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank09" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell09" unique_id=2079331182]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell09/EditorPreviewTank09"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell10" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=1147483298]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank10" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell10" unique_id=1334216285]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell10/EditorPreviewTank10"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell11" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=382202999]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank11" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell11" unique_id=770781915]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell11/EditorPreviewTank11"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell12" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=549932337]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank12" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell12" unique_id=493745439]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell12/EditorPreviewTank12"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell13" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=317237906]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank13" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell13" unique_id=480243408]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell13/EditorPreviewTank13"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell14" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=924635752]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank14" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell14" unique_id=1127726302]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell14/EditorPreviewTank14"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="EditorPreviewCell15" type="Control" parent="Panel/Center/TankScroll/TankGrid" unique_id=928773935]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="EditorPreviewTank15" type="TextureButton" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell15" unique_id=229451884]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture_normal = ExtResource("18_tank_slot")
+
+[node name="SkinFrame" type="TextureRect" parent="Panel/Center/TankScroll/TankGrid/EditorPreviewCell15/EditorPreviewTank15"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = ExtResource("47_skinframe_tanklist")
+
+[node name="SkinGallery" type="Control" parent="Panel/Center" unique_id=1737711306]
+editor_description = "Danh sách Skin nằm trực tiếp trong khung chọn Tank. Chỉnh toàn bộ vị trí/khung Skin tại node này; không dùng cửa sổ hoặc scene Skin tách riêng."
+visible = false
+anchors_preset = 0
+offset_left = 31.0
+offset_top = 103.0
+offset_right = 559.0
+offset_bottom = 409.0
+
+[node name="Tabs" type="Control" parent="Panel/Center/SkinGallery" unique_id=993272742]
+anchors_preset = 0
+offset_right = 528.0
+offset_bottom = 31.0
+
+[node name="All" type="TextureButton" parent="Panel/Center/SkinGallery/Tabs" unique_id=1067523330]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 31.0
+texture_normal = ExtResource("31_skin_tab_bg")
+
+[node name="Icon" type="TextureRect" parent="Panel/Center/SkinGallery/Tabs/All" unique_id=1249050525]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("32_skin_all")
+stretch_mode = 3
+
+[node name="A" type="TextureButton" parent="Panel/Center/SkinGallery/Tabs" unique_id=1719155916]
+layout_mode = 0
+offset_left = 88.0
+offset_right = 172.0
+offset_bottom = 31.0
+texture_normal = ExtResource("31_skin_tab_bg")
+
+[node name="Icon" type="TextureRect" parent="Panel/Center/SkinGallery/Tabs/A" unique_id=1417168260]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("33_skin_a")
+stretch_mode = 3
+
+[node name="S" type="TextureButton" parent="Panel/Center/SkinGallery/Tabs" unique_id=357641349]
+layout_mode = 0
+offset_left = 176.0
+offset_right = 260.0
+offset_bottom = 31.0
+texture_normal = ExtResource("31_skin_tab_bg")
+
+[node name="Icon" type="TextureRect" parent="Panel/Center/SkinGallery/Tabs/S" unique_id=75276739]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("34_skin_s")
+stretch_mode = 3
+
+[node name="SS" type="TextureButton" parent="Panel/Center/SkinGallery/Tabs" unique_id=800096428]
+layout_mode = 0
+offset_left = 264.0
+offset_right = 348.0
+offset_bottom = 31.0
+texture_normal = ExtResource("31_skin_tab_bg")
+
+[node name="Icon" type="TextureRect" parent="Panel/Center/SkinGallery/Tabs/SS" unique_id=1734994006]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("35_skin_ss")
+stretch_mode = 3
+
+[node name="SSS" type="TextureButton" parent="Panel/Center/SkinGallery/Tabs" unique_id=1626341617]
+layout_mode = 0
+offset_left = 352.0
+offset_right = 436.0
+offset_bottom = 31.0
+texture_normal = ExtResource("31_skin_tab_bg")
+
+[node name="Icon" type="TextureRect" parent="Panel/Center/SkinGallery/Tabs/SSS" unique_id=1265939324]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("36_skin_sss")
+stretch_mode = 3
+
+[node name="SkinViewport" type="Control" parent="Panel/Center/SkinGallery" unique_id=1191921399]
+clip_contents = true
+anchors_preset = 0
+offset_top = 35.0
+offset_right = 528.0
+offset_bottom = 280.0
+
+[node name="SkinContent" type="Control" parent="Panel/Center/SkinGallery/SkinViewport" unique_id=474608648]
+anchors_preset = 0
+offset_right = 528.0
+offset_bottom = 245.0
+
+[node name="EmptyLabel" type="Label" parent="Panel/Center/SkinGallery/SkinViewport/SkinContent" unique_id=1803764258]
+layout_mode = 0
+offset_right = 528.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Không có Skin thuộc bậc này."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkinScroll" type="Control" parent="Panel/Center/SkinGallery" unique_id=1397935140]
+anchors_preset = 0
+offset_top = 284.0
+offset_right = 528.0
+offset_bottom = 306.0
+mouse_filter = 1
+
+[node name="Track" type="TextureRect" parent="Panel/Center/SkinGallery/SkinScroll" unique_id=884376315]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 508.0
+rotation = -1.570796
+mouse_filter = 2
+texture = ExtResource("39_skin_track")
+expand_mode = 1
+
+[node name="Thumb" type="TextureRect" parent="Panel/Center/SkinGallery/SkinScroll" unique_id=1008119677]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 19.0
+offset_right = 39.0
+offset_bottom = 179.0
+rotation = -1.570796
+mouse_filter = 2
+texture = ExtResource("40_skin_thumb")
+expand_mode = 1
+
+[node name="Interaction" type="Control" parent="Panel/Center/SkinGallery/SkinScroll" unique_id=24996841]
+anchors_preset = 0
+offset_left = 20.0
+offset_right = 508.0
+offset_bottom = 19.0
+mouse_default_cursor_shape = 6
+
+[node name="LeftImage" type="TextureRect" parent="Panel/Center/SkinGallery/SkinScroll" unique_id=121374980]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 19.0
+offset_bottom = 38.0
+rotation = -1.570796
+mouse_filter = 2
+texture = ExtResource("37_skin_left")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Left" type="TextureButton" parent="Panel/Center/SkinGallery/SkinScroll" unique_id=1059684567]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+
+[node name="RightImage" type="TextureRect" parent="Panel/Center/SkinGallery/SkinScroll" unique_id=2040618847]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 19.0
+offset_right = 528.0
+offset_bottom = 38.0
+rotation = -1.570796
+mouse_filter = 2
+texture = ExtResource("38_skin_right")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Right" type="TextureButton" parent="Panel/Center/SkinGallery/SkinScroll" unique_id=1070161879]
+layout_mode = 0
+offset_left = 509.0
+offset_right = 528.0
+offset_bottom = 19.0
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+
+[node name="TankScrollBar" type="Control" parent="Panel/Center" unique_id=521284954]
+editor_description = "Thanh cuộn của chính PvpTankSelect. Đổi chiều dài: chỉnh Offset Bottom của Track và vị trí Down. Đổi chiều dài nút kéo: chỉnh Offset Bottom của Thumb. Không sửa/rescale ảnh nguồn."
+anchors_preset = 0
+offset_left = 539.0
+offset_top = 103.0
+offset_right = 559.0
+offset_bottom = 409.0
+
+[node name="Track" type="TextureRect" parent="Panel/Center/TankScrollBar" unique_id=303569523]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 287.0
+mouse_filter = 0
+texture = ExtResource("25_scroll_track")
+stretch_mode = 1
+
+[node name="Thumb" type="TextureRect" parent="Panel/Center/TankScrollBar" unique_id=1254262929]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 120.0
+mouse_filter = 0
+texture = ExtResource("26_scroll_thumb")
+
+[node name="Up" type="TextureButton" parent="Panel/Center/TankScrollBar" unique_id=942424281]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+texture_normal = ExtResource("23_scroll_up")
+
+[node name="Down" type="TextureButton" parent="Panel/Center/TankScrollBar" unique_id=1010722616]
+layout_mode = 0
+offset_top = 287.0
+offset_right = 19.0
+offset_bottom = 306.0
+texture_normal = ExtResource("24_scroll_down")
+
+[node name="LineupHint" type="Label" parent="Panel/Center" unique_id=1374420742]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 410.0
+offset_right = 582.0
+offset_bottom = 438.0
+theme_override_colors/font_color = Color(1, 0.85, 0.08, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.22, 0.4, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 15
+text = "Nhắc nhở: Thiếu trận hình  Chống chịu, Phụ trợ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MapPreview" type="TextureRect" parent="Panel/Center" unique_id=292477572]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 441.0
+offset_right = 194.0
+offset_bottom = 525.0
+mouse_filter = 2
+texture = ExtResource("12_map")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MapCover" type="TextureRect" parent="Panel/Center" unique_id=1056057682]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 439.0
+offset_right = 194.0
+offset_bottom = 523.0
+mouse_filter = 2
+texture = ExtResource("13_map_cover")
+
+[node name="RoleBox" type="Panel" parent="Panel/Center" unique_id=434777014]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 446.0
+offset_right = 414.0
+offset_bottom = 505.0
+theme_override_styles/panel = SubResource("StyleRole")
+
+[node name="Caption" type="Label" parent="Panel/Center/RoleBox" unique_id=739392137]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 63.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_font_sizes/font_size = 12
+text = "Vị trí"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="Panel/Center/RoleBox" unique_id=1015632713]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 10.0
+offset_right = 194.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0.88, 0.98, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "DPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Deploy" type="TextureButton" parent="Panel/Center" unique_id=503634095]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 446.0
+offset_right = 566.0
+offset_bottom = 504.0
+texture_normal = ExtResource("3_deploy_bg")
+texture_disabled = ExtResource("21_deployed_bg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="StateText" type="TextureRect" parent="Panel/Center/Deploy" unique_id=1465447496]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 11.0
+offset_right = 121.0
+offset_bottom = 47.0
+mouse_filter = 2
+texture = ExtResource("4_deploy_text")
+stretch_mode = 3
+
+[node name="DeployEffect" type="Node2D" parent="Panel/Center" unique_id=1601392788]
+position = Vector2(503, 481)
+script = ExtResource("30_swf")
+timeline_path = "res://assets/animations/pvp_deploy_button_effect_compact/timeline.json"
+
+[node name="Chat" type="Control" parent="Panel/Center" unique_id=615213609]
+anchors_preset = 0
+offset_left = 21.5
+offset_top = 522.0
+offset_right = 578.5
+offset_bottom = 601.0
+mouse_filter = 1
+
+[node name="Background" type="TextureRect" parent="Panel/Center/Chat" unique_id=2080265820]
+layout_mode = 0
+offset_right = 557.0
+offset_bottom = 79.0
+mouse_filter = 2
+texture = ExtResource("41_chat_compact")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="History" type="RichTextLabel" parent="Panel/Center/Chat" unique_id=761774467]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 528.0
+offset_bottom = 40.0
+mouse_filter = 1
+bbcode_enabled = true
+text = "[color=#d6e9ee][Phe ta][/color] Chọn Tank phù hợp với đội hình."
+scroll_active = false
+autowrap_mode = 0
+
+[node name="ScrollTrack" type="TextureRect" parent="Panel/Center/Chat"]
+visible = false
+layout_mode = 0
+offset_left = 528.0
+offset_top = 26.0
+offset_right = 548.0
+offset_bottom = 26.0
+mouse_filter = 2
+texture = ExtResource("25_scroll_track")
+stretch_mode = 1
+
+[node name="ScrollUp" type="TextureButton" parent="Panel/Center/Chat" unique_id=369037923]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 7.0
+offset_right = 548.0
+offset_bottom = 27.0
+texture_normal = ExtResource("43_chat_up")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="ScrollDown" type="TextureButton" parent="Panel/Center/Chat" unique_id=165468482]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 20.0
+offset_right = 548.0
+offset_bottom = 40.0
+texture_normal = ExtResource("44_chat_down")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Input" type="LineEdit" parent="Panel/Center/Chat" unique_id=1452482516]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 49.0
+offset_right = 474.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.9, 0.98, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.56, 0.75, 0.86, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleInput")
+theme_override_styles/focus = SubResource("StyleInput")
+placeholder_text = "Nhập nội dung chat"
+max_length = 64
+
+[node name="Send" type="TextureButton" parent="Panel/Center/Chat" unique_id=1450837445]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 48.0
+offset_right = 549.0
+offset_bottom = 77.0
+texture_normal = ExtResource("14_send")
+texture_hover = ExtResource("14_send")
+
+[node name="Intro" type="Label" parent="." unique_id=442939529]
+layout_mode = 0
+offset_left = 694.5
+offset_top = 506.5
+offset_right = 1225.5
+offset_bottom = 569.5
+theme_override_colors/font_color = Color(1, 0.93, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.2, 0.5, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleIntro")
+text = "Chọn Tank xuất chiến"
+horizontal_alignment = 1
+vertical_alignment = 1

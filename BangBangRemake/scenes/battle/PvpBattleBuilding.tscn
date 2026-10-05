@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/battle/pvp_battle_building.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/battle/hud/life_bg.png" id="2_hp_bg"]
+[ext_resource type="Texture2D" path="res://assets/battle/hud/life_blue.png" id="3_hp_blue"]
+[ext_resource type="Texture2D" path="res://assets/battle/hud/life_red.png" id="4_hp_red"]
+
+[node name="PvpBattleBuilding" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Base" type="Sprite2D" parent="."]
+
+[node name="Overlay" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="StructureHealth" type="Control" parent="."]
+z_index = 80
+z_as_relative = false
+layout_mode = 0
+offset_left = -36.0
+offset_top = 66.0
+offset_right = 36.0
+offset_bottom = 80.0
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="StructureHealth"]
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("2_hp_bg")
+expand_mode = 1
+
+[node name="FillClip" type="Control" parent="StructureHealth"]
+clip_contents = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 69.0
+offset_bottom = 11.0
+mouse_filter = 2
+
+[node name="Fill" type="TextureRect" parent="StructureHealth/FillClip"]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("3_hp_blue")
+expand_mode = 1
+
+[node name="Collision" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0

@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://ovasdnkm0ksh"]
+
+[ext_resource type="Script" uid="uid://d0he82rijywii" path="res://scripts/lobby/pvp_map_selector.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bnlttkw6m27lc" path="res://assets/ui/pvp_ready_room/map_select_background.png" id="2_background"]
+[ext_resource type="Texture2D" uid="uid://b7v68ppavvmip" path="res://assets/ui/pvp_ready_room/map_card.png" id="3_card"]
+[ext_resource type="Texture2D" path="res://assets/ui/close_original.png" id="4_close"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_room/pager_arrow.png" id="5_arrow"]
+[ext_resource type="Texture2D" uid="uid://cgkvwyff77gx8" path="res://assets/ui/profile/btn_confirm.png" id="6_confirm"]
+[ext_resource type="Script" uid="uid://1357l0jood2h" path="res://scripts/ui/HoverButton.gd" id="7_hover"]
+[ext_resource type="Texture2D" uid="uid://dguvgm8thnya" path="res://assets/ui/pvp_ready_room/maps/random.jpg" id="8_preview_map"]
+
+[node name="MapSelector" type="Control" unique_id=1029926358]
+z_index = 1000
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1017.0
+offset_bottom = 618.0
+mouse_filter = 0
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=1591321919]
+layout_mode = 0
+offset_right = 1017.0
+offset_bottom = 618.0
+mouse_filter = 0
+color = Color(0, 0, 0, 0.55)
+
+[node name="Window" type="Control" parent="." unique_id=443504999]
+anchors_preset = 0
+offset_left = 111.0
+offset_top = 84.0
+offset_right = 905.0
+offset_bottom = 531.0
+mouse_filter = 0
+
+[node name="Background" type="TextureRect" parent="Window" unique_id=370286927]
+layout_mode = 0
+offset_right = 794.0
+offset_bottom = 447.0
+mouse_filter = 2
+texture = ExtResource("2_background")
+
+[node name="Close" type="TextureButton" parent="Window" unique_id=1658594126]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 34.0
+offset_right = 780.0
+offset_bottom = 58.0
+mouse_filter = 0
+texture_normal = ExtResource("4_close")
+ignore_texture_size = true
+script = ExtResource("7_hover")
+
+[node name="Cards" type="Control" parent="Window" unique_id=1200291315]
+anchors_preset = 0
+offset_left = 31.0
+offset_top = 46.0
+offset_right = 763.0
+offset_bottom = 368.0
+
+[node name="Card1" type="TextureButton" parent="Window/Cards" unique_id=1808878836]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 25.0
+offset_right = 242.0
+offset_bottom = 347.0
+texture_normal = ExtResource("3_card")
+ignore_texture_size = true
+script = ExtResource("7_hover")
+
+[node name="Thumbnail" type="TextureRect" parent="Window/Cards/Card1" unique_id=905292665]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 150.0
+mouse_filter = 2
+texture = ExtResource("8_preview_map")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Window/Cards/Card1" unique_id=59641538]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 165.0
+offset_right = 218.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(1, 0.95, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.3, 0.42, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "Bản đồ ngẫu nhiên"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Card2" type="TextureButton" parent="Window/Cards" unique_id=173010288]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 26.0
+offset_right = 479.0
+offset_bottom = 348.0
+texture_normal = ExtResource("3_card")
+ignore_texture_size = true
+script = ExtResource("7_hover")
+
+[node name="Thumbnail" type="TextureRect" parent="Window/Cards/Card2" unique_id=1542283612]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 150.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Window/Cards/Card2" unique_id=2103254411]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 165.0
+offset_right = 218.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(1, 0.95, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.3, 0.42, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Card3" type="TextureButton" parent="Window/Cards" unique_id=680914187]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 26.0
+offset_right = 720.0
+offset_bottom = 348.0
+texture_normal = ExtResource("3_card")
+ignore_texture_size = true
+script = ExtResource("7_hover")
+
+[node name="Thumbnail" type="TextureRect" parent="Window/Cards/Card3" unique_id=351451314]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 150.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="Window/Cards/Card3" unique_id=228005589]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 165.0
+offset_right = 218.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(1, 0.95, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.3, 0.42, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Previous" type="TextureButton" parent="Window" unique_id=1874794831]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 190.0
+offset_right = 38.0
+offset_bottom = 219.0
+texture_normal = ExtResource("5_arrow")
+ignore_texture_size = true
+flip_h = true
+script = ExtResource("7_hover")
+
+[node name="Next" type="TextureButton" parent="Window" unique_id=1816391083]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 190.0
+offset_right = 789.0
+offset_bottom = 219.0
+texture_normal = ExtResource("5_arrow")
+ignore_texture_size = true
+script = ExtResource("7_hover")
+
+[node name="Confirm" type="TextureButton" parent="Window" unique_id=1787113614]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 389.0
+offset_right = 461.0
+offset_bottom = 432.0
+texture_normal = ExtResource("6_confirm")
+ignore_texture_size = true
+script = ExtResource("7_hover")

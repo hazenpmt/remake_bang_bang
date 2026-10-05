@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://d3j27oidhsinw"]
+
+[ext_resource type="Script" uid="uid://i5c47cch2v3s" path="res://scripts/battle/pvp_battle_team_state_card.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cxgr6qwwgl6gm" path="res://assets/battle/hud/team_state/tank_state_bg.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://saxjp14xbp55" path="res://assets/battle/hud/team_state/player_blue_hp_bar.png" id="4_hp"]
+[ext_resource type="Texture2D" uid="uid://d00ebmebtynp2" path="res://assets/battle/hud/team_state/teammate_cd_bg.png" id="5_cd_bg"]
+[ext_resource type="Texture2D" uid="uid://cytjlro0jeph5" path="res://assets/battle/hud/team_state/teammate_cd_ready.png" id="6_cd_ready"]
+[ext_resource type="Texture2D" path="res://assets/battle/hud/minimap/gangtiexia_small.png" id="7_micro"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_match_flow/chat/talk/talkbktop.png" id="8_bubble_top"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_match_flow/chat/talk/talkbkmiddle.png" id="9_bubble_middle"]
+[ext_resource type="Texture2D" path="res://assets/ui/pvp_match_flow/chat/talk/talkbkbottom.png" id="10_bubble_bottom"]
+
+[sub_resource type="SystemFont" id="SystemFont_card"]
+font_names = PackedStringArray("Verdana")
+font_weight = 700
+subpixel_positioning = 0
+
+[node name="PvpBattleTeamStateCard" type="Control" unique_id=221199742]
+custom_minimum_size = Vector2(64, 71)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 71.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=134834727]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 71.0
+mouse_filter = 2
+texture = ExtResource("2_bg")
+
+[node name="TankIcon" type="TextureRect" parent="." unique_id=1639066089]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 37.0
+offset_bottom = 35.0
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+texture = ExtResource("7_micro")
+
+[node name="SkinFrame" type="TextureRect" parent="." unique_id=1169035479]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_right = 61.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="DisplayName" type="Label" parent="." unique_id=465814387]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 42.0
+offset_right = 62.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = SubResource("SystemFont_card")
+theme_override_font_sizes/font_size = 10
+text = "Tank"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="HpClip" type="Control" parent="." unique_id=195363032]
+clip_contents = true
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 62.0
+offset_right = 59.0
+offset_bottom = 69.0
+mouse_filter = 2
+
+[node name="Fill" type="TextureRect" parent="HpClip" unique_id=1007030770]
+layout_mode = 0
+offset_right = 56.0
+offset_bottom = 7.0
+mouse_filter = 2
+texture = ExtResource("4_hp")
+expand_mode = 1
+
+[node name="CooldownBackground" type="TextureRect" parent="." unique_id=169666648]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 64.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("5_cd_bg")
+
+[node name="CooldownReady" type="TextureRect" parent="." unique_id=514393588]
+layout_mode = 0
+offset_left = 40.0
+offset_top = -2.0
+offset_right = 64.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("6_cd_ready")
+
+[node name="CooldownValue" type="Label" parent="." unique_id=1767843726]
+visible = false
+layout_mode = 0
+offset_left = 39.0
+offset_top = 1.0
+offset_right = 65.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("SystemFont_card")
+theme_override_font_sizes/font_size = 12
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChatBubble" type="Control" parent="."]
+visible = false
+z_index = 80
+layout_mode = 0
+offset_left = 64.0
+offset_top = 8.0
+offset_right = 230.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="Top" type="TextureRect" parent="ChatBubble"]
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("8_bubble_top")
+
+[node name="Middle1" type="TextureRect" parent="ChatBubble"]
+layout_mode = 0
+offset_top = 27.0
+offset_bottom = 27.0
+mouse_filter = 2
+texture = ExtResource("9_bubble_middle")
+
+[node name="Middle2" type="TextureRect" parent="ChatBubble"]
+layout_mode = 0
+offset_top = 35.0
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("9_bubble_middle")
+
+[node name="Bottom" type="TextureRect" parent="ChatBubble"]
+layout_mode = 0
+offset_top = 43.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("10_bubble_bottom")
+
+[node name="Message" type="Label" parent="ChatBubble"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 7.0
+offset_right = 156.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = SubResource("SystemFont_card")
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 0
+clip_text = true
+vertical_alignment = 1

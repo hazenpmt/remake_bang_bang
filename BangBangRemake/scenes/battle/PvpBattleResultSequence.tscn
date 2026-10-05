@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/battle/pvp_battle_result_sequence.gd" id="1_script"]
+[ext_resource type="Script" path="res://scripts/animation/swf_timeline_player.gd" id="2_swf"]
+[ext_resource type="AudioStream" path="res://assets/audio/ui/ui_bg_down.mp3" id="3_bg_down"]
+[ext_resource type="AudioStream" path="res://assets/audio/ui/ui_medal_down.mp3" id="4_medal_down"]
+
+[node name="PvpBattleResultSequence" type="Control"]
+visible = false
+z_index = 80
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.62)
+
+[node name="MovieCenter" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Movie" type="Node2D" parent="MovieCenter"]
+script = ExtResource("2_swf")
+timeline_path = "res://assets/animations/battle_result_mv_t_compact/timeline.json"
+autoplay = false
+loop = false
+
+[node name="HonorStage" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Center" type="CenterContainer" parent="HonorStage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Slots" type="HBoxContainer" parent="HonorStage/Center"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="BackgroundDownSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bg_down")
+max_polyphony = 3
+
+[node name="MedalDownSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_medal_down")
+max_polyphony = 3

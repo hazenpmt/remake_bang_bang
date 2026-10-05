@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwg3kfwoacuyd"]
+
+[ext_resource type="Script" uid="uid://bs1qvr5clnchu" path="res://scripts/lobby/pvp_match_flow.gd" id="1_flow"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/test/match/PvpMatchFound.tscn" id="2_found"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/test/match/PvpTankSelect.tscn" id="3_select"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/test/match/PvpBattleLoading.tscn" id="4_loading"]
+[ext_resource type="PackedScene" path="res://scenes/lobby/pvp/test/match/PvpBattleTransition.tscn" id="5_transition"]
+[ext_resource type="PackedScene" path="res://scenes/battle/PvpBattleMap.tscn" id="6_battle_map"]
+[ext_resource type="PackedScene" path="res://scenes/battle/PvpBattleResultScreen.tscn" id="7_result_screen"]
+
+[node name="PvpMatchFlow" type="Control" unique_id=1257683672]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_flow")
+
+[node name="MatchFound" parent="." unique_id=209302021 instance=ExtResource("2_found")]
+layout_mode = 1
+
+[node name="TankSelect" parent="." unique_id=191104862 instance=ExtResource("3_select")]
+visible = false
+layout_mode = 1
+
+[node name="BattleLoading" parent="." unique_id=397873963 instance=ExtResource("4_loading")]
+visible = false
+layout_mode = 1
+
+[node name="BattleMap" parent="." instance=ExtResource("6_battle_map")]
+visible = false
+layout_mode = 1
+
+[node name="BattleResultScreen" parent="." instance=ExtResource("7_result_screen")]
+visible = false
+layout_mode = 1
+
+[node name="Transition" parent="." unique_id=479814463 instance=ExtResource("5_transition")]
+visible = false
+layout_mode = 1

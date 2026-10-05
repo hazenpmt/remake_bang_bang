@@ -1,0 +1,17 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\ui\\5e6995de5408b53932a3a5d436ce6478.swf",
+  "logical_name": "zh_CN/swf/ui/5e6995de5408b53932a3a5d436ce6478.swf",
+  "fps": 24.0,
+  "frames": 97,
+  "shape_textures": 13,
+  "sprite_timelines": 9,
+  "frame_items_min": 0,
+  "frame_items_max": 11,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 2481061,
+  "timeline_json_bytes": 108564,
+  "warnings": [
+    "Flash filters were found; compare them or bake only the affected layer."
+  ]
+}

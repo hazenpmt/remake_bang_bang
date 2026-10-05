@@ -1,0 +1,856 @@
+[gd_scene load_steps=31 format=3]
+
+[ext_resource type="Script" path="res://scripts/lobby/friend_panel.gd" id="1_script"]
+[ext_resource type="Script" path="res://scripts/ui/HoverButton.gd" id="2_hover_button"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/avatar_male.png" id="2_avatar"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/panel_friend.png" id="3_panel"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/search_results_bg.png" id="4_selection"]
+[ext_resource type="Shader" path="res://assets/shaders/rounded_solid.gdshader" id="5_rounded"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_up.png" id="6_scroll_up"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_down.png" id="7_scroll_down"]
+[ext_resource type="Texture2D" path="res://assets/ui/chat/scrollbar_track.png" id="8_scroll_track"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skin_scroll_thumb.png" id="9_scroll_thumb"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/row_word_view.png" id="10_word_view"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/add_friend_panel.png" id="32_add_panel"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/add_friend_input.png" id="33_add_input"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/add_friend_ok.png" id="34_add_ok"]
+[ext_resource type="Texture2D" path="res://assets/ui/close_original.png" id="12_close"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/avatar_frame.png" id="13_avatar_frame"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/search_bg.png" id="14_search_bg"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/search_icon.png" id="15_search_icon"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/tree_closed.png" id="25_tree_closed"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/tree_open.png" id="26_tree_open"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/button_add_friend.png" id="27_add_friend"]
+[ext_resource type="Texture2D" path="res://assets/ui/friend_original/button_block_list.png" id="28_block_list"]
+[ext_resource type="Script" path="res://scripts/animation/swf_timeline_player.gd" id="29_anim"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/level/level_15.png" id="30_level"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/skin_use_button_bg.png" id="31_row_green"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBox_empty"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBox_search_empty"]
+content_margin_left = 37.0
+content_margin_right = 8.0
+content_margin_top = 4.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_list_rounded"]
+shader = ExtResource("5_rounded")
+shader_parameter/fill_color = Color(0.94, 0.975, 0.99, 1)
+shader_parameter/rect_size = Vector2(279, 330)
+shader_parameter/radius = 8.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_menu_rounded"]
+shader = ExtResource("5_rounded")
+shader_parameter/fill_color = Color(0.94, 0.975, 0.99, 1)
+shader_parameter/rect_size = Vector2(190, 278)
+shader_parameter/radius = 9.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBox_add_friend_input"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+
+[node name="FriendPanel" type="Control"]
+visible = false
+z_index = 90
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_script")
+
+[node name="DismissArea" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+
+[node name="Window" type="Control" parent="."]
+custom_minimum_size = Vector2(324, 606)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -797.0
+offset_top = -318.0
+offset_right = -473.0
+offset_bottom = 288.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="Background" type="TextureRect" parent="Window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_panel")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Title" type="Label" parent="Window"]
+z_index = 5
+layout_mode = 0
+offset_left = 102.0
+offset_top = 7.0
+offset_right = 222.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.42, 0.55, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+text = "Bạn bè"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DragHandle" type="Control" parent="Window"]
+z_index = 5
+layout_mode = 0
+offset_left = 18.0
+offset_right = 280.0
+offset_bottom = 38.0
+mouse_default_cursor_shape = 13
+
+[node name="BtnClose" type="TextureButton" parent="Window"]
+z_index = 6
+layout_mode = 0
+offset_left = 282.0
+offset_top = 5.0
+offset_right = 306.0
+offset_bottom = 29.0
+texture_normal = ExtResource("12_close")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="OwnerCard" type="Control" parent="Window"]
+z_index = 2
+layout_mode = 0
+offset_right = 324.0
+offset_bottom = 128.0
+mouse_filter = 2
+
+[node name="AvatarFrame" type="TextureRect" parent="Window/OwnerCard"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 99.0
+offset_bottom = 122.0
+texture = ExtResource("13_avatar_frame")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Avatar" type="TextureRect" parent="Window/OwnerCard"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 55.0
+offset_right = 94.0
+offset_bottom = 119.0
+texture = ExtResource("2_avatar")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Level" type="Control" parent="Window/OwnerCard"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 77.0
+offset_right = 143.0
+offset_bottom = 97.0
+mouse_filter = 2
+
+[node name="Base" type="TextureRect" parent="Window/OwnerCard/Level"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 20.0
+mouse_filter = 2
+texture = ExtResource("30_level")
+expand_mode = 1
+
+[node name="Effect" type="Node2D" parent="Window/OwnerCard/Level"]
+visible = false
+position = Vector2(20, 10)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("29_anim")
+timeline_path = "res://assets/animations/profile_level_11_20_fx_compact/timeline.json"
+autoplay = false
+
+[node name="Name" type="Label" parent="Window/OwnerCard"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 77.0
+offset_right = 295.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(1, 0.93, 0.28, 1)
+theme_override_colors/font_outline_color = Color(0, 0.26, 0.43, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Beenn"
+vertical_alignment = 1
+
+[node name="SearchBackground" type="TextureRect" parent="Window"]
+z_index = 2
+layout_mode = 0
+offset_left = 31.0
+offset_top = 131.0
+offset_right = 298.0
+offset_bottom = 163.0
+texture = ExtResource("14_search_bg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Search" type="LineEdit" parent="Window"]
+z_index = 3
+layout_mode = 0
+offset_left = 31.0
+offset_top = 131.0
+offset_right = 298.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.84, 0.96, 1, 1)
+theme_override_colors/caret_color = Color(1, 0.87, 0.18, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBox_search_empty")
+theme_override_styles/focus = SubResource("StyleBox_search_empty")
+placeholder_text = "Nhập tên người chơi cần tìm"
+clear_button_enabled = true
+
+[node name="SearchIcon" type="TextureRect" parent="Window"]
+z_index = 4
+layout_mode = 0
+offset_left = 40.0
+offset_top = 136.0
+offset_right = 67.0
+offset_bottom = 159.0
+mouse_filter = 2
+texture = ExtResource("15_search_icon")
+
+[node name="ListBackground" type="Control" parent="Window"]
+z_index = 1
+layout_mode = 0
+offset_left = 25.0
+offset_top = 175.0
+offset_right = 304.0
+offset_bottom = 505.0
+mouse_filter = 2
+
+[node name="Fill" type="ColorRect" parent="Window/ListBackground"]
+material = SubResource("ShaderMaterial_list_rounded")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.94, 0.975, 0.99, 1)
+
+[node name="SectionSelection" type="TextureRect" parent="Window"]
+z_index = 2
+layout_mode = 0
+offset_left = 28.0
+offset_top = 210.0
+offset_right = 281.0
+offset_bottom = 240.0
+mouse_filter = 2
+texture = ExtResource("4_selection")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="MentorButton" type="Button" parent="Window"]
+z_index = 3
+layout_mode = 0
+offset_left = 28.0
+offset_top = 180.0
+offset_right = 281.0
+offset_bottom = 210.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.13, 0.25, 0.3, 1)
+theme_override_colors/font_hover_color = Color(0.02, 0.39, 0.58, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "      Sư Đồ"
+alignment = 0
+
+[node name="Disclosure" type="TextureRect" parent="Window/MentorButton"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 17.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("25_tree_closed")
+
+[node name="FriendsButton" type="Button" parent="Window"]
+z_index = 3
+layout_mode = 0
+offset_left = 28.0
+offset_top = 210.0
+offset_right = 281.0
+offset_bottom = 240.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.13, 0.25, 0.3, 1)
+theme_override_colors/font_hover_color = Color(0.02, 0.39, 0.58, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "      Bạn bè"
+alignment = 0
+
+[node name="Disclosure" type="TextureRect" parent="Window/FriendsButton"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 18.0
+offset_bottom = 20.0
+mouse_filter = 2
+texture = ExtResource("26_tree_open")
+
+[node name="BlockedButton" type="Button" parent="Window"]
+z_index = 3
+layout_mode = 0
+offset_left = 28.0
+offset_top = 240.0
+offset_right = 281.0
+offset_bottom = 270.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.13, 0.25, 0.3, 1)
+theme_override_colors/font_hover_color = Color(0.02, 0.39, 0.58, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "      Sổ đen"
+alignment = 0
+
+[node name="Disclosure" type="TextureRect" parent="Window/BlockedButton"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 17.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("25_tree_closed")
+
+[node name="SectionStatus" type="Label" parent="Window"]
+z_index = 3
+layout_mode = 0
+offset_left = 34.0
+offset_top = 272.0
+offset_right = 279.0
+offset_bottom = 296.0
+theme_override_colors/font_color = Color(0.03, 0.38, 0.56, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.9)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 14
+text = "Đang tải danh sách..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FriendCounts" type="HBoxContainer" parent="Window"]
+visible = false
+z_index = 3
+layout_mode = 0
+offset_left = 34.0
+offset_top = 272.0
+offset_right = 279.0
+offset_bottom = 296.0
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="FriendsLabel" type="Label" parent="Window/FriendCounts"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.03, 0.38, 0.56, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.95)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 14
+text = "Bạn bè:"
+vertical_alignment = 1
+
+[node name="FriendsValue" type="Label" parent="Window/FriendCounts"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.94, 0.15, 0.1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 15
+text = "8"
+vertical_alignment = 1
+
+[node name="InvitesLabel" type="Label" parent="Window/FriendCounts"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.03, 0.38, 0.56, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.95)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 14
+text = " • Lời mời:"
+vertical_alignment = 1
+
+[node name="InvitesValue" type="Label" parent="Window/FriendCounts"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.94, 0.15, 0.1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 15
+text = "0"
+vertical_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Window"]
+z_index = 3
+layout_mode = 0
+offset_left = 28.0
+offset_top = 296.0
+offset_right = 281.0
+offset_bottom = 498.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Rows" type="VBoxContainer" parent="Window/Scroll"]
+custom_minimum_size = Vector2(248, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="CustomScrollBar" type="Control" parent="Window"]
+z_index = 4
+layout_mode = 0
+offset_left = 282.0
+offset_top = 180.0
+offset_right = 302.0
+offset_bottom = 498.0
+mouse_filter = 1
+
+[node name="Track" type="TextureRect" parent="Window/CustomScrollBar"]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 299.0
+mouse_default_cursor_shape = 2
+texture = ExtResource("8_scroll_track")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Thumb" type="TextureRect" parent="Window/CustomScrollBar"]
+z_index = 1
+layout_mode = 0
+offset_top = 19.0
+offset_right = 19.0
+offset_bottom = 67.0
+mouse_default_cursor_shape = 6
+texture = ExtResource("9_scroll_thumb")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Up" type="TextureButton" parent="Window/CustomScrollBar"]
+z_index = 2
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_scroll_up")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Down" type="TextureButton" parent="Window/CustomScrollBar"]
+z_index = 2
+layout_mode = 0
+offset_top = 299.0
+offset_right = 19.0
+offset_bottom = 318.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_scroll_down")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PlayerMenu" type="Control" parent="Window"]
+visible = false
+z_index = 20
+layout_mode = 0
+offset_left = 230.0
+offset_top = 220.0
+offset_right = 420.0
+offset_bottom = 498.0
+mouse_filter = 0
+
+[node name="BackgroundFill" type="ColorRect" parent="Window/PlayerMenu"]
+material = SubResource("ShaderMaterial_menu_rounded")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.94, 0.975, 0.99, 1)
+
+[node name="PlayerName" type="Label" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 179.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 0.43, 0.12, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Người chơi"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Guild" type="Label" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 35.0
+offset_right = 178.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_font_sizes/font_size = 13
+text = "Guild: Không có"
+text_overrun_behavior = 3
+
+[node name="Team" type="Label" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 55.0
+offset_right = 178.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_font_sizes/font_size = 13
+text = "Team: Không có"
+text_overrun_behavior = 3
+
+[node name="AddFriend" type="Button" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 77.0
+offset_right = 178.0
+offset_bottom = 99.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_colors/font_hover_color = Color(1, 0.42, 0.08, 1)
+theme_override_colors/font_disabled_color = Color(0.66, 0.69, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "Thêm bạn bè"
+alignment = 0
+
+[node name="PrivateChat" type="Button" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 99.0
+offset_right = 178.0
+offset_bottom = 121.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_colors/font_hover_color = Color(1, 0.42, 0.08, 1)
+theme_override_colors/font_disabled_color = Color(0.66, 0.69, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "Chat riêng"
+alignment = 0
+
+[node name="CopyName" type="Button" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 121.0
+offset_right = 178.0
+offset_bottom = 143.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_colors/font_hover_color = Color(1, 0.42, 0.08, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "Copy tên gọi"
+alignment = 0
+
+[node name="Block" type="Button" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 143.0
+offset_right = 178.0
+offset_bottom = 165.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_colors/font_hover_color = Color(1, 0.42, 0.08, 1)
+theme_override_colors/font_disabled_color = Color(0.66, 0.69, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "Thêm vào sổ đen"
+alignment = 0
+
+[node name="InviteGuild" type="Button" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 165.0
+offset_right = 178.0
+offset_bottom = 187.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_colors/font_hover_color = Color(1, 0.42, 0.08, 1)
+theme_override_colors/font_disabled_color = Color(0.66, 0.69, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "Mời vào Guild"
+alignment = 0
+
+[node name="RemoveFriend" type="Button" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 187.0
+offset_right = 178.0
+offset_bottom = 209.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_colors/font_hover_color = Color(1, 0.42, 0.08, 1)
+theme_override_colors/font_disabled_color = Color(0.66, 0.69, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "Xóa"
+alignment = 0
+
+[node name="Observe" type="Button" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 209.0
+offset_right = 178.0
+offset_bottom = 231.0
+focus_mode = 0
+flat = true
+theme_override_colors/font_color = Color(0.03, 0.38, 0.57, 1)
+theme_override_colors/font_hover_color = Color(1, 0.42, 0.08, 1)
+theme_override_colors/font_disabled_color = Color(0.66, 0.69, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+text = "Quan sát"
+alignment = 0
+
+[node name="View" type="TextureButton" parent="Window/PlayerMenu"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 235.0
+offset_right = 178.0
+offset_bottom = 263.0
+texture_normal = ExtResource("31_row_green")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Word" type="TextureRect" parent="Window/PlayerMenu/View"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("10_word_view")
+
+[node name="AddFriendButton" type="TextureButton" parent="Window"]
+z_index = 3
+layout_mode = 0
+offset_left = 40.0
+offset_top = 510.0
+offset_right = 144.0
+offset_bottom = 554.0
+texture_normal = ExtResource("27_add_friend")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_hover_button")
+
+[node name="BlockedListButton" type="TextureButton" parent="Window"]
+z_index = 3
+layout_mode = 0
+offset_left = 170.0
+offset_top = 510.0
+offset_right = 274.0
+offset_bottom = 554.0
+texture_normal = ExtResource("28_block_list")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_hover_button")
+
+[node name="AddFriendDismissArea" type="Button" parent="."]
+visible = false
+z_index = 100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+theme_override_styles/normal = SubResource("StyleBox_empty")
+theme_override_styles/hover = SubResource("StyleBox_empty")
+theme_override_styles/pressed = SubResource("StyleBox_empty")
+theme_override_styles/focus = SubResource("StyleBox_empty")
+
+[node name="AddFriendModal" type="Control" parent="."]
+visible = false
+z_index = 101
+custom_minimum_size = Vector2(314, 280)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -140.0
+offset_right = 157.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="Background" type="TextureRect" parent="AddFriendModal"]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 280.0
+mouse_filter = 2
+texture = ExtResource("32_add_panel")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="AddFriendModal"]
+z_index = 3
+layout_mode = 0
+offset_left = 68.0
+offset_top = 8.0
+offset_right = 246.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.03, 0.31, 0.48, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 21
+text = "Kết bạn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnClose" type="TextureButton" parent="AddFriendModal"]
+z_index = 4
+layout_mode = 0
+offset_left = 274.0
+offset_top = 3.0
+offset_right = 298.0
+offset_bottom = 27.0
+texture_normal = ExtResource("12_close")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_hover_button")
+
+[node name="Prompt" type="Label" parent="AddFriendModal"]
+z_index = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 78.0
+offset_right = 294.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.03, 0.31, 0.48, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 18
+text = "Nhập tên người chơi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InputBackground" type="TextureRect" parent="AddFriendModal"]
+z_index = 2
+layout_mode = 0
+offset_left = 52.0
+offset_top = 120.0
+offset_right = 262.0
+offset_bottom = 155.0
+mouse_filter = 2
+texture = ExtResource("33_add_input")
+
+[node name="NameInput" type="LineEdit" parent="AddFriendModal"]
+z_index = 3
+layout_mode = 0
+offset_left = 52.0
+offset_top = 120.0
+offset_right = 262.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/caret_color = Color(1, 0.91, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBox_add_friend_input")
+theme_override_styles/focus = SubResource("StyleBox_add_friend_input")
+max_length = 32
+
+[node name="Confirm" type="TextureButton" parent="AddFriendModal"]
+z_index = 3
+layout_mode = 0
+offset_left = 97.0
+offset_top = 208.0
+offset_right = 217.0
+offset_bottom = 243.0
+texture_normal = ExtResource("34_add_ok")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_hover_button")
+
+[node name="Label" type="Label" parent="AddFriendModal/Confirm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.21, 0.48, 0.04, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "OK"
+horizontal_alignment = 1
+vertical_alignment = 1

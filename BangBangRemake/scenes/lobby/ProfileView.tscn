@@ -1,0 +1,1240 @@
+[gd_scene format=3 uid="uid://b17emj6x7dbot"]
+
+[ext_resource type="Script" uid="uid://b2wn7mv4m2sv0" path="res://scripts/lobby/profile_view.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://0gkyq7q1s5oy" path="res://assets/ui/profile/frame/profile_frame_composed_v4.png" id="2_frame_composite"]
+[ext_resource type="Shader" uid="uid://brf1y8beldqb2" path="res://assets/shaders/profile_composite.gdshader" id="3_frame_composite_shader"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/character_frame.png" id="5_character_frame"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/character_male_rgba.png" id="6_character"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/level/level_15.png" id="7_level"]
+[ext_resource type="Texture2D" uid="uid://cyvrtqe6mwttj" path="res://assets/ui/profile/tank_selected_bg.png" id="10_tank_selected"]
+[ext_resource type="Texture2D" path="res://assets/ui/tank/tank_ironman_reward.png" id="11_tank"]
+[ext_resource type="Texture2D" uid="uid://cn4r8ogqju6fx" path="res://assets/ui/profile/original/value_82x27.png" id="12_value_82"]
+[ext_resource type="Texture2D" uid="uid://bei4lul34fl8r" path="res://assets/ui/profile/original/value_152x27.png" id="13_value_152"]
+[ext_resource type="Texture2D" uid="uid://byyx7bt8hdnih" path="res://assets/ui/profile/original/tab_axis_254x29.png" id="14_tab_axis"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory/public/button_2_green.png" id="15_tab_selected"]
+[ext_resource type="Texture2D" uid="uid://ds2f5g18aqmxo" path="res://assets/ui/profile/original/achievement_box.png" id="16_achievement_box"]
+[ext_resource type="Texture2D" uid="uid://dgp61e3j4doo7" path="res://assets/ui/profile/original/scroll_track.png" id="17_scroll_track"]
+[ext_resource type="Texture2D" uid="uid://ddainjgn8hebp" path="res://assets/ui/profile/original/scroll_thumb.png" id="18_scroll_thumb"]
+[ext_resource type="Texture2D" uid="uid://bvrpqq4lavex3" path="res://assets/ui/profile/original/scroll_down.png" id="19_scroll_down"]
+[ext_resource type="Texture2D" uid="uid://cta7d01dr56un" path="res://assets/ui/profile/original/scroll_up.png" id="20_scroll_up"]
+[ext_resource type="Texture2D" uid="uid://dlpj0om2b40vw" path="res://assets/ui/profile/original/help.png" id="21_help"]
+[ext_resource type="Texture2D" uid="uid://b6wpd3aos5d0f" path="res://assets/ui/profile/original/orange_dot.png" id="22_orange_dot"]
+[ext_resource type="Texture2D" uid="uid://dj0y2pg2hbw60" path="res://assets/ui/profile/original/label_character_id.png" id="23_character_id"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/original/label_glamour.png" id="24_glamour"]
+[ext_resource type="Texture2D" path="res://assets/ui/profile/original/label_romantic.png" id="25_romantic"]
+[ext_resource type="Texture2D" uid="uid://sj1x7f45l0br" path="res://assets/ui/profile/original/label_honour.png" id="26_honour"]
+[ext_resource type="Texture2D" uid="uid://calxas0tp26p0" path="res://assets/ui/profile/original/label_escape.png" id="27_escape"]
+[ext_resource type="Texture2D" uid="uid://b0praho10s47w" path="res://assets/ui/profile/original/label_win_stage.png" id="28_win_stage"]
+[ext_resource type="Texture2D" uid="uid://c4moh77efffut" path="res://assets/ui/profile/original/label_assist.png" id="29_assist"]
+[ext_resource type="Texture2D" uid="uid://c6tjt2yc6jadx" path="res://assets/ui/profile/original/label_kill.png" id="30_kill"]
+[ext_resource type="Texture2D" uid="uid://dafvvvog1vm73" path="res://assets/ui/profile/original/label_tank_report.png" id="31_tank_report"]
+[ext_resource type="Texture2D" uid="uid://3c7ts610sp8g" path="res://assets/ui/profile/original/label_tank_score.png" id="32_tank_score"]
+[ext_resource type="Texture2D" uid="uid://dtvklhlcf663i" path="res://assets/ui/profile/original/tab_total_selected.png" id="33_tab_total_selected"]
+[ext_resource type="Texture2D" uid="uid://biahqb4xhgm1i" path="res://assets/ui/profile/original/tab_pvp.png" id="34_tab_pvp"]
+[ext_resource type="Texture2D" uid="uid://bbgx241lcrx23" path="res://assets/ui/profile/original/tab_rank.png" id="35_tab_rank"]
+[ext_resource type="Texture2D" uid="uid://jslbtlj0xk8j" path="res://assets/ui/profile/original/tab_clan.png" id="36_tab_clan"]
+[ext_resource type="Texture2D" uid="uid://dppjoaua2q7jc" path="res://assets/ui/profile/original/icon_kill.png" id="37_icon_kill"]
+[ext_resource type="Texture2D" uid="uid://b6uw8i2m20mxs" path="res://assets/ui/profile/original/icon_all_round.png" id="38_icon_all_round"]
+[ext_resource type="Texture2D" uid="uid://c1rd7jxpyq6bv" path="res://assets/ui/profile/original/icon_demolish.png" id="39_icon_demolish"]
+[ext_resource type="Texture2D" uid="uid://iwntp73ib5jl" path="res://assets/ui/profile/original/icon_assist.png" id="40_icon_assist"]
+[ext_resource type="Texture2D" uid="uid://s7nuu288st5g" path="res://assets/ui/profile/original/title_achievement.png" id="41_title_achievement"]
+[ext_resource type="Texture2D" uid="uid://3nha2d6yq1ik" path="res://assets/ui/tank/tank_level_1.png" id="42_tank_level_1"]
+[ext_resource type="Script" uid="uid://bvn8uw1j2bjgm" path="res://scripts/animation/swf_timeline_player.gd" id="43_level_fx_script"]
+[ext_resource type="Texture2D" uid="uid://bd3qgpfd2cjb2" path="res://assets/ui/profile/original/label_guild.png" id="44_label_guild"]
+[ext_resource type="Texture2D" uid="uid://2lax25w64a4x" path="res://assets/ui/profile/original/label_team.png" id="45_label_team"]
+[ext_resource type="Texture2D" path="res://assets/ui/close_original.png" id="46_close"]
+[ext_resource type="Script" uid="uid://1357l0jood2h" path="res://scripts/ui/HoverButton.gd" id="47_hover"]
+[ext_resource type="Texture2D" path="res://assets/ui/skinframe/tankinfo/orange.png" id="48_skinframe_tankinfo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_frame_composite"]
+shader = ExtResource("3_frame_composite_shader")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_list"]
+bg_color = Color(0.01, 0.47, 0.7, 0.72)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.09, 0.72, 0.96, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ProfileView" type="Control" unique_id=758155920]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 4.0
+offset_right = -2.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_script")
+
+[node name="Window" type="Control" parent="." unique_id=1316353220]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -405.0
+offset_top = -274.0
+offset_right = 405.0
+offset_bottom = 274.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(405, 274)
+
+[node name="FrameComposite" type="TextureRect" parent="Window" unique_id=66065646]
+material = SubResource("ShaderMaterial_frame_composite")
+layout_mode = 0
+offset_right = 810.0
+offset_bottom = 548.0
+mouse_filter = 2
+texture = ExtResource("2_frame_composite")
+expand_mode = 1
+
+[node name="BtnClose" type="TextureButton" parent="Window" unique_id=633089120]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 13.0
+offset_right = 791.0
+offset_bottom = 37.0
+tooltip_text = "Đóng"
+texture_normal = ExtResource("46_close")
+ignore_texture_size = true
+script = ExtResource("47_hover")
+
+[node name="CharacterFrame" type="TextureRect" parent="Window" unique_id=1530919053]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 48.0
+offset_right = 232.0
+offset_bottom = 354.0
+mouse_filter = 2
+texture = ExtResource("5_character_frame")
+
+[node name="LevelBadge" type="TextureRect" parent="Window/CharacterFrame" unique_id=195327338]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("7_level")
+
+[node name="LevelEffect" type="Node2D" parent="Window/CharacterFrame" unique_id=204699441]
+visible = false
+position = Vector2(40, 20)
+script = ExtResource("43_level_fx_script")
+timeline_path = "res://assets/animations/profile_level_11_20_fx_compact/timeline.json"
+
+[node name="Name" type="Label" parent="Window/CharacterFrame" unique_id=713825298]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 4.0
+offset_right = 198.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.22, 0.38, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "Beenn"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Character" type="TextureRect" parent="Window/CharacterFrame" unique_id=878914777]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 55.0
+offset_right = 197.0
+offset_bottom = 295.0
+mouse_filter = 2
+texture = ExtResource("6_character")
+
+[node name="LeftStats" type="Control" parent="Window" unique_id=93846397]
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 359.0
+offset_right = 232.0
+offset_bottom = 520.0
+
+[node name="GlamourDot" type="TextureRect" parent="Window/LeftStats" unique_id=561372395]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 12.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("22_orange_dot")
+
+[node name="GlamourTitle" type="TextureRect" parent="Window/LeftStats" unique_id=533101161]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 6.0
+offset_right = 63.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("24_glamour")
+
+[node name="GlamourBackground" type="TextureRect" parent="Window/LeftStats" unique_id=706939866]
+layout_mode = 0
+offset_left = 70.0
+offset_right = 152.0
+offset_bottom = 27.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/LeftStats/GlamourBackground" unique_id=1591125520]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.43, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 13
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RomanticDot" type="TextureRect" parent="Window/LeftStats" unique_id=703069122]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 12.0
+offset_bottom = 53.0
+mouse_filter = 2
+texture = ExtResource("22_orange_dot")
+
+[node name="RomanticTitle" type="TextureRect" parent="Window/LeftStats" unique_id=1259859137]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 38.0
+offset_right = 63.0
+offset_bottom = 54.0
+mouse_filter = 2
+texture = ExtResource("25_romantic")
+
+[node name="RomanticBackground" type="TextureRect" parent="Window/LeftStats" unique_id=357342861]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 32.0
+offset_right = 152.0
+offset_bottom = 59.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/LeftStats/RomanticBackground" unique_id=973368279]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.43, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 13
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GuildTitle" type="TextureRect" parent="Window/LeftStats" unique_id=1625436878]
+layout_mode = 0
+offset_top = 72.5
+offset_right = 34.0
+offset_bottom = 90.5
+mouse_filter = 2
+texture = ExtResource("44_label_guild")
+
+[node name="GuildBackground" type="TextureRect" parent="Window/LeftStats" unique_id=1719629617]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 68.0
+offset_right = 207.0
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("13_value_152")
+
+[node name="Value" type="Label" parent="Window/LeftStats/GuildBackground" unique_id=55987019]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.43, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "LV.0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TeamTitle" type="TextureRect" parent="Window/LeftStats" unique_id=1341203503]
+layout_mode = 0
+offset_top = 105.5
+offset_right = 33.0
+offset_bottom = 123.5
+mouse_filter = 2
+texture = ExtResource("45_label_team")
+
+[node name="TeamBackground" type="TextureRect" parent="Window/LeftStats" unique_id=13721896]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 101.0
+offset_right = 207.0
+offset_bottom = 128.0
+mouse_filter = 2
+texture = ExtResource("13_value_152")
+
+[node name="Value" type="Label" parent="Window/LeftStats/TeamBackground" unique_id=1201040621]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.43, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "LV.0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Note" type="Label" parent="Window/LeftStats" unique_id=2095075577]
+layout_mode = 0
+offset_top = 136.0
+offset_right = 210.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.25, 0.43, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "Nhắc: 5 phút/lần làm mới\nthông tin"
+
+[node name="CharacterIdTitle" type="TextureRect" parent="Window" unique_id=1724645320]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 52.0
+offset_right = 307.0
+offset_bottom = 77.0
+mouse_filter = 2
+texture = ExtResource("23_character_id")
+
+[node name="CharacterIdValue" type="Label" parent="Window" unique_id=1176029296]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 50.0
+offset_right = 418.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "10341"
+vertical_alignment = 1
+
+[node name="Tabs" type="Control" parent="Window" unique_id=1218713047]
+anchors_preset = 0
+offset_left = 481.0
+offset_top = 52.0
+offset_right = 785.0
+offset_bottom = 81.0
+mouse_filter = 1
+
+[node name="Axis" type="NinePatchRect" parent="Window/Tabs" unique_id=857392101]
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 29.0
+texture = ExtResource("14_tab_axis")
+patch_margin_left = 14
+patch_margin_top = 14
+patch_margin_right = 14
+patch_margin_bottom = 14
+
+[node name="Selected" type="TextureRect" parent="Window/Tabs" unique_id=857392102]
+layout_mode = 0
+offset_left = -8.0
+offset_right = 88.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("15_tab_selected")
+
+[node name="Tab0" type="TextureButton" parent="Window/Tabs" unique_id=307083995]
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 29.0
+mouse_default_cursor_shape = 2
+
+[node name="Text" type="TextureRect" parent="Window/Tabs/Tab0" unique_id=221606818]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("33_tab_total_selected")
+
+[node name="Tab1" type="TextureButton" parent="Window/Tabs" unique_id=694886152]
+layout_mode = 0
+offset_left = 76.0
+offset_right = 152.0
+offset_bottom = 29.0
+mouse_default_cursor_shape = 2
+
+[node name="Text" type="TextureRect" parent="Window/Tabs/Tab1" unique_id=1205845336]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 62.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("34_tab_pvp")
+
+[node name="Tab2" type="TextureButton" parent="Window/Tabs" unique_id=168373857]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 228.0
+offset_bottom = 29.0
+mouse_default_cursor_shape = 2
+
+[node name="Text" type="TextureRect" parent="Window/Tabs/Tab2" unique_id=1641397442]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 62.0
+offset_bottom = 25.0
+mouse_filter = 2
+texture = ExtResource("35_tab_rank")
+
+[node name="Tab3" type="TextureButton" parent="Window/Tabs" unique_id=1479662041]
+layout_mode = 0
+offset_left = 228.0
+offset_right = 304.0
+offset_bottom = 29.0
+mouse_default_cursor_shape = 2
+
+[node name="Text" type="TextureRect" parent="Window/Tabs/Tab3" unique_id=124282050]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("36_tab_clan")
+
+[node name="Summary" type="Control" parent="Window" unique_id=787580893]
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 78.0
+offset_right = 798.0
+offset_bottom = 165.0
+
+[node name="Title" type="TextureRect" parent="Window/Summary" unique_id=42838258]
+layout_mode = 0
+offset_right = 68.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("41_title_achievement")
+
+[node name="RankTitle" type="Label" parent="Window/Summary" unique_id=60183234]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 25.0
+offset_right = 48.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.27, 0.47, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "Hạng"
+vertical_alignment = 1
+
+[node name="RankBackground" type="TextureRect" parent="Window/Summary" unique_id=2146369154]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 25.0
+offset_right = 130.0
+offset_bottom = 52.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/Summary/RankBackground" unique_id=557256383]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.27, 0.47, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "Đồng I"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinTitle" type="TextureRect" parent="Window/Summary" unique_id=322015579]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 29.0
+offset_right = 184.0
+offset_bottom = 46.0
+mouse_filter = 2
+texture = ExtResource("28_win_stage")
+
+[node name="WinBackground" type="TextureRect" parent="Window/Summary" unique_id=547879006]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 25.0
+offset_right = 272.0
+offset_bottom = 52.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/Summary/WinBackground" unique_id=1314997873]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.27, 0.47, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EscapeTitle" type="TextureRect" parent="Window/Summary" unique_id=1304697054]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 31.0
+offset_right = 328.0
+offset_bottom = 48.0
+mouse_filter = 2
+texture = ExtResource("27_escape")
+
+[node name="EscapeBackground" type="TextureRect" parent="Window/Summary" unique_id=278451595]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 25.0
+offset_right = 416.0
+offset_bottom = 52.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/Summary/EscapeBackground" unique_id=484070312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.27, 0.47, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "0%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KillIcon" type="TextureRect" parent="Window/Summary" unique_id=867609529]
+layout_mode = 0
+offset_left = 15.000054
+offset_top = 54.035725
+offset_right = 43.000053
+offset_bottom = 82.03572
+mouse_filter = 2
+texture = ExtResource("37_icon_kill")
+
+[node name="KillBackground" type="TextureRect" parent="Window/Summary" unique_id=1383274463]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 54.0
+offset_right = 130.0
+offset_bottom = 81.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/Summary/KillBackground" unique_id=1450268154]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.27, 0.47, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AssistIcon" type="TextureRect" parent="Window/Summary" unique_id=1456224575]
+layout_mode = 0
+offset_left = 157.85718
+offset_top = 52.25001
+offset_right = 185.85718
+offset_bottom = 80.250015
+mouse_filter = 2
+texture = ExtResource("40_icon_assist")
+
+[node name="AssistBackground" type="TextureRect" parent="Window/Summary" unique_id=1284328664]
+layout_mode = 0
+offset_left = 190.00002
+offset_top = 54.03572
+offset_right = 272.0
+offset_bottom = 81.03572
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/Summary/AssistBackground" unique_id=361046363]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.27, 0.47, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AllRoundIcon" type="TextureRect" parent="Window/Summary" unique_id=1830887295]
+layout_mode = 0
+offset_left = 303.3929
+offset_top = 52.25001
+offset_right = 331.3929
+offset_bottom = 80.250015
+mouse_filter = 2
+texture = ExtResource("38_icon_all_round")
+
+[node name="AllRoundBackground" type="TextureRect" parent="Window/Summary" unique_id=158133209]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 54.0
+offset_right = 418.0
+offset_bottom = 81.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/Summary/AllRoundBackground" unique_id=1480742394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.27, 0.47, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DemolishIcon" type="TextureRect" parent="Window/Summary" unique_id=675219463]
+layout_mode = 0
+offset_left = 439.10718
+offset_top = 51.357155
+offset_right = 467.10718
+offset_bottom = 79.357155
+mouse_filter = 2
+texture = ExtResource("39_icon_demolish")
+
+[node name="DemolishBackground" type="TextureRect" parent="Window/Summary" unique_id=1302104898]
+layout_mode = 0
+offset_left = 467.67862
+offset_top = 54.03572
+offset_right = 549.6786
+offset_bottom = 81.03572
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/Summary/DemolishBackground" unique_id=330023698]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.27, 0.47, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HonourTitle" type="TextureRect" parent="Window" unique_id=1657911272]
+layout_mode = 0
+offset_left = 246.07147
+offset_top = 164.17857
+offset_right = 283.07147
+offset_bottom = 185.17857
+mouse_filter = 2
+texture = ExtResource("26_honour")
+
+[node name="AchievementBox" type="NinePatchRect" parent="Window" unique_id=1646961971]
+layout_mode = 0
+offset_left = 236.25005
+offset_top = 174.89285
+offset_right = 794.25006
+offset_bottom = 255.89285
+texture = ExtResource("16_achievement_box")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="TankSection" type="Control" parent="Window" unique_id=254411169]
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 255.0
+offset_right = 798.0
+offset_bottom = 520.0
+
+[node name="SectionTitle" type="TextureRect" parent="Window/TankSection" unique_id=1375834007]
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("31_tank_report")
+
+[node name="TankCount" type="Label" parent="Window/TankSection" unique_id=531310697]
+layout_mode = 0
+offset_left = 78.0
+offset_right = 235.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 0.9, 0.05, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+text = "Hiện có 1 Tank"
+vertical_alignment = 1
+
+[node name="TankList" type="Panel" parent="Window/TankSection" unique_id=1473928751]
+clip_contents = true
+layout_mode = 0
+offset_top = 25.0
+offset_right = 224.0
+offset_bottom = 258.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_list")
+
+[node name="TankRow0" type="Control" parent="Window/TankSection/TankList" unique_id=1969153637]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 222.0
+offset_bottom = 78.0
+
+[node name="Background" type="TextureRect" parent="Window/TankSection/TankList/TankRow0" unique_id=503548168]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 76.0
+mouse_filter = 2
+texture = ExtResource("10_tank_selected")
+
+[node name="Icon" type="TextureRect" parent="Window/TankSection/TankList/TankRow0" unique_id=1277579256]
+editor_description = "SCALE MẪU CHO ẢNH TANK NHỎ TRONG PROFILE. Chỉ chỉnh Transform > Scale của node này; hai dòng còn lại tự dùng đúng scale này."
+z_index = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 66.0
+offset_bottom = 69.0
+mouse_filter = 2
+texture = ExtResource("11_tank")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Level" type="TextureRect" parent="Window/TankSection/TankList/TankRow0" unique_id=2108281526]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 3.0
+offset_right = 108.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("42_tank_level_1")
+
+[node name="Name" type="Label" parent="Window/TankSection/TankList/TankRow0" unique_id=516132367]
+z_index = 2
+layout_mode = 0
+offset_left = 116.0
+offset_top = 3.0
+offset_right = 216.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.9, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.08, 0.2, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 14
+text = "Iron Man"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Achievement" type="Label" parent="Window/TankSection/TankList/TankRow0" unique_id=1931631533]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 28.0
+offset_right = 216.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "Chiến tích: 0"
+vertical_alignment = 1
+
+[node name="Wins" type="Label" parent="Window/TankSection/TankList/TankRow0" unique_id=215094889]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 49.0
+offset_right = 216.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 12
+text = "Thắng: 0"
+vertical_alignment = 1
+
+[node name="SkinFrame" type="TextureRect" parent="Window/TankSection/TankList/TankRow0"]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 219.0
+offset_bottom = 73.0
+mouse_filter = 2
+texture = ExtResource("48_skinframe_tankinfo")
+
+[node name="Select" type="Button" parent="Window/TankSection/TankList/TankRow0" unique_id=1372209223]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 76.0
+flat = true
+
+[node name="TankRow1" type="Control" parent="Window/TankSection/TankList" unique_id=1066443002]
+visible = false
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 78.0
+offset_right = 222.0
+offset_bottom = 154.0
+
+[node name="Background" type="TextureRect" parent="Window/TankSection/TankList/TankRow1" unique_id=259494858]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 76.0
+mouse_filter = 2
+texture = ExtResource("10_tank_selected")
+
+[node name="Icon" type="TextureRect" parent="Window/TankSection/TankList/TankRow1" unique_id=567534404]
+z_index = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 66.0
+offset_bottom = 69.0
+mouse_filter = 2
+texture = ExtResource("11_tank")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Level" type="TextureRect" parent="Window/TankSection/TankList/TankRow1" unique_id=968935340]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 3.0
+offset_right = 108.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("42_tank_level_1")
+
+[node name="Name" type="Label" parent="Window/TankSection/TankList/TankRow1" unique_id=1384769714]
+z_index = 2
+layout_mode = 0
+offset_left = 116.0
+offset_top = 3.0
+offset_right = 216.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.9, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.08, 0.2, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 14
+text = "Tank"
+text_overrun_behavior = 3
+
+[node name="Achievement" type="Label" parent="Window/TankSection/TankList/TankRow1" unique_id=218239806]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 28.0
+offset_right = 216.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Chiến tích: 0"
+
+[node name="Wins" type="Label" parent="Window/TankSection/TankList/TankRow1" unique_id=1889622190]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 49.0
+offset_right = 216.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Thắng: 0"
+
+[node name="SkinFrame" type="TextureRect" parent="Window/TankSection/TankList/TankRow1"]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 219.0
+offset_bottom = 73.0
+mouse_filter = 2
+texture = ExtResource("48_skinframe_tankinfo")
+
+[node name="Select" type="Button" parent="Window/TankSection/TankList/TankRow1" unique_id=1703874595]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 76.0
+flat = true
+
+[node name="TankRow2" type="Control" parent="Window/TankSection/TankList" unique_id=1988736921]
+visible = false
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 154.0
+offset_right = 222.0
+offset_bottom = 230.0
+
+[node name="Background" type="TextureRect" parent="Window/TankSection/TankList/TankRow2" unique_id=1168612034]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 76.0
+mouse_filter = 2
+texture = ExtResource("10_tank_selected")
+
+[node name="Icon" type="TextureRect" parent="Window/TankSection/TankList/TankRow2" unique_id=1318432297]
+z_index = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 66.0
+offset_bottom = 69.0
+mouse_filter = 2
+texture = ExtResource("11_tank")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Level" type="TextureRect" parent="Window/TankSection/TankList/TankRow2" unique_id=132166033]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 3.0
+offset_right = 108.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("42_tank_level_1")
+
+[node name="Name" type="Label" parent="Window/TankSection/TankList/TankRow2" unique_id=1916218188]
+z_index = 2
+layout_mode = 0
+offset_left = 116.0
+offset_top = 3.0
+offset_right = 216.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.9, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.08, 0.2, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 14
+text = "Tank"
+text_overrun_behavior = 3
+
+[node name="Achievement" type="Label" parent="Window/TankSection/TankList/TankRow2" unique_id=1127091424]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 28.0
+offset_right = 216.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Chiến tích: 0"
+
+[node name="Wins" type="Label" parent="Window/TankSection/TankList/TankRow2" unique_id=158354271]
+z_index = 2
+layout_mode = 0
+offset_left = 72.0
+offset_top = 49.0
+offset_right = 216.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Thắng: 0"
+
+[node name="SkinFrame" type="TextureRect" parent="Window/TankSection/TankList/TankRow2"]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 219.0
+offset_bottom = 73.0
+mouse_filter = 2
+texture = ExtResource("48_skinframe_tankinfo")
+
+[node name="Select" type="Button" parent="Window/TankSection/TankList/TankRow2" unique_id=2083004025]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 76.0
+flat = true
+
+[node name="TankScroll" type="Control" parent="Window/TankSection" unique_id=151530140]
+anchors_preset = 0
+offset_left = 224.0
+offset_top = 25.0
+offset_right = 244.0
+offset_bottom = 258.0
+
+[node name="Track" type="TextureRect" parent="Window/TankSection/TankScroll" unique_id=277774528]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 20.0
+offset_bottom = 216.0
+mouse_filter = 2
+texture = ExtResource("17_scroll_track")
+
+[node name="Thumb" type="TextureRect" parent="Window/TankSection/TankScroll" unique_id=15025210]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 18.0
+offset_right = 19.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("18_scroll_thumb")
+
+[node name="Up" type="TextureButton" parent="Window/TankSection/TankScroll" unique_id=233388437]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 19.0
+offset_bottom = 18.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("20_scroll_up")
+
+[node name="Down" type="TextureButton" parent="Window/TankSection/TankScroll" unique_id=1492537859]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 215.0
+offset_right = 19.0
+offset_bottom = 233.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("19_scroll_down")
+
+[node name="TankPreview" type="Control" parent="Window/TankSection" unique_id=1358363844]
+anchors_preset = 0
+offset_left = 248.0
+offset_top = 25.0
+offset_right = 558.0
+offset_bottom = 258.0
+
+[node name="TankImage" type="TextureRect" parent="Window/TankSection/TankPreview" unique_id=568619651]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 19.0
+offset_right = 194.0
+offset_bottom = 219.0
+mouse_filter = 2
+texture = ExtResource("11_tank")
+
+[node name="TankLevel" type="TextureRect" parent="Window/TankSection/TankPreview" unique_id=159104561]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 203.0
+offset_right = 57.0
+offset_bottom = 224.0
+mouse_filter = 2
+texture = ExtResource("42_tank_level_1")
+
+[node name="TankName" type="Label" parent="Window/TankSection/TankPreview" unique_id=1865337071]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 194.0
+offset_right = 191.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Iron Man"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Stats" type="Control" parent="Window/TankSection/TankPreview" unique_id=1992903794]
+anchors_preset = 0
+offset_left = 194.0
+offset_top = 100.0
+offset_right = 308.0
+offset_bottom = 220.0
+
+[node name="ScoreTitle" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=1302781978]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 23.0
+offset_right = 20.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("32_tank_score")
+
+[node name="Help" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=627585687]
+layout_mode = 0
+offset_left = 88.0
+offset_top = -3.0
+offset_right = 104.0
+offset_bottom = 13.0
+mouse_filter = 2
+texture = ExtResource("21_help")
+
+[node name="ScoreBackground" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=1308138871]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 17.0
+offset_right = 109.0
+offset_bottom = 44.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/TankSection/TankPreview/Stats/ScoreBackground" unique_id=1156986103]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinTitle" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=525237873]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 56.0
+offset_right = 18.0
+offset_bottom = 73.0
+mouse_filter = 2
+texture = ExtResource("28_win_stage")
+
+[node name="WinBackground" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=1294802241]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 51.0
+offset_right = 109.0
+offset_bottom = 78.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/TankSection/TankPreview/Stats/WinBackground" unique_id=87479104]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KillTitle" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=1589156222]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 93.0
+offset_right = 21.0
+offset_bottom = 110.0
+mouse_filter = 2
+texture = ExtResource("30_kill")
+
+[node name="KillBackground" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=137899091]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 85.0
+offset_right = 109.0
+offset_bottom = 112.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/TankSection/TankPreview/Stats/KillBackground" unique_id=976388387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AssistTitle" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=1242322165]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 124.0
+offset_right = 21.0
+offset_bottom = 141.0
+mouse_filter = 2
+texture = ExtResource("29_assist")
+
+[node name="AssistBackground" type="TextureRect" parent="Window/TankSection/TankPreview/Stats" unique_id=780258024]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 118.0
+offset_right = 109.0
+offset_bottom = 145.0
+mouse_filter = 2
+texture = ExtResource("12_value_82")
+
+[node name="Value" type="Label" parent="Window/TankSection/TankPreview/Stats/AssistBackground" unique_id=161633957]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.3, 0.52, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

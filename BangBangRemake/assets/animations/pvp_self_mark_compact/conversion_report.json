@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\tank\\53325f609d2682eb6ddf77637e7c4325.swf",
+  "logical_name": "zh_CN/tank/self_mark.swf",
+  "fps": 24.0,
+  "frames": 9,
+  "shape_textures": 4,
+  "sprite_timelines": 0,
+  "frame_items_min": 2,
+  "frame_items_max": 2,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 3242,
+  "timeline_json_bytes": 3944,
+  "warnings": []
+}

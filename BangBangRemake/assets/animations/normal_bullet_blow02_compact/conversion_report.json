@@ -1,0 +1,15 @@
+{
+  "source_swf": "C:\\Users\\ycao7\\Downloads\\asset_1\\rez\\zh_CN\\swf\\skills\\normal_bullet_blow02.swf",
+  "logical_name": "normal_bullet_blow02",
+  "fps": 24.0,
+  "frames": 18,
+  "shape_textures": 9,
+  "sprite_timelines": 0,
+  "frame_items_min": 1,
+  "frame_items_max": 1,
+  "frame_masks_min": 0,
+  "frame_masks_max": 0,
+  "shape_png_bytes": 69828,
+  "timeline_json_bytes": 4914,
+  "warnings": []
+}

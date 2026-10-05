@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://ytmtgollexwt"]
+
+[sub_resource type="SystemFont" id="SystemFont_global"]
+font_names = PackedStringArray("Verdana")
+font_weight = 700
+
+[resource]
+default_font = SubResource("SystemFont_global")
